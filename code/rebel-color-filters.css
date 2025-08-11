@@ -1,0 +1,147 @@
+/* 
+ * Applies a color filter to elements with both 'icon' and '{COLOR}' class.
+ * The filter uses a combination of invert, sepia, saturate, hue-rotate, brightness, and contrast
+ * to achieve the desired purple hue effect on the icon.
+ */
+.sg_icon,
+.sg_icon.is-blue,
+.icon.is-blue {
+  filter: invert(22%) sepia(11%) saturate(6547%) hue-rotate(190deg) brightness(95%) contrast(94%);
+  -webkit-filter: invert(22%) sepia(11%) saturate(6547%) hue-rotate(190deg) brightness(95%) contrast(94%);
+}
+
+.sg_icon.is-purple,
+.icon.is-purple {
+  filter: invert(40%) sepia(14%) saturate(1056%) hue-rotate(190deg) brightness(95%) contrast(85%);
+}
+
+.sg_icon.is-green,
+.icon.is-green {
+  filter: invert(49%) sepia(37%) saturate(374%) hue-rotate(154deg) brightness(96%) contrast(96%);
+}
+
+.sg_icon.is-bright-blue,
+.icon.is-bright-blue {
+  filter: invert(40%) sepia(14%) saturate(1056%) hue-rotate(190deg) brightness(95%) contrast(85%);
+}
+
+.sg_icon.is-red,
+.icon.is-red {
+  filter: invert(42%) sepia(51%) saturate(5228%) hue-rotate(336deg) brightness(115%) contrast(89%);
+}
+
+.sg_icon.is-orange,
+.icon.is-orange {
+  filter: invert(53%) sepia(69%) saturate(1222%) hue-rotate(343deg) brightness(95%) contrast(88%);
+}
+
+.sg_icon.is-bright-orange,
+.icon.is-bright-orange {
+  filter: invert(63%) sepia(80%) saturate(2385%) hue-rotate(353deg) brightness(100%) contrast(89%);
+}
+
+.sg_icon.is-yellow,
+.icon.is-yellow {
+  filter: invert(85%) sepia(96%) saturate(1233%) hue-rotate(322deg) brightness(106%) contrast(96%);
+}
+
+.sg_icon.is-bright-grey,
+.icon.is-bright-grey {
+  filter: invert(80%) sepia(4%) saturate(14%) hue-rotate(312deg) brightness(87%) contrast(84%);
+}
+
+.sg_icon.is-grey,
+.icon.is-grey {
+  filter: invert(31%) sepia(51%) saturate(6%) hue-rotate(315deg) brightness(95%) contrast(94%);
+}
+
+.sg_icon.is-dark-grey,
+.icon.is-dark-grey {
+  filter: invert(15%) sepia(0%) saturate(0%) hue-rotate(251deg) brightness(98%) contrast(90%);
+}
+
+.sg_icon.is-white,
+.icon.is-white {
+  filter: invert(97%) sepia(0%) saturate(7112%) hue-rotate(301deg) brightness(128%) contrast(96%);
+}
+
+/* 
+ * Gradients
+ */
+.is-rebel-gradient,
+.bg-rebel-gradient {
+  background-size: 100% 100%;
+  background-position: 0px 0px, 0px 0px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;
+  background-image: linear-gradient(90deg, #5E688D2B 15%, #B2D3DE1A 35%, #E4782E4F 65%, #FAD6443D 100%), linear-gradient(90deg, #1C447F30 0%, #5B8AA052 26%, #EF5353A8 51%, #F08D1942 75%), linear-gradient(90deg, #5E688D69 11%, #5E688D69 17%, #E4782E38 65%, #FAD644BA 100%), linear-gradient(90deg, #1C447F63 1%, #5B8AA069 24%, #EF53536B 50%, #F08D1947 75%), linear-gradient(90deg, #1C447F4A 0%, #5B8AA04A 25%, #EF53534A 50%, #F08D1954 75%), linear-gradient(90deg, #1C447F 0%, #5E688D 14%, #5B8AA0 28%, #B2D3DEFF 42%, #EF5353FF 59%, #E4782EFF 75%, #F08D19 86%, #FAD644 100%);
+}
+
+.text-rebel-gradient {
+  background-size: 100% 100%;
+  background-position: 0px 0px, 0px 0px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;
+  background-image: linear-gradient(90deg, #5E688D2B 15%, #B2D3DE1A 35%, #E4782E4F 65%, #FAD6443D 100%), linear-gradient(90deg, #1C447F30 0%, #5B8AA052 26%, #EF5353A8 51%, #F08D1942 75%), linear-gradient(90deg, #5E688D69 11%, #5E688D69 17%, #E4782E38 65%, #FAD644BA 100%), linear-gradient(90deg, #1C447F63 1%, #5B8AA069 24%, #EF53536B 50%, #F08D1947 75%), linear-gradient(90deg, #1C447F4A 0%, #5B8AA04A 25%, #EF53534A 50%, #F08D1954 75%), linear-gradient(90deg, #1C447F 0%, #5E688D 14%, #5B8AA0 28%, #B2D3DEFF 42%, #EF5353FF 59%, #E4782EFF 75%, #F08D19 86%, #FAD644 100%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.is-green-blue-gradient,
+.bg-green-blue-gradient-h {
+  background-image: linear-gradient(75deg, rgb(28, 68, 127), rgb(55, 105, 148), rgb(90, 138, 160));
+}
+
+.bg-green-blue-gradient-v {
+  flex-direction: column;
+  justify-content: space-around;
+  background-image: linear-gradient(rgb(28, 68, 127), rgb(29, 70, 128), rgb(33, 74, 130), rgb(38, 81, 133), rgb(45, 90, 137), rgb(52, 99, 141), rgb(61, 109, 146), rgb(70, 118, 150), rgb(78, 126, 154), rgb(85, 132, 157), rgb(89, 136, 159), rgb(91, 138, 160));
+}
+
+.text-green-blue-gradient {
+  background-image: linear-gradient(75deg, rgb(28, 68, 127), rgb(55, 105, 148), rgb(90, 138, 160));
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.is-red-orange-gradient,
+.bg-red-orange-gradient {
+  background-image: linear-gradient(91deg, rgb(239, 83, 83) 0%, rgb(240, 141, 25) 50%, rgb(228, 120, 46) 100%);
+}
+
+.text-red-orange-gradient {
+  background-image: linear-gradient(91deg, rgb(239, 83, 83) 0%, rgb(240, 141, 25) 50%, rgb(228, 120, 46) 100%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.is-orange-yellow-gradient,
+.bg-orange-yellow-gradient {
+  background-image: linear-gradient(90deg, rgb(239, 83, 83) 0%, rgb(240, 141, 25) 33%, rgb(250, 214, 68) 81%);
+}
+
+.text-orange-yellow-gradient {
+  background-image: linear-gradient(90deg, rgb(239, 83, 83) 0%, rgb(240, 141, 25) 33%, rgb(250, 214, 68) 81%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.is-red-purple-gradient,
+.bg-red-purple-gradient {
+  background-image: linear-gradient(97deg, rgb(239, 83, 83) 0%, rgb(94, 104, 141) 100%);
+}
+
+.text-red-purple-gradient {
+  background-image: linear-gradient(97deg, rgb(239, 83, 83) 0%, rgb(94, 104, 141) 100%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.is-purple-red-orange-gradient,
+.bg-purple-red-orange-gradient {
+  background-color: var(--_colors---white-2);
+  background-image: linear-gradient(90deg, rgb(28, 68, 127), rgb(239, 83, 83) 50%, rgb(240, 141, 25));
+}
+
+.text-purple-red-gradient {
+  background-color: var(--_colors---white-2);
+  background-image: linear-gradient(90deg, rgb(28, 68, 127), rgb(239, 83, 83) 50%, rgb(240, 141, 25));
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
