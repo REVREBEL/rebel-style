@@ -1,9 +1,9 @@
 /**
-<link rel="preconnect" href="https://cdn.jsdelivr.net/gh/REVREBEL/revrebel.io/css/rebel-style/reboot-rebel.min.css">
-<link rel="preconnect" href="https://cdn.jsdelivr.net/gh/REVREBEL/revrebel.io/css/rebel-style/reboot-rebel.min.css" crossorigin>
+<link rel="preconnect" href="https://cdn.jsdelivr.net/gh/REVREBEL/rebel-style/css/reboot-rebel.css">
+<link rel="preconnect" href="https://cdn.jsdelivr.net/gh/REVREBEL/rebel-style/css/reboot-rebel.css" crossorigin>
 <link 
 rel="stylesheet" 
-href="https://cdn.jsdelivr.net/gh/REVREBEL/revrebel.io/css/rebel-style/reboot-rebel.min.css">
+href="https://cdn.jsdelivr.net/gh/REVREBEL/rebel-style/css/reboot-rebel.css">
 type="text/css"
 >
 */
@@ -20,42 +20,26 @@ type="text/css"
 <link href="https://fonts.googleapis.com/css2?family=Noto+Emoji:wght@300;700&display=swap" rel="stylesheet">
 */
 
-<head>
-<meta http-equiv="Content-Security-Policy"
-      content="
-      default-src 'self';
-      style-src 'self' data:https://revrebel.github.io/revrebel.io/css/rebel-style/reboot-rebel.css;
-      style-src-elem 'self' data:https://revrebel.github.io/revrebel.io/css/rebel-style/reboot-rebel.css"
-      />
+<head><meta http-equiv="Content-Security-Policy"
+content="
+default-src 'self';
+style-src 'self'data:https: //revrebel.github.io/revrebel.io/css/rebel-style/reboot-rebel.css;
+style-src-elem 'self'data:https: //revrebel.github.io/revrebel.io/css/rebel-style/reboot-rebel.css"
+/><meta http-equiv="Content-Security-Policy"
+content="
+default-src 'self';
+img-src 'self'data:https: //res.cloudinary.com/revrebel/image/upload/c_scale,w_25/v1709731814/RevRebel/ui/info/info-blue_urfwzp.png;"
+/><meta http-equiv="Content-Security-Policy"
+content=" 
+default-src 'self'data:gap:https: //ssl.gstatic.com '
+unsafe-eval';
+style-src 'self'https: //fonts.googleapis.com;
+font-src 'self'data:https: //fonts.gstatic.com;
+img-src 'self'data:content:;
+media-src *;
 
-<meta http-equiv="Content-Security-Policy"
-      content="
-      default-src 'self';
-      img-src 'self' data:https://res.cloudinary.com/revrebel/image/upload/c_scale,w_25/v1709731814/RevRebel/ui/info/info-blue_urfwzp.png;"
-      />
-
-<meta http-equiv="Content-Security-Policy"
-      content=" 
-      default-src 'self' data:gap:https://ssl.gstatic.com '
-      unsafe-eval';
-      style-src 'self' https://fonts.googleapis.com;
-      font-src 'self' data:https://fonts.gstatic.com;
-      img-src 'self' data:content:;
-      media-src *;"
-      />
-</head>
-
-<style>
-
-@import url('https://fonts.googleapis.com/css2?family=Khand:wght@400;400;500;600;700&display=swap') 
-@import url('https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500&display=swap') 
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500&display=swap') 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;500;600&display=swap') 
-@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap') 
-@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@700;800;900&display=swap') 
-@import url('https://fonts.googleapis.com/css2?family=Noto+Emoji:wght@300;700&display=swap') 
-
-body {
+"
+/></head><style>@import url('https://fonts.googleapis.com/css2?family=Khand:wght@400;400;500;600;700&display=swap') @import url('https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500&display=swap') @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500&display=swap') @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;500;600&display=swap') @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap') @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@700;800;900&display=swap') @import url('https://fonts.googleapis.com/css2?family=Noto+Emoji:wght@300;700&display=swap') body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-smoothing: antialiased;
@@ -83,7 +67,6 @@ a {
   text-align: left;
   text-transform: uppercase;
 }
-
 
 h1 {
   color: #1c437f;
@@ -308,14 +291,14 @@ ul {
   background-color: #132E58;
   border-color: #132E58;
   font-size: 1.05rem;
-  transform: scale3d(1.02, 1.02, 1.00)
+  box-shadow: rgba(28, 67, 127, 0.2) 0px 20px 30px -15px;
 }
 
 .button:active,
 .btn:active {
   background-color: #132E58;
   border-color: #132E58;
-  transform: scale3d(1.02, 1.02, 1.00)
+  box-shadow: none;
 }
 
 .button.is-secondary,
@@ -331,6 +314,7 @@ ul {
   color: white;
   background-color: #5B8AA0;
   border-color: #5B8AA0;
+  box-shadow: rgba(77, 117, 136, 0.4) 0px 20px 30px -15px;
 }
 
 .button.is-secondary:active,
@@ -338,6 +322,7 @@ ul {
   color: white;
   background-color: #5B8AA0;
   border-color: #5B8AA0;
+  box-shadow: none;
 }
 
 .button.is-outline,
@@ -348,6 +333,7 @@ ul {
   color: #1c437f;
   font-weight: 700;
   padding: 1.45rem 1.5rem 1.3rem;
+  box-shadow: none;
 }
 
 .button.is-outline:hover,
@@ -389,14 +375,13 @@ ul {
   color: #1c437f;
   padding: 0;
   text-align: unset;
-  transform: unset;
+  transform: none;
   border-width: 0px;
 }
 
 .button.is-borderless:hover,
 .btn.is-borderless:hover {
   color: #5b8aa0;
-  transform: unset;
 }
 
 .button.is-borderless:active,
@@ -723,6 +708,7 @@ ul {
 .logo-letter-8 {
   color: #fad644;
 }
+
 .text-field {
   background-color: rgba(0, 0, 0, 0);
   border-radius: 3px;
@@ -1634,8 +1620,6 @@ input.dark.message,
   padding-bottom: 0;
   padding-top: 0;
 }
-
-
 
 .checkbox {
   width: 1.25rem;
