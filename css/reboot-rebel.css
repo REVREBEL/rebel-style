@@ -1345,7 +1345,7 @@ input.dark.message,
 .line {
   padding-top: 5px;
   padding-bottom: 5px;
-  border-bottom: 10px solid #1c447f;
+  border-bottom: 3px solid #1c447f;
 }
 
 .form {
