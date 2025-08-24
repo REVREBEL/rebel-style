@@ -3,6 +3,7 @@
  * The filter uses a combination of invert, sepia, saturate, hue-rotate, brightness, and contrast
  * to achieve the desired purple hue effect on the icon.
  */
+ 
 .sg_icon,
 .icon-button_svg.is-blue,
 .sg_icon.is-blue,
