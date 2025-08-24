@@ -1,0 +1,134 @@
+<!-- Place this single <script> in Page Settings → Before </body> (bottom of the page). -->
+<!-- Do NOT also put a copy in the <head>. Keep just one copy per page. -->
+<script>
+(function(){
+  if (window.__revJsonLdInit) return; // guard against double‑init in Preview/Code Compile
+  window.__revJsonLdInit = true;
+
+  function ready(fn){
+    if (document.readyState !== 'loading') fn();
+    else document.addEventListener('DOMContentLoaded', fn);
+  }
+
+  function getMeta(name){
+    var el = document.querySelector('meta[name="' + name + '"]');
+    return el ? (el.getAttribute('content') || '') : '';
+  }
+
+  function toISO(dateString){
+    if (!dateString) return '';
+    var d = new Date(dateString);
+    if (isNaN(d.getTime())) return '';
+    return d.toISOString();
+  }
+
+  ready(function(){
+    // The CMS data blob must exist and be valid JSON
+    var dataEl = document.getElementById('rev-post');
+    if (!dataEl){
+      console.error('[REVREBEL JSON-LD] #rev-post element not found');
+      return;
+    }
+
+    var raw = dataEl.textContent || dataEl.innerText || '';
+    var d;
+    try {
+      d = JSON.parse(raw);
+    } catch (e){
+      console.error('[REVREBEL JSON-LD] Invalid JSON inside #rev-post:', e);
+      return;
+    }
+
+    // Validate essentials
+    if (!d || !d.title || !d.url || !d.authorName || !d.authorSlug){
+      console.error('[REVREBEL JSON-LD] Missing required fields (title, url, authorName, authorSlug).');
+      return;
+    }
+
+    // Normalize author URL/@id to absolute URL
+    var authorSlug = (d.authorSlug || '').replace(/^\//, '');
+    var authorUrl = 'https://revrebel.io/author/' + authorSlug;
+
+    // Collect images (filter empties)
+    var images = [];
+    if (d.image1x1) images.push(d.image1x1);
+    if (d.image4x3) images.push(d.image4x3);
+    if (d.image16x9) images.push(d.image16x9);
+
+    // Dates: prefer custom rev:* metas; fall back to article:* if present; emit ISO8601
+    var dp = toISO(getMeta('rev:date-published')) || toISO(getMeta('article:published_time'));
+    var dm = toISO(getMeta('rev:date-modified'))  || toISO(getMeta('article:modified_time'));
+
+    var jsonld = {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": d.title,
+      "description": d.description || '',
+      "image": images,
+      "url": d.url,
+      "mainEntityOfPage": { "@type": "WebPage", "@id": d.url },
+      "author": {
+        "@type": "Person",
+        "@id": authorUrl,
+        "name": d.authorName,
+        "url": authorUrl
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "REVREBEL",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://revrebel.io/images/revrebel-logo-512.png",
+          "width": 512,
+          "height": 512
+        }
+      },
+      "datePublished": dp || undefined,
+      "dateModified": dm || undefined,
+      "articleSection": d.category || '',
+      "keywords": d.keywords || ''
+    };
+
+    // Remove undefined keys to keep JSON-LD tidy
+    try {
+      Object.keys(jsonld).forEach(function(k){ if (jsonld[k] === undefined) delete jsonld[k]; });
+    } catch(_){ /* no-op */ }
+
+    var s = document.createElement('script');
+    s.type = 'application/ld+json';
+    try {
+      s.text = JSON.stringify(jsonld);
+    } catch (e){
+      s.appendChild(document.createTextNode(JSON.stringify(jsonld)));
+    }
+    document.head.appendChild(s);
+  });
+})();
+</script>
+
+<!-- Place this JSON data block anywhere on the page (safe spot: also Before </body>). -->
+<!-- IMPORTANT: Keep the id exactly #rev-post. Ensure these CMS bindings resolve on publish. -->
+<script type="application/json" id="rev-post">
+{
+  "url": "https://revrebel.io/blog/{{wf {&quot;path&quot;:&quot;slug&quot;,&quot;type&quot;:&quot;PlainText&quot;} }}",
+  "title": "{{wf {&quot;path&quot;:&quot;name&quot;,&quot;type&quot;:&quot;PlainText&quot;} }}",
+  "description": "{{wf {&quot;path&quot;:&quot;summary&quot;,&quot;type&quot;:&quot;PlainText&quot;} }}",
+  "image16x9": "https://res.cloudinary.com/revrebel/image/upload/{{wf {&quot;path&quot;:&quot;cloudinary-image-id&quot;,&quot;type&quot;:&quot;PlainText&quot;} }}ar_16:9,c_thumb,g_auto",
+  "image4x3":  "https://res.cloudinary.com/revrebel/image/upload/{{wf {&quot;path&quot;:&quot;cloudinary-image-id&quot;,&quot;type&quot;:&quot;PlainText&quot;} }}ar_4:3,c_thumb,g_auto",
+  "image1x1":  "https://res.cloudinary.com/revrebel/image/upload/{{wf {&quot;path&quot;:&quot;cloudinary-image-id&quot;,&quot;type&quot;:&quot;PlainText&quot;} }}ar_1:1,c_thumb,g_auto",
+  "authorName": "{{wf {&quot;path&quot;:&quot;expert-contributor:name&quot;,&quot;type&quot;:&quot;PlainText&quot;} }}",
+  "authorSlug": "{{wf {&quot;path&quot;:&quot;expert-contributor:slug&quot;,&quot;type&quot;:&quot;PlainText&quot;} }}",
+  "category": "{{wf {&quot;path&quot;:&quot;category:name&quot;,&quot;type&quot;:&quot;PlainText&quot;} }}",
+  "keywords": "{{wf {&quot;path&quot;:&quot;keywords&quot;,&quot;type&quot;:&quot;PlainText&quot;} }}"
+}
+
+</script>
+
+<!-- Optional: rev:date-* metas (human-friendly), rendered by Webflow bindings in HEAD or BODY -->
+<!-- If you keep these in the <head>, the injector will still find them. Format can be MMM DD, YYYY. -->
+<!-- The script converts them to ISO 8601 for schema.org. -->
+<!--
+<meta name="rev:date-published" content="{{wf {&quot;path&quot;:&quot;publish-date&quot;,&quot;transformers&quot;:[{&quot;name&quot;:&quot;date&quot;,&quot;arguments&quot;:[&quot;MMM DD, YYYY&quot;]}],&quot;type&quot;:&quot;Date&quot;} }}">
+<meta name="rev:date-modified" content="{{wf {&quot;path&quot;:&quot;updated-on&quot;,&quot;transformers&quot;:[{&quot;name&quot;:&quot;date&quot;,&quot;arguments&quot;:[&quot;MMM DD, YYYY&quot;]}],&quot;type&quot;:&quot;Date&quot;} }}">
+-->
+
