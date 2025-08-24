@@ -1,7 +1,7 @@
 
 /*! ADDING THE SCRIPT:
 
-<!-- START Calculate Read Time -->
+<!-- START Share Icons Render -->
 <script
   defer
   src="https://cdn.jsdelivr.net/gh/REVREBEL/rebel-style@main/scripts/share-icons-render.js"
@@ -9,7 +9,7 @@
   referrerpolicy="no-referrer"
   crossorigin="anonymous">
 </script>
-<!-- END Calculate Read Time -->
+<!-- END Share Icons Render -->
 
 */
 

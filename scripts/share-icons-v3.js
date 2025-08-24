@@ -1,5 +1,5 @@
 
-/*! ADDING THE SCRIPT:
+/*! ADD THE SCRIPT INSIDE WEBFLOW:
 
 <!-- START Share Icons Render -->
 <script
@@ -9,9 +9,36 @@
   referrerpolicy="no-referrer"
   crossorigin="anonymous">
 </script>
-<!-- END Share Icons Render -->
+
+CSS (unchanged). Place globally or per‑page.
+CSS baseline: add this in Page Settings <head> or global embed 
 
 */
+
+/*!
+<!-- CSS (unchanged). Place globally or per‑page. -->
+<!-- CSS baseline: add this in Page Settings <head> or global embed -->
+<style>
+.share-icons-wrapper {
+position: fixed;
+right: 1rem;
+bottom: 20vh;
+z-index: 9999;
+transition: opacity .25s ease;
+// default hidden 
+opacity: 0;
+pointer-events: none;
+}
+.share-icons-wrapper.is-visible {
+opacity: 1;
+pointer-events: auto; // clickable 
+}
+</style>
+
+*/
+
+
+
 
 (function(){
   if (window.__revShareProgressInit) return; window.__revShareProgressInit = true;
