@@ -1,4 +1,19 @@
 
+/*! ADDING THE SCRIPT:
+
+<!-- START Calculate Read Time -->
+<script
+  defer
+  src="https://cdn.jsdelivr.net/gh/REVREBEL/rebel-style@main/scripts/share-icons-render.js"
+  type="text/javascript"
+  referrerpolicy="no-referrer"
+  crossorigin="anonymous">
+</script>
+<!-- END Calculate Read Time -->
+
+*/
+
+
 (function () {
   // Prevent double-init in Webflow preview
   if (window.__revShareInit) return; 
