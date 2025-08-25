@@ -149,9 +149,11 @@
 
 <!-- END Blog Meta-Data Capture + Publish  -->
 
-*/
 
-  1. Place the JavaScript code (the (function(){...})(); block above) in
+
+ ------------------ ADDING WEBFLOW VALUES: ------------------ 
+
+1. Place the JavaScript code (the (function(){...})(); block above) in
      Page Settings → Before </body> tag.
 
   2. Place the following JSON data block on the page, also before the </body> tag.
