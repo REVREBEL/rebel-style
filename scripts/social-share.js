@@ -1,11 +1,13 @@
-/*! REVREBEL Social Share (Webflow CMS)
+/*! REVREBEL Social Share (Webflow CMS) --------------------- 
+ *
  *  - Reads #rev-post JSON in <head> and meta tags (canonical/OG/Twitter)
- *  - data-share="[x|linkedin|facebook|pinterest|reddit|email|copy|whatsapp|telegram]"
+ *  - data-share="[x|linkedin|facebook|pinterest|reddit|email|copy|whatsapp|telegram|blog-rss]"
  *  - Optional overrides via: data-share-url, -title, -desc, -image, -via, -hashtags, -utm
  *  - Optional wrapper defaults via [data-share-root] with same attributes (incl. data-utm)
  */
 
-/*! ADDING THE SCRIPT:
+
+/*! ------------------ ADDING THE SCRIPT: ------------------ 
 
 <!-- START Social Share  -->
 <script 
@@ -19,11 +21,11 @@ crossorigin="anonymous"
 
 */
 
-/*! HOW TO USE IN WEBFLOW
 
-A) (Optional) Add a wrapper with global defaults/UTMs
+/*! ------------------ HOW TO USE IN WEBFLOW --------------- 
+
+(Optional) Add a wrapper with global defaults/UTMs
 Add a div around your buttons and set attributes in Element Settings → Custom attributes:
-
 
 Name: data-share-root            Value: (anything; presence is enough)
 Name: data-utm                   Value: utm_source=blog&utm_medium=share&utm_campaign=post
@@ -31,10 +33,8 @@ Name: data-share-image           Value: (bind to main image URL if you want to f
 Name: data-share-via             Value: revrebel          (for X)
 Name: data-share-hashtags        Value: hotels,revrebel   (comma list)
 
-
-B) Add your buttons (any element works)
+Add your buttons (any element works)
 Give each button a data-share value. Use your own classes/icons.
-
 
 <a class="btn-share" data-share="x">X</a>
 <a class="btn-share" data-share="linkedin">LinkedIn</a>
@@ -44,11 +44,11 @@ Give each button a data-share value. Use your own classes/icons.
 <a class="btn-share" data-share="email">Email</a>
 <a class="btn-share" data-share="whatsapp">WhatsApp</a>
 <a class="btn-share" data-share="telegram">Telegram</a>
+<a class="btn-share" data-share="blog-rss">RSS</a>
+
 <button class="btn-share" data-share="copy">Copy Link</button>
 
-
-
-C) (Optional) Per‑button overrides
+(Optional) Per‑button overrides
 Need a special UTM or title on one network?
 
 Name: data-utm            Value: utm_source=twitter&utm_medium=share&utm_campaign=post
@@ -57,35 +57,94 @@ Name: data-share-url      Value: {{ bind to CMS URL if different from canonical 
 Name: data-share-image    Value: {{ bind to a different image (e.g., Pinterest‑optimized) }}
 Name: data-share-hashtags Value: hotels,webflow,analytics
 
- */
+*/
 
+
+/** 
+ * Component Name: Share-Buttons --------------------- 
+ *
+ * Provides a unified sharing system for elements with `[data-share]` attributes.
+ * 
+ * Features:
+ * - Gathers metadata (canonical, OpenGraph, Twitter, custom JSON in #rev-post)
+ * - Builds provider-specific share URLs (X/Twitter, LinkedIn, Facebook, etc.)
+ * - Handles UTM appending and collection-based RSS links
+ * - Opens popup windows for social providers, or copies links to clipboard
+ * - Enhances accessibility with ARIA roles, labels, and keyboard support
+ * 
+ * Usage:
+ * <button data-share="linkedin"></button>
+ * <button data-share="copy" data-share-url="https://..."></button>
+ */
 
 (function () {
   "use strict";
 
-  const qs  = (sel, root = document) => root.querySelector(sel);
+  /* ------------------ Utilities ------------------ */
+
+  /** 
+   * Shortcut for querySelector.
+   * @param {string} sel - CSS selector
+   * @param {ParentNode} [root=document] - Search context
+   * @returns {Element|null}
+   */
+  const qs = (sel, root = document) => root.querySelector(sel);
+
+  /** 
+   * Shortcut for querySelectorAll, returns Array.
+   * @param {string} sel - CSS selector
+   * @param {ParentNode} [root=document] - Search context
+   * @returns {Element[]}
+   */
   const qsa = (sel, root = document) => Array.from(root.querySelectorAll(sel));
+
+  /** 
+   * Safe URI encoder.
+   * @param {string|undefined|null} v - Value to encode
+   * @returns {string}
+   */
   const enc = (v) => encodeURIComponent(v ?? "");
 
+  /** 
+   * Read `<meta name="...">`.
+   * @param {string} name - Meta tag name
+   * @returns {string}
+   */
   const meta = (name) => qs(`meta[name="${name}"]`)?.content || "";
-  const og   = (prop) => qs(`meta[property="${prop}"]`)?.content || "";
 
-  // Head data (canonical / #rev-post)
+  /** 
+   * Read `<meta property="...">`.
+   * @param {string} prop - OG property name
+   * @returns {string}
+   */
+  const og = (prop) => qs(`meta[property="${prop}"]`)?.content || "";
+
+  /* ------------------ Head Data ------------------ */
+
+  /** @type {string} */
   const canonical = qs('link[rel="canonical"]')?.href || location.href;
-  let headData = {};
-  try { headData = JSON.parse(qs('#rev-post')?.textContent || "{}"); } catch {}
 
-  // Construct a base share payload from head data, with fallbacks
+  /** @type {Object<string, any>} */
+  let headData = {};
+  try { headData = JSON.parse(qs('#rev-post')?.textContent || "{}"); } catch { }
+
+  /** @type {Object} Default share payload */
   const base = {
-    url:        headData.url || canonical,
-    title:      headData.title || og("og:title") || document.title,
-    description:headData.description || og("og:description") || meta("description") || "",
-    image:      headData.image16x9 || og("og:image") || meta("twitter:image") || "",
-    via:        (meta("twitter:site") || "").replace(/^@/, ""),
-    hashtags:   "" // optional, can be overridden
+    url: headData.url || canonical,
+    title: headData.title || og("og:title") || document.title,
+    description: headData.description || og("og:description") || meta("description") || "",
+    image: headData.image16x9 || og("og:image") || meta("twitter:image") || "",
+    via: (meta("twitter:site") || "").replace(/^@/, ""),
+    hashtags: ""
   };
 
-  // Merge strategy: button attr → wrapper attr → base
+  /* ------------------ Core Functions ------------------ */
+
+  /**
+   * Merge strategy: button attr → wrapper attr → base payload.
+   * @param {Element} el - The clicked share button
+   * @returns {Object} Share payload with url, title, description, image, via, hashtags
+   */
   function resolveData(el) {
     const root = el.closest("[data-share-root]") || qs("[data-share-root]") || document.body;
 
@@ -101,14 +160,20 @@ Name: data-share-hashtags Value: hotels,webflow,analytics
 
     return {
       url,
-      title:     pick("data-share-title", base.title),
+      title: pick("data-share-title", base.title),
       description: pick("data-share-desc", base.description),
-      image:     pick("data-share-image", base.image),
-      via:       pick("data-share-via", base.via),
-      hashtags:  pick("data-share-hashtags", base.hashtags)
+      image: pick("data-share-image", base.image),
+      via: pick("data-share-via", base.via),
+      hashtags: pick("data-share-hashtags", base.hashtags)
     };
   }
 
+  /**
+   * Append UTM parameters to a URL.
+   * @param {string} url - Base URL
+   * @param {string} utm - Querystring of UTM params ("a=1&b=2")
+   * @returns {string}
+   */
   function appendUtm(url, utm) {
     try {
       const u = new URL(url, location.origin);
@@ -122,14 +187,35 @@ Name: data-share-hashtags Value: hotels,webflow,analytics
     }
   }
 
+  /**
+   * Returns "<origin>/<first-path-segment>/" from a URL.
+   * Example: "https://revrebel.io/blogs/post" -> "https://revrebel.io/blogs/"
+   * @param {string} url - Input URL
+   * @returns {string}
+   */
+  function getRootAndCollection(url) {
+    let u;
+    try {
+      u = new URL(url, (typeof location !== "undefined" ? location.origin : undefined));
+    } catch {
+      return "";
+    }
+    const first = u.pathname.split("/").filter(Boolean)[0] || "";
+    return u.origin + (first ? `/${first}/` : "/");
+  }
+
+  /**
+   * Opens a centered popup window.
+   * @param {string} url - URL to open
+   */
   function popup(url) {
     const w = 640, h = 720;
     const dualLeft = window.screenLeft ?? screen.left ?? 0;
-    const dualTop  = window.screenTop  ?? screen.top  ?? 0;
-    const width  = window.innerWidth  || document.documentElement.clientWidth  || screen.width;
+    const dualTop = window.screenTop ?? screen.top ?? 0;
+    const width = window.innerWidth || document.documentElement.clientWidth || screen.width;
     const height = window.innerHeight || document.documentElement.clientHeight || screen.height;
     const left = width / 2 - w / 2 + dualLeft;
-    const top  = height / 2 - h / 2 + dualTop;
+    const top = height / 2 - h / 2 + dualTop;
 
     const win = window.open(
       url,
@@ -139,6 +225,9 @@ Name: data-share-hashtags Value: hotels,webflow,analytics
     if (win && win.focus) win.focus();
   }
 
+  /* ------------------ Share URL Builders ------------------ */
+
+  /** @type {Record<string,(d:Object)=>string>} */
   const builders = {
     x: (d) =>
       `https://twitter.com/intent/tweet?url=${enc(d.url)}&text=${enc(d.title)}`
@@ -168,20 +257,33 @@ Name: data-share-hashtags Value: hotels,webflow,analytics
     telegram: (d) =>
       `https://t.me/share/url?url=${enc(d.url)}&text=${enc(d.title)}`,
 
-    copy: (d) => d.url
+    copy: (d) => d.url,
+
+    "blog-rss": (d) => `${getRootAndCollection(d.url)}rss.xml`
   };
 
+  /* ------------------ Event Handlers ------------------ */
+
+  /**
+   * Handle click on a share button.
+   * - Builds the share URL
+   * - Handles "copy to clipboard" fallback
+   * - Opens popup or new tab
+   * @param {MouseEvent} e
+   */
   async function onClick(e) {
     e.preventDefault();
     const btn = e.currentTarget;
     const type = (btn.getAttribute("data-share") || "").toLowerCase();
-    if (!type || !builders[type]) return;
+    const builder = builders[type];
+    if (!builder) return;
 
     const data = resolveData(btn);
 
     if (type === "copy") {
+      const urlToCopy = builder(data);
       try {
-        await navigator.clipboard.writeText(data.url);
+        await navigator.clipboard.writeText(urlToCopy);
         btn.setAttribute("data-copied", "true");
         const prev = btn.getAttribute("aria-label");
         btn.setAttribute("aria-label", "Link copied");
@@ -190,15 +292,25 @@ Name: data-share-hashtags Value: hotels,webflow,analytics
           if (prev) btn.setAttribute("aria-label", prev);
         }, 1500);
       } catch {
-        window.prompt("Copy this link:", data.url);
+        window.prompt("Copy this link:", urlToCopy);
       }
       return;
     }
 
-    const url = builders[type](data);
-    popup(url);
+    const url = builder(data);
+    const popupTypes = new Set(["x", "linkedin", "facebook", "pinterest", "reddit"]);
+
+    if (popupTypes.has(type)) {
+      popup(url);
+    } else {
+      window.open(url, "_blank", "noopener,noreferrer");
+    }
   }
 
+  /**
+   * Enhance a share element with ARIA role, label, keyboard events.
+   * @param {Element} el - Button element
+   */
   function enhance(el) {
     el.addEventListener("click", onClick);
     el.setAttribute("role", el.getAttribute("role") || "button");
@@ -215,9 +327,14 @@ Name: data-share-hashtags Value: hotels,webflow,analytics
     });
   }
 
+  /**
+   * Initialize: Enhance all `[data-share]` elements.
+   */
   function init() {
     qsa("[data-share]").forEach(enhance);
   }
+
+  /* ------------------ Boot ------------------ */
 
   if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", init);
