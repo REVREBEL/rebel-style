@@ -135,24 +135,8 @@
   -- HOW TO USE IN WEBFLOW -------------------------------------------------
   --------------------------------------------------------------------------
 
-  /*! ------------------ ADDING THE SCRIPT: ------------------ 
-
-<!-- START Meta-Data Capture + Publish-->
-
-<script
-  defer
-  src="https://cdn.jsdelivr.net/gh/REVREBEL/rebel-style@main/scripts/share-icons-visibility.js"
-  type="text/javascript"
-  referrerpolicy="no-referrer"
-  crossorigin="anonymous">
-</script>
-
-<!-- END Meta-Data Capture + Publish  -->
-
-*/
-
-  1. Place the JavaScript code (the (function(){...})(); block above) in
-     Page Settings → Before </body> tag.
+  1. Place this entire script file's content (the (function(){...})(); block)
+     into your Webflow page's settings, inside the "Before </body> tag" section.
 
   2. Place the following JSON data block on the page, also before the </body> tag.
      Ensure the Webflow CMS bindings resolve correctly on publish.

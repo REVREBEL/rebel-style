@@ -1,6 +1,6 @@
 /*! REVREBEL Social Share (Webflow CMS) --------------------- 
  *
- *  - Reads #rev-post JSON in <head> and meta tags (canonical/OG/Twitter)
+ *  - Reads #revrebel-post JSON in <head> and meta tags (canonical/OG/Twitter)
  *  - data-share="[x|linkedin|facebook|pinterest|reddit|email|copy|whatsapp|telegram|blog-rss]"
  *  - Optional overrides via: data-share-url, -title, -desc, -image, -via, -hashtags, -utm
  *  - Optional wrapper defaults via [data-share-root] with same attributes (incl. data-utm)
@@ -10,8 +10,8 @@
 /*! ------------------ ADDING THE SCRIPT: ------------------ 
 
 <!-- START Social Share  -->
-<script 
-defer src="href="https://cdn.jsdelivr.net/gh/REVREBEL/rebel-style@main/scripts/social-share.js"
+<script
+defer src="https://cdn.jsdelivr.net/gh/REVREBEL/rebel-style@main/scripts/social-share.js"
 type="text/javascript" 
 referrerpolicy="no-referrer" 
 crossorigin="anonymous" 
@@ -78,7 +78,7 @@ Name: data-share-hashtags Value: hotels,webflow,analytics
  * Provides a unified sharing system for elements with `[data-share]` attributes.
  * 
  * Features:
- * - Gathers metadata (canonical, OpenGraph, Twitter, custom JSON in #rev-post)
+ * - Gathers metadata (canonical, OpenGraph, Twitter, custom JSON in #revrebel-post)
  * - Builds provider-specific share URLs (X/Twitter, LinkedIn, Facebook, etc.)
  * - Handles UTM appending and collection-based RSS links
  * - Opens popup windows for social providers, or copies links to clipboard
@@ -138,11 +138,13 @@ Name: data-share-hashtags Value: hotels,webflow,analytics
 
   /** @type {Object<string, any>} */
   let headData = {};
-  try { headData = JSON.parse(qs('#rev-post')?.textContent || "{}"); } catch { }
+  try { headData = JSON.parse(qs('#revrebel-post')?.textContent || "{}"); } catch { }
 
   /** @type {Object} Default share payload */
   const base = {
-    url: headData.url || canonical,
+    // Always prefer the canonical URL as the single source of truth for the page's address.
+    // This aligns with the logic in meta-data.js and is more robust.
+    url: canonical,
     title: headData.title || og("og:title") || document.title,
     description: headData.description || og("og:description") || meta("description") || "",
     image: headData.image16x9 || og("og:image") || meta("twitter:image") || "",
