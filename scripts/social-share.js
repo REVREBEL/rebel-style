@@ -25,7 +25,18 @@ crossorigin="anonymous"
 /*! ------------------ HOW TO USE IN WEBFLOW --------------- 
 
 (Optional) Add a wrapper with global defaults/UTMs
-Add a div around your buttons and set attributes in Element Settings → Custom attributes:
+Add a div around your buttons and set attributes in Element Settings → Custom attributes. 
+The data-share-root attribute should be placed at the wrapper-level.
+
+ - Any share-related attributes you place on that wrapper (e.g. data-utm, data-share-image, 
+   data-share-via, data-share-hashtags) act as defaults for all buttons inside it.
+
+ - The button itself can override these by having the same attribute directly (data-share-url, 
+   data-share-title, etc.).
+
+ - If neither the button nor the root has a given attribute, the script falls back to the 
+   age’s metadata (canonical URL, OG tags, etc.).
+
 
 Name: data-share-root            Value: (anything; presence is enough)
 Name: data-utm                   Value: utm_source=blog&utm_medium=share&utm_campaign=post
@@ -34,6 +45,7 @@ Name: data-share-via             Value: revrebel          (for X)
 Name: data-share-hashtags        Value: hotels,revrebel   (comma list)
 
 Add your buttons (any element works)
+
 Give each button a data-share value. Use your own classes/icons.
 
 <a class="btn-share" data-share="x">X</a>
@@ -141,6 +153,18 @@ Name: data-share-hashtags Value: hotels,webflow,analytics
   /* ------------------ Core Functions ------------------ */
 
   /**
+   * Normalize hashtag string by removing all `#` characters.
+   * Accepts either comma-separated string or single hashtag.
+   *
+   * @param {string} val - Raw hashtag string, e.g. "#hotels,#revrebel"
+   * @returns {string} Cleaned string, e.g. "hotels,revrebel"
+   */
+  function normalizeHashtags(val) {
+    if (!val) return "";
+    return val.replace(/#/g, "").trim();
+  }
+
+  /**
    * Merge strategy: button attr → wrapper attr → base payload.
    * @param {Element} el - The clicked share button
    * @returns {Object} Share payload with url, title, description, image, via, hashtags
@@ -164,7 +188,7 @@ Name: data-share-hashtags Value: hotels,webflow,analytics
       description: pick("data-share-desc", base.description),
       image: pick("data-share-image", base.image),
       via: pick("data-share-via", base.via),
-      hashtags: pick("data-share-hashtags", base.hashtags)
+      hashtags: normalizeHashtags(pick("data-share-hashtags", base.hashtags))
     };
   }
 
