@@ -135,28 +135,22 @@
   -- HOW TO USE IN WEBFLOW -------------------------------------------------
   --------------------------------------------------------------------------
 
-  /*! ------------------ ADDING THE SCRIPT: ------------------ 
+  1. Add the external script to your site/page settings (e.g., Before </body>).
+     This loads the code on your page.
+     For best results (especially for debugging), include all attributes:
 
-<!-- START Blog Meta-Data Capture + Publish-->
+     <!-- START Blog Meta-Data Capture + Publish-->
+     <script
+        defer
+        src="https://cdn.jsdelivr.net/gh/REVREBEL/rebel-style@main/scripts/blog-meta-data.js"
+        type="text/javascript"
+        referrerpolicy="no-referrer"
+        crossorigin="anonymous">
+      </script>
+      <!-- END Blog Meta-Data Capture + Publish  -->
 
-<script
-  defer
-  src="https://cdn.jsdelivr.net/gh/REVREBEL/rebel-style@main/scripts/blog-meta-data.js"
-  type="text/javascript"
-  referrerpolicy="no-referrer"
-  crossorigin="anonymous">
-</script>
-
-<!-- END Blog Meta-Data Capture + Publish  -->
-
-
-
- ------------------ ADDING WEBFLOW VALUES: ------------------ 
-
-1. Place the JavaScript code (the (function(){...})(); block above) in
-     Page Settings → Before </body> tag.
-
-  2. Place the following JSON data block on the page, also before the </body> tag.
+  2. Place the following JSON data block in an HTML Embed on your page, also
+     before the </body> tag.
      Ensure the Webflow CMS bindings resolve correctly on publish.
      IMPORTANT: Keep the id exactly "revrebel-post".
 
@@ -179,7 +173,7 @@
     "publisherLogoHeight": "512",
     "authorBio": "{{wf {&quot;path&quot;:&quot;expert-contributor:bio&quot;,&quot;type&quot;:&quot;PlainText&quot;\} }}",
     // For authorImage, use a clear, square (1:1) headshot, at least 300x300 pixels.
-    "authorImage": "{{wf {&quot;path&quot;:&quot;expert-contributor:profile-image&quot;,&quot;type&quot;:&quot;ImageRef&quot;\} }}",
+    "authorImage": "{{wf {&quot;path&quot;:&quot;expert-contributor:profile-image&quot;,&quot;type&quot;:&quot;ImageRef&quot;\} }}"
   }
   </script>
 
