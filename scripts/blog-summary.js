@@ -13,7 +13,6 @@
 */
 
 
-
 /**
  * Generates a summary navigation from article headings (h2, h3, h4)
  * and enables smooth scrolling to target sections.
