@@ -115,7 +115,7 @@
     // Poll for the richtext-field, as it may be rendered by Webflow after the initial 'load' event.
     let attempts = 0;
     const intervalId = setInterval(function() {
-      const richTextField = document.getElementById("richtext-field");
+      const richTextField = document.querySelector('[data-blog-summary="article-body"]');
       attempts++;
       if (richTextField || attempts >= 15) { // Try for ~3 seconds
         clearInterval(intervalId);
@@ -124,7 +124,7 @@
           const text = richTextField.innerText || richTextField.textContent || "";
           finalWordCount = text.split(/\s+/).filter(Boolean).length;
         } else {
-          console.log('[REVREBEL JSON-LD] Note: #richtext-field not found after waiting. Word count will be omitted.');
+          console.log('[REVREBEL JSON-LD] Note: [data-blog-summary="article-body"] not found after waiting. Word count will be omitted.');
         }
         buildAndInject(finalWordCount);
       }
@@ -184,8 +184,8 @@
 
   4. (Recommended) For dynamic word counts, ensure your main blog post
      content element (the Rich Text element in Webflow) has the ID
-     "richtext-field". The script will automatically calculate the word count
-     from this element. You do not need to add a "wordCount" property to the
-     JSON data block above.
+     `data-blog-summary="article-body"`. The script will automatically
+     calculate the word count from this element. You do not need to add a
+     "wordCount" property to the JSON data block above.
 
 */

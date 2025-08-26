@@ -1,4 +1,4 @@
-/*! ------------------ ADDING THE SCRIPT: ------------------ 
+/*! ------------------ ADDING THE SCRIPT: ------------------
 
 <!-- START Create Blog Summary -->
 <script
@@ -12,14 +12,28 @@
 
 */
 
+/*! ------------------ HOW TO USE IN WEBFLOW ---------------
+
+<!-- 1. Add a container for the summary links -->
+<div data-blog-summary="summary">
+  <!-- Links will be generated here -->
+</div>
+
+<!-- 2. Add the attribute to your article's rich text body -->
+<div class="w-richtext" data-blog-summary="article-body">
+  <!-- Your Webflow Rich Text element with H2, H3, H4, H5, H6 headings -->
+</div>
+
+*/
+
 /**
- * Generates a summary navigation from article headings (h2, h3, h4)
+ * Generates a summary navigation from article headings (h2, h3, h4, h5, h6)
  * and enables smooth scrolling to target sections.
  *
  * Behavior:
- * - Scans #articleBody for h2, h3, h4 elements
+ * - Scans [data-blog-summary="article-body"] for h2, h3, h4, h5, h6 elements
  * - Assigns IDs based on heading text (slugified)
- * - Creates navigation links inside #summary using your existing CSS classes
+ * - Creates navigation links inside [data-blog-summary="summary"] using your existing CSS classes
  *   (.link, .headline-xsmall, .headline-small, .headline-regular)
  * - Smooth scrolls to target section on click
  * - On page load with hash, auto-scrolls to section
@@ -27,13 +41,13 @@
 
 function initBlogSummary() {
   /** @type {HTMLElement|null} */
-  const list = document.getElementById("summary");
+  const list = document.querySelector('[data-blog-summary="summary"]');
 
   /** @type {HTMLElement|null} */
-  const body = document.getElementById("articleBody");
+  const body = document.querySelector('[data-blog-summary="article-body"]');
 
   /** @type {HTMLElement[]} */
-  const sections = body ? Array.from(body.querySelectorAll('h2, h3, h4')) : [];
+  const sections = body ? Array.from(body.querySelectorAll('h2, h3, h4, h5, h6')) : [];
 
   sections.forEach(section => {
     /** @type {string} Heading text */
@@ -42,8 +56,8 @@ function initBlogSummary() {
     /** @type {string} Slugified ID */
     const id = title.trim()
       .toLowerCase()
-      .replace(/\s+/g, '-')        // Replace spaces with dashes
-      .replace(/[^\w-]+/g, '');    // Remove non-word characters
+      .replace(/\s+/g, '-')    
+      .replace(/[^\w-]+/g, '');
 
     // Assign the generated ID to the section
     section.id = id;
@@ -56,11 +70,15 @@ function initBlogSummary() {
 
     // Add headline class based on heading level
     if (section.nodeName === 'H2') {
-      link.classList.add('headline-xsmall');
+      link.classList.add('text-size-xlarge');
     } else if (section.nodeName === 'H3') {
-      link.classList.add('headline-small');
+      link.classList.add('text-size-large');
     } else if (section.nodeName === 'H4') {
-      link.classList.add('headline-regular');
+      link.classList.add('text-size-medium');
+    } else if (section.nodeName === 'H5') {
+      link.classList.add('text-size-regular');
+    } else if (section.nodeName === 'H6') {
+      link.classList.add('text-size-small');
     }
 
     /**
@@ -82,8 +100,12 @@ function initBlogSummary() {
       }
     });
 
+    // Wrap link in a div to ensure it renders on a new line
+    const linkWrapper = document.createElement('div');
+    linkWrapper.appendChild(link);
+
     if (list) {
-      list.appendChild(link);
+      list.appendChild(linkWrapper);
     }
   });
 
