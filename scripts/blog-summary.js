@@ -12,7 +12,6 @@
 
 */
 
-
 /**
  * Generates a summary navigation from article headings (h2, h3, h4)
  * and enables smooth scrolling to target sections.
@@ -25,7 +24,6 @@
  * - Smooth scrolls to target section on click
  * - On page load with hash, auto-scrolls to section
  */
-
 document.addEventListener('DOMContentLoaded', function () {
   /** @type {HTMLElement|null} */
   const list = document.getElementById("summary");
@@ -34,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const body = document.getElementById("articleBody");
 
   /** @type {HTMLElement[]} */
-  const sections = body ? Array.from(body.querySelectorAll<HTMLElement>('h2, h3, h4')) : [];
+  const sections = body ? Array.from(body.querySelectorAll('h2, h3, h4')) : [];
 
   sections.forEach(section => {
     /** @type {string} Heading text */
