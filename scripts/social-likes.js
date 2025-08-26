@@ -1,5 +1,4 @@
-/**
- * Blog Likes & Views Module
+/*! REVREBEL Blog Likes & Views Module
  *
  * Handles tracking and displaying likes & views for blog posts
  * using a Xano backend. Automatically initializes on page load.
@@ -14,6 +13,23 @@
  *      * Increment likes on click
  *      * Store liked state in localStorage and update UI
  */
+
+/*! ------------------ ADDING THE SCRIPT: ------------------ 
+
+<!-- START Blog Likes & Views Module  -->
+
+<script
+defer src="https://cdn.jsdelivr.net/gh/REVREBEL/rebel-style@main/scripts/social-likes.js"
+type="text/javascript" 
+referrerpolicy="no-referrer" 
+crossorigin="anonymous" 
+>
+</script>
+
+<!-- END Blog Likes & Views Module -->
+*/
+
+
 (function () {
   "use strict";
 
