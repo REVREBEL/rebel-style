@@ -35,7 +35,7 @@
 /**
  * Component: Share Icons Visibility via Scroll Markers
  *
- * Toggles `is-visible` on the wrapper (`aside.share-icons-wrapper`) when the
+ * Toggles `is-visible` on the wrapper (`aside.social-share_component`) when the
  * viewport "anchor line" (a fraction of the viewport height) lies between two
  * marker elements: `[data-share-start]` and `[data-share-end]`.
  *
@@ -53,7 +53,7 @@
  * - Set `window.REV_SHARE_DEBUG = true` to enable console logging.
  *
  * Markup requirements:
- * - Wrapper element:  `aside.share-icons-wrapper`
+ * - Wrapper element:  `aside.social-share_component`
  * - Start sentinel:   any element with `[data-share-start]`
  * - End sentinel:     any element with `[data-share-end]`
  */
@@ -63,7 +63,7 @@
   window.__revShareMarkersInit = true;
 
   /** @type {string} */
-  var WRAPPER_SEL = 'aside.share-icons-wrapper';
+  var WRAPPER_SEL = 'aside.social-share_component';
   /** @type {string} */
   var START_SEL   = '[data-share-start]';
   /** @type {string} */

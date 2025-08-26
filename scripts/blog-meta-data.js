@@ -45,91 +45,89 @@
       return;
     }
 
-    // Get the canonical URL from the <link> tag, falling back to the page's URL.
-    // This is the most reliable source for the page's primary URL.
-    const canonicalTag = document.querySelector('link[rel="canonical"]');
-    const pageUrl = canonicalTag ? canonicalTag.href : window.location.href;
+    /**
+     * This function builds and injects the final JSON-LD script.
+     * It's called after we've attempted to find the rich text field.
+     * @param {number|undefined} wordCount - The calculated word count.
+     */
+    function buildAndInject(wordCount) {
+      // Get the canonical URL from the <link> tag, falling back to the page's URL.
+      const canonicalTag = document.querySelector('link[rel="canonical"]');
+      const pageUrl = canonicalTag ? canonicalTag.href : window.location.href;
 
-    // Normalize author URL/@id to absolute URL
-    var authorSlug = (d.authorSlug || '').replace(/^\//, '');
-    var authorUrl = 'https://revrebel.io/author/' + authorSlug;
+      // Normalize author URL/@id to absolute URL
+      var authorSlug = (d.authorSlug || '').replace(/^\//, '');
+      var authorUrl = 'https://revrebel.io/author/' + authorSlug;
 
-    // Collect images (filter empties)
-    var images = [];
-    if (d.image1x1) images.push(d.image1x1);
-    if (d.image4x3) images.push(d.image4x3);
-    if (d.image16x9) images.push(d.image16x9);
+      // Collect images (filter empties)
+      var images = [];
+      if (d.image1x1) images.push(d.image1x1);
+      if (d.image4x3) images.push(d.image4x3);
+      if (d.image16x9) images.push(d.image16x9);
 
-    // Dates: prefer custom rev:* metas; fall back to article:* if present; emit ISO8601
-    var dp = toISO(getMeta('revrebel:date-published')) || toISO(getMeta('article:published_time'));
-    var dm = toISO(getMeta('revrebel:date-modified'))  || toISO(getMeta('article:modified_time'));
+      // Dates: prefer custom rev:* metas; fall back to article:* if present; emit ISO8601
+      var dp = toISO(getMeta('revrebel:date-published')) || toISO(getMeta('article:published_time'));
+      var dm = toISO(getMeta('revrebel:date-modified'))  || toISO(getMeta('article:modified_time'));
 
-    // Calculate word count dynamically from the rich text field.
-    // Falls back to the 'wordCount' value from the JSON data block if the element isn't found.
-    let finalWordCount;
-    const richTextField = document.getElementById("richtext-field");
-    if (richTextField) {
-      // Use innerText to get the rendered text content, which is closer to what a user sees.
-      const text = richTextField.innerText || richTextField.textContent || "";
-      // Split by whitespace and filter out empty strings from multiple spaces.
-      finalWordCount = text.split(/\s+/).filter(Boolean).length;
-    } else {
-      // Fallback to the value from the data block if the element is not present.
-      finalWordCount = d.wordCount ? parseInt(d.wordCount, 10) : undefined;
-      if (!d.wordCount) {
-        console.log('[REVREBEL JSON-LD] Note: #richtext-field not found and no wordCount in data block.');
-      }
+      var jsonld = {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": d.title,
+        "description": d.description || '',
+        "image": images,
+        "url": pageUrl,
+        "mainEntityOfPage": { "@type": "WebPage", "@id": pageUrl },
+        "author": {
+          "@type": "Person",
+          "@id": authorUrl,
+          "name": d.authorName,
+          "url": authorUrl,
+          "description": d.authorBio || undefined,
+          "image": d.authorImage ? {
+            "@type": "ImageObject",
+            "url": d.authorImage
+          } : undefined
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": d.publisherName || "CNTLShift",
+          "logo": {
+            "@type": "ImageObject",
+            "url": d.publisherLogo || "https://res.cloudinary.com/revrebel/image/upload/v1756121061/website/brand/CTRLShift_bqjn17.png",
+            "width": d.publisherLogoWidth ? parseInt(d.publisherLogoWidth, 10) : undefined,
+            "height": d.publisherLogoHeight ? parseInt(d.publisherLogoHeight, 10) : undefined
+          }
+        },
+        "datePublished": dp || undefined,
+        "dateModified": dm || undefined,
+        "articleSection": d.category || '',
+        "keywords": d.keywords || '',
+        "wordCount": wordCount
+      };
+
+      var s = document.createElement('script');
+      s.type = 'application/ld+json';
+      s.text = JSON.stringify(jsonld); // Modern browsers support .text
+      document.head.appendChild(s);
     }
 
-
-    var jsonld = {
-      "@context": "https://schema.org",
-      "@type": "BlogPosting",
-      "headline": d.title,
-      "description": d.description || '',
-      "image": images,
-      "url": pageUrl,
-      "mainEntityOfPage": { "@type": "WebPage", "@id": pageUrl },
-      "author": {
-        "@type": "Person",
-        "@id": authorUrl,
-        "name": d.authorName,
-        "url": authorUrl,
-        "description": d.authorBio || undefined,
-        "image": d.authorImage ? {
-          "@type": "ImageObject",
-          "url": d.authorImage
-        } : undefined
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": d.publisherName || "CNTLShift",
-        "logo": {
-          "@type": "ImageObject",
-          "url": d.publisherLogo || "https://res.cloudinary.com/revrebel/image/upload/v1756121061/website/brand/CTRLShift_bqjn17.png",
-          // The script will automatically include width and height if you provide them.
-          "width": d.publisherLogoWidth ? parseInt(d.publisherLogoWidth, 10) : undefined,
-          "height": d.publisherLogoHeight ? parseInt(d.publisherLogoHeight, 10) : undefined
+    // Poll for the richtext-field, as it may be rendered by Webflow after the initial 'load' event.
+    let attempts = 0;
+    const intervalId = setInterval(function() {
+      const richTextField = document.getElementById("richtext-field");
+      attempts++;
+      if (richTextField || attempts >= 15) { // Try for ~3 seconds
+        clearInterval(intervalId);
+        let finalWordCount;
+        if (richTextField) {
+          const text = richTextField.innerText || richTextField.textContent || "";
+          finalWordCount = text.split(/\s+/).filter(Boolean).length;
+        } else {
+          console.log('[REVREBEL JSON-LD] Note: #richtext-field not found after waiting. Word count will be omitted.');
         }
-      },
-      "datePublished": dp || undefined,
-      "dateModified": dm || undefined,
-      "articleSection": d.category || '',
-      "keywords": d.keywords || '',
-      "wordCount": finalWordCount
-    };
-
-    // JSON.stringify will automatically omit keys with `undefined` values,
-    // so we don't need to manually clean the object.
-
-    var s = document.createElement('script');
-    s.type = 'application/ld+json';
-    try {
-      s.text = JSON.stringify(jsonld);
-    } catch (e){
-      s.appendChild(document.createTextNode(JSON.stringify(jsonld)));
-    }
-    document.head.appendChild(s);
+        buildAndInject(finalWordCount);
+      }
+    }, 200); // Check every 200ms
   });
 })();
 
