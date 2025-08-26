@@ -1,3 +1,4 @@
+//Version 20250826 11:28AM
 (function(){
   if (window.__revJsonLdInit) return; // guard against double‑init in Preview/Code Compile
   window.__revJsonLdInit = true;
@@ -155,9 +156,10 @@
     {
     "title": "{{wf {&quot;path&quot;:&quot;name&quot;,&quot;type&quot;:&quot;PlainText&quot;\} }}",
     "description": "{{wf {&quot;path&quot;:&quot;summary&quot;,&quot;type&quot;:&quot;PlainText&quot;\} }}",
-    "image16x9": "https://res.cloudinary.com/revrebel/image/upload/{{wf {&quot;path&quot;:&quot;cloudinary-image-id&quot;,&quot;type&quot;:&quot;PlainText&quot;\} }}/ar_16:9,c_thumb,g_auto",
-    "image4x3":  "https://res.cloudinary.com/revrebel/image/upload/{{wf {&quot;path&quot;:&quot;cloudinary-image-id&quot;,&quot;type&quot;:&quot;PlainText&quot;\} }}/ar_4:3,c_thumb,g_auto",
-    "image1x1":  "https://res.cloudinary.com/revrebel/image/upload/{{wf {&quot;path&quot;:&quot;cloudinary-image-id&quot;,&quot;type&quot;:&quot;PlainText&quot;\} }}/ar_1:1,c_thumb,g_auto",
+    // Use 1.91:1 ratio (1200x630) for the main image, as it's optimal for social sharing (X, FB, LinkedIn).
+    "image16x9": "https://res.cloudinary.com/revrebel/image/upload/c_fill,w_1200,h_630/{{wf {&quot;path&quot;:&quot;cloudinary-image-id&quot;,&quot;type&quot;:&quot;PlainText&quot;\} }}",
+    "image4x3":  "https://res.cloudinary.com/revrebel/image/upload/c_crop,ar_4:3/{{wf {&quot;path&quot;:&quot;cloudinary-image-id&quot;,&quot;type&quot;:&quot;PlainText&quot;\} }}",
+    "image1x1":  "https://res.cloudinary.com/revrebel/image/upload/c_crop,ar_1:1/{{wf {&quot;path&quot;:&quot;cloudinary-image-id&quot;,&quot;type&quot;:&quot;PlainText&quot;\} }}",
     "authorName": "{{wf {&quot;path&quot;:&quot;expert-contributor:name&quot;,&quot;type&quot;:&quot;PlainText&quot;\} }}",
     "authorSlug": "{{wf {&quot;path&quot;:&quot;expert-contributor:slug&quot;,&quot;type&quot;:&quot;PlainText&quot;\} }}",
     "category": "{{wf {&quot;path&quot;:&quot;category:name&quot;,&quot;type&quot;:&quot;PlainText&quot;\} }}",

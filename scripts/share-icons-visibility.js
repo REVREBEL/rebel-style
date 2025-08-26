@@ -1,3 +1,5 @@
+//Version 20250826 11:28AM
+
 /*! ------------------ ADDING THE SCRIPT: ------------------ 
 
 <!-- START Share Icons Show/Hide -->
@@ -58,12 +60,14 @@
  * - End sentinel:     any element with `[data-share-end]`
  */
 
+
+
 (function(){
   if (window.__revShareMarkersInit) return; 
   window.__revShareMarkersInit = true;
 
   /** @type {string} */
-  var WRAPPER_SEL = 'aside.social-share_component';
+  var WRAPPER_SEL = 'aside.social-share_component ';
   /** @type {string} */
   var START_SEL   = '[data-share-start]';
   /** @type {string} */
@@ -193,11 +197,6 @@
 
     // ---------------- Public Runtime Controls ----------------
 
-    /**
-     * Adjust runtime parameters and recompute.
-     * @param {{anchor?:number, startOffset?:number, endOffset?:number}} [opts]
-     * @returns {{anchor:number, startOffset:number, endOffset:number}} New values.
-     */
     window.revShareMarkSet = function(opts){
       opts = opts || {}; 
       var changed=false;
