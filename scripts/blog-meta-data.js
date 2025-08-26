@@ -112,23 +112,49 @@
       document.head.appendChild(s);
     }
 
-    // Poll for the richtext-field, as it may be rendered by Webflow after the initial 'load' event.
-    let attempts = 0;
-    const intervalId = setInterval(function() {
-      const richTextField = document.querySelector('[data-blog-summary="article-body"]');
-      attempts++;
-      if (richTextField || attempts >= 15) { // Try for ~3 seconds
-        clearInterval(intervalId);
-        let finalWordCount;
-        if (richTextField) {
-          const text = richTextField.innerText || richTextField.textContent || "";
-          finalWordCount = text.split(/\s+/).filter(Boolean).length;
-        } else {
-          console.log('[REVREBEL JSON-LD] Note: [data-blog-summary="article-body"] not found after waiting. Word count will be omitted.');
-        }
-        buildAndInject(finalWordCount);
+    /**
+     * Waits for an element to appear in the DOM using MutationObserver.
+     * This is more robust than polling for elements that may be added late by frameworks.
+     * @param {string} selector - The CSS selector for the target element.
+     * @param {(element: HTMLElement | null) => void} callback - Called when the element is found or on timeout.
+     */
+    function waitForElement(selector, callback) {
+      const element = document.querySelector(selector);
+      if (element) {
+        callback(element);
+        return;
       }
-    }, 200); // Check every 200ms
+
+      const observer = new MutationObserver(() => {
+        const el = document.querySelector(selector);
+        if (el) {
+          observer.disconnect();
+          callback(el);
+        }
+      });
+
+      observer.observe(document.body, { childList: true, subtree: true });
+
+      // Fallback timeout to ensure the script always completes.
+      setTimeout(() => {
+        observer.disconnect();
+        // Final check before giving up
+        const el = document.querySelector(selector);
+        if (!el) callback(null); // Only call callback if element still not found
+      }, 5000); // Stop observing after 5 seconds
+    }
+
+    // Use the observer to wait for the rich text field.
+    waitForElement('[data-blog-summary="article-body"]', (richTextField) => {
+      let finalWordCount;
+      if (richTextField) {
+        const text = richTextField.innerText || richTextField.textContent || "";
+        finalWordCount = text.split(/\s+/).filter(Boolean).length;
+      } else {
+        console.log('[REVREBEL JSON-LD] Note: [data-blog-summary="article-body"] not found after waiting. Word count will be omitted.');
+      }
+      buildAndInject(finalWordCount);
+    });
   });
 })();
 
