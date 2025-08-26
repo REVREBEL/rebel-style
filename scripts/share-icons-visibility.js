@@ -1,6 +1,7 @@
 /*! ------------------ ADDING THE SCRIPT: ------------------ 
 
-<!-- START Calculate Read Time -->
+<!-- START Share Icons Show/Hide -->
+
 <script
   defer
   src="https://cdn.jsdelivr.net/gh/REVREBEL/rebel-style@main/scripts/share-icons-visibility.js"
@@ -8,10 +9,28 @@
   referrerpolicy="no-referrer"
   crossorigin="anonymous">
 </script>
-<!-- END Calculate Read Time -->
+
+<!-- END Share Icons Show/Hide  -->
 
 */
 
+
+/*! USAGE (marker-controlled show/hide):------------------ 
+
+1) In Webflow, add two tiny Divs anywhere in the page:
+   - one with Custom Attribute:  name = data-share-start, value = (blank)
+   - one with Custom Attribute:  name = data-share-end,   value = (blank)
+   Place them where you want the share block to BEGIN and STOP being visible.
+
+2) Include this file ONCE Before </body>. Keep only one visibility controller on the page.
+
+3) Tweak live from console: revShareMarkSet({ anchor: 0.5, startOffset: 0, endOffset: 0 })
+   - anchor: fraction of viewport height used as the trigger line (0=top, 1=bottom). Default 0.5 (midpoint).
+   - startOffset / endOffset: px adjustments to nudge the boundaries.
+   - force always on/off: revShareForceAlways(true/false)
+   - enable logs: window.REV_SHARE_DEBUG = true
+-->
+*/
 
 /**
  * Component: Share Icons Visibility via Scroll Markers
