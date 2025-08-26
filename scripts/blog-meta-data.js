@@ -3,8 +3,11 @@
   window.__revJsonLdInit = true;
 
   function ready(fn){
-    if (document.readyState !== 'loading') fn();
-    else document.addEventListener('DOMContentLoaded', fn);
+    // Use 'load' instead of 'DOMContentLoaded'. This waits for all resources (like
+    // other scripts that might render content) to finish loading. It's more patient
+    // and increases the chance of finding elements like '#richtext-field'.
+    if (document.readyState === 'complete') fn();
+    else window.addEventListener('load', fn);
   }
 
   function getMeta(name){
@@ -138,16 +141,12 @@
   1. Add the external script to your site/page settings (e.g., Before </body>).
      This loads the code on your page.
      For best results (especially for debugging), include all attributes:
-
-     <!-- START Blog Meta-Data Capture + Publish-->
-     <script
+     `<script
         defer
         src="https://cdn.jsdelivr.net/gh/REVREBEL/rebel-style@main/scripts/blog-meta-data.js"
         type="text/javascript"
         referrerpolicy="no-referrer"
-        crossorigin="anonymous">
-      </script>
-      <!-- END Blog Meta-Data Capture + Publish  -->
+        crossorigin="anonymous"></script>`
 
   2. Place the following JSON data block in an HTML Embed on your page, also
      before the </body> tag.
@@ -155,7 +154,7 @@
      IMPORTANT: Keep the id exactly "revrebel-post".
 
   <script type="application/json" id="revrebel-post">
-  {
+    {
     "title": "{{wf {&quot;path&quot;:&quot;name&quot;,&quot;type&quot;:&quot;PlainText&quot;\} }}",
     "description": "{{wf {&quot;path&quot;:&quot;summary&quot;,&quot;type&quot;:&quot;PlainText&quot;\} }}",
     "image16x9": "https://res.cloudinary.com/revrebel/image/upload/{{wf {&quot;path&quot;:&quot;cloudinary-image-id&quot;,&quot;type&quot;:&quot;PlainText&quot;\} }}/ar_16:9,c_thumb,g_auto",
@@ -165,15 +164,14 @@
     "authorSlug": "{{wf {&quot;path&quot;:&quot;expert-contributor:slug&quot;,&quot;type&quot;:&quot;PlainText&quot;\} }}",
     "category": "{{wf {&quot;path&quot;:&quot;category:name&quot;,&quot;type&quot;:&quot;PlainText&quot;\} }}",
     "keywords": "{{wf {&quot;path&quot;:&quot;keywords&quot;,&quot;type&quot;:&quot;PlainText&quot;\} }}",
-
-    "publisherName": "CNTLShift",
+    "publisherName": "CNTLShift, The REVREBEL Blog",
     // For publisherLogo, use a square (1:1) logo, at least 112x112 pixels.
-    "publisherLogo": "https://.../path-to-your-CNTLShift-logo.png",
+    "publisherLogo": "https://res.cloudinary.com/revrebel/image/upload/v1756121061/website/brand/CTRLShift_bqjn17.png",
     "publisherLogoWidth": "512",
     "publisherLogoHeight": "512",
-    "authorBio": "{{wf {&quot;path&quot;:&quot;expert-contributor:bio&quot;,&quot;type&quot;:&quot;PlainText&quot;\} }}",
     // For authorImage, use a clear, square (1:1) headshot, at least 300x300 pixels.
-    "authorImage": "{{wf {&quot;path&quot;:&quot;expert-contributor:profile-image&quot;,&quot;type&quot;:&quot;ImageRef&quot;\} }}"
+    "authorBio": "{{wf {&quot;path&quot;:&quot;expert-contributor:bio-summary&quot;,&quot;type&quot;:&quot;PlainText&quot;\} }}",
+    "authorImage": "{{wf {&quot;path&quot;:&quot;expert-contributor:picture-url&quot;,&quot;type&quot;:&quot;Link&quot;\} }}"
   }
   </script>
 
@@ -186,8 +184,8 @@
 
   4. (Recommended) For dynamic word counts, ensure your main blog post
      content element (the Rich Text element in Webflow) has the ID
-     "richtext-field". The script will automatically calculate the word
-     count. The "wordCount" property in the JSON block above will be
-     used as a fallback if this element is not found.
+     "richtext-field". The script will automatically calculate the word count
+     from this element. You do not need to add a "wordCount" property to the
+     JSON data block above.
 
 */
