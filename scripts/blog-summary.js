@@ -19,12 +19,13 @@
  * Behavior:
  * - Scans #articleBody for h2, h3, h4 elements
  * - Assigns IDs based on heading text (slugified)
- * - Creates navigation links inside #summary
- * - Applies indentation for nested headings (h3, h4)
+ * - Creates navigation links inside #summary using your existing CSS classes
+ *   (.link, .headline-xsmall, .headline-small, .headline-regular)
  * - Smooth scrolls to target section on click
  * - On page load with hash, auto-scrolls to section
  */
-document.addEventListener('DOMContentLoaded', function () {
+
+function initBlogSummary() {
   /** @type {HTMLElement|null} */
   const list = document.getElementById("summary");
 
@@ -51,13 +52,15 @@ document.addEventListener('DOMContentLoaded', function () {
     const link = document.createElement('a');
     link.innerHTML = title;
     link.href = `#${id}`;
-    link.style.textDecoration = "none";
+    link.classList.add('link'); // Base class for all summary links
 
-    // Indent links based on heading level
-    if (section.nodeName === 'H3') {
-      link.style.paddingLeft = '20px';
+    // Add headline class based on heading level
+    if (section.nodeName === 'H2') {
+      link.classList.add('headline-xsmall');
+    } else if (section.nodeName === 'H3') {
+      link.classList.add('headline-small');
     } else if (section.nodeName === 'H4') {
-      link.style.paddingLeft = '40px';
+      link.classList.add('headline-regular');
     }
 
     /**
@@ -100,4 +103,12 @@ document.addEventListener('DOMContentLoaded', function () {
       }, 0);
     }
   }
-});
+}
+
+// Use 'load' instead of 'DOMContentLoaded' to ensure all content,
+// especially from frameworks like Webflow, is fully rendered.
+if (document.readyState === 'complete') {
+  initBlogSummary();
+} else {
+  window.addEventListener('load', initBlogSummary);
+}
