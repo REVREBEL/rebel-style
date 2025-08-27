@@ -2,12 +2,12 @@
   "use strict";
 
   /**
-   * Finds emoji characters within elements having a `.category-label` class
-   * and wraps them in a <span> with a specified class to allow for custom font styling.
+   * Finds emoji characters within elements that have a `data-font-emoji` attribute
+   * and wraps them in a <span> with a class specified in that attribute.
    * This is useful for ensuring consistent emoji rendering across browsers.
    */
   function initEmojiStyling() {
-    document.querySelectorAll('.category-label').forEach(el => {
+    document.querySelectorAll('[data-font-emoji]').forEach(el => {
       // Get the class to apply from the data attribute.
       const emojiClass = el.getAttribute('data-font-emoji');
       if (!emojiClass) return; // Skip if no class is specified.
