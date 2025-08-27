@@ -1,3 +1,4 @@
+// 20250827 7:30AM
 /*! REVREBEL Blog Likes & Views Module
  *
  * Handles tracking and displaying likes & views for blog posts
@@ -33,10 +34,15 @@ crossorigin="anonymous"
 (function () {
   "use strict";
 
-  /**
-   * Initializes the module after DOM is ready.
-   */
-  function init() {
+  // This function contains the entire application logic.
+  // It will only be called once the necessary elements are on the page.
+  function run() {
+    // --- Guard against re-initialization ---
+    if (window.__social_likes_active) return;
+    window.__social_likes_active = true;
+
+    console.log("[Likes] Elements found. Running main logic.");
+
     /** @constant {string} BASE - The base URL for the Xano API. */
     const BASE = "https://x8ki-letl-twmt.n7.xano.io/api:cYJipMDK";
 
@@ -92,21 +98,19 @@ crossorigin="anonymous"
      * @param {boolean} liked - Whether it's liked.
      */
     const setLikedUI = (slug, liked) => {
-      const btns = likeBtnElsBySlug.get(slug) || [];
+      // Re-query the DOM each time to handle dynamic content.
+      const btns = $all(`[data-like-btn="${slug}"]`);
       btns.forEach((btn) => {
         btn.classList.toggle("is-liked", liked);
+        // Find and update the icon and text elements inside this specific button.
+        const icon = btn.querySelector(".like-icon");
+        if (icon) icon.classList.toggle("is-liked", liked);
+        const postText = btn.querySelector(".like-post");
+        if (postText) postText.classList.toggle("is-like", liked);
       });
-      // Find and update the icon and text elements inside the button.
-      const icon = btn.querySelector(".like-icon");
-      const postText = btn.querySelector(".like-post");
-      if (icon) icon.classList.toggle("is-liked", liked);
-      // Use .is-like for the text element, as requested.
-      if (postText) postText.classList.toggle("is-like", liked);
-    });
-  };
+    };
 
-
-  /**
+    /**
    * Update likes text in DOM.
    * @param {string} slug - Post slug.
    * @param {number} likes - Number of likes.
@@ -118,6 +122,7 @@ crossorigin="anonymous"
     });
   };
 
+  
   /**
    * Update views text in DOM (always prefixed with +).
    * @param {string} slug - Post slug.
@@ -304,11 +309,38 @@ crossorigin="anonymous"
     }
   });
 }
+  
+  /**
+   * This function boots the application. It waits for the like/view
+   * elements to appear before running the main logic. This handles
+   * content that is loaded dynamically.
+   */
+  function boot() {
+    if (window.__social_likes_booted) return;
+    const selector = '[data-like-btn], [data-post-likes], [data-post-views]';
 
-  // Auto-init on DOM ready
+    // If elements are already here, run immediately.
+    if (document.querySelector(selector)) {
+      window.__social_likes_booted = true;
+      run();
+      return;
+    }
+
+    // Otherwise, wait for them to be added to the DOM.
+    const observer = new MutationObserver((mutations, obs) => {
+      if (document.querySelector(selector)) {
+        window.__social_likes_booted = true;
+        run();
+        obs.disconnect(); // Important: run only once.
+      }
+    });
+
+    observer.observe(document.body, { childList: true, subtree: true });
+  }
+
   if (document.readyState === "loading") {
-  document.addEventListener("DOMContentLoaded", init);
+  document.addEventListener("DOMContentLoaded", boot);
 } else {
-  init();
+  boot();
 }
-}) ();
+})();
