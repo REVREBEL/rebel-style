@@ -63,6 +63,12 @@
       const text = richTextField ? (richTextField.innerText || richTextField.textContent || "") : "";
       const finalWordCount = text.split(/\s+/).filter(Boolean).length;
 
+      // Store the result on a global object for any scripts that load late.
+      window.__revrebel_wc = {
+        count: finalWordCount > 0 ? finalWordCount : undefined,
+        ready: true
+      };
+
       // Dispatch a custom event with the word count.
       document.dispatchEvent(new CustomEvent('wordCountReady', {
         detail: { count: finalWordCount > 0 ? finalWordCount : undefined }
