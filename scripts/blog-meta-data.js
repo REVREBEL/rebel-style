@@ -1,15 +1,8 @@
-//Version 20250826 4:28PM
 (function(){
   if (window.__revJsonLdInit) return; // guard against double‑init in Preview/Code Compile
   window.__revJsonLdInit = true;
 
-  function ready(fn){
-    // Use 'load' instead of 'DOMContentLoaded'. This waits for all resources (like
-    // other scripts that might render content) to finish loading. It's more patient
-    // and increases the chance of finding elements like '#richtext-field'.
-    if (document.readyState === 'complete') fn();
-    else window.addEventListener('load', fn);
-  }
+  console.log('[Meta Data] Script loaded. Waiting for "wordCountReady" event...');
 
   function getMeta(name){
     var el = document.querySelector('meta[name="' + name + '"]');
@@ -23,11 +16,18 @@
     return d.toISOString();
   }
 
-  ready(function(){
+  /**
+   * This function listens for the 'wordCountReady' event, then builds and
+   * injects the final JSON-LD script.
+   */
+  document.addEventListener('wordCountReady', function(event) {
+    const wordCount = event.detail.count;
+    console.log(`[Meta Data] "wordCountReady" event received. Word count: ${wordCount || 'N/A'}.`);
+
     // The CMS data blob must exist and be valid JSON
     var dataEl = document.getElementById('revrebel-post');
     if (!dataEl){
-      console.error('[REVREBEL JSON-LD] #revrebel-post element not found');
+      console.error('[Meta Data] Exit: #revrebel-post element not found');
       return;
     }
 
@@ -36,125 +36,75 @@
     try {
       d = JSON.parse(raw);
     } catch (e){
-      console.error('[REVREBEL JSON-LD] Invalid JSON inside #revrebel-post:', e);
+      console.error('[Meta Data] Exit: Invalid JSON inside #revrebel-post:', e);
       return;
     }
 
     // Validate essentials
     if (!d || !d.title || !d.authorName || !d.authorSlug){
-      console.error('[REVREBEL JSON-LD] Missing required fields (title, authorName, authorSlug).');
+      console.error('[Meta Data] Exit: Missing required fields (title, authorName, authorSlug).');
       return;
     }
 
-    /**
-     * This function builds and injects the final JSON-LD script.
-     * It's called after we've attempted to find the rich text field.
-     * @param {number|undefined} wordCount - The calculated word count.
-     */
-    function buildAndInject(wordCount) {
-      // Get the canonical URL from the <link> tag, falling back to the page's URL.
-      const canonicalTag = document.querySelector('link[rel="canonical"]');
-      const pageUrl = canonicalTag ? canonicalTag.href : window.location.href;
+    // Get the canonical URL from the <link> tag, falling back to the page's URL.
+    const canonicalTag = document.querySelector('link[rel="canonical"]');
+    const pageUrl = canonicalTag ? canonicalTag.href : window.location.href;
 
-      // Normalize author URL/@id to absolute URL
-      var authorSlug = (d.authorSlug || '').replace(/^\//, '');
-      var authorUrl = 'https://revrebel.io/author/' + authorSlug;
+    // Normalize author URL/@id to absolute URL
+    var authorSlug = (d.authorSlug || '').replace(/^\//, '');
+    var authorUrl = 'https://revrebel.io/author/' + authorSlug;
 
-      // Collect images (filter empties)
-      var images = [];
-      if (d.image1x1) images.push(d.image1x1);
-      if (d.image4x3) images.push(d.image4x3);
-      if (d.image16x9) images.push(d.image16x9);
+    // Collect images (filter empties)
+    var images = [];
+    if (d.image1x1) images.push(d.image1x1);
+    if (d.image4x3) images.push(d.image4x3);
+    if (d.image16x9) images.push(d.image16x9);
 
-      // Dates: prefer custom rev:* metas; fall back to article:* if present; emit ISO8601
-      var dp = toISO(getMeta('revrebel:date-published')) || toISO(getMeta('article:published_time'));
-      var dm = toISO(getMeta('revrebel:date-modified'))  || toISO(getMeta('article:modified_time'));
+    // Dates: prefer custom rev:* metas; fall back to article:* if present; emit ISO8601
+    var dp = toISO(getMeta('revrebel:date-published')) || toISO(getMeta('article:published_time'));
+    var dm = toISO(getMeta('revrebel:date-modified'))  || toISO(getMeta('article:modified_time'));
 
-      var jsonld = {
-        "@context": "https://schema.org",
-        "@type": "BlogPosting",
-        "headline": d.title,
-        "description": d.description || '',
-        "image": images,
-        "url": pageUrl,
-        "mainEntityOfPage": { "@type": "WebPage", "@id": pageUrl },
-        "author": {
-          "@type": "Person",
-          "@id": authorUrl,
-          "name": d.authorName,
-          "url": authorUrl,
-          "description": d.authorBio || undefined,
-          "image": d.authorImage ? {
-            "@type": "ImageObject",
-            "url": d.authorImage
-          } : undefined
-        },
-        "publisher": {
-          "@type": "Organization",
-          "name": d.publisherName || "CNTLShift",
-          "logo": {
-            "@type": "ImageObject",
-            "url": d.publisherLogo || "https://res.cloudinary.com/revrebel/image/upload/v1756121061/website/brand/CTRLShift_bqjn17.png",
-            "width": d.publisherLogoWidth ? parseInt(d.publisherLogoWidth, 10) : undefined,
-            "height": d.publisherLogoHeight ? parseInt(d.publisherLogoHeight, 10) : undefined
-          }
-        },
-        "datePublished": dp || undefined,
-        "dateModified": dm || undefined,
-        "articleSection": d.category || '',
-        "keywords": d.keywords || '',
-        "wordCount": wordCount
-      };
-
-      var s = document.createElement('script');
-      s.type = 'application/ld+json';
-      s.text = JSON.stringify(jsonld); // Modern browsers support .text
-      document.head.appendChild(s);
-    }
-
-    /**
-     * Waits for an element to appear in the DOM using MutationObserver.
-     * This is more robust than polling for elements that may be added late by frameworks.
-     * @param {string} selector - The CSS selector for the target element.
-     * @param {(element: HTMLElement | null) => void} callback - Called when the element is found or on timeout.
-     */
-    function waitForElement(selector, callback) {
-      const element = document.querySelector(selector);
-      if (element) {
-        callback(element);
-        return;
-      }
-
-      const observer = new MutationObserver(() => {
-        const el = document.querySelector(selector);
-        if (el) {
-          observer.disconnect();
-          callback(el);
+    var jsonld = {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": d.title,
+      "description": d.description || '',
+      "image": images,
+      "url": pageUrl,
+      "mainEntityOfPage": { "@type": "WebPage", "@id": pageUrl },
+      "author": {
+        "@type": "Person",
+        "@id": authorUrl,
+        "name": d.authorName,
+        "url": authorUrl,
+        "description": d.authorBio || undefined,
+        "image": d.authorImage ? {
+          "@type": "ImageObject",
+          "url": d.authorImage
+        } : undefined
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": d.publisherName || "CNTLShift",
+        "logo": {
+          "@type": "ImageObject",
+          "url": d.publisherLogo || "https://res.cloudinary.com/revrebel/image/upload/v1756121061/website/brand/CTRLShift_bqjn17.png",
+          "width": d.publisherLogoWidth ? parseInt(d.publisherLogoWidth, 10) : undefined,
+          "height": d.publisherLogoHeight ? parseInt(d.publisherLogoHeight, 10) : undefined
         }
-      });
+      },
+      "datePublished": dp || undefined,
+      "dateModified": dm || undefined,
+      "articleSection": d.category || '',
+      "keywords": d.keywords || '',
+      "wordCount": wordCount
+    };
 
-      observer.observe(document.body, { childList: true, subtree: true });
-
-      // Fallback timeout to ensure the script always completes.
-      setTimeout(() => {
-        observer.disconnect();
-        // Final check before giving up
-        const el = document.querySelector(selector);
-        if (!el) callback(null); // Only call callback if element still not found
-      }, 5000); // Stop observing after 5 seconds
-    }
-
-    // Use the observer to wait for the rich text field.
-    waitForElement('[data-blog-summary="article-body"]', (richTextField) => {
-      let finalWordCount;
-      if (richTextField) {
-        const text = richTextField.innerText || richTextField.textContent || "";
-        finalWordCount = text.split(/\s+/).filter(Boolean).length;
-      } else {
-        console.log('[REVREBEL JSON-LD] Note: [data-blog-summary="article-body"] not found after waiting. Word count will be omitted.');
-      }
-      buildAndInject(finalWordCount);
-    });
+    var s = document.createElement('script');
+    s.type = 'application/ld+json';
+    s.text = JSON.stringify(jsonld); // Modern browsers support .text
+    document.head.appendChild(s);
+    console.log('[Meta Data] Success: JSON-LD script injected into <head>.');
   });
 })();
 
@@ -163,8 +113,13 @@
   -- HOW TO USE IN WEBFLOW -------------------------------------------------
   --------------------------------------------------------------------------
 
-  1. Add the external script to your site/page settings (e.g., Before </body>).
-     This loads the code on your page.
+  1. Add these two scripts to your site/page settings (e.g., Before </body>).
+     The word-count script MUST come before the meta-data script.
+
+     `<script defer src=".../path/to/word-count.js"></script>`
+     `<script defer src=".../path/to/blog-meta-data.js"></script>`
+
+     Or, for external hosting with better debugging:
      For best results (especially for debugging), include all attributes:
      `<script
         defer
@@ -209,9 +164,8 @@
   <meta name="revrebel:date-modified"  content="{{wf {&quot;path&quot;:&quot;updated-on&quot;,&quot;transformers&quot;:[{&quot;name&quot;:&quot;date&quot;,&quot;arguments&quot;:[&quot;MMM DD, YYYY&quot;]\}],&quot;type&quot;:&quot;Date&quot;\} }}">
 
   4. (Recommended) For dynamic word counts, ensure your main blog post
-     content element (the Rich Text element in Webflow) has the ID
-     `data-blog-summary="article-body"`. The script will automatically
-     calculate the word count from this element. You do not need to add a
-     "wordCount" property to the JSON data block above.
+     content element (the Rich Text element in Webflow) has the attribute
+     `data-ms-code="reading-article"`. The `word-count.js` script will
+     automatically calculate the word count from this element.
 
 */

@@ -1,43 +1,3 @@
-/*! ------------------ ADDING THE SCRIPT: ------------------
-
-<!-- START Create Blog Summary -->
-<script
-  defer
-  src="https://cdn.jsdelivr.net/gh/REVREBEL/rebel-style@main/scripts/blog-summary.js"
-  type="text/javascript"
-  referrerpolicy="no-referrer"
-  crossorigin="anonymous">
-</script>
-<!-- END Create Blog Summary -->
-
-*/
-
-/*! ------------------ HOW TO USE IN WEBFLOW ---------------
-
-<!-- 1. Add a container for the summary links -->
-<div data-blog-summary="summary">
-  <!-- Links will be generated here -->
-</div>
-
-<!-- 2. Add the attribute to your article's rich text body -->
-<div class="w-richtext" data-blog-summary="article-body">
-  <!-- Your Webflow Rich Text element with H2, H3, H4, H5, H6 headings -->
-</div>
-
-*/
-
-/**
- * Generates a summary navigation from article headings (h2, h3, h4, h5, h6)
- * and enables smooth scrolling to target sections.
- *
- * Behavior:
- * - Scans [data-blog-summary="article-body"] for h2, h3, h4, h5, h6 elements
- * - Assigns IDs based on heading text (slugified)
- * - Creates navigation links inside [data-blog-summary="summary"] using your existing CSS classes
- *   (.link, .headline-xsmall, .headline-small, .headline-regular)
- * - Smooth scrolls to target section on click
- * - On page load with hash, auto-scrolls to section
- */
 
 function initBlogSummary() {
   /** @type {HTMLElement|null} */
@@ -66,7 +26,7 @@ function initBlogSummary() {
     const link = document.createElement('a');
     link.innerHTML = title;
     link.href = `#${id}`;
-    link.classList.add('link'); // Base class for all summary links
+    link.classList.add('blog-link'); // Base class for all summary links
 
     // Add headline class based on heading level
     if (section.nodeName === 'H2') {
@@ -134,3 +94,4 @@ if (document.readyState === 'complete') {
 } else {
   window.addEventListener('load', initBlogSummary);
 }
+
