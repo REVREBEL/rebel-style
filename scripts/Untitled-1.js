@@ -2,33 +2,56 @@
   "use strict";
 
   /**
-   * Finds emoji characters within elements that have a `data-font-emoji` attribute
-   * and wraps them in a <span> with a class specified in that attribute.
-   * This is useful for ensuring consistent emoji rendering across browsers.
+   * Finds emoji characters within a given element and its descendants
+   * and wraps them in a <span> with a class specified in a data attribute.
+   * @param {Element} rootElement - The element to scan for emoji containers.
    */
-  function initEmojiStyling() {
-    document.querySelectorAll('[data-font-emoji]').forEach(el => {
+  function processElements(rootElement) {
+    // Find all elements with the data attribute, including the root if it has it.
+    const elements = rootElement.matches('[data-font-emoji]')
+      ? [rootElement, ...rootElement.querySelectorAll('[data-font-emoji]')]
+      : rootElement.querySelectorAll('[data-font-emoji]');
+
+    elements.forEach(el => {
       // Get the class to apply from the data attribute.
       const emojiClass = el.getAttribute('data-font-emoji');
-      if (!emojiClass) return; // Skip if no class is specified.
+      // Skip if no class is specified or if we've already styled this element.
+      if (!emojiClass || el.dataset.emojiStyled) return;
 
-      // This regex finds one or more consecutive emoji characters.
-      // The 'u' flag enables Unicode support, and 'g' finds all occurrences.
       const emojiRegex = /(\p{Extended_Pictographic}|\p{Emoji})+/ug;
 
-      // We must check for a match before modifying innerHTML to avoid potential issues.
       if (emojiRegex.test(el.textContent)) {
-        // Replace all found emojis with a span wrapping the emoji.
-        // `$&` in the replacement string is a special pattern that inserts the matched substring.
         el.innerHTML = el.innerHTML.replace(emojiRegex, `<span class="${emojiClass}">$&</span>`);
+        el.dataset.emojiStyled = 'true'; // Mark as processed to prevent re-running.
       }
     });
   }
 
-  // Run the script after the DOM is fully loaded.
+  /**
+   * Initializes the emoji styling and sets up a MutationObserver to handle
+   * dynamically added content.
+   */
+  function init() {
+    // Process any elements that are already on the page.
+    processElements(document.body);
+
+    // Observe the body for new nodes being added.
+    const observer = new MutationObserver((mutationsList) => {
+      for (const mutation of mutationsList) {
+        if (mutation.type === 'childList') {
+          mutation.addedNodes.forEach(node => {
+            if (node.nodeType === Node.ELEMENT_NODE) processElements(node);
+          });
+        }
+      }
+    });
+
+    observer.observe(document.body, { childList: true, subtree: true });
+  }
+
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initEmojiStyling);
+    document.addEventListener('DOMContentLoaded', init);
   } else {
-    initEmojiStyling();
+    init();
   }
 })();
