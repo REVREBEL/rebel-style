@@ -1,0 +1,394 @@
+.card.shadow-blue.width_400px {
+    display: block;
+    position: static;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    width: 400px;
+    height: 566.656px;
+    margin: 0px;
+    padding: 0px;
+    border: 0px none rgba(0, 0, 0, 0.5);
+    color: rgb(51, 51, 51);
+    background-color: rgba(0, 0, 0, 0);
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.card-body {
+    display: block;
+    position: static;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    width: 400px;
+    height: 566.656px;
+    margin: 0px;
+    padding: 0px;
+    border: 0px none rgb(51, 51, 51);
+    color: rgb(51, 51, 51);
+    background-color: rgba(0, 0, 0, 0);
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.card-content_wrapper {
+    display: flex;
+    position: relative;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    width: 400px;
+    height: 300px;
+    margin: 0px;
+    padding: 32px;
+    border: 0px none rgb(51, 51, 51);
+    color: rgb(51, 51, 51);
+    background-color: rgba(0, 0, 0, 0);
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.blog_meta.flex-align_auto {
+    display: flex;
+    position: static;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    width: 336px;
+    height: 23.2031px;
+    margin: 0px;
+    padding: 0px;
+    border: 0px none rgb(51, 51, 51);
+    color: rgb(51, 51, 51);
+    background-color: rgba(0, 0, 0, 0);
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.blog_category {
+    display: block;
+    position: static;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    width: 67.5625px;
+    height: 23.2031px;
+    margin: 0px;
+    padding: 0px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(22, 54, 102);
+    font-size: 15.2px;
+    font-weight: 700;
+}
+
+.blog_date {
+    display: block;
+    position: static;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    width: 83.6562px;
+    height: 16px;
+    margin: 0px;
+    padding: 0px;
+    border: 0px none rgb(113, 201, 197);
+    color: rgb(113, 201, 197);
+    background-color: rgba(0, 0, 0, 0);
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.headline-small.font-weight-semibold.padding-top_xsmall {
+    display: block;
+    position: static;
+    top: 0%;
+    right: 0%;
+    bottom: auto;
+    left: 0%;
+    width: 336px;
+    height: 54.6719px;
+    margin: 0px 0px 6.4464px;
+    padding: 16px 0px 0px;
+    border: 0px none rgb(22, 54, 102);
+    color: rgb(22, 54, 102);
+    background-color: rgba(0, 0, 0, 0);
+    font-size: 42.976px;
+    font-weight: 600;
+}
+
+.blog_items-wrapper.margin-top-auto.w-clearfix {
+    display: flex;
+    position: static;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    width: 336px;
+    height: 21.2031px;
+    margin: 122.484px 0px 0px;
+    padding: 0px;
+    border: 0px none rgb(51, 51, 51);
+    color: rgb(51, 51, 51);
+    background-color: rgba(0, 0, 0, 0);
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.button-link_underline.w-inline-block {
+    display: block;
+    position: relative;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    width: 74.0156px;
+    height: 21.2031px;
+    margin: 0px;
+    padding: 0px;
+    border: 0px none rgba(0, 0, 0, 0);
+    color: rgb(22, 54, 102);
+    background-color: rgba(0, 0, 0, 0);
+    font-size: 13.6px;
+    font-weight: 700;
+}
+
+.cta-link {
+    display: flex;
+    position: static;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    width: 74.0156px;
+    height: 15.2031px;
+    margin: 0px;
+    padding: 0px 1px;
+    border: 0px none rgb(22, 54, 102);
+    color: rgb(22, 54, 102);
+    background-color: rgba(0, 0, 0, 0);
+    font-size: 15.2px;
+    font-weight: 700;
+}
+
+.link-line {
+    display: block;
+    position: static;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    width: 74.0156px;
+    height: 4px;
+    margin: 2px 0px 0px;
+    padding: 0px;
+    border: 0px none rgb(22, 54, 102);
+    color: rgb(22, 54, 102);
+    background-color: rgb(22, 54, 102);
+    font-size: 13.6px;
+    font-weight: 700;
+}
+
+.js-preview-btn.js-preview-btn.tooltip-content.w-inline-block {
+    display: block;
+    position: static;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    width: 159.391px;
+    height: 17px;
+    margin: 2px 0px 0px 10px;
+    padding: 0px;
+    border: 0px solid rgba(0, 0, 0, 0);
+    color: rgb(0, 0, 238);
+    background-color: rgba(0, 0, 0, 0);
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.like-button {
+    display: flex;
+    position: static;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    width: 92.5938px;
+    height: 21.2031px;
+    margin: 0px;
+    padding: 0px;
+    border: 0px none rgb(51, 51, 51);
+    color: rgb(51, 51, 51);
+    background-color: rgba(0, 0, 0, 0);
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.views-wrapper {
+    display: flex;
+    position: static;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    width: 53.375px;
+    height: 21px;
+    margin: 0px;
+    padding: 0px;
+    border: 0px none rgb(51, 51, 51);
+    color: rgb(51, 51, 51);
+    background-color: rgba(0, 0, 0, 0);
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.views {
+    display: block;
+    position: static;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    width: 30.5312px;
+    height: 21px;
+    margin: 0px;
+    padding: 1px 0px 0px;
+    border: 0px none rgb(22, 54, 102);
+    color: rgb(22, 54, 102);
+    background-color: rgba(0, 0, 0, 0);
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.views-count {
+    display: block;
+    position: static;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    width: 17.8438px;
+    height: 20px;
+    margin: 0px 0px 0px 5px;
+    padding: 0px;
+    border: 0px none rgb(22, 54, 102);
+    color: rgb(22, 54, 102);
+    background-color: rgba(0, 0, 0, 0);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.likes-wrapper {
+    display: flex;
+    position: static;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    width: 34.2188px;
+    height: 20px;
+    margin: 0px;
+    padding: 0px;
+    border: 0px none rgb(51, 51, 51);
+    color: rgb(51, 51, 51);
+    background-color: rgba(0, 0, 0, 0);
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.like-icon {
+    display: block;
+    position: static;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    width: 20px;
+    height: 20px;
+    margin: 0px;
+    padding: 0px;
+    border: 0px none rgb(22, 54, 102);
+    color: rgb(22, 54, 102);
+    background-color: rgba(0, 0, 0, 0);
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.likes-count {
+    display: block;
+    position: static;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    width: 9.21875px;
+    height: 20px;
+    margin: 0px 0px 0px 5px;
+    padding: 0px;
+    border: 0px none rgb(22, 54, 102);
+    color: rgb(22, 54, 102);
+    background-color: rgba(0, 0, 0, 0);
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.image-cover.radius_top-0.ratio_3x2 {
+    display: block;
+    position: relative;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    width: 400px;
+    height: 266.656px;
+    margin: 0px;
+    padding: 0px;
+    border: 0px none rgb(51, 51, 51);
+    color: rgb(51, 51, 51);
+    background-color: rgba(0, 0, 0, 0);
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.image-animated.radius-top_none.ratio_3x2 {
+    display: inline-block;
+    position: relative;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    width: 400px;
+    height: 266.656px;
+    margin: 0px;
+    padding: 0px;
+    border: 0px none rgb(51, 51, 51);
+    color: rgb(51, 51, 51);
+    background-color: rgba(0, 0, 0, 0);
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.margin-left_auto {
+    display: block;
+    position: static;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    width: 0px;
+    height: 566.656px;
+    margin: 0px 0px 0px 1020px;
+    padding: 0px;
+    border: 0px none rgb(51, 51, 51);
+    color: rgb(51, 51, 51);
+    background-color: rgba(0, 0, 0, 0);
+    font-size: 14px;
+    font-weight: 400;
+}

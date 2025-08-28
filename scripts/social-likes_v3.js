@@ -98,8 +98,9 @@ crossorigin="anonymous"
      * @param {boolean} liked - Whether it's liked.
      */
     const setLikedUI = (slug, liked) => {
-      // Re-query the DOM each time to handle dynamic content.
-      const btns = $all(`[data-like-btn="${slug}"]`);
+      // Target only the main button wrappers to avoid issues with nested data attributes.
+      // This makes the script more resilient to markup variations.
+      const btns = $all(`.like-button[data-like-btn="${slug}"]`);
       btns.forEach((btn) => {
         btn.classList.toggle("is-liked", liked);
         // Find and update the icon and text elements inside this specific button.

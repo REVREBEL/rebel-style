@@ -71,6 +71,7 @@
        * @constant {string}
        */
       const BASE = "https://x8ki-letl-twmt.n7.xano.io/api:cYJipMDK";
+ 
 
       // --- DOM & Utility Helpers ---
 
@@ -182,7 +183,7 @@
        */
       const createRecord = async (slug) => {
         try {
-          const r = await fetch(`${BASE}/stats/${encodeURIComponent(slug)}`, {
+          const r = await fetch(`${BASE}/blog_stats/${encodeURIComponent(slug)}`, {
             method: "POST",
           });
           if (!r.ok) {
@@ -201,11 +202,11 @@
        * found, it triggers the createRecord function.
        * @async
        * @param {string} slug - The slug of the post.
-       * @returns {Promise<object|null>} The stats object, or null on failure.
+       * @returns {Promise<object|null>} The blog_stats object, or null on failure.
        */
       const fetchStats = async (slug) => {
         try {
-          const r = await fetch(`${BASE}/stats/${encodeURIComponent(slug)}`);
+          const r = await fetch(`${BASE}/blog_stats/${encodeURIComponent(slug)}`);
           if (r.ok) return await r.json();
 
           const responseText = await r.text();
@@ -214,10 +215,10 @@
             return await createRecord(slug);
           }
 
-          console.error(`[Likes] API Error fetching stats for "${slug}": ${r.status}`, responseText);
+          console.error(`[Likes] API Error fetching blog_stats for "${slug}": ${r.status}`, responseText);
           return null;
         } catch (e) {
-          console.error(`[Likes] Network error fetching stats for "${slug}":`, e);
+          console.error(`[Likes] Network error fetching blog_stats for "${slug}":`, e);
           return null;
         }
       };
@@ -237,7 +238,7 @@
         if (now - lastMs <= DAY) return null; // Guard: Already viewed recently.
 
         try {
-          const r = await fetch(`${BASE}/views/${encodeURIComponent(slug)}`, {
+          const r = await fetch(`${BASE}/blog_stats_views/${encodeURIComponent(slug)}`, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ record_type: "view" }),
@@ -247,7 +248,7 @@
           localStorage.setItem(key, String(now));
           return data;
         } catch (e) {
-          console.error(`[Likes] Error incrementing views for "${slug}":`, e);
+          console.error(`[Likes] Error incrementing blog_stats_views for "${slug}":`, e);
           return null;
         }
       };
@@ -256,11 +257,11 @@
        * Increments the like count for a slug via a POST request.
        * @async
        * @param {string} slug - The slug of the post to update.
-       * @returns {Promise<object|null>} The updated stats object, or null.
+       * @returns {Promise<object|null>} The updated blog_stats_likes object, or null.
        */
       const incrementLikes = async (slug) => {
         try {
-          const r = await fetch(`${BASE}/likes/${encodeURIComponent(slug)}`, {
+          const r = await fetch(`${BASE}/blog_stats_likes/${encodeURIComponent(slug)}`, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ record_type: "like" }),
