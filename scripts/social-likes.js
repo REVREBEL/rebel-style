@@ -53,13 +53,6 @@
  * view and like counts, while preserving user interactions across multiple pages through local storage.
  */
   (function () {
-    "use strict";
-
-    /**
-     * This function contains the entire application logic. It is called by the
-     * bootstrapper only after the necessary elements are present in the DOM.
-     * @returns {void}
-     */
     function run() {
       // --- Application-level Guards ---
       if (window.__social_likes_active) return;
@@ -210,8 +203,8 @@
 
           const responseText = await r.text();
           if (responseText.includes("Slug Not Found")) {
-            console.log(`[Likes] Record for "${slug}" not found. Attempting to create.`);
-            return await createRecord(slug);
+            console.log(`[Likes] Record for "${slug}" not found. Counts will be 0.`);
+            return { likes: 0, views: 0 }; // Return default stats for new posts
           }
 
           console.error(`[Likes] API Error fetching stats for "${slug}": ${r.status}`, responseText);
@@ -381,6 +374,4 @@
     } else {
       boot();
     }
-  })();
 }());
-
