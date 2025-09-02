@@ -4,7 +4,7 @@
  * 'wordCountReady' event with the result.
  *
  * Usage:
- *  - Add `data-ms-code="reading-article"` to the rich text container.
+ *  - Add `data-wordcount="reading-article"` to the rich text container.
  *  - Listen for the 'wordCountReady' event on the document.
  *    e.g., document.addEventListener('wordCountReady', (e) => {
  *      console.log('Word count is:', e.detail.count);
@@ -59,7 +59,7 @@
 
   function init() {
     console.log('[Word Count] Initializing...');
-    waitForElement('[data-ms-code="reading-article"]', (richTextField) => {
+    waitForElement('[data-wordcount="reading-article"]', (richTextField) => {
       const text = richTextField ? (richTextField.innerText || richTextField.textContent || "") : "";
       const finalWordCount = text.split(/\s+/).filter(Boolean).length;
 
