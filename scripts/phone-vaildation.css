@@ -1,0 +1,10 @@
+/*# ------------------ ADDING THE SCRIPT: ------------------ 
+<!-- START Phone Vaildation-->
+<link href="https://cdn.jsdelivr.net/gh/REVREBEL/rebel-style@main/scripts/phone-vaildation.css" rel="stylesheet">"
+<!--  Phone Vaildation -->
+*/
+
+html:not(.wf-design-mode) [x-cloak],html.wf-design-mode :not(.uncloak):not([uncloak])>[x-cloak]:not(.uncloak):not([uncloak]){display:none}html.wf-design-mode [x-data]{outline:1px dashed #8ac0cf7f}
+
+/*# sourceMappingURL=phone-vaildation.css.map */
+
