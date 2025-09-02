@@ -2,7 +2,7 @@
 
 <!-- START Webflow Apline ->
 <script
-defer src="https://cdn.jsdelivr.net/gh/REVREBEL/rebel-style@main/scripts/webflow-apline.js"
+defer src="https://cdn.jsdelivr.net/gh/REVREBEL/rebel-style@main/scripts/webflow-alpine.js"
 type="text/javascript" 
 referrerpolicy="no-referrer" 
 crossorigin="anonymous" 
