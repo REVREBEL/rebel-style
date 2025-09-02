@@ -2,7 +2,7 @@
 ADD IN THE HEADER
 <!-- START Grained Effect -->
 <script
-defer src="https://cdn.jsdelivr.net/npm/grained/dist/grained.min.js"
+defer src="https://cdn.jsdelivr.net/gh/REVREBEL/rebel-style@main/scripts/grained.js"
 type="text/javascript" 
 referrerpolicy="no-referrer" 
 crossorigin="anonymous" 
