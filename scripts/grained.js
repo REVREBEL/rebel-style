@@ -35,7 +35,7 @@ ADD BEFORE BODY
 
 </script>
 <!-- END Grained Effect -->
-
+*/
 
 /*! Grained.js 
 * Author : Sarath Saleem  - https://github.com/sarathsaleem 
