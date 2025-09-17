@@ -1,103 +1,144 @@
-$icon-airbus: "\ea01";
-$icon-airport: "\ea02";
-$icon-airtram: "\ea03";
-$icon-alarm-clock: "\ea04";
-$icon-analyze: "\ea05";
-$icon-approval: "\ea06";
-$icon-bank-note: "\ea07";
-$icon-bar-chart: "\ea08";
-$icon-bed: "\ea09";
-$icon-blownhorn: "\ea0a";
-$icon-brainstorming: "\ea0b";
-$icon-brief-case: "\ea0c";
-$icon-buggy: "\ea0d";
-$icon-calculator: "\ea0e";
-$icon-camera: "\ea0f";
-$icon-camper: "\ea10";
-$icon-chat: "\ea11";
-$icon-checkbox-checked: "\ea12";
-$icon-christmas-star: "\ea13";
-$icon-clipboard: "\ea14";
-$icon-compass: "\ea15";
-$icon-confetti: "\ea16";
-$icon-crown: "\ea17";
-$icon-data-sheet: "\ea18";
-$icon-data-transer: "\ea19";
-$icon-discount: "\ea1a";
-$icon-dollar-bill: "\ea1b";
-$icon-drinks: "\ea1c";
-$icon-edit: "\ea1d";
-$icon-email: "\ea1e";
-$icon-end-of-month: "\ea1f";
-$icon-faq: "\ea20";
-$icon-filling-cabinet: "\ea21";
-$icon-film-reel: "\ea22";
-$icon-five-dive: "\ea23";
-$icon-flow-chart: "\ea24";
-$icon-four-dice: "\ea25";
-$icon-gear: "\ea26";
-$icon-get-quote: "\ea27";
-$icon-graph-preso: "\ea28";
-$icon-headset: "\ea29";
-$icon-heart: "\ea2a";
-$icon-help: "\ea2b";
-$icon-image: "\ea2c";
-$icon-in-love: "\ea2d";
-$icon-increase: "\ea2e";
-$icon-labtop-with-cursor: "\ea2f";
-$icon-lake: "\ea30";
-$icon-launch: "\ea31";
-$icon-list-pad: "\ea32";
-$icon-low-price: "\ea33";
-$icon-measure: "\ea34";
-$icon-money-box: "\ea35";
-$icon-more: "\ea36";
-$icon-new-label: "\ea37";
-$icon-old-computer: "\ea38";
-$icon-one-dice: "\ea39";
-$icon-pad: "\ea3a";
-$icon-phone-agent: "\ea3b";
-$icon-pie-chart: "\ea3c";
-$icon-pine-trees: "\ea3d";
-$icon-plane: "\ea3e";
-$icon-planner: "\ea3f";
-$icon-play-video: "\ea40";
-$icon-poll: "\ea41";
-$icon-popular: "\ea42";
-$icon-profile: "\ea43";
-$icon-record: "\ea44";
-$icon-revenue-meeting: "\ea45";
-$icon-room-service: "\ea46";
-$icon-sale: "\ea47";
-$icon-sd-100: "\ea48";
-$icon-settings: "\ea49";
-$icon-shopping-cart: "\ea4a";
-$icon-ski-resort: "\ea4b";
-$icon-slr-camera: "\ea4c";
-$icon-sms: "\ea4d";
-$icon-spaceman: "\ea4e";
-$icon-stationery: "\ea4f";
-$icon-statistics: "\ea50";
-$icon-strategy: "\ea51";
-$icon-study: "\ea52";
-$icon-sunglasses: "\ea53";
-$icon-super-mario: "\ea54";
-$icon-table: "\ea55";
-$icon-tablet: "\ea56";
-$icon-target: "\ea57";
-$icon-technical-support: "\ea58";
-$icon-today: "\ea59";
-$icon-tree-structure: "\ea5a";
-$icon-us-dollar: "\ea5b";
-$icon-users: "\ea5c";
-$icon-video-chat: "\ea5d";
-$icon-vintage-camera: "\ea5e";
-$icon-winter: "\ea5f";
+$icon-air-tram: "\ea01";
+$icon-airbus: "\ea02";
+$icon-airplane: "\ea03";
+$icon-airport: "\ea04";
+$icon-airtram: "\ea05";
+$icon-alarm-clock: "\ea06";
+$icon-analyze: "\ea07";
+$icon-approval: "\ea08";
+$icon-artboard-1-copy-12: "\ea09";
+$icon-astriek: "\ea0a";
+$icon-bank-note: "\ea0b";
+$icon-bar-chart: "\ea0c";
+$icon-bed: "\ea0d";
+$icon-blownhorn: "\ea0e";
+$icon-brainstorming: "\ea0f";
+$icon-brief-case: "\ea10";
+$icon-buggy: "\ea11";
+$icon-calculator: "\ea12";
+$icon-camera: "\ea13";
+$icon-camper: "\ea14";
+$icon-chat: "\ea15";
+$icon-chat-bubble: "\ea16";
+$icon-chat-love: "\ea17";
+$icon-checkbox-checked: "\ea18";
+$icon-christmas-star: "\ea19";
+$icon-clock: "\ea1a";
+$icon-coconut-cocktail: "\ea1b";
+$icon-code: "\ea1c";
+$icon-color-palette: "\ea1d";
+$icon-compass: "\ea1e";
+$icon-computer-graph: "\ea1f";
+$icon-confetti: "\ea20";
+$icon-crown: "\ea21";
+$icon-data-sheet: "\ea22";
+$icon-data-transer: "\ea23";
+$icon-dice-five-side: "\ea24";
+$icon-dice-four-side: "\ea25";
+$icon-dice-one-side: "\ea26";
+$icon-discount: "\ea27";
+$icon-dollar-bill: "\ea28";
+$icon-drinks: "\ea29";
+$icon-edit_1: "\ea2a";
+$icon-email: "\ea2b";
+$icon-end-of-month: "\ea2c";
+$icon-faq: "\ea2d";
+$icon-filling-cabinet: "\ea2e";
+$icon-film-reel: "\ea2f";
+$icon-flow-chart: "\ea30";
+$icon-game-over: "\ea31";
+$icon-gear: "\ea32";
+$icon-graph: "\ea33";
+$icon-headset: "\ea34";
+$icon-heart: "\ea35";
+$icon-help: "\ea36";
+$icon-image: "\ea37";
+$icon-in-love: "\ea38";
+$icon-increase: "\ea39";
+$icon-keep-calm-dnd: "\ea3a";
+$icon-labtop-with-cursor: "\ea3b";
+$icon-lake: "\ea3c";
+$icon-laptop: "\ea3d";
+$icon-last-day-of-month: "\ea3e";
+$icon-launch: "\ea3f";
+$icon-list-pad: "\ea40";
+$icon-low-price: "\ea41";
+$icon-luggage: "\ea42";
+$icon-map: "\ea43";
+$icon-money-box: "\ea44";
+$icon-more: "\ea45";
+$icon-mountian: "\ea46";
+$icon-mushroom: "\ea47";
+$icon-new-label: "\ea48";
+$icon-notepad: "\ea49";
+$icon-notepad-with-notes: "\ea4a";
+$icon-notepad-with-pen: "\ea4b";
+$icon-old-computer: "\ea4c";
+$icon-pad: "\ea4d";
+$icon-palm-tree: "\ea4e";
+$icon-party-time: "\ea4f";
+$icon-percentage: "\ea50";
+$icon-phone-agent: "\ea51";
+$icon-picture: "\ea52";
+$icon-pie-chart: "\ea53";
+$icon-piggy: "\ea54";
+$icon-pine-tree: "\ea55";
+$icon-plane: "\ea56";
+$icon-planner: "\ea57";
+$icon-play-video: "\ea58";
+$icon-poll: "\ea59";
+$icon-presentation: "\ea5a";
+$icon-process: "\ea5b";
+$icon-profile: "\ea5c";
+$icon-projection-screen: "\ea5d";
+$icon-quotes: "\ea5e";
+$icon-record: "\ea5f";
+$icon-resort-destination: "\ea60";
+$icon-rocket: "\ea61";
+$icon-room-service: "\ea62";
+$icon-sale-label: "\ea63";
+$icon-sd-100: "\ea64";
+$icon-settings: "\ea65";
+$icon-shopping-cart: "\ea66";
+$icon-ski-resort: "\ea67";
+$icon-sky-mask: "\ea68";
+$icon-sky-maskorig: "\ea69";
+$icon-slr-camera: "\ea6a";
+$icon-sms: "\ea6b";
+$icon-snow-ski: "\ea6c";
+$icon-snowflake: "\ea6d";
+$icon-social-platforms: "\ea6e";
+$icon-spa-rocks: "\ea6f";
+$icon-spa-towel: "\ea70";
+$icon-spaceman: "\ea71";
+$icon-star: "\ea72";
+$icon-stationery: "\ea73";
+$icon-statistics: "\ea74";
+$icon-strategy: "\ea75";
+$icon-street-map: "\ea76";
+$icon-study: "\ea77";
+$icon-sun-glasses: "\ea78";
+$icon-sunglasses: "\ea79";
+$icon-super-mario: "\ea7a";
+$icon-table: "\ea7b";
+$icon-tablet: "\ea7c";
+$icon-technical-support: "\ea7d";
+$icon-today: "\ea7e";
+$icon-transfer: "\ea7f";
+$icon-tree-structure: "\ea80";
+$icon-university: "\ea81";
+$icon-us-dollar: "\ea82";
+$icon-users: "\ea83";
+$icon-video: "\ea84";
+$icon-video-chat: "\ea85";
+$icon-vintage-camera: "\ea86";
+$icon-waiting: "\ea87";
+$icon-winter: "\ea88";
 
 @font-face {
   font-family: "rebel-icons";
   src: url("../font/rebel-icons.eot");
-  src: url("../font/rebel-icons.eot?hj9idl#iefix") format("embedded-opentype"), url("../font/rebel-icons.woff2?hj9idl") format("woff2"), url("../font/rebel-icons.woff?hj9idl") format("woff"), url("../font/rebel-icons.ttf?hj9idl") format("truetype"), url("../font/rebel-icons.svg?hj9idl#rebel-icons") format("svg");
+  src: url("../font/rebel-icons.eot?fybv66#iefix") format("embedded-opentype"), url("../font/rebel-icons.woff2?fybv66") format("woff2"), url("../font/rebel-icons.woff?fybv66") format("woff"), url("../font/rebel-icons.ttf?fybv66") format("truetype"), url("../font/rebel-icons.svg?fybv66#rebel-icons") format("svg");
   font-style: normal;
   font-weight: 400;
 }
@@ -121,288 +162,411 @@ $icon-winter: "\ea5f";
   @extend %icon;
 }
 
-.icon-airbus::before {
+.icon-air-tram::before {
   content: "\ea01";
 }
-.icon-airport::before {
+.icon-airbus::before {
   content: "\ea02";
 }
-.icon-airtram::before {
+.icon-airplane::before {
   content: "\ea03";
 }
-.icon-alarm-clock::before {
+.icon-airport::before {
   content: "\ea04";
 }
-.icon-analyze::before {
+.icon-airtram::before {
   content: "\ea05";
 }
-.icon-approval::before {
+.icon-alarm-clock::before {
   content: "\ea06";
 }
-.icon-bank-note::before {
+.icon-analyze::before {
   content: "\ea07";
 }
-.icon-bar-chart::before {
+.icon-approval::before {
   content: "\ea08";
 }
-.icon-bed::before {
+.icon-artboard-1-copy-12::before {
   content: "\ea09";
 }
-.icon-blownhorn::before {
+.icon-astriek::before {
   content: "\ea0a";
 }
-.icon-brainstorming::before {
+.icon-bank-note::before {
   content: "\ea0b";
 }
-.icon-brief-case::before {
+.icon-bar-chart::before {
   content: "\ea0c";
 }
-.icon-buggy::before {
+.icon-bed::before {
   content: "\ea0d";
 }
-.icon-calculator::before {
+.icon-blownhorn::before {
   content: "\ea0e";
 }
-.icon-camera::before {
+.icon-brainstorming::before {
   content: "\ea0f";
 }
-.icon-camper::before {
+.icon-brief-case::before {
   content: "\ea10";
 }
-.icon-chat::before {
+.icon-buggy::before {
   content: "\ea11";
 }
-.icon-checkbox-checked::before {
+.icon-calculator::before {
   content: "\ea12";
 }
-.icon-christmas-star::before {
+.icon-camera::before {
   content: "\ea13";
 }
-.icon-clipboard::before {
+.icon-camper::before {
   content: "\ea14";
 }
-.icon-compass::before {
+.icon-chat::before {
   content: "\ea15";
 }
-.icon-confetti::before {
+.icon-chat-bubble::before {
   content: "\ea16";
 }
-.icon-crown::before {
+.icon-chat-love::before {
   content: "\ea17";
 }
-.icon-data-sheet::before {
+.icon-checkbox-checked::before {
   content: "\ea18";
 }
-.icon-data-transer::before {
+.icon-christmas-star::before {
   content: "\ea19";
 }
-.icon-discount::before {
+.icon-clock::before {
   content: "\ea1a";
 }
-.icon-dollar-bill::before {
+.icon-coconut-cocktail::before {
   content: "\ea1b";
 }
-.icon-drinks::before {
+.icon-code::before {
   content: "\ea1c";
 }
-.icon-edit::before {
+.icon-color-palette::before {
   content: "\ea1d";
 }
-.icon-email::before {
+.icon-compass::before {
   content: "\ea1e";
 }
-.icon-end-of-month::before {
+.icon-computer-graph::before {
   content: "\ea1f";
 }
-.icon-faq::before {
+.icon-confetti::before {
   content: "\ea20";
 }
-.icon-filling-cabinet::before {
+.icon-crown::before {
   content: "\ea21";
 }
-.icon-film-reel::before {
+.icon-data-sheet::before {
   content: "\ea22";
 }
-.icon-five-dive::before {
+.icon-data-transer::before {
   content: "\ea23";
 }
-.icon-flow-chart::before {
+.icon-dice-five-side::before {
   content: "\ea24";
 }
-.icon-four-dice::before {
+.icon-dice-four-side::before {
   content: "\ea25";
 }
-.icon-gear::before {
+.icon-dice-one-side::before {
   content: "\ea26";
 }
-.icon-get-quote::before {
+.icon-discount::before {
   content: "\ea27";
 }
-.icon-graph-preso::before {
+.icon-dollar-bill::before {
   content: "\ea28";
 }
-.icon-headset::before {
+.icon-drinks::before {
   content: "\ea29";
 }
-.icon-heart::before {
+.icon-edit_1::before {
   content: "\ea2a";
 }
-.icon-help::before {
+.icon-email::before {
   content: "\ea2b";
 }
-.icon-image::before {
+.icon-end-of-month::before {
   content: "\ea2c";
 }
-.icon-in-love::before {
+.icon-faq::before {
   content: "\ea2d";
 }
-.icon-increase::before {
+.icon-filling-cabinet::before {
   content: "\ea2e";
 }
-.icon-labtop-with-cursor::before {
+.icon-film-reel::before {
   content: "\ea2f";
 }
-.icon-lake::before {
+.icon-flow-chart::before {
   content: "\ea30";
 }
-.icon-launch::before {
+.icon-game-over::before {
   content: "\ea31";
 }
-.icon-list-pad::before {
+.icon-gear::before {
   content: "\ea32";
 }
-.icon-low-price::before {
+.icon-graph::before {
   content: "\ea33";
 }
-.icon-measure::before {
+.icon-headset::before {
   content: "\ea34";
 }
-.icon-money-box::before {
+.icon-heart::before {
   content: "\ea35";
 }
-.icon-more::before {
+.icon-help::before {
   content: "\ea36";
 }
-.icon-new-label::before {
+.icon-image::before {
   content: "\ea37";
 }
-.icon-old-computer::before {
+.icon-in-love::before {
   content: "\ea38";
 }
-.icon-one-dice::before {
+.icon-increase::before {
   content: "\ea39";
 }
-.icon-pad::before {
+.icon-keep-calm-dnd::before {
   content: "\ea3a";
 }
-.icon-phone-agent::before {
+.icon-labtop-with-cursor::before {
   content: "\ea3b";
 }
-.icon-pie-chart::before {
+.icon-lake::before {
   content: "\ea3c";
 }
-.icon-pine-trees::before {
+.icon-laptop::before {
   content: "\ea3d";
 }
-.icon-plane::before {
+.icon-last-day-of-month::before {
   content: "\ea3e";
 }
-.icon-planner::before {
+.icon-launch::before {
   content: "\ea3f";
 }
-.icon-play-video::before {
+.icon-list-pad::before {
   content: "\ea40";
 }
-.icon-poll::before {
+.icon-low-price::before {
   content: "\ea41";
 }
-.icon-popular::before {
+.icon-luggage::before {
   content: "\ea42";
 }
-.icon-profile::before {
+.icon-map::before {
   content: "\ea43";
 }
-.icon-record::before {
+.icon-money-box::before {
   content: "\ea44";
 }
-.icon-revenue-meeting::before {
+.icon-more::before {
   content: "\ea45";
 }
-.icon-room-service::before {
+.icon-mountian::before {
   content: "\ea46";
 }
-.icon-sale::before {
+.icon-mushroom::before {
   content: "\ea47";
 }
-.icon-sd-100::before {
+.icon-new-label::before {
   content: "\ea48";
 }
-.icon-settings::before {
+.icon-notepad::before {
   content: "\ea49";
 }
-.icon-shopping-cart::before {
+.icon-notepad-with-notes::before {
   content: "\ea4a";
 }
-.icon-ski-resort::before {
+.icon-notepad-with-pen::before {
   content: "\ea4b";
 }
-.icon-slr-camera::before {
+.icon-old-computer::before {
   content: "\ea4c";
 }
-.icon-sms::before {
+.icon-pad::before {
   content: "\ea4d";
 }
-.icon-spaceman::before {
+.icon-palm-tree::before {
   content: "\ea4e";
 }
-.icon-stationery::before {
+.icon-party-time::before {
   content: "\ea4f";
 }
-.icon-statistics::before {
+.icon-percentage::before {
   content: "\ea50";
 }
-.icon-strategy::before {
+.icon-phone-agent::before {
   content: "\ea51";
 }
-.icon-study::before {
+.icon-picture::before {
   content: "\ea52";
 }
-.icon-sunglasses::before {
+.icon-pie-chart::before {
   content: "\ea53";
 }
-.icon-super-mario::before {
+.icon-piggy::before {
   content: "\ea54";
 }
-.icon-table::before {
+.icon-pine-tree::before {
   content: "\ea55";
 }
-.icon-tablet::before {
+.icon-plane::before {
   content: "\ea56";
 }
-.icon-target::before {
+.icon-planner::before {
   content: "\ea57";
 }
-.icon-technical-support::before {
+.icon-play-video::before {
   content: "\ea58";
 }
-.icon-today::before {
+.icon-poll::before {
   content: "\ea59";
 }
-.icon-tree-structure::before {
+.icon-presentation::before {
   content: "\ea5a";
 }
-.icon-us-dollar::before {
+.icon-process::before {
   content: "\ea5b";
 }
-.icon-users::before {
+.icon-profile::before {
   content: "\ea5c";
 }
-.icon-video-chat::before {
+.icon-projection-screen::before {
   content: "\ea5d";
 }
-.icon-vintage-camera::before {
+.icon-quotes::before {
   content: "\ea5e";
 }
-.icon-winter::before {
+.icon-record::before {
   content: "\ea5f";
+}
+.icon-resort-destination::before {
+  content: "\ea60";
+}
+.icon-rocket::before {
+  content: "\ea61";
+}
+.icon-room-service::before {
+  content: "\ea62";
+}
+.icon-sale-label::before {
+  content: "\ea63";
+}
+.icon-sd-100::before {
+  content: "\ea64";
+}
+.icon-settings::before {
+  content: "\ea65";
+}
+.icon-shopping-cart::before {
+  content: "\ea66";
+}
+.icon-ski-resort::before {
+  content: "\ea67";
+}
+.icon-sky-mask::before {
+  content: "\ea68";
+}
+.icon-sky-maskorig::before {
+  content: "\ea69";
+}
+.icon-slr-camera::before {
+  content: "\ea6a";
+}
+.icon-sms::before {
+  content: "\ea6b";
+}
+.icon-snow-ski::before {
+  content: "\ea6c";
+}
+.icon-snowflake::before {
+  content: "\ea6d";
+}
+.icon-social-platforms::before {
+  content: "\ea6e";
+}
+.icon-spa-rocks::before {
+  content: "\ea6f";
+}
+.icon-spa-towel::before {
+  content: "\ea70";
+}
+.icon-spaceman::before {
+  content: "\ea71";
+}
+.icon-star::before {
+  content: "\ea72";
+}
+.icon-stationery::before {
+  content: "\ea73";
+}
+.icon-statistics::before {
+  content: "\ea74";
+}
+.icon-strategy::before {
+  content: "\ea75";
+}
+.icon-street-map::before {
+  content: "\ea76";
+}
+.icon-study::before {
+  content: "\ea77";
+}
+.icon-sun-glasses::before {
+  content: "\ea78";
+}
+.icon-sunglasses::before {
+  content: "\ea79";
+}
+.icon-super-mario::before {
+  content: "\ea7a";
+}
+.icon-table::before {
+  content: "\ea7b";
+}
+.icon-tablet::before {
+  content: "\ea7c";
+}
+.icon-technical-support::before {
+  content: "\ea7d";
+}
+.icon-today::before {
+  content: "\ea7e";
+}
+.icon-transfer::before {
+  content: "\ea7f";
+}
+.icon-tree-structure::before {
+  content: "\ea80";
+}
+.icon-university::before {
+  content: "\ea81";
+}
+.icon-us-dollar::before {
+  content: "\ea82";
+}
+.icon-users::before {
+  content: "\ea83";
+}
+.icon-video::before {
+  content: "\ea84";
+}
+.icon-video-chat::before {
+  content: "\ea85";
+}
+.icon-vintage-camera::before {
+  content: "\ea86";
+}
+.icon-waiting::before {
+  content: "\ea87";
+}
+.icon-winter::before {
+  content: "\ea88";
 }
