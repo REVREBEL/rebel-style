@@ -73,7 +73,7 @@
 'wght' (range from 300.0 to 700.0
 */
 @font-face {
-  font-family: 'khand-variable';
+  font-family: 'Khand';
   font-weight: 300 700;
   font-display: swap;
   font-style: normal;
@@ -230,19 +230,19 @@
 
 // Khand
 
-.khand-medium {
+.khand_medium {
     font-family: "Khand", sans-serif;
     font-weight: 500;
     font-style: normal;
   }
   
-  .khand-semibold {
+  .khand_semibold {
     font-family: "Khand", sans-serif;
     font-weight: 600;
     font-style: normal;
   }
   
-  .khand-bold {
+  .khand_bold {
     font-family: "Khand", sans-serif;
     font-weight: 700;
     font-style: normal;
@@ -250,19 +250,19 @@
   
 // General Sans
 
-  .general-sans-light {
+  .general-sans_light {
     font-family: "General Sans", sans-serif;
     font-weight: 300;
     font-style: normal;
   }
   
-  .general-sans-regular {
+  .general-sans_regular {
     font-family: "General Sans", sans-serif;
     font-weight: 400;
     font-style: normal;
   }
   
-  .general-sans-medium {
+  .general-sans_medium {
     font-family: "General Sans", sans-serif;
     font-weight: 500;
     font-style: normal;
@@ -272,19 +272,19 @@
 
   // Fira Code
 
-  .fira-code-light {
+  .fira-code_light {
     font-family: "Fira Code", sans-serif;
     font-weight: 300;
     font-style: normal;
   }
   
-   .fira-code-regular {
+   .fira-code_regular {
     font-family: "Fira Code", sans-serif;
     font-weight: 400;
     font-style: normal;
   }
 
-    .fira-code-medium {
+    .fira-code_medium {
     font-family: "Fira Code", sans-serif;
     font-weight: 500;
     font-style: normal;
@@ -293,7 +293,7 @@
 // <uniquifier>: Use a uniquifier for the class name
 // <weight>: Use a value from 300 to 700
 
-.fira-code-<uniquifier> {
+.fira-code_<uniquifier> {
   font-family: "Fira Code", monospace;
   font-optical-sizing: auto;
   font-weight: <weight>;
@@ -304,7 +304,7 @@
   // Barlow
 
 
-.barlow-black {
+.barlow_black {
   font-family: "Barlow", sans-serif;
   font-weight: 900;
   font-style: normal;
@@ -312,7 +312,7 @@
 
   // Pacifico
 
-.pacifico-regular {
+.pacifico_regular {
     font-family: "Pacifico", cursive;
     font-weight: 400;
     font-style: normal;
@@ -322,7 +322,7 @@
 // <uniquifier>: Use a uniquifier for the class name
 // <weight>: Use a value from 300 to 700
 
-.noto-emoji-<uniquifier> {
+.noto-emoji_<uniquifier> {
   font-family: "Noto Emoji", sans-serif;
   font-optical-sizing: auto;
   font-weight: <weight>;
