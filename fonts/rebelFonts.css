@@ -228,6 +228,76 @@
 }
 
 
+
+@font-face {
+  font-display: swap; 
+  font-family: 'Noto Emoji';
+  font-style: normal;
+  font-weight: 300;
+  src: url('../fonts/noto-emoji-v60-emoji-300.eot');
+  src: url('../fonts/noto-emoji-v60-emoji-300.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/noto-emoji-v60-emoji-300.woff2') format('woff2'), 
+       url('../fonts/noto-emoji-v60-emoji-300.woff') format('woff'),
+       url('../fonts/noto-emoji-v60-emoji-300.ttf') format('truetype'),
+       url('../fonts/noto-emoji-v60-emoji-300.svg#NotoEmoji') format('svg');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Noto Emoji';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/noto-emoji-v60-emoji-regular.eot');
+  src: url('../fonts/noto-emoji-v60-emoji-regular.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/noto-emoji-v60-emoji-regular.woff2') format('woff2'),
+       url('../fonts/noto-emoji-v60-emoji-regular.woff') format('woff'),
+       url('../fonts/noto-emoji-v60-emoji-regular.ttf') format('truetype'),
+       url('../fonts/noto-emoji-v60-emoji-regular.svg#NotoEmoji') format('svg');
+}
+
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Noto Emoji';
+  font-style: normal;
+  font-weight: 500;
+  src: url('../fonts/noto-emoji-v60-emoji-500.eot');
+  src: url('../fonts/noto-emoji-v60-emoji-500.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/noto-emoji-v60-emoji-500.woff2') format('woff2'),
+       url('../fonts/noto-emoji-v60-emoji-500.woff') format('woff'),
+       url('../fonts/noto-emoji-v60-emoji-500.ttf') format('truetype'),
+       url('../fonts/noto-emoji-v60-emoji-500.svg#NotoEmoji') format('svg');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Noto Emoji';
+  font-style: normal;
+  font-weight: 600;
+  src: url('../fonts/noto-emoji-v60-emoji-600.eot');
+  src: url('../fonts/noto-emoji-v60-emoji-600.eot?#iefix') format('embedded-opentype'), 
+       url('../fonts/noto-emoji-v60-emoji-600.woff2') format('woff2'),
+       url('../fonts/noto-emoji-v60-emoji-600.woff') format('woff'),
+       url('../fonts/noto-emoji-v60-emoji-600.ttf') format('truetype'),
+       url('../fonts/noto-emoji-v60-emoji-600.svg#NotoEmoji') format('svg'); 
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Noto Emoji';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/noto-emoji-v60-emoji-700.eot');
+  src: url('../fonts/noto-emoji-v60-emoji-700.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/noto-emoji-v60-emoji-700.woff2') format('woff2'),
+       url('../fonts/noto-emoji-v60-emoji-700.woff') format('woff'),
+       url('../fonts/noto-emoji-v60-emoji-700.ttf') format('truetype'),
+       url('../fonts/noto-emoji-v60-emoji-700.svg#NotoEmoji') format('svg');
+}
+
+
+
+
+
 // Khand
 
 .khand_medium {
