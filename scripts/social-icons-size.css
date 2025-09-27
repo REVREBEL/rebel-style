@@ -14,3 +14,60 @@
 </style>
 
 <!-- END: Social Button -->
+
+
+
+<!--  Used to Component "Social Button" -->
+
+<style>
+  /* SMALL SIZE */
+  .button[data-button-size="small"] {
+    font-size: var(--_buttons---small-buttons--sm-btn-text-size);
+    padding-top: var(--_buttons---small-buttons--sm-btn-padding-top);
+    padding-bottom: var(--_buttons---small-buttons--sm-btn-padding-bottom);
+    padding-left: var(--_buttons---small-buttons--sm-btn-padding-left);
+    padding-right: var(--_buttons---small-buttons--sm-btn-padding-right);
+    border-top-width: var(--_buttons---small-buttons--sm-btn-border-width);
+    border-bottom-width: var(--_buttons---small-buttons--sm-btn-border-width);
+    border-left-width: var(--_buttons---small-buttons--sm-btn-border-width);
+    border-right-width: var(--_buttons---small-buttons--sm-btn-border-width);
+    border-top-left-radius: var(--_buttons---small-buttons--sm-btn-radius);
+    border-top-right-radius: var(--_buttons---small-buttons--sm-btn-radius);
+    border-bottom-left-radius: var(--_buttons---small-buttons--sm-btn-radius);
+    border-bottom-right-radius: var(--_buttons---small-buttons--sm-btn-radius);
+  }
+  /* NORMAL SIZE */
+  .button[data-button-size="normal"] {
+    font-size: var(--_buttons---base-buttons--btn-font-size);
+    padding-top: var(--_buttons---base-buttons--btn-padding-top);
+    padding-bottom: var(--_buttons---base-buttons--btn-padding-bottom);
+    padding-left: var(--_buttons---base-buttons--btn-padding-left);
+    padding-right: var(--_buttons---base-buttons--btn-padding-right);
+    border-top-width: var(--_buttons---all-buttons--btn-border-width);
+    border-bottom-width: var(--_buttons---all-buttons--btn-border-width);
+    border-left-width: var(--_buttons---all-buttons--btn-border-width);
+    border-right-width: var(--_buttons---all-buttons--btn-border-width);
+    border-top-left-radius: var(--_buttons---all-buttons--btn-radius);
+    border-top-right-radius: var(--_buttons---all-buttons--btn-radius);
+    border-bottom-left-radius: var(--_buttons---all-buttons--btn-radius);
+    border-bottom-right-radius: var(--_buttons---all-buttons--btn-radius);
+  }
+  /* LARGE SIZE */
+  .button[data-button-size="big"] {
+    font-size: var(--_buttons---large-buttons--lg-btn-text-size);
+    padding-top: var(--_buttons---large-buttons--lg-btn-padding-top);
+    padding-bottom: var(--_buttons---large-buttons--lg-btn-padding-bottom);
+    padding-left: var(--_buttons---large-buttons--lg-btn-padding-left);
+    padding-right: var(--_buttons---large-buttons--lg-btn-padding-right);
+    border-top-width: var(--_buttons---large-buttons--lg-btn-border-width);
+    border-bottom-width: var(--_buttons---large-buttons--lg-btn-border-width);
+    border-left-width: var(--_buttons---large-buttons--lg-btn-border-width);
+    border-right-width: var(--_buttons---large-buttons--lg-btn-border-width);
+    border-top-left-radius: var(--_buttons---large-buttons--lg-btn-radius);
+    border-top-right-radius: var(--_buttons---large-buttons--lg-btn-radius);
+    border-bottom-left-radius: var(--_buttons---large-buttons--lg-btn-radius);
+    border-bottom-right-radius: var(--_buttons---large-buttons--lg-btn-radius);
+  }
+</style>
+
+<!-- END: Social Button -->
