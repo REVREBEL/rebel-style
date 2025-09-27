@@ -1,0 +1,16 @@
+<!-- START: Social Button -->
+<!--  Used to Component "Social Button" -->
+
+<style>
+.socials_component-button[data-icon-size="1x1"] { width: 1rem!important; height: 1rem!important; }
+.socials_component-button[data-icon-size="2x2"] { width: 2rem!important; height: 2rem!important; }
+.socials_component-button[data-icon-size="3x3"] { width: 3rem!important; height: 3rem!important; }
+.socials_component-button[data-icon-size="4x4"] { width: 4rem!important; height: 4rem!important; }
+
+.socials_icon-size[data-icon-size="1x1"] { width: 1rem!important; height: 1rem!important; }
+.socials_icon-size[data-icon-size="2x2"] { width: 2rem!important; height: 2rem!important; }
+.socials_icon-size[data-icon-size="3x3"] { width: 3rem!important; height: 3rem!important; }
+.socials_icon-size[data-icon-size="4x4"] { width: 4rem!important; height: 4rem!important; }
+</style>
+
+<!-- END: Social Button -->
