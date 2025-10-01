@@ -1,0 +1,66 @@
+
+/* 
+ * Applies a color filter to elements with both 'icon' and '{COLOR}' class.
+ * The filter uses a combination of invert, sepia, saturate, hue-rotate, brightness, and contrast
+ * to achieve the desired purple hue effect on the icon.
+ */
+ 
+/* 
+ * Gradients
+ */
+.bg-gradient-yellow-red {
+  background-image: linear-gradient(to right, #faca78, #fabc6e, #f9ae66, #f8a060, #f6915c, #f48759, #f17d56, #ee7254, #eb6a50, #e7624d, #e4594a, #e05047);
+}
+
+.bg-gradient-blue-green {
+  background-image: linear-gradient(to right, #27498b, #145491, #005e95, #006897, #007198, #067b9c, #1785a0, #278fa3, #3a9dac, #4cacb4, #5ebabd, #71c9c5);
+}
+
+.bg-red-purple {
+  background-image: linear-gradient(to right, #f37d59, #f07555, #ec6d51, #e9654e, #e55c4b, #df554f, #d84e53, #d04856, #c2455f, #b14565, #a04569, #8e456a);
+}
+
+.bg-yellow-purple {
+  background-image: linear-gradient(to right, #faca78, #fabc6e, #f9ae66, #f8a060, #f6915c, #f0835e, #e97660, #e06963, #ce5d68, #ba536b, #a54c6c, #8e456a);
+}
+
+.bg-yellow-red {
+  background-image: linear-gradient(to right, #faca78, #fabc6e, #f9ae66, #f8a060, #f6915c, #f48759, #f17d56, #ee7254, #eb6a50, #e7624d, #e4594a, #e05047);
+}
+
+.bg-blue-red {
+  background-image: linear-gradient(to right, #27498b, #494788, #604583, #72447d, #804375, #8e4372, #9b446e, #a64568, #b74563, #c7475c, #d54a53, #e05047);
+}
+
+.is-rebel,
+.text-rebel {
+  background-image: linear-gradient(to right, #27498b, #145491, #005e95, #006897, #007198, #00789b, #007f9d, #00869f, #008ea5, #0096ab, #009eb1, #00a6b6, #71c9c5, #7aceb5, #8fd2a2, #abd38e, #ccd17e, #dbca73, #ebc16d, #fab86b, #f9aa64, #f89b5e, #f68c5b, #f37d59, #f37d59, #f07555, #ec6d51, #e9654e, #e55c4b, #df554f, #d84e53, #d04856, #c2455f, #b14565, #a04569, #8e456a);
+}
+
+
+@media screen and (max-width: 1132px) {
+  .footer_contact-wrapper.margin_left-auto {
+    flex-flow: column;
+    margin-left: unset;
+    width: 100%
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .footer_contact-wrapper.margin_left-auto {
+    flex-flow: column;
+    width: 100%
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .footer_contact-wrapper.margin_left-auto {
+    flex-flow: row;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .footer_contact-wrapper.margin_left-auto {
+    flex-flow: column;
+  }
+}
