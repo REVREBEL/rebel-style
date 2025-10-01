@@ -1,3 +1,19 @@
+/**
+/*! REVREBEL Emoji Styling Module (Webflow) --------------------- 
+<script
+defer src="https://cdn.jsdelivr.net/gh/REVREBEL/rebel-style@main/scripts/google-sheets-min.js"
+type="text/javascript" 
+referrerpolicy="no-referrer" 
+crossorigin="anonymous" 
+>
+</script>
+
+*/
+
+/**
+<!-- START Google Sheets Module  -->
+*/
+
 !function(e) {
     "function" == typeof define && define.amd ? define(e) : e()
 }((function() {
