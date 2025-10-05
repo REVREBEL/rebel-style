@@ -35,7 +35,7 @@
 */
 
 /**
- * Component: Share Icons Visibility via Scroll Markers
+ * Component: PageNav Visibility via Scroll Markers
  *
  * Toggles `is-visible` on the wrapper (`aside.page-nav_wrapper`) when the
  * viewport "anchor line" (a fraction of the viewport height) lies between two

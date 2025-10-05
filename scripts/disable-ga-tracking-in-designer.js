@@ -7,6 +7,7 @@
  * Webflow Editor or Designer mode, ensuring your analytics data stays clean.
  * 
  * ------------------ ADDING THE SCRIPT ------------------
+ * 
  * - Place the script in: Project Settings → Custom Code → <head> section.
  * - Replace the placeholder Measurement ID with your actual Google Analytics 4 (GA4) ID.
  *   Example: G-XXXXXXXXXX

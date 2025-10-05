@@ -1,0 +1,167 @@
+
+<!-- START Whitelisting Tool for Google Analytics   -->
+/**
+ * Webflow Whitelisting Tool for Google Analytics (GA4).
+ * 
+ * This script prevents Google Analytics from tracking activity while using
+ * Webflow Editor or Designer mode, ensuring your analytics data stays clean.
+ * Replace this value with your actual GA4 ID.
+ * @type {string}
+ */
+var measurementID = 'G-VF5Z5N3FMD';
+/**
+ * Checks if the current environment is Webflow Editor or Designer.
+ * @returns {boolean} True if in Editor or Designer mode, otherwise false.
+ */
+function isWebflowEditorOrDesigner() {
+  return window.location.search.includes('?edit') || window.WebflowEditor;
+}
+/**
+ * Disables Google Analytics tracking in Webflow Editor/Designer mode
+ * by setting the global GA disable flag for the current Measurement ID.
+*/
+if (isWebflowEditorOrDesigner()) {
+  window['ga-disable-' + measurementID] = true;
+  console.log('Google Analytics disabled for Webflow Editor/Designer mode.');
+}
+/**
+ * Custom Web Component: <wf-join-attr>
+ * 
+ * Dynamically applies category name, text color, and background color
+ * as class names and inline styles to its target element.
+ * 
+*/
+<!-- END Whitelisting Tool for Google Analytics   -->
+
+<!-- START Blog Category Tags  -->
+<script
+  defer
+  src="https://cdn.jsdelivr.net/gh/REVREBEL/rebel-style@main/scripts/blog-category-tags.js"
+  type="text/javascript"
+  referrerpolicy="no-referrer"
+  crossorigin="anonymous">
+</script>
+<!-- END Blog Category Tags  -->
+
+<!-- START Polyfill for CSS `color-mix(in srgb, ...)  -->
+/**
+ * Polyfill for CSS `color-mix(in srgb, ...)` fallbacks.
+ * 
+ * - If the browser supports `color-mix()`, the script does nothing.
+ * - If not (e.g., Firefox without flag), it scans all CSS custom properties
+ *   whose names start with `--Shades...` and replaces any `color-mix(...)`
+ *   value with a computed hex fallback.
+ *
+  */
+<script
+defer src="https://cdn.jsdelivr.net/gh/REVREBEL/rebel-style@main/scripts/color-mix.js"
+type="text/javascript" 
+referrerpolicy="no-referrer" 
+crossorigin="anonymous" 
+>
+</script>
+<!-- END Polyfill for CSS `color-mix(in srgb, ...)  -->
+
+
+<!-- START Dynamic Border Shadow Color  -->
+<script
+defer src="https://cdn.jsdelivr.net/gh/REVREBEL/rebel-style@main/scripts/dynamic-border-shadow-color.js"
+type="text/javascript" 
+referrerpolicy="no-referrer" 
+crossorigin="anonymous" 
+>
+</script>
+<!-- END Dynamic Border Shadow Color -->
+
+<!-- START Form Vaildation-->
+<script
+defer src="https://cdn.jsdelivr.net/gh/REVREBEL/rebel-style@main/scripts/form-vaildation.js"
+type="text/javascript" 
+referrerpolicy="no-referrer" 
+crossorigin="anonymous" 
+>
+</script>
+<!-- END Form Vaildation -->
+
+<!-- START Form Recall Input -->
+<script
+defer src="https://cdn.jsdelivr.net/gh/REVREBEL/rebel-style@main/scripts/form-recall-input.js"
+type="text/javascript" 
+referrerpolicy="no-referrer" 
+crossorigin="anonymous" 
+>
+</script>
+<!-- END Form Recall Input -->
+
+
+<!-- START Phone Vaildation-->
+<script
+defer src="https://cdn.jsdelivr.net/gh/REVREBEL/rebel-style@main/scripts/phone-vaildation.js"
+type="text/javascript" 
+referrerpolicy="no-referrer" 
+crossorigin="anonymous" 
+>
+</script>
+<!--  Phone Vaildation -->
+
+
+<!-- START Calculate Read Time -->
+<script
+  defer
+  src="https://cdn.jsdelivr.net/gh/REVREBEL/rebel-style@main/scripts/read-time.js"
+  type="text/javascript"
+  referrerpolicy="no-referrer"
+  crossorigin="anonymous">
+</script>
+<!-- END Calculate Read Time -->
+
+
+<!-- START Emoji Styling Module  -->
+<script
+defer src="https://cdn.jsdelivr.net/gh/REVREBEL/rebel-style@main/scripts/emoji-styling.js"
+type="text/javascript" 
+referrerpolicy="no-referrer" 
+crossorigin="anonymous" 
+>
+</script>
+<!-- END Emoji Styling Module -->
+
+
+<!-- START PageNav Visibility -->
+/**
+ * Component: PageNav Visibility via Scroll Markers
+*/
+<script
+  defer
+  src="https://cdn.jsdelivr.net/gh/REVREBEL/rebel-style@main/scripts/page-nav-visibility.js"
+  type="text/javascript"
+  referrerpolicy="no-referrer"
+  crossorigin="anonymous">
+</script>
+
+<!-- END PageNav Visibility -->
+
+
+<!-- START Equalize Height-->
+<script
+defer src="https://cdn.jsdelivr.net/gh/REVREBEL/rebel-style@main/scripts/equalize-height.js"
+type="text/javascript" 
+referrerpolicy="no-referrer" 
+crossorigin="anonymous" 
+>
+</script>
+<!-- END Equalize Height -->
+
+
+<!-- GSAP -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+
+<!-- START PageNav GSAP Controller  -->
+<script
+defer src="https://cdn.jsdelivr.net/gh/REVREBEL/rebel-style@main/scripts/page-nav-gsap-controller.js"
+type="text/javascript" 
+referrerpolicy="no-referrer" 
+crossorigin="anonymous" 
+>
+</script>
+<!-- END PageNav GSAP Controller  -->

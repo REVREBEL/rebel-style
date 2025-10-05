@@ -1,6 +1,6 @@
 /*! ------------------ ADDING THE SCRIPT: ------------------ 
 
-<!-- START Calculate Read Time -->
+<!-- START Blog Category tags -->
 <script
   defer
   src="https://cdn.jsdelivr.net/gh/REVREBEL/rebel-style@main/scripts/blog-category-tags.js"
@@ -8,7 +8,7 @@
   referrerpolicy="no-referrer"
   crossorigin="anonymous">
 </script>
-<!-- END Calculate Read Time -->
+<!-- END Blog Category tags -->
 
 */
 

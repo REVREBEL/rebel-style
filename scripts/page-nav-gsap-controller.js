@@ -1,6 +1,20 @@
-//<!-- GSAP -->
-//<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 
+/**
+<!-- GSAP -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+ */
+
+/**
+<!-- START PageNav GSAP Controller  -->
+<script
+defer src="https://cdn.jsdelivr.net/gh/REVREBEL/rebel-style@main/scripts/page-nav-gsap-controller.js"
+type="text/javascript" 
+referrerpolicy="no-referrer" 
+crossorigin="anonymous" 
+>
+</script>
+<!-- END PageNav GSAP Controller  -->
+ */
 
 /**
  * GSAP controller wired to your data-attributes.

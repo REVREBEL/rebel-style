@@ -1,0 +1,283 @@
+/* ==========================================================================
+   REVREBEL | Visual Plugin Sheet (scoped)
+   Purpose: visually theme third-party apps without altering layout/spacing.
+   How to use:
+     1) Wrap the integration root with: <div class="rr-theme">...</div>
+     2) Override tokens anywhere: .rr-theme { --brand-primary: #27498b; }
+     3) Optional dark mode: <div class="rr-theme" data-theme="dark">...</div>
+   Notes:
+     - No margins/positioning/widths here (keeps performance/layout intact).
+     - Uses :where() to keep specificity low and be “overridable”.
+   ========================================================================== */
+
+/* -----------------------------
+   1) Theme Tokens (defaults)
+   ----------------------------- */
+
+.rr-theme {
+  /* Brand & base */
+  --brand-primary:        #0b5fff;
+  --brand-secondary:      #6b7280;
+
+  /* Semantic */
+  --color-success:        #22c55e;
+  --color-warning:        #f59e0b;
+  --color-danger:         #ef4444;
+  --color-info:           #06b6d4;
+
+  /* Surfaces & text */
+  --surface-0:            #ffffff;
+  --surface-1:            #f6f7f9;
+  --surface-2:            #eef0f3;
+  --text-strong:          #0b1320;
+  --text:                 #1f2937;
+  --text-muted:           #6b7280;
+
+  /* Links & focus */
+  --link:                 var(--brand-primary);
+  --link-hover:           color-mix(in oklab, var(--link), black 10%); /* wide support fallback handled below */
+  --focus-ring:           color-mix(in oklab, var(--brand-primary), white 60%);
+
+  /* Borders & radii */
+  --border-color:         #d1d5db;
+  --radius-xs:            4px;
+  --radius-sm:            6px;
+  --radius-md:            10px;
+  --radius-lg:            14px;
+  --radius-pill:          999px;
+
+  /* Typography */
+  --font-sans:            system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+  --font-mono:            ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --font-size-100:        12px;
+  --font-size-200:        14px;
+  --font-size-300:        16px; /* base */
+  --font-size-400:        18px;
+  --font-size-500:        20px;
+  --line:                 1.5;
+
+  /* Effects */
+  --shadow-100:           0 1px 2px rgba(0,0,0,.06);
+  --shadow-200:           0 4px 10px rgba(0,0,0,.08);
+  --shadow-focus:         0 0 0 3px var(--focus-ring);
+  --transition-fast:      150ms ease;
+  --transition:           220ms cubic-bezier(.2,.6,.2,1);
+}
+
+/* Fallback when color-mix isn’t supported */
+@supports not (color: color-mix(in oklab, white, black)) {
+  .rr-theme {
+    --link-hover: #084ecc;
+    --focus-ring: rgba(11,95,255,.35);
+  }
+}
+
+/* Dark variant (opt-in by data attribute) */
+.rr-theme[data-theme="dark"] {
+  --surface-0:   #0b1320;
+  --surface-1:   #111827;
+  --surface-2:   #1f2937;
+  --text-strong: #f9fafb;
+  --text:        #e5e7eb;
+  --text-muted:  #9ca3af;
+  --border-color:#374151;
+  --shadow-100:  0 1px 2px rgba(0,0,0,.5);
+  --shadow-200:  0 4px 10px rgba(0,0,0,.45);
+}
+
+/* Respect user preference (optional) */
+@media (prefers-color-scheme: dark) {
+  .rr-theme[data-theme="auto"] {
+    --surface-0:   #0b1320;
+    --surface-1:   #111827;
+    --surface-2:   #1f2937;
+    --text-strong: #f9fafb;
+    --text:        #e5e7eb;
+    --text-muted:  #9ca3af;
+    --border-color:#374151;
+    --shadow-100:  0 1px 2px rgba(0,0,0,.5);
+    --shadow-200:  0 4px 10px rgba(0,0,0,.45);
+  }
+}
+
+/* -----------------------------
+   2) Base visual layer
+   ----------------------------- */
+
+.rr-theme {
+  color: var(--text);
+  background-color: var(--surface-0);
+  font-family: var(--font-sans);
+  font-size: var(--font-size-300);
+  line-height: var(--line);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Text elements (no margins here) */
+.rr-theme :where(h1,h2,h3,h4,h5,h6,strong,b) {
+  color: var(--text-strong);
+  font-weight: 700;
+}
+.rr-theme :where(p,li,dd,dt,span,small) { color: var(--text); }
+.rr-theme :where(small,.is-muted) { color: var(--text-muted); font-size: var(--font-size-200); }
+.rr-theme :where(code,kbd,samp,pre) { font-family: var(--font-mono); }
+
+/* Links */
+.rr-theme :where(a) {
+  color: var(--link);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: color var(--transition-fast);
+}
+.rr-theme :where(a:hover) { color: var(--link-hover); }
+
+/* Focus ring (accessible) */
+.rr-theme :where(a,button,[role="button"],input,select,textarea) {
+  outline: none;
+}
+.rr-theme :where(a,button,[role="button"],input,select,textarea):focus-visible {
+  box-shadow: var(--shadow-focus);
+  border-radius: var(--radius-sm);
+}
+
+/* -----------------------------
+   3) Buttons (visual only)
+   ----------------------------- */
+
+.rr-theme :where(button,[type="button"],[type="submit"],.btn) {
+  --_btn-bg: var(--brand-primary);
+  --_btn-fg: #fff;
+  --_btn-bd: transparent;
+
+  color: var(--_btn-fg);
+  background-color: var(--_btn-bg);
+  border: 1px solid var(--_btn-bd);
+  border-radius: var(--radius-md);
+  padding: .625em 1em;            /* no external margin */
+  line-height: 1.1;
+  box-shadow: var(--shadow-100);
+  transition: background-color var(--transition), transform var(--transition-fast), box-shadow var(--transition-fast);
+  cursor: pointer;
+}
+.rr-theme :where(button,[type="button"],[type="submit"],.btn):hover {
+  background-color: color-mix(in oklab, var(--_btn-bg), black 10%);
+  box-shadow: var(--shadow-200);
+}
+.rr-theme :where(button,[type="button"],[type="submit"],.btn):active {
+  transform: translateY(1px);
+}
+.rr-theme :where(button,[type="button"],[type="submit"],.btn)[disabled],
+.rr-theme :where(button,[type="button"],[type="submit"],.btn).is-disabled {
+  opacity: .6;
+  pointer-events: none;
+}
+
+/* Button variants (use classes to map) */
+.rr-theme .btn--secondary { --_btn-bg: var(--brand-secondary); }
+.rr-theme .btn--success   { --_btn-bg: var(--color-success); }
+.rr-theme .btn--warning   { --_btn-bg: var(--color-warning); color: #111; }
+.rr-theme .btn--danger    { --_btn-bg: var(--color-danger); }
+.rr-theme .btn--ghost {
+  --_btn-bg: transparent;
+  --_btn-fg: var(--text);
+  --_btn-bd: var(--border-color);
+}
+
+/* Pill and square shapes */
+.rr-theme .is-pill   { border-radius: var(--radius-pill); }
+.rr-theme .is-square { border-radius: var(--radius-xs);  }
+
+/* -----------------------------
+   4) Forms (inputs/selects/textarea)
+   ----------------------------- */
+
+.rr-theme :where(input:not([type="checkbox"]):not([type="radio"]),
+                 select, textarea) {
+  color: var(--text);
+  background-color: var(--surface-0);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  padding: .625em .75em;          /* internal only */
+  line-height: 1.25;
+  box-shadow: 0 0 0 0 transparent;
+  transition: border-color var(--transition), box-shadow var(--transition);
+  min-height: 2.5rem;
+}
+.rr-theme :where(input,select,textarea)::placeholder { color: var(--text-muted); }
+
+.rr-theme :where(input,select,textarea):hover {
+  border-color: color-mix(in oklab, var(--border-color), black 15%);
+}
+.rr-theme :where(input,select,textarea):focus {
+  border-color: var(--brand-primary);
+  box-shadow: var(--shadow-focus);
+}
+
+.rr-theme :where(input[disabled],select[disabled],textarea[disabled]) {
+  opacity: .6; pointer-events: none;
+}
+
+/* Checkboxes / radios */
+.rr-theme :where(input[type="checkbox"], input[type="radio"]) {
+  accent-color: var(--brand-primary);
+}
+
+/* File inputs (visual only) */
+.rr-theme :where(input[type="file"]) {
+  color: var(--text);
+}
+
+/* -----------------------------
+   5) Generic “card/surface” & chips
+   ----------------------------- */
+
+.rr-theme .card {
+  background-color: var(--surface-0);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-100);
+  /* no margin/padding here to avoid layout changes */
+}
+
+.rr-theme .chip {
+  display: inline-flex;
+  align-items: center;
+  gap: .5ch;
+  padding: .35em .6em;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--border-color);
+  background-color: var(--surface-1);
+  color: var(--text);
+  font-size: var(--font-size-200);
+}
+
+/* Colorized chips */
+.rr-theme .chip--info    { background-color: color-mix(in oklab, var(--color-info),    white 85%); }
+.rr-theme .chip--success { background-color: color-mix(in oklab, var(--color-success), white 85%); }
+.rr-theme .chip--warn    { background-color: color-mix(in oklab, var(--color-warning), white 80%); color:#111; }
+.rr-theme .chip--danger  { background-color: color-mix(in oklab, var(--color-danger),  white 85%); }
+
+/* -----------------------------
+   6) Helper states (no layout)
+   ----------------------------- */
+
+.rr-theme .is-loading { opacity: .7; cursor: progress; }
+.rr-theme .is-error   { color: var(--color-danger); }
+.rr-theme .is-success { color: var(--color-success); }
+
+/* -----------------------------
+   7) SVG/Icon coloring
+   ----------------------------- */
+
+.rr-theme :where(svg, .icon) { fill: currentColor; stroke: currentColor; }
+
+/* -----------------------------
+   8) Animations (subtle)
+   ----------------------------- */
+
+.rr-theme .fade-in {
+  opacity: 0;
+  animation: rr-fade var(--transition) forwards;
+}
+@keyframes rr-fade { to { opacity: 1; } }
