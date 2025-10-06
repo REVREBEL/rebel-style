@@ -1,8 +1,5 @@
-<head>
-<link rel="preconnect"href="https://cdn.jsdelivr.net"crossorigin>
-<link rel="preload"as="style"href="https://cdn.jsdelivr.net/gh/REVREBEL/fonts@main/rebel-fonts.css"type="text/css">
-<link rel="stylesheet"href="https://cdn.jsdelivr.net/gh/REVREBEL/fonts@main/rebel-fonts.css">
-</head>
+@import url('https://cdn.jsdelivr.net/gh/REVREBEL/fonts@main/rebel-fonts.css');
+
 /* ==========================================================================
    REVREBEL | Global Theme Sheet
    Purpose: Universal drop-in theme for app Custom CSS fields.
@@ -18,7 +15,6 @@
   --rev-font-headline: "Khand", 'Oswald', 'Impact', sans-serif;
   --rev-font-body: "General Sans", "Public Sans", "Andale Mono", Tahoma, sans-serif;
   --rev-font-code: "Fira Code", Courier, monospace;
-
   --rev-color-primary: #163666;
   --rev-color-1: #047c97;
   --rev-color-2: #71c9c5;
@@ -61,49 +57,40 @@
    2) Typography
    ----------------------------- */
 
-
-body {
-  font-size: 100%;
-  -webkit-text-size-adjust: 100%;
-  font-variant-ligatures: none;
-  -webkit-font-variant-ligatures: none;
-  text-rendering: optimizeLegibility;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: subpixel-antialiased;
-  font-smoothing: antialiased;
-  font-smooth: always;
-  -webkit-font-smoothing: antialiased;
-  text-shadow: rgba(0,0,0,.01) 0 0 1px
-}
-
+   
 body, input, textarea, select, button {
-  font-family: var(--rev-font-body) !important;
-  color: var(--rev-color-text) !important;
   background-color: var(--rev-color-bg);
+  color: var(--rev-color-text);
+  font-family: var(--rev-font-body);
+  font-weight: 300;
   -webkit-font-smoothing: antialiased;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  color: var(--rev-color-primary) !important;
-  font-family: var(--rev-font-headline) !important;
-  font-weight: 700 !important;
-  letter-spacing: -0.95px;
-  line-height: 0.9 !important;
+h1, h2 {
+  color: var(--rev-color-primary);
+  font-family: var(--rev-font-headline);
+  font-weight: 700;
   text-wrap: balance;
-  text-transform: uppercase !important;
+  text-transform: uppercase;
 }
 
+h3, h4, h5, h6 {
+  color: var(--rev-color-primary);
+  font-family: var(--rev-font-headline);
+  font-weight: 500;
+  text-wrap: balance;
+  text-transform: uppercase;
+}
 
 .bold {
   font-weight: 700;
 }
 
 p, li, span, label {
-  font-family: var(--rev-font-body);
   color: var(--rev-color-text);
-  line-height: 1.5;
-    text-transform: uppercase !important;
-    text-decoration: none !important;
+  font-weight: 300;
+  font-family: var(--rev-font-body);
+  text-decoration: none;
 }
 
 small {
@@ -112,15 +99,12 @@ small {
 
 /* Links / underlines */
 a {
-  color: var(--rev-color-accent) !important;
-  text-decoration: underline !important;
+  color: var(--rev-color-accent);
   transition: color var(--rev-transition);
-      text-transform: uppercase !important;
-    text-decoration: none !important;
 }
 
 a:hover {
-  color: var(--rev-color-primary) !important;
+  color: var(--rev-color-primary);
 }
 
 /* Code */
@@ -143,18 +127,19 @@ input[type="button"],
 input[type="image"],
 input[type="reset"],
 input[type="submit"] {
-  background-color: var(--rev-color-primary) !important;
-  border: none !important;
+  background-color: var(--rev-color-primary);
+  border-color: var(--rev-color-primary);
+  border: none;
   border-radius: 0.15rem;
   border-style: solid;
   border-width: 3px;
   box-shadow: var(--rev-shadow-sm);
-  color: var(--rev-color-white) !important;
+  color: var(--rev-color-accent);
   cursor: pointer;
   font-family: var(--rev-font-headline);
   font-weight: 700;
   line-height: 1;
-  padding: 0.6em 1.2em !important;
+  padding: 0.6em 1.2em;
   text-transform: uppercase;
   text-decoration: none;
   transition-duration: 200ms;
@@ -179,8 +164,8 @@ input[type="reset"]:hover,
 input[type="submit"]:hover,
 button:hover:hover {
   color: var(--rev-color-primary);
-  background-color: var(--rev-color-accent) !important;
-  border-color: var(--rev-color-accent) !important;
+  background-color: var(--rev-color-accent);
+  border-color: var(--rev-color-accent);
   box-shadow: var(--rev-shadow-md);
 }
 
@@ -206,9 +191,9 @@ button:disabled,
 
 /* Ghost / Secondary variants */
 .btn-secondary, .button-secondary {
-  background-color: transparent !important;
-  color: var(--rev-color-primary) !important;
-  border: 2px solid var(--rev-color-primary) !important;
+  background-color: transparent;
+  color: var(--rev-color-primary);
+  border: 2px solid var(--rev-color-primary);
 }
 
 /* -----------------------------
@@ -224,7 +209,7 @@ button:disabled,
 
 .link:hover {
   color: var(--rev-color-3);
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .link:active {
@@ -261,6 +246,7 @@ textarea {
   background-color: var(--rev-color-white);
   color: var(--rev-color-text);
   font-family: var(--rev-font-body);
+  font-weight: 300;
   transition: border-color var(--rev-transition), box-shadow var(--rev-transition);
 }
 
@@ -285,6 +271,7 @@ textarea:focus {
   background-color: var(--rev-color-white);
   color: var(--rev-color-text);
   font-family: var(--rev-font-body);
+  font-weight: 300;
   transition: border-color var(--rev-transition), box-shadow var(--rev-transition);
 }
 
@@ -311,6 +298,7 @@ textarea.dark {
   background-color: var(--rev-color-white);
   color: var(--rev-color-text);
   font-family: var(--rev-font-body);
+  font-weight: 300;
   transition: border-color var(--rev-transition), box-shadow var(--rev-transition);
 }
 
@@ -336,17 +324,19 @@ textarea.dark:focus {
   background-color: var(--rev-color-primary);
   color: var(--rev-color-light);
   font-family: var(--rev-font-body);
+  font-weight: 300;
   transition: border-color var(--rev-transition), box-shadow var(--rev-transition);
 }
 
 input:not([type="checkbox"]):not([type="radio"]),
 select,
 textarea {
-  border: 1px solid var(--rev-color-border) !important;
+  border: 1px solid var(--rev-color-border);
   border-radius: var(--rev-radius-sm);
   background-color: var(--rev-color-white);
   color: var(--rev-color-text);
   font-family: var(--rev-font-body);
+  font-weight: 300;
   transition: border-color var(--rev-transition), box-shadow var(--rev-transition);
 }
 
@@ -355,7 +345,7 @@ input:hover, select:hover, textarea:hover {
 }
 
 input:focus, select:focus, textarea:focus {
-  outline: none !important;
+  outline: none;
   border-color: var(--rev-color-primary);
   box-shadow: 0 0 0 3px var(--rev-focus);
 }
@@ -427,22 +417,22 @@ svg, .icon, i[class*="icon"], [class^="fa-"], [class*=" fa-"] {
    ----------------------------- */
 .success,
 .is-success {
-  color: var(--rev-color-2) !important;
+  color: var(--rev-color-2)
 }
 
 .warning,
 .is-warning {
-  color: var(--rev-color-6) !important;
+  color: var(--rev-color-6);
 }
 
 .danger,
 .is-danger {
-  color: var(--rev-color-7) !important;
+  color: var(--rev-color-7);
 }
 
 .muted,
 .is-muted {
-  color: var(--rev-color-muted) !important;
+  color: var(--rev-color-muted);
 }
 
 :focus-visible {
