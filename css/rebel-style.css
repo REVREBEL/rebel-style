@@ -1,8 +1,21 @@
 <head>
-<link rel="preconnect"href="https://cdn.jsdelivr.net"crossorigin>
-<link rel="preload"as="style"href="https://cdn.jsdelivr.net/gh/REVREBEL/fonts@main/rebel-fonts.css"type="text/css">
-<link rel="stylesheet"href="https://cdn.jsdelivr.net/gh/REVREBEL/fonts@main/rebel-fonts.css">
+
+<link rel="preconnect"
+href="https://cdn.jsdelivr.net"
+crossorigin>
+
+<link rel="preload"
+as="style"
+href="https://cdn.jsdelivr.net/gh/REVREBEL/fonts@main/rebel-fonts.css"
+type="text/css"
+>
+
+<link rel="stylesheet" 
+href="https://cdn.jsdelivr.net/gh/REVREBEL/fonts@main/rebel-fonts.css">
+
 </head>
+
+
 /* ==========================================================================
    REVREBEL | Global Theme Sheet
    Purpose: Universal drop-in theme for app Custom CSS fields.
@@ -10,6 +23,9 @@
    Affects common elements: headings, paragraphs, links, buttons, inputs,
    checkboxes, labels, icons. Avoids layout changes or spacing.
    ========================================================================== */
+
+@import url('https://cdn.jsdelivr.net/gh/REVREBEL/fonts@main/rebel-fonts.css');
+
 
 /* -----------------------------
    1) Brand Tokens
@@ -73,7 +89,7 @@ body {
   font-smoothing: antialiased;
   font-smooth: always;
   -webkit-font-smoothing: antialiased;
-  text-shadow: rgba(0,0,0,.01) 0 0 1px
+  text-shadow: rgba(0, 0, 0, .01) 0 0 1px
 }
 
 body, input, textarea, select, button {
@@ -102,8 +118,8 @@ p, li, span, label {
   font-family: var(--rev-font-body);
   color: var(--rev-color-text);
   line-height: 1.5;
-    text-transform: uppercase !important;
-    text-decoration: none !important;
+  text-transform: uppercase !important;
+  text-decoration: none !important;
 }
 
 small {
@@ -115,8 +131,8 @@ a {
   color: var(--rev-color-accent) !important;
   text-decoration: underline !important;
   transition: color var(--rev-transition);
-      text-transform: uppercase !important;
-    text-decoration: none !important;
+  text-transform: uppercase !important;
+  text-decoration: none !important;
 }
 
 a:hover {
