@@ -1,0 +1,451 @@
+<head>
+<link rel="preconnect"href="https://cdn.jsdelivr.net"crossorigin>
+<link rel="preload"as="style"href="https://cdn.jsdelivr.net/gh/REVREBEL/fonts@main/rebel-fonts.css"type="text/css">
+<link rel="stylesheet"href="https://cdn.jsdelivr.net/gh/REVREBEL/fonts@main/rebel-fonts.css">
+</head>
+/* ==========================================================================
+   REVREBEL | Global Theme Sheet
+   Purpose: Universal drop-in theme for app Custom CSS fields.
+   --------------------------------------------------------------------------
+   Affects common elements: headings, paragraphs, links, buttons, inputs,
+   checkboxes, labels, icons. Avoids layout changes or spacing.
+   ========================================================================== */
+
+/* -----------------------------
+   1) Brand Tokens
+   ----------------------------- */
+:root {
+  --rev-font-headline: "Khand", 'Oswald', 'Impact', sans-serif;
+  --rev-font-body: "General Sans", "Public Sans", "Andale Mono", Tahoma, sans-serif;
+  --rev-font-code: "Fira Code", Courier, monospace;
+
+  --rev-color-primary: #163666;
+  --rev-color-1: #047c97;
+  --rev-color-2: #71c9c5;
+  --rev-color-3: #00a6b6;
+  --rev-color-4: #b2d3de;
+  --rev-color-5: #faca78;
+  --rev-color-6: #f37d59;
+  --rev-color-7: #e05047;
+  --rev-color-8: #8e456a;
+  --rev-color-9: #eff5f6;
+  --rev-color-grey-1: #ababab;
+  --rev-color-grey-2: #575757;
+  --rev-color-grey-3: #2E2E2E;
+  --rev-color-light: #fafafa;
+
+  /* Core Blue */
+  --rev-color-accent: var(--rev-color-4);
+
+  /* Lagoon Pulse */
+  --rev-color-bg: #fafafa;
+  --rev-color-text: #1f2937;
+  --rev-color-muted: #6b7280;
+  --rev-color-border: #d1d5db;
+  --rev-color-white: #fafafa;
+  --rev-color-black: #163666;
+
+  --rev-radius-sm: 4px;
+  --rev-radius-md: 8px;
+  --rev-radius-pill: 999px;
+
+  --rev-shadow-sm: 0 1px 2px rgba(0, 0, 0, .06);
+  --rev-shadow-md: 0 4px 10px rgba(0, 0, 0, .08);
+  --rev-focus: rgba(22, 54, 102, .35);
+  --rev-transition: 200ms cubic-bezier(.2, .6, .2, 1);
+}
+
+
+
+/* -----------------------------
+   2) Typography
+   ----------------------------- */
+
+
+body {
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  font-variant-ligatures: none;
+  -webkit-font-variant-ligatures: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: subpixel-antialiased;
+  font-smoothing: antialiased;
+  font-smooth: always;
+  -webkit-font-smoothing: antialiased;
+  text-shadow: rgba(0,0,0,.01) 0 0 1px
+}
+
+body, input, textarea, select, button {
+  font-family: var(--rev-font-body) !important;
+  color: var(--rev-color-text) !important;
+  background-color: var(--rev-color-bg);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--rev-color-primary) !important;
+  font-family: var(--rev-font-headline) !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.95px;
+  line-height: 0.9 !important;
+  text-wrap: balance;
+  text-transform: uppercase !important;
+}
+
+
+.bold {
+  font-weight: 700;
+}
+
+p, li, span, label {
+  font-family: var(--rev-font-body);
+  color: var(--rev-color-text);
+  line-height: 1.5;
+    text-transform: uppercase !important;
+    text-decoration: none !important;
+}
+
+small {
+  color: var(--rev-color-muted);
+}
+
+/* Links / underlines */
+a {
+  color: var(--rev-color-accent) !important;
+  text-decoration: underline !important;
+  transition: color var(--rev-transition);
+      text-transform: uppercase !important;
+    text-decoration: none !important;
+}
+
+a:hover {
+  color: var(--rev-color-primary) !important;
+}
+
+/* Code */
+code, pre, kbd, samp {
+  font-family: var(--rev-font-code);
+  background-color: #f3f4f6;
+  border-radius: var(--rev-radius-sm);
+}
+
+/* -----------------------------
+   3) Buttons
+   ----------------------------- */
+.button,
+.btn,
+[type="button"],
+[type="image"],
+[type="reset"],
+[type="submit"],
+input[type="button"],
+input[type="image"],
+input[type="reset"],
+input[type="submit"] {
+  background-color: var(--rev-color-primary) !important;
+  border: none !important;
+  border-radius: 0.15rem;
+  border-style: solid;
+  border-width: 3px;
+  box-shadow: var(--rev-shadow-sm);
+  color: var(--rev-color-white) !important;
+  cursor: pointer;
+  font-family: var(--rev-font-headline);
+  font-weight: 700;
+  line-height: 1;
+  padding: 0.6em 1.2em !important;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition-duration: 200ms;
+  transition-property: all;
+  transition-timing-function: ease;
+  transition: background-color var(--rev-transition), box-shadow var(--rev-transition);
+  -webkit-border-radius: 0.15rem;
+  -moz-border-radius: 0.15rem;
+  -ms-border-radius: 0.15rem;
+  -o-border-radius: 0.15rem;
+}
+
+.button:hover,
+.btn:hover,
+[type="button"]:hover,
+[type="image"]:hover,
+[type="reset"]:hover,
+[type="submit"]:hover,
+input[type="button"]:hover,
+input[type="image"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover,
+button:hover:hover {
+  color: var(--rev-color-primary);
+  background-color: var(--rev-color-accent) !important;
+  border-color: var(--rev-color-accent) !important;
+  box-shadow: var(--rev-shadow-md);
+}
+
+.button:active,
+.btn:active,
+[type="button"]:active,
+[type="image"]:active,
+[type="reset"]:active,
+[type="submit"]:active,
+input[type="button"]:active,
+input[type="image"]:active,
+input[type="reset"]:active,
+input[type="submit"]:active,
+button:active:active {
+  box-shadow: none;
+}
+
+button:disabled,
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Ghost / Secondary variants */
+.btn-secondary, .button-secondary {
+  background-color: transparent !important;
+  color: var(--rev-color-primary) !important;
+  border: 2px solid var(--rev-color-primary) !important;
+}
+
+/* -----------------------------
+   3b) Links
+   ----------------------------- */
+
+.link {
+  color: var(--rev-color-2);
+  cursor: pointer;
+  transition: all .2s;
+  text-decoration: none;
+}
+
+.link:hover {
+  color: var(--rev-color-3);
+  text-decoration: underline;
+}
+
+.link:active {
+  color: var(--rev-color-3);
+}
+
+
+/* -----------------------------
+   4) Form Elements
+   ----------------------------- */
+
+/* INPUTS LIGHT BACKGROUND */
+
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="month"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="time"],
+input[type="url"],
+input[type="week"],
+select[multiple],
+select[size],
+.input,
+input,
+select,
+textarea {
+  border-radius: var(--rev-radius-sm);
+  background-color: var(--rev-color-white);
+  color: var(--rev-color-text);
+  font-family: var(--rev-font-body);
+  transition: border-color var(--rev-transition), box-shadow var(--rev-transition);
+}
+
+input[type="date"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="email"]:focus,
+input[type="month"]:focus,
+input[type="number"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="text"]:focus,
+input[type="time"]:focus,
+input[type="url"]:focus,
+input[type="week"]:focus,
+input[multiple]:focus,
+input[size]:focus,
+input:focus,
+textarea:focus {
+  border-radius: var(--rev-radius-sm);
+  background-color: var(--rev-color-white);
+  color: var(--rev-color-text);
+  font-family: var(--rev-font-body);
+  transition: border-color var(--rev-transition), box-shadow var(--rev-transition);
+}
+
+/* INPUTS DARK BACKGROUND */
+
+input.dark[type="date"],
+input.dark[type="datetime"],
+input.dark[type="datetime-local"],
+input.dark[type="email"],
+input.dark[type="month"],
+input.dark[type="number"],
+input.dark[type="password"],
+input.dark[type="search"],
+input.dark[type="tel"],
+input.dark[type="text"],
+input.dark[type="time"],
+input.dark[type="url"] input.dark[type="week"] select.dark[multiple],
+select.dark[size],
+.input.dark,
+input.dark,
+select.dark,
+textarea.dark {
+  border-radius: var(--rev-radius-sm);
+  background-color: var(--rev-color-white);
+  color: var(--rev-color-text);
+  font-family: var(--rev-font-body);
+  transition: border-color var(--rev-transition), box-shadow var(--rev-transition);
+}
+
+input.dark[type="date"]:focus,
+input.dark[type="datetime"]:focus,
+input.dark[type="datetime-local"]:focus,
+input.dark[type="email"]:focus,
+input.dark[type="month"]:focus,
+input.dark[type="number"]:focus,
+input.dark[type="password"]:focus,
+input.dark[type="search"]:focus,
+input.dark[type="tel"]:focus,
+input.dark[type="text"]:focus,
+input.dark[type="time"]:focus,
+input.dark[type="url"]:focus,
+input.dark[type="week"]:focus,
+select.dark[multiple]:focus,
+select.dark[size]:focus,
+.input.dark:focus select.dark:focus,
+input.dark:focus,
+textarea.dark:focus {
+  border-radius: var(--rev-radius-sm);
+  background-color: var(--rev-color-primary);
+  color: var(--rev-color-light);
+  font-family: var(--rev-font-body);
+  transition: border-color var(--rev-transition), box-shadow var(--rev-transition);
+}
+
+input:not([type="checkbox"]):not([type="radio"]),
+select,
+textarea {
+  border: 1px solid var(--rev-color-border) !important;
+  border-radius: var(--rev-radius-sm);
+  background-color: var(--rev-color-white);
+  color: var(--rev-color-text);
+  font-family: var(--rev-font-body);
+  transition: border-color var(--rev-transition), box-shadow var(--rev-transition);
+}
+
+input:hover, select:hover, textarea:hover {
+  border-color: var(--rev-color-primary);
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: none !important;
+  border-color: var(--rev-color-primary);
+  box-shadow: 0 0 0 3px var(--rev-focus);
+}
+
+input::placeholder, textarea::placeholder {
+  color: var(--rev-color-muted);
+}
+
+/* Checkboxes & Radios */
+input[type="checkbox"],
+input[type="radio"] {
+  accent-color: var(--rev-color-primary);
+}
+
+input[type="radio"]:hover {
+  accent-color: var(--rev-color-4);
+}
+
+input[type="radio"]:active {
+  background: var(--rev-color-light);
+  border: 1px solid var(--rev-color-primary);
+}
+
+input[type="radio"]:focus {
+  border: 1px solid var(--rev-color-primary);
+}
+
+input[type="radio"]:checked {
+  background: var(--rev-color-4);
+}
+
+input[type="radio"]:checked:after {
+  background: var(--rev-color-primary);
+}
+
+input[type="radio"]:disabled {
+  background-color: var(--rev-color-4);
+  border: 1px solid var(--rev-color-4);
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  opacity: .5;
+}
+
+fieldset {
+  border: 1px solid var(--rev-color-light);
+}
+
+label {
+  font-family: var(--rev-font-headline);
+  font-weight: 700;
+  letter-spacing: 0.015px;
+  text-transform: uppercase;
+}
+
+
+/* -----------------------------
+   5) Icons / SVGs
+   ----------------------------- */
+
+svg, .icon, i[class*="icon"], [class^="fa-"], [class*=" fa-"] {
+  fill: currentColor;
+  color: var(--rev-color-primary);
+  vertical-align: middle;
+}
+
+
+/* -----------------------------
+   6) States
+   ----------------------------- */
+.success,
+.is-success {
+  color: var(--rev-color-2) !important;
+}
+
+.warning,
+.is-warning {
+  color: var(--rev-color-6) !important;
+}
+
+.danger,
+.is-danger {
+  color: var(--rev-color-7) !important;
+}
+
+.muted,
+.is-muted {
+  color: var(--rev-color-muted) !important;
+}
+
+:focus-visible {
+  outline: 2px solid var(--rev-color-accent);
+  outline-offset: 2px;
+}
