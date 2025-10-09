@@ -1,3 +1,22 @@
+/**
+
+<link rel="preconnect"
+href="https://cdn.jsdelivr.net"
+crossorigin>
+
+<link rel="preload"
+as="style"
+href="https://cdn.jsdelivr.net/gh/REVREBEL/rebel-style@main/css/rebel-style.css"
+type="text/css">
+
+
+<link rel="stylesheet"
+href="https://cdn.jsdelivr.net/gh/REVREBEL/rebel-style@main/css/rebel-style.css">
+
+*/
+
+
+
 :root {
   --divider-width: 3px;
   --rev-8x: 8rem;
@@ -66,28 +85,41 @@
   --rev-gap-sm: var(--rev-2x);
   --rev-gap-xs: var(--rev-1x);
   --rev-gap-xxs: var(--rev-0-5x);
+  --rev-h0-font-weight: 700;
+  --rev-h0-letter-spacing: -0.01em;
+  --rev-h0-line-height: .85;
   --rev-h0-xl: 10.738rem;
+  --rev-h0-margin-bottom: 0;
   --rev-h1-font-weight: 700;
   --rev-h1-letter-spacing: -0.01em;
-  --rev-h1-lg: 3.594rem;
   --rev-h1-line-height: .85;
+  --rev-h1-lg: 3.594rem;
   --rev-h1-margin-bottom: 0;
   --rev-h2-font-weight: 700;
   --rev-h2-letter-spacing: -0.01em;
   --rev-h2-line-height: .85;
   --rev-h2-md: 3.57rem;
+  --rev-h2-margin-bottom: .05rem;
+  --rev-h3-font-weight: 700;
+  --rev-h3-letter-spacing: -0.01em;
+  --rev-h3-line-height: .9;
   --rev-h3-base: 2.798rem;
+  --rev-h3-margin-bottom: .15em;
   --rev-h4-font-weight: 700;
   --rev-h4-letter-spacing: -0.01em;
   --rev-h4-line-height: .9;
   --rev-h4-sm: 2.286rem;
+  --rev-h4-margin-bottom: .15em;
   --rev-h5-font-weight: 600;
   --rev-h5-letter-spacing: -0.01em;
   --rev-h5-line-height: .95;
   --rev-h5-xs: 2.5rem;
+  --rev-h5-margin-bottom: .25em;
   --rev-h6-font-weight: 600;
   --rev-h6-letter-spacing: -0.01em;
+  --rev-h6-line-height: .9;
   --rev-h6-xxs: 1.543rem;
+  --rev-h6-margin-bottom: .25em;
   --rev-half-size: 50%;
   --rev-headline-font-weight: 700;
   --rev-headline-font: 'Khand', 'Oswald', 'Impact', sans-serif;
@@ -728,89 +760,101 @@ textarea:hover {
   text-wrap: balance;
 }
 
+
+.headline-xl,
+.headline_h0,
+.heading_h0 {
+  font-family: var(--rev-headline-font);
+  font-size: var(--rev-h0-lg);
+  font-weight: var(--rev-h0-font-weight);
+  letter-spacing: var(--rev-h1-letter-spacing);
+  line-height: var(--rev-h0-line-height);
+  margin-bottom: .05rem;
+  text-transform: uppercase;
+  text-wrap: balance;
+}
+
+.headline-lg,
+.headline_h1,
+.heading_h1 {
+  font-family: var(--rev-headline-font);
+  font-size: var(--rev-h1-lg);
+  font-weight: var(--rev-h1-font-weight);
+  letter-spacing: var(--rev-h1-letter-spacing);
+  line-height: var(--rev-h1-line-height);
+  margin-bottom: var(--rev-h1-margin-bottom);
+  text-transform: uppercase;
+  text-wrap: balance;
+}
+
+.headline-md,
+.headline_h2,
 .heading_h2 {
   font-family: var(--rev-headline-font);
   font-size: var(--rev-h2-md);
   font-weight: var(--rev-h2-font-weight);
   letter-spacing: var(--rev-h2-letter-spacing);
   line-height: var(--rev-h2-line-height);
-  margin-bottom: .05rem;
+  margin-bottom: var(--rev-h2-margin-bottom);
   text-transform: uppercase;
   text-wrap: balance;
 }
 
+.headline-regular,
+.headline_h3,
 .heading_h3 {
   font-family: var(--rev-headline-font);
-  font-size: var(--rev-h4-sm);
-  font-weight: var(--rev-h4-font-weight);
-  margin-bottom: .15em;
+  font-size: var(--rev-h3-sm);
+  font-weight: var(--rev-h3-font-weight);
+  letter-spacing: var(--rev-h3-letter-spacing);
+  line-height: var(--rev-h3-line-height);
+  margin-bottom: var(--rev-h3-margin-bottom);
   text-transform: uppercase;
   text-wrap: balance
 }
 
+.headline-sm,
+.headline_h4,
+.heading_h4 {
+  font-family: var(--rev-headline-font);
+  font-size: var(--rev-h4-sm);
+  font-weight: var(--rev-h4-font-weight);
+  letter-spacing: var(--rev-4-letter-spacing);
+  line-height: var(--rev-h4-line-height);
+  margin-bottom: var(--rev-h4-margin-bottom);
+  text-transform: uppercase;
+  text-wrap: balance
+}
+
+.headline-xs,
+.headline_h5,
 .heading_h5 {
   font-family: var(--rev-headline-font);
   font-size: var(--rev-h5-xs);
   font-weight: var(--rev-h5-font-weight);
-  margin-bottom: .25em;
+  letter-spacing: var(--rev-5-letter-spacing);
+  line-height: var(--rev-h5-line-height);
+  margin-bottom: var(--rev-h5-margin-bottom);
   text-transform: uppercase;
   text-wrap: balance
 }
 
-.headline-lg {
-  align-items: flex-start;
-  display: inline-flex;
-  flex-flow: column;
+.headline-xxs,
+.headline_h6,
+.heading_h6 {
   font-family: var(--rev-headline-font);
-  font-size: var(--rev-h1-lg);
-  font-weight: var(--rev-h1-font-weight);
-  justify-content: center;
-  letter-spacing: var(--rev-h1-letter-spacing);
-  line-height: var(--rev-h2-line-height);
-  margin-bottom: var(--rev-h1-margin-bottom);
+  font-size: var(--rev-h6-xxs);
+  font-weight: var(--rev-h6-font-weight);
+  letter-spacing: var(--rev-6-letter-spacing);
+  line-height: var(--rev-h6-line-height);
+  margin-bottom: var(--rev-h6-margin-bottom);
   text-transform: uppercase;
-}
-
-.headline-md {
-  font-family: var(--rev-headline-font);
-  font-size: var(--rev-h2-md);
-  font-weight: var(--rev-h2-font-weight);
-  letter-spacing: var(--rev-h2-letter-spacing);
-  line-height: var(--rev-h2-line-height);
-  margin-bottom: .05rem;
-  text-transform: uppercase;
-}
-
-.headline-sm {
-  flex-flow: column;
-  font-family: var(--rev-headline-font);
-  font-size: var(--rev-h4-sm);
-  font-weight: var(--rev-h4-font-weight);
-  inset: 0% 0% auto;
-  justify-content: flex-end;
-  letter-spacing: var(--rev-h4-letter-spacing);
-  line-height: var(--rev-line-height);
-  margin-bottom: var(--rev-h4-margin-bottom);
-  overflow-wrap: normal;
-  position: static;
-  text-transform: uppercase;
-  z-index: 99;
+  text-wrap: balance
 }
 
 .headline-wrapper {
   margin-bottom: 0;
   margin-top: 0
-}
-
-.headline-xl {
-  align-items: flex-start;
-  flex-direction: row;
-  font-family: var(--rev-headline-font);
-  font-size: var(--rev-h0-xl);
-  font-weight: var(--rev-h0-font-weight);
-  justify-content: flex-start;
-  margin-bottom: 0;
-  text-transform: uppercase
 }
 
 .height_100pct {
@@ -1092,32 +1136,32 @@ textarea:hover {
   display: block
 }
 
-.is-icon-color-blue {
+.is-icon-color-primary {
   color: #000;
   filter: invert(15%) sepia(28%) saturate(3881%) hue-rotate(199deg) brightness(93%) contrast(91%)
 }
 
-.is-icon-color-bright-blue {
+.is-icon-color-4 {
   color: #000;
   filter: invert(90%) sepia(15%) saturate(576%) hue-rotate(162deg) brightness(92%) contrast(89%)
 }
 
-.is-icon-color-bright-green {
+.is-icon-color-3 {
   color: #000;
   filter: invert(81%) sepia(41%) saturate(374%) hue-rotate(123deg) brightness(84%) contrast(92%)
 }
 
-.is-icon-color-dark-green {
+.is-icon-color-1 {
   color: #000;
   filter: invert(26%) sepia(80%) saturate(2128%) hue-rotate(169deg) brightness(93%) contrast(97%)
 }
 
-.is-icon-color-green {
+.is-icon-color-2 {
   color: #000;
   filter: invert(60%) sepia(83%) saturate(5082%) hue-rotate(155deg) brightness(97%) contrast(101%)
 }
 
-.is-icon-color-grey {
+.is-icon-color-grey-2 {
   color: #000;
   filter: invert(33%) sepia(0%) saturate(1659%) hue-rotate(154deg) brightness(89%) contrast(77%)
 }
@@ -1132,17 +1176,17 @@ textarea:hover {
   filter: invert(15%) sepia(0%) saturate(0%) hue-rotate(251deg) brightness(98%) contrast(90%)
 }
 
-.is-icon-color-orange {
+.is-icon-color-6 {
   color: #000;
   filter: invert(64%) sepia(13%) saturate(3377%) hue-rotate(323deg) brightness(99%) contrast(92%)
 }
 
-.is-icon-color-purple {
+.is-icon-color-8 {
   color: #000;
   filter: invert(34%) sepia(17%) saturate(1564%) hue-rotate(277deg) brightness(92%) contrast(89%)
 }
 
-.is-icon-color-red {
+.is-icon-color-7 {
   color: #000;
   filter: invert(53%) sepia(85%) saturate(4480%) hue-rotate(335deg) brightness(94%) contrast(86%)
 }
@@ -1152,7 +1196,7 @@ textarea:hover {
   filter: invert(97%) sepia(0%) saturate(7112%) hue-rotate(301deg) brightness(128%) contrast(96%)
 }
 
-.is-icon-color-yellow {
+.is-icon-color-5 {
   color: #000;
   filter: invert(95%) sepia(17%) saturate(4211%) hue-rotate(309deg) brightness(113%) contrast(96%)
 }
