@@ -1,0 +1,751 @@
+
+
+
+
+
+:root {
+  /* Base Button variables */
+  --rev-btn-font: Khand, Impact, sans-serif;
+  --rev-btn-font-size: 1rem;
+  --rev-btn-font-weight: 700;
+  --rev-btn-line-height: 1.25;
+  --rev-btn-letter-spacing: .05em;
+  --rev-btn-font-shorthand: var(--rev-btn-font-weight) var(--rev-btn-font-size)/var(--rev-btn-line-height) var(--rev-btn-font);
+  --rev-btn-radius: 2px;
+  --rev-btn-border-width: 3px;
+  --rev-btn-padding-vertical: 1.25rem;
+  --rev-btn-padding-horizontal: 1.5rem;
+
+  --rev-color-primary: #163666;
+  --rev-color-1: #047c97;
+  --rev-color-2: #71c9c5;
+  --rev-color-3: #00a6b6;
+  --rev-color-4: #b2d3de;
+  --rev-color-5: #faca78;
+  --rev-color-6: ##f37d59;
+  --rev-color-7: #e05047;
+  --rev-color-8: #8e456a;
+  --rev-color-9: #eff5f6;
+  --rev-color-1-inverse: var(--rev-color-4);
+  --rev-color-2-inverse: var(--rev-color-5);
+  --rev-color-3-inverse: var(--rev-color-8);
+  --rev-color-4-inverse: var(--rev-color-1);
+  --rev-color-5-inverse: var(--rev-color-7);
+  --rev-color-6-inverse: var(--rev-core-primary);
+  --rev-color-7-inverse: var(--rev-color-4);
+  --rev-color-8-inverse: var(--rev-color-6);
+  --rev-color-9-inverse: var(--rev-core-primary);
+
+  /* Labels */
+  --rev-label-font: Khand, Impact, sans-serif;
+  --rev-label-line-height: 1;
+  --rev-label-font-weight: 700;
+  --rev-label-padding: .25em .3em .15rem;
+
+  --rev-label-padding-top: .25em;
+  --rev-label-padding-right: .3em;
+  --rev-label-padding-bottom: .15rem;
+  --rev-label-padding-left: .3em;
+
+  /* Tags */
+  --rev-tag-border-width: 3px;
+  --rev-tag-font-size: .9rem;
+  --rev-tag-font-weight: 700;
+  --rev-tag-font: Khand, Impact, sans-serif;
+  --rev-tag-letter-spacing: 0;
+  --rev-tag-line-height: 1;
+  --rev-tag-padding-bottom: .35rem;
+  --rev-tag-padding-left-right: .45rem;
+  --rev-tag-padding-top: .35rem;
+  --rev-tag-radius: .35rem;
+  --rev-tag-weight: 300;
+
+  /* States */
+  --rev-btn-disabled-bg: var(--rev-color-grey-2, #575757);
+  --rev-btn-disabled-font-color: var(--rev-color-grey-3, #2E2E2E);
+  --rev-btn-disabled-border-color: var(--rev-color-grey-2, #575757);
+  --rev-btn-disabled-bg-hover: var(--rev-color-grey-2, #575757);
+  --rev-btn-alert-bg: var(--rev-color-7, #e05047);
+  --rev-btn-alert-font-color: var(--rev-color-light, #fafafa);
+  --rev-btn-alert-border-color: var(--rev-color-7, #e05047);
+  --rev-btn-alert-bg-hover: var(--rev-color-7-l200, #e9807a);
+
+  /* Primary Theme */
+  --rev-btn-primary-bg: var(--rev-color-primary, #163666);
+  --rev-btn-primary-font-color: var(--rev-color-light, #fafafa);
+  --rev-btn-primary-border-color: var(--rev-color-primary, #163666);
+  --rev-btn-primary-bg-hover: var(--rev-color-primary-l200, #425c83);
+
+  /* Light Theme */
+  --rev-btn-light-bg: var(--rev-color-light, #fafafa);
+  --rev-btn-light-font-color: var(--rev-color-dark, #1f2937);
+  --rev-btn-light-border-color: var(--rev-color-light, #fafafa);
+  --rev-btn-light-bg-hover: var(--rev-color-9, #eff5f6);
+
+  /* Color 8 Theme */
+  --rev-btn-color-8-bg: var(--rev-color-8, #8e456a);
+  --rev-btn-color-8-font-color: var(--rev-color-light, #fafafa);
+  --rev-btn-color-8-border-color: var(--rev-color-8, #8e456a);
+  --rev-btn-color-8-bg-hover: var(--rev-color-8-l200, #a56a88);
+
+  /* Color 3 Theme */
+  --rev-btn-color-3-bg: var(--rev-color-3, #00a6b6);
+  --rev-btn-color-3-font-color: var(--rev-color-dark, #1f2937);
+  --rev-btn-color-3-border-color: var(--rev-color-3, #00a6b6);
+  --rev-btn-color-3-bg-hover: var(--rev-color-2-l200, #8dd4d1);
+
+  /* Color 5 Theme */
+  --rev-btn-color-5-bg: var(--rev-color-5, #faca78);
+  --rev-btn-color-5-font-color: var(--rev-color-dark, #1f2937);
+  --rev-btn-color-5-border-color: var(--rev-color-5, #faca78);
+  --rev-btn-color-5-bg-hover: var(--rev-color-5-d200, #c8a260);
+
+  /* Sizes */
+  --rev-btn-lg-padding: 1.75rem;
+  --rev-btn-lg-border-width: 4px;
+  --rev-btn-lg-radius: .35rem;
+  --rev-btn-sm-padding: 1rem 1.25rem;
+  --rev-btn-sm-text-size: .85rem;
+  --rev-btn-sm-radius: .3rem;
+
+    /* TAGS */
+
+
+
+
+}
+
+
+
+/* ==========================================================================
+   Color Styles
+   ========================================================================== */
+
+   .u-button {
+  display: inline-block;
+  padding: 9px 15px;
+  background-color: #3898EC;
+  color: white;
+  border: 0;
+  line-height: inherit;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 0;
+}
+
+.btn,
+.button,
+.tag.is-color-primary,
+.tag-clear.is-color-primary,
+.btn.is-color-primary,
+.card.is-color-primary,
+.tag.is-color-primary,
+.label.is-color-primary {
+   --border-color: var(--rev-color-primary-inverse);
+  --shadow-color: var(--rev-color-primary-inverse);
+  background-color: var(--rev-color-primary);
+  color: var(--rev-color-primary-inverse);
+  border-color: var(--rev-color-primary);
+}
+
+.tag.is-color-1,
+.tag-clear.is-color-1,
+.card.is-color-1,
+.btn.is-color-1.is-inverse:hover,
+.btn.is-color-1,
+.tag.is-color-1,
+.label.is-color-1 {
+  --border-color: var(--rev-color-1-inverse);
+  --shadow-color: var(--rev-color-1-inverse);
+  background-color: var(--rev-color-1);
+  color: var(--rev-color-1-inverse);
+  border-color: var(--rev-color-1);
+}
+
+.tag.is-color-2,
+.tag-clear.is-color-2,
+.card.is-color-2,
+.btn.is-color-2.is-inverse:hover,
+.btn.is-color-2,
+.tag.is-color-2,
+.label.is-color-2 {
+  --border-color: var(--rev-color-2-inverse);
+  --shadow-color: var(--rev-color-2-inverse);
+  background-color: var(--rev-color-2);
+  color: var(--rev-color-2-inverse);
+  border-color: var(--rev-color-2);
+}
+
+.tag.is-color-3,
+.tag-clear.is-color-3,
+.card.is-color-3,
+.btn.is-color-3.is-inverse:hover,
+.btn.is-color-3,
+.tag.is-color-3,
+.label.is-color-3 {
+  --border-color: var(--rev-color-3-inverse);
+  --shadow-color: var(--rev-color-3-inverse);
+  background-color: var(--rev-color-3);
+  color: var(--rev-color-3-inverse);
+  border-color: var(--rev-color-3);
+}
+
+.card.is-color-4,
+.btn.is-color-4.is-inverse:hover,
+.btn.is-color-4,
+.tag.is-color-4,
+.label.is-color-4 {
+  --border-color: var(--rev-color-4-inverse);
+  --shadow-color: var(--rev-color-4-inverse);
+  background-color: var(--rev-color-4);
+  color: var(--rev-color-4-inverse);
+  border-color: var(--rev-color-4);
+}
+
+.tag.is-color-5,
+.tag-clear.is-color-5,
+.card.is-color-5,
+.btn.is-color-5.is-inverse:hover,
+.btn.is-color-5,
+.tag.is-color-5,
+.label.is-color-5 var {
+  --border-color: var(--rev-color-5-inverse);
+  --shadow-color: var(--rev-color-5-inverse);
+  background-color: var(--rev-color-5);
+  border-color: var(--rev-color-5);
+  color: var(--rev-color-5-inverse);
+}
+
+.tag.is-color-6,
+.tag-clear.is-color-6,
+.card.is-color-6,
+.btn.is-color-6.is-inverse:hover,
+.btn.is-color-6,
+.tag.is-color-6,
+.label.is-color-6 {
+  --border-color: var(--rev-color-6-inverse);
+  --shadow-color: var(--rev-color-6-inverse);
+  background-color: var(--rev-color-6);
+  border-color: var(--rev-color-6);
+  color: var(--rev-color-6-inverse);
+}
+
+.tag.is-color-7,
+.tag-clear.is-color-7,
+.card.is-color-7,
+.btn.is-color-7.is-inverse:hover,
+.btn.is-alert:hover,
+.btn.is-color-7,
+.tag.is-color-7,
+.label.is-color-7 {
+  --border-color: var(--rev-color-7-inverse);
+  --shadow-color: var(--rev-color-7-inverse);
+  background-color: var(--rev-color-7);
+  color: var(--rev-color-7-inverse);
+  border-color: var(--rev-color-7);
+}
+
+.tag.is-color-8,
+.tag-clear.is-color-8,
+.card.is-color-8,
+.btn.is-color-8.is-inverse:hover,
+.btn.is-color-8,
+.tag.is-color-8,
+.label.is-color-8 {
+  --border-color: var(--rev-color-8);
+  --shadow-color: var(--rev-color-8);
+  background-color: var(--rev-color-8);
+  border-color: var(--rev-color-8);
+  color: var(--rev-color-8-inverse);
+}
+
+.tag.is-color-9,
+.tag-clear.is-color-9,
+.card.is-color-9,
+.btn.is-color-9.is-inverse:hover,
+.btn.is-color-9,
+.tag.is-color-9,
+.label.is-color-9 {
+  --border-color: var(--rev-color-9-inverse);
+  --shadow-color: var(--rev-color-9-inverse);
+  background-color: var(--rev-color-9);
+  color: var(--rev-color-9-inverse);
+  border-color: var(--rev-color-9);
+}
+
+
+.btn.is-disabled,
+.tag.is-disabled,
+.label.is-disabled {
+  background-color: var(--rev-color-grey-2);
+  color: var(--rev-color-grey-2-inverse);
+  border-color: var(--rev-color-grey-2);
+}
+
+.tag.is-color-light,
+.tag-clear.is-color-light,
+.card.is-color-light,
+.btn.is-color-light.is-inverse:hover,
+.btn.is-color-light,
+.tag.is-color-light,
+.label.is-color-light {
+  --border-color: var(--rev-color-light-inverse);
+  --shadow-color: var(--rev-color-light-inverse);
+  background-color: var(--rev-color-light);
+  border-color: var(--rev-color-light);
+  color: var(--rev-color-dark-inverse);
+}
+
+.tag.is-color-dark,
+.tag-clear.is-color-dark,
+.card.is-color-dark,
+.btn.is-color-dark.is-inverse:hover,
+.btn.is-color-dark,
+.tag.is-color-dark,
+.label.is-color-dark {
+  --border-color: var(--rev-color-dark-inverse);
+  --shadow-color: var(--rev-color-dark-inverse);
+  background-color: var(--rev-color-dark);
+  border-color: var(--rev-color-dark);
+  color: var(--rev-color-dark-inverse);
+}
+
+
+
+
+/* ==========================================================================
+  INVERSE 
+   ========================================================================== */
+
+.tag.is-color-primary.is-inverse,
+.btn.is-color-primary:hover,
+.btn.is-color-primary.is-inverse,
+.tag.is-color-primary.is-inverse,
+.label.is-color-primary.is-inverse, {
+  --border-color: var(--rev-color-primary);
+  --shadow-color: var(--rev-color-primary);
+  background-color: var(--rev-color-primary-inverse);
+  border-color: var(--rev-color-primary-inverse);
+  color: var(--rev-color-primary);
+}
+
+.tag.is-color-1.is-inverse,
+.btn.is-color-1:hover,
+.btn.is-color-1.is-inverse,
+.tag.is-color-1.is-inverse,
+.label.is-color-1.is-inverse {
+  --border-color: var(--rev-color-1);
+  --shadow-color: var(--rev-color-1);
+  background-color: var(--rev-color-1-inverse);
+  border-color: var(--rev-color-1-inverse);
+  color: var(--rev-color-1);
+}
+
+.tag.is-color-2.is-inverse,
+.btn.is-color-2:hover,
+.btn.iscolor-2.is-inverse,
+.tag.is-color-2.is-inverse,
+.label.is-color-2.is-inverse {
+  --border-color: var(--rev-color-2);
+  --shadow-color: var(--rev-color-2);
+  background-color: var(--rev-color-2-inverse);
+  border-color: var(--rev-color-2-inverse);
+  color: var(--rev-color-2);
+}
+
+.tag.is-color-3.is-inverse,
+.btn.is-color-3:hover,
+.btn.is-color-3.is-inverse,
+.tag.is-color-3.is-inverse,
+.label.is-color-3.is-inverse {
+  --border-color: var(--rev-color-3);
+  --shadow-color: var(--rev-color-3);
+  background-color: var(--rev-color-3-inverse);
+  border-color: var(--rev-color-3-inverse);
+  color: var(--rev-color-3);
+}
+
+.tag.is-color-4.is-inverse,
+.btn.is-color-4:hover,
+.btn.iscolor-4.is-inverse,
+.tag.is-color-4.is-inverse,
+.label.is-color-4.is-inverse {
+  --border-color: var(--rev-color-4);
+  --shadow-color: var(--rev-color-4);
+  background-color: var(--rev-color-4-inverse);
+  border-color: var(--rev-color-4-inverse);
+  color: var(--rev-color-4);
+}
+
+.tag.is-color-5.is-inverse,
+.btn.is-color-5:hover,
+.btn.iscolor-5.is-inverse,
+.tag.is-color-5.is-inverse,
+.label.is-color-5.is-inverse {
+  --border-color: var(--rev-color-5);
+  --shadow-color: var(--rev-color-5);
+  background-color: var(--rev-color-5-inverse);
+  color: var(--rev-color-5);
+  border-color: var(--rev-color-5-inverse);
+}
+
+.tag.is-color-6.is-inverse,
+.btn.is-color-6:hover,
+.btn.is-color-6.is-inverse,
+.tag.is-color-6.is-inverse,
+.label.is-color-6.is-inverse {
+  --border-color: var(--rev-color-6);
+  --shadow-color: var(--rev-color-6);
+  background-color: var(--rev-color-6-inverse);
+  color: var(--rev-color-6);
+  border-color: var(--rev-color-6-inverse);
+}
+
+.tag.is-color-7.is-inverse,
+.btn.is-alert:hover,
+.btn.is-color-7:hover,
+.btn.is-color-7.is-inverse,
+.tag.is-color-7.is-inverse,
+.label.is-color-7.is-inverse {
+  --border-color: var(--rev-color-7);
+  --shadow-color: var(--rev-color-7);
+  background-color: var(--rev-color-7-inverse);
+  border-color: var(--rev-color-7-inverse);
+  color: var(--rev-color-7);
+}
+
+.tag.is-color-8.is-inverse,
+.btn.is-color-8:hover,
+.btn.is-color-8.is-inverse,
+.tag.is-color-8.is-inverse,
+.label.is-color-8.is-inverse {
+  --border-color: var(--rev-color-8);
+  --shadow-color: var(--rev-color-8);
+  background-color: var(--rev-color-8-inverse);
+  border-color: var(--rev-color-8-inverse);
+  color: var(--rev-color-8);
+}
+
+.tag.is-color-9.is-inverse,
+.btn.is-color-9:hover,
+.btn.iscolor-9.is-inverse,
+.tag.is-color-9.is-inverse,
+.label.is-color-9.is-inverse {
+  --border-color: var(--rev-color-9);
+  --shadow-color: var(--rev-color-9);
+  background-color: var(--rev-color-9-inverse);
+  border-color: var(--rev-color-9-inverse);
+  color: var(--rev-color-9);
+}
+
+
+.btn.is-disabled.is-inverse,
+.tag.is-disabled.is-inverse,
+.label.is-disabled.is-inverse {
+  background-color: var(--rev-color-grey-2-inverse);
+  color: var(--rev-color-grey-2);
+  border-color: var(--rev-color-grey-2-inverse);
+}
+
+/* ==========================================================================
+   Base Button Styles
+   ========================================================================== */
+
+
+.btn-group {
+  align-items: center;
+  color: inherit;
+  column-gap: .5rem;
+  display: flex flex-wrap: wrap;
+  grid-row-gap: .5rem;
+  ;
+  justify-content: flex-start;
+}
+
+
+.btn {
+  align-items: center;
+  border-radius: var(--rev-btn-radius);
+  border: var(--rev-btn-border-width) solid var(--rev-btn-primary-border-color);
+  /* Default to primary */
+  background-color: var(--rev-btn-primary-bg);
+  /* Default to primary */
+  color: var(--rev-btn-primary-font-color);
+  /* Default to primary */
+  flex: 0 auto;
+  font: var(--rev-btn-font-shorthand);
+  gap: .5em;
+  justify-content: center;
+  letter-spacing: var(--rev-btn-letter-spacing);
+  padding: var(--rev-btn-padding-vertical) var(--rev-btn-padding-horizontal);
+  pointer-events: auto;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: border-color .4s, background-color .4s, box-shadow .4s, color .4s;
+}
+
+
+.btn:hover {
+  border-color: var(--rev-btn-primary-bg-hover);
+  /* Default to primary hover */
+  background-color: var(--rev-btn-primary-bg-hover);
+  /* Default to primary hover */
+}
+
+.btn:active {
+  box-shadow: none;
+  transform: none;
+}
+
+
+/* Base Card Style */
+.card {
+  border-radius: var(--rev-card-radius);
+  box-shadow: none;
+  border: 0;
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+  list-style-type: none;
+  width: 100%;
+}
+
+/* Card Body */
+.card-body_small {
+  align-self: stretch;
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+  overflow: hidden;
+  padding: 2.5rem 1.5rem;
+  position: relative;
+  width: 100%;
+  z-index: 1;
+}
+
+
+.label {
+  flex: none;
+  font-family: var(--rev-labels-font);
+  font-size: var(--rev-t3-base);
+  font-weight: var(--rev-labels-font-weight);
+  letter-spacing: var(--rev-labels-letter-spacing);
+  line-height: var(--rev-labels-line-height);
+  margin-bottom: 0;
+  overflow: visible;
+  padding: var(--rev-labels-padding);
+  text-transform: uppercase;
+}
+
+.tag {
+  align-self: center flex: none;
+  font-family: var(--rev-tag--font);
+  font-size: var(--rev-tag-text-size--t4-sm);
+  font-style: normal;
+  font-weight: var(--rev-tag-font-weight);
+  letter-spacing: .025em;
+  line-height: var(--rev-tag-line-height);
+  opacity: 1;
+  padding: .35rem .45rem;
+  text-transform: uppercase;
+}
+
+
+.tag-clear {
+  display: inline-flex;
+  padding-top: var(--rev-tag-padding-top);
+  padding-right: var(--rev-tag-padding-left-right);
+  padding-bottom: var(--rev-tag-padding-bottom);
+  padding-left: var(--rev-tag-padding-left-right);
+  justify-content: center;
+  align-items: center;
+  transition-property: border-color, color, background-color;
+  transition-duration: 200ms, 200ms, 200ms;
+  transition-timing-function: ease, ease, ease;
+  font-family: var(--rev-tag-font);
+  font-size: var(--rev-tag-font-size);
+  line-height: var(--rev-tag-line-height);
+  font-weight: var(--rev-tag-font-weight);
+  letter-spacing: 0.035em;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: inherit;
+  background-color: color-mix(in srgb, currentcolor 20%, transparent);
+}
+
+
+
+/* ==========================================================================
+   Button Color Themes & States
+   ========================================================================== */
+
+
+
+
+/* ==========================================================================
+   Button Size Modifiers
+   ========================================================================== */
+
+
+.btn.is-lg {
+  border-radius: var(--rev-btn-lg-radius);
+  border-width: var(--rev-btn-lg-border-width);
+  font-size: 1.15rem;
+  padding: var(--rev-btn-lg-padding);
+}
+
+.btn.is-sm {
+  border-radius: var(--rev-btn-sm-radius);
+  border-width: var(--rev-btn-border-width);
+  font-size: var(--rev-btn-sm-text-size);
+}
+
+
+
+/* ==========================================================================
+  Text Buttons
+   ========================================================================== */
+
+
+.text-btn {
+  align-items: center;
+  color: inherit;
+  column-gap: .5em;
+  font-family: var(--_btns---all-btns--btn-font);
+  font-size: var(--_space-size---text-size--t3-base);
+  font-weight: var(--rev-btn-font-weight);
+  grid-row-gap: .5em;
+  justify-content: flex-start;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition-duration: .2s;
+  transition-property: all;
+  transition-timing-function: ease-in-out
+}
+
+.text-btn {
+  align-items: center;
+  color: inherit;
+  column-gap: .5em;
+  font-family: var(--_btns---all-btns--btn-font);
+  font-size: var(--_space-size---text-size--t3-base);
+  font-weight: var(--rev-btn-font-weight);
+  grid-row-gap: .5em;
+  justify-content: flex-start;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition-duration: .2s;
+  transition-property: all;
+  transition-timing-function: ease-in-out;
+}
+
+.text-btn:hover {
+  column-gap: .7em;
+  grid-row-gap: .7em
+}
+
+/* ==========================================================================
+   Labels
+   ========================================================================== */
+
+
+.label.is-xs {
+  flex: none;
+  font-family: var(--rev-labels-font);
+  font-size: var(--rev-t5-base);
+  font-weight: var(--rev-labels-font-weight);
+  letter-spacing: var(--rev-labels-letter-spacing);
+  line-height: var(--rev-labels-line-height);
+  margin-bottom: 0;
+  padding: var(--rev-labels-padding-top) var(--rev-labels-padding-bottom) var(--rev-labels-line-left) var(--rev-labels-line-right);
+  text-transform: uppercase;
+}
+
+.label.is-sm {
+  align-items: flex-end;
+  flex: none;
+  font-family: var(--rev-labels-font);
+  font-size: var(--rev-t3-base);
+  font-weight: var(--rev-labels-font-weight);
+  letter-spacing: var(--rev-labels-letter-spacing);
+  line-height: var(--rev-labels-line-height);
+  margin-bottom: 0;
+  padding: var(--rev-labels-padding-top) var(--rev-labels-padding-bottom) var(--rev-labels-line-left) var(--rev-labels-line-right);
+  text-transform: uppercase;
+}
+
+.label.is-md {
+  flex: none;
+  font-family: var(--rev-labels-font);
+  font-size: var(--rev-t2-base);
+  font-weight: var(--rev-labels-font-weight);
+  letter-spacing: var(--rev-labels-letter-spacing);
+  line-height: var(--rev-labels-line-height);
+  margin-bottom: 0;
+  padding: var(--rev-labels-padding-top) var(--rev-labels-padding-bottom) var(--rev-labels-line-left) var(--rev-labels-line-right);
+  text-transform: uppercase;
+}
+
+.label.is-lg {
+  flex: none;
+  font-family: var(--rev-labels-font);
+  font-size: var(--rev-t1-base);
+  font-weight: var(--rev-labels-font-weight);
+  letter-spacing: var(--rev-labels-letter-spacing);
+  line-height: var(--rev-labels-line-height);
+  margin-bottom: 0;
+  padding: var(--rev-labels-padding-top) var(--rev-labels-padding-bottom) var(--rev-labels-line-left) var(--rev-labels-line-right);
+  text-transform: uppercase;
+}
+
+
+.label.is-xl {
+  flex: none;
+  font-family: var(--rev-labels-font);
+  font-size: var(--rev-t0-base);
+  font-weight: var(--rev-labels-font-weight);
+  letter-spacing: var(--rev-labels-letter-spacing);
+  line-height: var(--rev-labels-line-height);
+  margin-bottom: 0;
+  padding: var(--rev-labels-padding-top) var(--rev-labels-padding-bottom) var(--rev-labels-line-left) var(--rev-labels-line-right);
+  text-transform: uppercase;
+}
+
+
+
+
+/* ==========================================================================
+   Ratios
+   ========================================================================== */
+
+
+
+.ratio_3x2 {
+  aspect-ratio: 3/2;
+  object-fit: cover;
+  object-position: 50% 50%;
+  position: relative;
+  overflow: hidden
+}
+
+.ratio_3x2.is-bottom-radius {
+  border-bottom-left-radius: inherit;
+  border-bottom-right-radius: inherit
+}
+
+.ratio_3x2.is-bottom-radius {
+  border-bottom-left-radius: inherit;
+  border-bottom-right-radius: inherit
+}
+
+.ratio_3x2.is-top-radius {
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit
+}
+
+.ratio_3x2.is-top-radius {
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit
+}
