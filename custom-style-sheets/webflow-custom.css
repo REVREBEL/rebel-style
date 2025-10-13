@@ -1,0 +1,240 @@
+:root {
+  --list-icon: '✓';
+  --icon-color: inherit;
+  --icon-size: inherit
+}
+
+body {
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  font-variant-ligatures: none;
+  -webkit-font-variant-ligatures: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: subpixel-antialiased;
+  font-smoothing: antialiased;
+  font-smooth: always;
+  -webkit-font-smoothing: antialiased;
+  text-shadow: rgba(0, 0, 0, .01) 0 0 1px
+}
+
+[tabindex]:focus-visible,
+input[type=file]:focus-visible {
+  outline: .125rem solid #4d65ff;
+  outline-offset: 0.125rem
+}
+
+[tabindex]:focus-visible,
+input[type=file]:focus-visible {
+  outline: .125rem solid #4d65ff;
+  outline-offset: 0.125rem
+}
+
+.w-richtext > :not(div):first-child,
+.w-richtext > div:first-child > :first-child {
+  margin-top: 0 !important
+}
+
+.w-richtext > :last-child,
+.w-richtext ol li:last-child,
+.w-richtext ul li:last-child {
+  margin-bottom: 0 !important
+}
+
+.div-square::after {
+  content: "";
+  display: block;
+  padding-bottom: 100%
+}
+
+.full-page-container {
+  margin-right: none !important;
+  margin-left: none !important;
+  width: 100% !important;
+  height: 100% !important
+}
+
+.container .container-xxlarge,
+.container-large,
+.container-medium,
+.container-small,
+.container-xlarge,
+.container-xsmall,
+.container-xxsmall {
+  margin-right: auto !important;
+  margin-left: auto !important;
+  box-sizing: border-box
+}
+
+@media screen and (max-width:479px) {
+
+  .container .container-xxlarge,
+  .container-large,
+  .container-medium,
+  .container-small,
+  .container-xlarge,
+  .container-xsmall,
+  .container-xxsmall {
+    box-sizing: border-box
+  }
+}
+
+.display-inlineflex {
+  display: inline-flex
+}
+
+.show-on-mobile {
+  display: none !important
+}
+
+@media screen and (max-width:991px) {
+  .show-on-mobile {
+    display: block !important
+  }
+}
+
+.hide {
+  display: none !important
+}
+
+@media screen and (max-width:991px) {
+
+  .hide,
+  .hide-tablet {
+    display: none !important
+  }
+}
+
+@media screen and (max-width:767px) {
+  .hide-mobile-landscape {
+    display: none !important
+  }
+}
+
+@media screen and (max-width:479px) {
+  .hide-mobile {
+    display: none !important
+  }
+}
+
+.truncate-width {
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  overflow: -moz-scrollbars-none
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none
+}
+
+.margin-none {
+  margin: 0 !important
+}
+
+.padding-none {
+  padding: 0 !important
+}
+
+.spacing-clean {
+  padding: 0 !important;
+  margin: 0 !important
+}
+
+.margin-top {
+  margin-right: 0 !important;
+  margin-bottom: 0 !important;
+  margin-left: 0 !important
+}
+
+.padding-top {
+  padding-right: 0 !important;
+  padding-bottom: 0 !important;
+  padding-left: 0 !important
+}
+
+.margin-right {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  margin-left: 0 !important
+}
+
+.padding-right {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  padding-left: 0 !important
+}
+
+.margin-bottom {
+  margin-top: 0 !important;
+  margin-right: 0 !important;
+  margin-left: 0 !important
+}
+
+.padding-bottom {
+  padding-top: 0 !important;
+  padding-right: 0 !important;
+  padding-left: 0 !important
+}
+
+.margin-left {
+  margin-top: 0 !important;
+  margin-right: 0 !important;
+  margin-bottom: 0 !important
+}
+
+.padding-left {
+  padding-top: 0 !important;
+  padding-right: 0 !important;
+  padding-bottom: 0 !important
+}
+
+.margin-horizontal {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important
+}
+
+.padding-horizontal {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important
+}
+
+.margin-vertical {
+  margin-right: 0 !important;
+  margin-left: 0 !important
+}
+
+.padding-vertical {
+  padding-right: 0 !important;
+  padding-left: 0 !important
+}
+
+.w-dropdown-btn,
+.w-dropdown-link,
+.w-dropdown-toggle,
+.w-nav-link,
+.w-tab-link,
+a {
+  color: inherit
+}
+
+.clickable-off {
+  pointer-events: none
+}
+
+.clickable-on {
+  pointer-events: auto
+}
+
+.w-input,
+.w-select,
+a {
+  color: inherit;
+  text-decoration: inherit;
+  font-size: inherit
+}

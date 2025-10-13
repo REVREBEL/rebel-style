@@ -1,0 +1,203 @@
+/* stylelint-disable custom-property-empty-line-before */
+:root {
+  --rev-label-font: var(--rev-headline-font);
+  --rev-label-line-height: 1;
+  --rev-label-font-weight: 700;
+  --rev-label-padding: .25em .3em .15rem;
+  --rev-label-padding-top: .25em;
+  --rev-label-padding-right: .3em;
+  --rev-label-padding-bottom: .15rem;
+  --rev-label-padding-left: .3em;
+  --rev-labels-letter-spacing: 0.125rem;
+  --rev-tag-border-width: 3px;
+  --rev-tag-font-size: .9rem;
+  --rev-tag-font-weight: 700;
+  --rev-tag-font: var(--rev-headline-font);
+  --rev-tag-letter-spacing: 0;
+  --rev-tag-line-height: 1;
+  --rev-tag-radius: .35rem;
+  --rev-tag-weight: 300;
+  --rev-tag-padding-top: .35rem;
+  --rev-tag-padding-inline: .45rem;
+  --rev-tag-padding-bottom: .35rem;
+  --rev-tag-padding: var(--rev-tag-padding-top) var(--rev-tag-padding-inline) var(--rev-tag-padding-bottom) var(--rev-tag-padding-inline);
+  --brand-hue: 330;
+  --brand-saturation: 51%;
+  --brand-lightness: 56%;
+  --brand-hsl:
+    var(--brand-hue) var(--brand-saturation) var(--brand-lightness);
+  --brand-color: hsl(var(--brand-hsl));
+  --brand-color-variant: hsl(var(--brand-hsl) / 50%);
+}
+
+
+/* stylelint-enable custom-property-empty-line-before */
+.tag {
+  align-items: center;
+  align-self: center;
+  border: 3px solid;
+  display: inline-flex;
+  font-family: var(--rev-tag-font);
+  font-size: var(--rev-tag-text-size-t4-sm);
+  font-style: normal;
+  font-weight: var(--rev-tag-font-weight);
+  letter-spacing: .025em;
+  line-height: var(--rev-tag-line-height);
+  opacity: 1;
+  padding: var(--rev-tag-padding);
+  text-transform: uppercase;
+  transition: border-color var(--t) var(--easing), background-color var(--t) var(--easing), box-shadow var(--t) var(--easing), color var(--t) var(--easing);
+  
+  --c-bg: var(--c-raw);
+  --c-border: var(--c-raw);
+  --c-fg: var(--c-ink);
+
+  background-color: var(--c-bg);
+  border-color: var(--c-border);
+  color: var(--c-fg);
+}
+
+.tag.is-outline {
+  --c-border: var(--c-raw);
+  --c-fg: var(--c-ink);
+
+  background-color: transparent;
+  border-color: var(--c-border);
+  color: var(--c-fg);
+}
+
+.tag.is-inverse {
+  --c-bg: var(--c-ink);
+  --c-border: var(--c-ink);
+  --c-fg: var(--c-raw);
+
+  background-color: var(--c-bg);
+  border-color: var(--c-border);
+  color: var(--c-fg);
+}
+
+
+.tag:hover , .tag.is-inverse:hover {
+  --c-color: var(--c-raw);
+
+  border-color: oklch(from var(--c-color) calc(l * 1.10) c h);
+  background: oklch(from var(--c-color) calc(l * 1.10) c h);
+}
+
+.tag:active , .tag.is-inverse:active {
+  --c-bg: var(--c-raw);
+
+  border-color: oklch(from var(--c-color)lue calc(l * .75) c h);
+  background: oklch(from var(--c-color)lue calc(l * .75) c h);
+}
+
+
+.tag-clear {
+  align-items: center;
+  background-color: color-mix(in srgb, currentcolor 20%, transparent);
+  color: inherit;
+  display: inline-flex;
+  font-family: var(--rev-tag-font);
+  font-size: var(--rev-tag-font-size);
+  font-weight: var(--rev-tag-font-weight);
+  justify-content: center;
+  letter-spacing: 0.035em;
+  line-height: var(--rev-tag-line-height);
+  padding: var(--rev-tag-padding);
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: border-color var(--t) var(--easing), background-color var(--t) var(--easing), box-shadow var(--t) var(--easing), color var(--t) var(--easing);
+}
+
+/* ==========================================================================
+   Labels
+   ========================================================================== */
+.label-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+}
+
+.label {
+  flex: none;
+  font-family: var(--rev-labels-font);
+  font-size: var(--rev-t3-base);
+  font-weight: var(--rev-labels-font-weight);
+  letter-spacing: var(--rev-labels-letter-spacing);
+  line-height: var(--rev-labels-line-height);
+  margin-bottom: 0;
+  overflow: visible;
+  padding: var(--rev-labels-padding);
+  text-transform: uppercase;
+  /* derive visuals from color pair */
+  --c-bg: var(--c-bg);
+  --c-border: var(--c-border);
+  --c-fg: var(--c-fg);
+  background-color: var(--c-bg);
+  border-color: var(--c-border);
+  color: var(--c-fg);
+}
+
+.label.is-xs {
+  flex: none;
+  font-family: var(--rev-labels-font);
+  font-size: var(--rev-t5-base);
+  font-weight: var(--rev-labels-font-weight);
+  letter-spacing: var(--rev-labels-letter-spacing);
+  line-height: var(--rev-labels-line-height);
+  margin-bottom: 0;
+  padding: var(--rev-labels-padding-top) var(--rev-labels-padding-bottom) var(--rev-labels-line-left) var(--rev-labels-line-right);
+  text-transform: uppercase;
+}
+
+.label.is-sm {
+  align-items: flex-end;
+  flex: none;
+  font-family: var(--rev-labels-font);
+  font-size: var(--rev-t3-base);
+  font-weight: var(--rev-labels-font-weight);
+  letter-spacing: var(--rev-labels-letter-spacing);
+  line-height: var(--rev-labels-line-height);
+  margin-bottom: 0;
+  padding: var(--rev-labels-padding-top) var(--rev-labels-padding-bottom) var(--rev-labels-line-left) var(--rev-labels-line-right);
+  text-transform: uppercase;
+}
+
+.label.is-md {
+  flex: none;
+  font-family: var(--rev-labels-font);
+  font-size: var(--rev-t2-base);
+  font-weight: var(--rev-labels-font-weight);
+  letter-spacing: var(--rev-labels-letter-spacing);
+  line-height: var(--rev-labels-line-height);
+  margin-bottom: 0;
+  padding: var(--rev-labels-padding-top) var(--rev-labels-padding-bottom) var(--rev-labels-line-left) var(--rev-labels-line-right);
+  text-transform: uppercase;
+}
+
+.label.is-lg {
+  flex: none;
+  font-family: var(--rev-labels-font);
+  font-size: var(--rev-t1-base);
+  font-weight: var(--rev-labels-font-weight);
+  letter-spacing: var(--rev-labels-letter-spacing);
+  line-height: var(--rev-labels-line-height);
+  margin-bottom: 0;
+  padding: var(--rev-labels-padding-top) var(--rev-labels-padding-bottom) var(--rev-labels-line-left) var(--rev-labels-line-right);
+  text-transform: uppercase;
+}
+
+.label.is-xl {
+  flex: none;
+  font-family: var(--rev-labels-font);
+  font-size: var(--rev-t0-base);
+  font-weight: var(--rev-labels-font-weight);
+  letter-spacing: var(--rev-labels-letter-spacing);
+  line-height: var(--rev-labels-line-height);
+  margin-bottom: 0;
+  padding: var(--rev-labels-padding-top) var(--rev-labels-padding-bottom) var(--rev-labels-line-left) var(--rev-labels-line-right);
+  text-transform: uppercase;
+}

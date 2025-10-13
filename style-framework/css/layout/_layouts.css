@@ -1,0 +1,62 @@
+/* minify start */
+.display-none{display:none}
+.display-block{display:block}
+.display-flex{display:flex}
+.display-inline-block{display:inline-block}
+
+/* minify end */
+.display-inline-block.is-underline {
+  border-bottom: 4px solid #0000;
+  color: inherit;
+  opacity: 1;
+  overflow: hidden;
+  transition-duration: .4s;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(.755, .05, .855, .06)
+}
+
+.display-inline-block.is-underline:hover {
+  border-bottom-style: solid;
+  border-bottom-width: 4px;
+  border-bottom-color: inherit
+}
+
+
+/* minify start */
+
+.flex-vertical.is_align-end-flex{align-items:flex-end;justify-content:flex-start}
+.flex-vertical_100vh{min-height:100vh;justify-content:center;align-items:center}
+
+.tablet_flex-vertical{align-items:stretch;flex-flow:column;flex:1;gap:0}
+
+.mobile-l_flex_vertical{align-items:stretch;flex-flow:row;flex:1;gap:0}
+.mobile-p_flex_vertical{align-items:stretch;flex-flow:column;flex:1;gap:0}
+
+.is-flex-child-expand{flex:1}
+.is-flex-shrink{flex:0 1 auto;}
+
+.is-flex-align-stretch{display:flex;align-self:stretch;align-items:stretch;}
+.is-flex-align_center{align-items:center;align-self:center;justify-content:center}
+
+.is-flex-align-top{display:flex;align-self:flex-start;align-items:flex-start;}
+.is-flex-align-bottom{display:flex;align-self:flex-end;align-items:flex-end;}
+.is-flex-align-left{align-self:flex-start}
+.is-flex-align-right{align-self:flex-end}
+
+.flex-horizontal{align-items:stretch;display:flex;flex-flow:row;flex:1;gap:0}
+.flex-horizontal-100vw{min-height:100vw;justify-content:center;align-items:center}
+
+.flex-vertical{align-items:stretch;display:flex;flex-flow:column;flex:0 auto}
+
+.flex-vertical.is-align-center-flex{align-items:center}
+.flex-vertical.is-align-end-flex{align-items:flex-end;justify-content:flex-start}
+.flex-vertical-100vh{min-height:100vh;justify-content:center;align-items:center}
+
+.mobile-l-flex-vertical{align-items:stretch;flex-flow:row;flex:1;gap:0}
+.mobile-p-flex-vertical{align-items:stretch;flex-flow:column;flex:1;gap:0}
+
+.u-layout-blockcontainer{max-width:940px;margin-left:auto;margin-right:auto;display:block}
+.u-layout-hflex{flex-direction:row;align-items:flex-start;display:flex}
+.u-layout-layout{gap:20px;column-gap:20px;grid-auto-columns:1fr;justify-content:center;padding:20px}
+.u-layout-vflex{flex-direction:column;align-items:flex-start;display:flex}
+/* minify end */

@@ -1,0 +1,314 @@
+/* stylelint-disable custom-property-empty-line-before */
+:root {
+  --rev-btn-font: var(--rev-headline-font);
+  --rev-btn-font-size: var(--rev-t3-base);
+  --rev-btn-font-weight: var(--rev-font-weight-bold);
+  --rev-btn-line-height: 1.25;
+  --rev-btn-letter-spacing: .05em;
+  --rev-btn-font-shorthand: var(--rev-btn-font-weight) var(--rev-btn-font-size) var(--rev-btn-line-height) var(--rev-btn-font);
+  --rev-btn-radius: .15rem;
+  --rev-btn-border-width: .2rem;
+  --rev-btn-padding-vertical: 1.25rem;
+  --rev-btn-padding-horizontal: 1.5rem;
+  --rev-btn-padding: var(--rev-btn-padding-vertical) var(--rev-btn-padding-horizontal);
+  --rev-btn-lg-padding-vertical: 1.5rem;
+  --rev-btn-lg-padding-horizontal: 1.75rem;
+  --rev-btn-lg-border-width: .2rem;
+  --rev-btn-lg-font-size: var(--rev-t2-md);
+  --rev-btn-lg-radius: .2rem;
+  --rev-btn-lg-padding: var(--rev-btn-lg-padding-vertical) var(--rev-btn-lg-padding-horizontal);
+  ;
+  --rev-btn-sm-padding-vertical: 1rem;
+  --rev-btn-sm-padding-horizontal: 1rem;
+  --rev-btn-sm-border-width: .15rem;
+  --rev-btn-sm-font-size: var(--rev-t4-md);
+  --rev-btn-sm-radius: .2rem;
+  --rev-btn-sm-padding: var(--rev-btn-sm-padding-vertical) var(--rev-btn-sm-padding-horizontal);
+}
+
+/* stylelint-enable custom-property-empty-line-before */
+.btn, .button {
+  align-items: center;
+  border-radius: var(--rev-btn-radius);
+  cursor: pointer;
+  display: inline-flex;
+  flex: 0 auto;
+  font-family: var(--rev-headline-font);
+  font-size: var(--rev-btn-font-size);
+  font-weight: var(--rev-btn-font-weight);
+  letter-spacing: var(--rev-btn-letter-spacing);
+  line-height: var(--rev-btn-line-height);
+  gap: .5em;
+  justify-content: center;
+  padding: var(--rev-btn-padding);
+  pointer-events: auto;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: border-color var(--t) var(--easing), background-color var(--t) var(--easing), box-shadow var(--t) var(--easing), color var(--t) var(--easing);
+  /* derive visuals from color pair */
+  --c-bg: var(--c-raw);
+  --c-fg: var(--c-ink);
+  --c-border: var(--c-raw);
+  background-color: var(--c-bg);
+  border: var(--rev-btn-border-width) solid var(--c-border);
+  color: var(--c-fg, white);
+}
+
+.btn.is-inverse, .button.is-inverse {
+  --c-bg: var(--c-ink);
+  --c-fg: var(--c-raw);
+  --c-border: var(--c-ink);
+}
+
+.btn.is-sm, .button.is-sm {
+  border-radius: var(--rev-btn-sm-radius);
+  border-width: var(--rev-btn-sm-border-width);
+  font-size: var(--rev-btn-sm-font-size);
+  padding: var(--rev-btn-sm-padding);
+}
+
+.btn.is-lg, .button.is-lg {
+  border-radius: var(--rev-btn-lg-radius);
+  border-width: var(--rev-btn-lg-border-width);
+  font-size: var(--rev-btn-lg-font-size);
+  padding: var(--rev-btn-lg-padding);
+}
+
+.btn.is-outline, .button.is-outline {
+  --c-fg: var(--c-raw);
+  --c-border: var(--c-raw);
+  background-color: transparent;
+  border: var(--rev-btn-border-width) solid var(--c-border);
+  color: var(--c-fg);
+}
+
+.btn.is-rebel, .button.is-rebel {
+  background-image: linear-gradient(to right, #27498b, #145491, #005e95, #006897, #007198, #00789b, #007f9d, #00869f, #008ea5, #0096ab, #009eb1, #00a6b6, #71c9c5, #7aceb5, #8fd2a2, #abd38e, #ccd17e, #dbca73, #ebc16d, #fab86b, #f9aa64, #f89b5e, #f68c5b, #f37d59, #f37d59, #f07555, #ec6d51, #e9654e, #e55c4b, #df554f, #d84e53, #d04856, #c2455f, #b14565, #a04569, #8e456a);
+  background-clip: border-box;
+  -webkit-text-fill-color: inherit;
+  box-shadow: none;
+  color: var(--var-color-primary);
+}
+
+.btn.is-rebel.is-outline, .button.is-rebel.is-outline {
+  background-image: linear-gradient(to right, #27498b, #145491, #005e95, #006897, #007198, #00789b, #007f9d, #00869f, #008ea5, #0096ab, #009eb1, #00a6b6, #71c9c5, #7aceb5, #8fd2a2, #abd38e, #ccd17e, #dbca73, #ebc16d, #fab86b, #f9aa64, #f89b5e, #f68c5b, #f37d59, #f37d59, #f07555, #ec6d51, #e9654e, #e55c4b, #df554f, #d84e53, #d04856, #c2455f, #b14565, #a04569, #8e456a);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  box-shadow: none;
+}
+
+.btn:hover, .button:hover,
+.btn.is-lg:hover, .button.is-lg:hover,
+.btn.is-sm:hover, .button.is-sm:hover {
+  --c-bg: var(--c-ink);
+  --c-fg: var(--c-raw);
+  --c-border: var(--c-ink);
+  --c-shadow: var(--c-raw);
+  background-color: var(--c-bg);
+  border-color: var(--c-border);
+  box-shadow: 1px 1px 5px color-mix(in srgb, var(--c-shadow) 60%, transparent),
+    0 5px 30px color-mix(in srgb, var(--c-shadow) 60%, transparent),
+    0 10px 10px -15px color-mix(in srgb, var(--c-shadow) 60%, transparent);
+  color: var(--c-fg);
+}
+
+.btn.is-color-9:hover, .button.is-color-9:hover,
+.btn.is-color-light:hover, .button.is-color-light:hover {
+  --c-bg: var(--c-ink);
+  --c-fg: var(--c-raw);
+  --c-border: var(--c-ink);
+  --c-shadow: var(--c-raw);
+  background-color: var(--c-bg);
+  border-color: var(--c-border);
+  box-shadow: 1px 1px 5px color-mix(in srgb, var(--c-shadow) 60%, black),
+    0 5px 10px color-mix(in srgb, var(--c-shadow) 60%, black),
+    0 10px 20px -15px color-mix(in srgb, var(--c-shadow) 60%, black);
+  color: var(--c-fg);
+}
+
+.btn.is-inverse:hover, .button.is-inverse:hover,
+.btn.is-lg.is-inverse:hover, .button.is-lg.is-inverse:hover,
+.btn.is-sm.is-inverse:hover, .button.is-sm.is-inverse:hover {
+  /* derive visuals from color pair */
+  --c-bg: var(--c-raw);
+  --c-fg: var(--c-ink);
+  --c-border: var(--c-raw);
+  --c-shadow: var(--c-ink);
+  background-color: var(--c-bg);
+  border-color: var(--c-border);
+  box-shadow: 1px 1px 5px color-mix(in srgb, var(--c-shadow) 60%, transparent),
+    0 5px 30px color-mix(in srgb, var(--c-shadow) 60%, transparent),
+    0 10px 10px -15px color-mix(in srgb, var(--c-shadow) 60%, transparent);
+  color: var(--c-fg);
+}
+
+.btn.is-outline:hover, .button.is-outline:hover {
+  --c-bg: var(--c-raw);
+  --c-fg: var(--c-ink);
+  --c-border: var(--c-raw);
+  --c-shadow: var(--c-ink);
+  background-color: var(--c-bg);
+  border-color: var(--c-border);
+  box-shadow: 1px 1px 5px color-mix(in srgb, var(--c-shadow) 60%, transparent),
+    0 5px 30px color-mix(in srgb, var(--c-shadow) 60%, transparent),
+    0 10px 10px -15px color-mix(in srgb, var(--c-shadow) 60%, transparent);
+  color: var(--c-fg);
+}
+
+.btn.is-rebel:hover, .button.is-rebel:hover {
+  box-shadow: 1px 1px 5px var(--rev-color-primary), 0 10px 20px var(--rev-color-primary), 0 20px 30px -15px var(--rev-color-primary);
+}
+
+.btn:active, .button:active, .btn.is-inverse:active, .button.is-inverse:active,
+.btn.is-color-9:active, .button.is-color-9:active, .btn.is-color-light:active, .button.is-color-light:active,
+.btn.is-sm:active, .button.is-sm:active, .btn-is-lg:active, .button-is-lg:active,
+.btn.is-rebel:active, .button.is-rebel:active, .btn.is-rebel.is-outline:active, .button.is-rebe.is-outline:active {
+  box-shadow: none;
+  transform: none;
+}
+
+.btn.is-outline:active, .button.is-outline:active {
+  background-color: inherit;
+  border-color: inherit;
+  color: inherit;
+}
+
+.text-btn {
+  align-items: center;
+  color: inherit;
+  gap: .5em;
+  font-family: var(--rev-btn-font);
+  font-size: var(--rev-t3-base);
+  font-weight: var(--rev-btn-font-weight);
+  justify-content: flex-start;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition-duration: .2s;
+  transition-property: all;
+  transition-timing-function: ease-in-out
+}
+
+.text-button-icon {
+  align-items: center;
+  color: inherit;
+  display: flex;
+  height: 1em;
+  justify-content: center;
+  width: 1em
+}
+
+.text-btn:hover {
+  gap: .7em;
+}
+
+.btn.next,
+.button.next {
+  color: var(--rev-color-primary);
+  z-index: 5;
+  width: auto;
+  display: inline-block;
+  position: absolute;
+  inset: auto auto 0% 10px;
+}
+
+.btn.next.is-inverse,
+.button.next.is-inverse {
+  color: var(--rev-color-primary-inverse);
+  z-index: 99;
+  padding: var(--rev-btn-sm-padding);
+  -webkit-text-fill-color: transparent;
+  /* stylelint-disable-next-line  property-no-vendor-prefix */
+  -webkit-background-clip: text;
+  background-clip: text;
+  width: auto;
+  display: inline-block;
+  position: absolute;
+  inset: auto auto 0% 10px;
+}
+
+.btn.previous,
+.button.previous {
+  z-index: 99;
+  padding: var(--rev-btn-sm-padding);
+  -webkit-text-fill-color: transparent;
+  /* stylelint-disable-next-line  property-no-vendor-prefix */
+  -webkit-background-clip: text;
+  background-clip: text;
+  width: auto;
+  display: inline-block;
+  position: absolute;
+  inset: auto auto .5% 20%;
+}
+
+.btn.previous.is-inverse,
+.button.previous.is-inverse {
+  color: var(--rev-color-primary-inverse);
+  z-index: 99;
+  padding: var(--rev-btn-sm-padding);
+  -webkit-text-fill-color: transparent;
+  /* stylelint-disable-next-line  property-no-vendor-prefix */
+  -webkit-background-clip: text;
+  background-clip: text;
+  width: auto;
+  display: inline-block;
+  position: absolute;
+  inset: auto auto .5% 20%;
+}
+
+.button.previous.is-inverse:hover, .button.next.is-inverse:hover,
+.btn.previous.is-inverse:hover, .btn.next.is-inverse:hover {
+  color: var(--rev-color-primary);
+  border-color: var(--rev-color-primary-inverse);
+  background-color: var(--rev-color-primary-inverse);
+  -webkit-text-fill-color: inherit;
+  background-clip: border-box;
+}
+
+.btn.previous:hover, .btn.next:hover,
+.button.previous:hover, .button.next:hover {
+  color: var(--rev-color-primary-inverse);
+  border-color: var(--rev-color-primary);
+  background-color: var(--rev-color-primary);
+  -webkit-text-fill-color: inherit;
+  background-clip: border-box;
+}
+
+button: disabled {
+  cursor: not-allowed;
+  opacity: .6
+}
+
+.u-button {
+  display: inline-block;
+  padding: 9px 15px;
+  background-color: #163666;
+  ;
+  color: white;
+  border: 0;
+  line-height: inherit;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 0;
+}
+
+/* ===== Respect reduced motion ===== */
+@media (prefers-reduced-motion: reduce) {
+  .btn, .button, .btn.is-inverse, .button.is-inverse,
+  .btn.is-color-9, .button.is-color-9, .btn.is-color-light, .button.is-color-light,
+  .btn.is-sm, .button.is-sm, .btn-is-lg, .button-is-lg,
+  .btn.is-rebel, .button.is-rebel, .btn.is-rebel.is-outline, .button.is-rebe.is-outline {
+    transition: none;
+  }
+}
+
+
+
+@media screen and (width <=767px) {
+  .btn, .button, .btn.is-inverse, .button.is-inverse,
+  .btn.is-color-9, .button.is-color-9, .btn.is-color-light, .button.is-color-light,
+  .btn.is-sm, .button.is-sm, .btn-is-lg, .button-is-lg,
+  .btn.is-rebel, .button.is-rebel, .btn.is-rebel.is-outline, .button.is-rebe.is-outline {
+    font-size: 1.25rem;
+  }
+}

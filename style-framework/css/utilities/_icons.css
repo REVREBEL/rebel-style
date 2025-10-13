@@ -1,0 +1,242 @@
+
+
+
+.is-icon-color-1 {
+  color: #000;
+  filter: invert(26%) sepia(80%) saturate(2128%) hue-rotate(169deg) brightness(93%) contrast(97%)
+}
+
+.is-icon-color-2 {
+  color: #000;
+  filter: invert(60%) sepia(83%) saturate(5082%) hue-rotate(155deg) brightness(97%) contrast(101%)
+}
+
+.is-icon-color-3 {
+  color: #000;
+  filter: invert(81%) sepia(41%) saturate(374%) hue-rotate(123deg) brightness(84%) contrast(92%)
+}
+
+.is-icon-color-4 {
+  color: #000;
+  filter: invert(90%) sepia(15%) saturate(576%) hue-rotate(162deg) brightness(92%) contrast(89%)
+}
+
+.is-icon-color-5 {
+  color: #000;
+  filter: invert(95%) sepia(17%) saturate(4211%) hue-rotate(309deg) brightness(113%) contrast(96%)
+}
+
+.is-icon-color-6 {
+  color: #000;
+  filter: invert(64%) sepia(13%) saturate(3377%) hue-rotate(323deg) brightness(99%) contrast(92%)
+}
+
+.is-icon-color-7 {
+  color: #000;
+  filter: invert(53%) sepia(85%) saturate(4480%) hue-rotate(335deg) brightness(94%) contrast(86%)
+}
+
+.is-icon-color-8 {
+  color: #000;
+  filter: invert(34%) sepia(17%) saturate(1564%) hue-rotate(277deg) brightness(92%) contrast(89%)
+}
+
+.is-icon-color-grey-1 {
+  color: #000;
+  filter: invert(77%) sepia(0%) saturate(523%) hue-rotate(135deg) brightness(89%) contrast(90%)
+}
+
+.is-icon-color-grey-2 {
+  color: #000;
+  filter: invert(33%) sepia(0%) saturate(1659%) hue-rotate(154deg) brightness(89%) contrast(77%)
+}
+
+.is-icon-color-grey-3 {
+  color: #000;
+  filter: invert(15%) sepia(0%) saturate(0%) hue-rotate(251deg) brightness(98%) contrast(90%)
+}
+
+.is-icon-color-primary {
+  color: #000;
+  filter: invert(15%) sepia(28%) saturate(3881%) hue-rotate(199deg) brightness(93%) contrast(91%)
+}
+
+.is-icon-color-white {
+  color: #000;
+  filter: invert(97%) sepia(0%) saturate(7112%) hue-rotate(301deg) brightness(128%) contrast(96%)
+}
+
+
+.icon-ouline_linkedin {
+  background-image: url('../images/Linkedin-Outline.svg');
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover
+}
+
+.icon-ouline_linkedin:hover {
+  filter: invert(26%) sepia(80%) saturate(2128%) hue-rotate(169deg) brightness(93%) contrast(97%)
+}
+
+.icon-outline_blog {
+  background-image: url('../images/Blog-Outline.svg');
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover
+}
+
+.icon-outline_blog:hover {
+  filter: invert(95%) sepia(17%) saturate(4211%) hue-rotate(309deg) brightness(113%) contrast(96%)
+}
+
+.icon-outline_email {
+  background-image: none;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover
+}
+
+.icon-outline_facebook {
+  background-image: url('../images/Facebook-Outline.svg');
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover
+}
+
+.icon-outline_facebook:hover {
+  filter: invert(34%) sepia(17%) saturate(1564%) hue-rotate(277deg) brightness(92%) contrast(89%)
+}
+
+.icon-outline_github {
+  background-image: url('../images/Github-Outline.svg');
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover
+}
+
+.icon-outline_github:hover {
+  filter: invert(15%) sepia(0%) saturate(0%) hue-rotate(251deg) brightness(98%) contrast(90%)
+}
+
+.icon-outline_google {
+  background-image: url('../images/Google-Outline.svg');
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover
+}
+
+.icon-outline_google:hover {
+  filter: invert(64%) sepia(13%) saturate(3377%) hue-rotate(323deg) brightness(99%) contrast(92%)
+}
+
+.icon-outline_instagram {
+  background-image: url('../images/Instgram-Outline.png');
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover
+}
+
+.icon-outline_instagram:hover {
+  filter: invert(53%) sepia(85%) saturate(4480%) hue-rotate(335deg) brightness(94%) contrast(86%)
+}
+
+.icon-outline_telegram {
+  background-image: none;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover
+}
+
+.icon-outline_x {
+  background-image: url('../images/X-Outline.svg');
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover
+}
+
+.icon-outline_x:hover {
+  filter: invert(81%) sepia(41%) saturate(374%) hue-rotate(123deg) brightness(84%) contrast(92%)
+}
+
+.icon-outline_youtube {
+  background-image: none,url('https://d3e54v103j8qbb.cloudfront.net/img/background-image.svg');
+  background-position: 50%,0 0;
+  background-repeat: no-repeat,repeat;
+  background-size: cover,auto
+}
+
+.icon-solid_blog {
+  background-image: url('../images/Blog.svg');
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover
+}
+
+.icon-solid_blog-rss {
+  background-image: url('../images/RSS.svg');
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover
+}
+
+.icon-solid_email {
+  background-image: url('../images/Email-1.svg');
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover
+}
+
+.icon-solid_facebook {
+  background-image: url('../images/Facebook.svg');
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover
+}
+
+.icon-solid_github {
+  background-image: url('../images/Github.svg');
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover
+}
+
+.icon-solid_google {
+  background-image: url('../images/Google.svg');
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover
+}
+
+.icon-solid_instagram {
+  background-image: url('../images/Instagram.svg');
+  background-position: 0 0;
+  background-size: auto
+}
+
+.icon-solid_linkedin {
+  background-image: url('../images/Linkedin.svg');
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover
+}
+
+.icon-solid_telegram {
+  background-image: url('../images/Telegraph.svg');
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover
+}
+
+.icon-solid_x {
+  background-image: url('../images/X.svg');
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover
+}
+
+.icon-solid_youtube {
+  background-image: none;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover
+}

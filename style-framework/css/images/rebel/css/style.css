@@ -1,0 +1,385 @@
+@font-face {
+  font-family: "rebel";
+  src: url("../font/rebel.eot");
+  src: url("../font/rebel.eot?nebf3d#iefix") format("embedded-opentype"),
+      url("../font/rebel.woff2?nebf3d") format("woff2"),
+      url("../font/rebel.woff?nebf3d") format("woff"),
+      url("../font/rebel.ttf?nebf3d") format("truetype"),
+      url("../font/rebel.svg?nebf3d#rebel") format("svg");
+  font-style: normal;
+  font-weight: 400;
+}
+
+.rebel {
+  display: inline-block;
+  font-family: "rebel" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  vertical-align: -.125em;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+.rebel-air-tram::before {
+  content: "\ea01";
+}
+.rebel-airplane::before {
+  content: "\ea02";
+}
+.rebel-airport::before {
+  content: "\ea03";
+}
+.rebel-alarm-clock::before {
+  content: "\ea04";
+}
+.rebel-apple-watch::before {
+  content: "\ea05";
+}
+.rebel-approval::before {
+  content: "\ea06";
+}
+.rebel-arrow::before {
+  content: "\ea07";
+}
+.rebel-arrow-long::before {
+  content: "\ea08";
+}
+.rebel-artboard-2::before {
+  content: "\ea09";
+}
+.rebel-astriek::before {
+  content: "\ea0a";
+}
+.rebel-astronaut::before {
+  content: "\ea0b";
+}
+.rebel-avocado::before {
+  content: "\ea0c";
+}
+.rebel-back::before {
+  content: "\ea0d";
+}
+.rebel-bankcard::before {
+  content: "\ea0e";
+}
+.rebel-bar-chart::before {
+  content: "\ea0f";
+}
+.rebel-bed::before {
+  content: "\ea10";
+}
+.rebel-birthday-cupcake::before {
+  content: "\ea11";
+}
+.rebel-blowhorn::before {
+  content: "\ea12";
+}
+.rebel-brainstorming::before {
+  content: "\ea13";
+}
+.rebel-brief-case::before {
+  content: "\ea14";
+}
+.rebel-calculator::before {
+  content: "\ea15";
+}
+.rebel-certificate::before {
+  content: "\ea16";
+}
+.rebel-chat::before {
+  content: "\ea17";
+}
+.rebel-chat-bubble::before {
+  content: "\ea18";
+}
+.rebel-chat-love::before {
+  content: "\ea19";
+}
+.rebel-checkbox::before {
+  content: "\ea1a";
+}
+.rebel-clipboard::before {
+  content: "\ea1b";
+}
+.rebel-clock::before {
+  content: "\ea1c";
+}
+.rebel-coconut-cocktail::before {
+  content: "\ea1d";
+}
+.rebel-code::before {
+  content: "\ea1e";
+}
+.rebel-color-palette::before {
+  content: "\ea1f";
+}
+.rebel-computer-graph::before {
+  content: "\ea20";
+}
+.rebel-cottage::before {
+  content: "\ea21";
+}
+.rebel-data-sheet::before {
+  content: "\ea22";
+}
+.rebel-data-sheet_1::before {
+  content: "\ea23";
+}
+.rebel-details::before {
+  content: "\ea24";
+}
+.rebel-diamond::before {
+  content: "\ea25";
+}
+.rebel-dice-five-side::before {
+  content: "\ea26";
+}
+.rebel-dice-four-side::before {
+  content: "\ea27";
+}
+.rebel-dice-one-side::before {
+  content: "\ea28";
+}
+.rebel-discount::before {
+  content: "\ea29";
+}
+.rebel-fancy-birhday-cake::before {
+  content: "\ea2a";
+}
+.rebel-faq::before {
+  content: "\ea2b";
+}
+.rebel-favorite::before {
+  content: "\ea2c";
+}
+.rebel-flip-flops::before {
+  content: "\ea2d";
+}
+.rebel-flow-chart::before {
+  content: "\ea2e";
+}
+.rebel-folder::before {
+  content: "\ea2f";
+}
+.rebel-game-over::before {
+  content: "\ea30";
+}
+.rebel-gear::before {
+  content: "\ea31";
+}
+.rebel-grand-canynon::before {
+  content: "\ea32";
+}
+.rebel-graph::before {
+  content: "\ea33";
+}
+.rebel-heart::before {
+  content: "\ea34";
+}
+.rebel-help::before {
+  content: "\ea35";
+}
+.rebel-inbox::before {
+  content: "\ea36";
+}
+.rebel-keep-calm-dnd::before {
+  content: "\ea37";
+}
+.rebel-lake::before {
+  content: "\ea38";
+}
+.rebel-laptop::before {
+  content: "\ea39";
+}
+.rebel-last-day-of-month::before {
+  content: "\ea3a";
+}
+.rebel-lightbulb::before {
+  content: "\ea3b";
+}
+.rebel-lightening::before {
+  content: "\ea3c";
+}
+.rebel-loyalty-card::before {
+  content: "\ea3d";
+}
+.rebel-loyalty-card_1::before {
+  content: "\ea3e";
+}
+.rebel-luggage::before {
+  content: "\ea3f";
+}
+.rebel-mac-client::before {
+  content: "\ea40";
+}
+.rebel-magic-wand::before {
+  content: "\ea41";
+}
+.rebel-map::before {
+  content: "\ea42";
+}
+.rebel-money-bag::before {
+  content: "\ea43";
+}
+.rebel-mountian::before {
+  content: "\ea44";
+}
+.rebel-mushroom::before {
+  content: "\ea45";
+}
+.rebel-national-park::before {
+  content: "\ea46";
+}
+.rebel-new-label::before {
+  content: "\ea47";
+}
+.rebel-north::before {
+  content: "\ea48";
+}
+.rebel-notepad::before {
+  content: "\ea49";
+}
+.rebel-notepad-with-notes::before {
+  content: "\ea4a";
+}
+.rebel-notepad-with-pen::before {
+  content: "\ea4b";
+}
+.rebel-palm-tree::before {
+  content: "\ea4c";
+}
+.rebel-party-time::before {
+  content: "\ea4d";
+}
+.rebel-percentage::before {
+  content: "\ea4e";
+}
+.rebel-picture::before {
+  content: "\ea4f";
+}
+.rebel-pie-chart::before {
+  content: "\ea50";
+}
+.rebel-piggy::before {
+  content: "\ea51";
+}
+.rebel-pine-tree::before {
+  content: "\ea52";
+}
+.rebel-planner::before {
+  content: "\ea53";
+}
+.rebel-potted-plant::before {
+  content: "\ea54";
+}
+.rebel-presentation::before {
+  content: "\ea55";
+}
+.rebel-process::before {
+  content: "\ea56";
+}
+.rebel-profile::before {
+  content: "\ea57";
+}
+.rebel-projection-screen::before {
+  content: "\ea58";
+}
+.rebel-queen::before {
+  content: "\ea59";
+}
+.rebel-quotes::before {
+  content: "\ea5a";
+}
+.rebel-record::before {
+  content: "\ea5b";
+}
+.rebel-resort-destination::before {
+  content: "\ea5c";
+}
+.rebel-rocket::before {
+  content: "\ea5d";
+}
+.rebel-sale-label::before {
+  content: "\ea5e";
+}
+.rebel-simple-birthday-cake::before {
+  content: "\ea5f";
+}
+.rebel-sky-mask::before {
+  content: "\ea60";
+}
+.rebel-sleep::before {
+  content: "\ea61";
+}
+.rebel-small-icons::before {
+  content: "\ea62";
+}
+.rebel-snow-ski::before {
+  content: "\ea63";
+}
+.rebel-snowflake::before {
+  content: "\ea64";
+}
+.rebel-social-platforms::before {
+  content: "\ea65";
+}
+.rebel-spa-rocks::before {
+  content: "\ea66";
+}
+.rebel-spa-towel::before {
+  content: "\ea67";
+}
+.rebel-star::before {
+  content: "\ea68";
+}
+.rebel-strategy::before {
+  content: "\ea69";
+}
+.rebel-sun-glasses::before {
+  content: "\ea6a";
+}
+.rebel-super-mario::before {
+  content: "\ea6b";
+}
+.rebel-super-mario-profile::before {
+  content: "\ea6c";
+}
+.rebel-table::before {
+  content: "\ea6d";
+}
+.rebel-table_1::before {
+  content: "\ea6e";
+}
+.rebel-tablet::before {
+  content: "\ea6f";
+}
+.rebel-tape-drive::before {
+  content: "\ea70";
+}
+.rebel-transfer::before {
+  content: "\ea71";
+}
+.rebel-tropical-cocktail::before {
+  content: "\ea72";
+}
+.rebel-university::before {
+  content: "\ea73";
+}
+.rebel-upside::before {
+  content: "\ea74";
+}
+.rebel-video-chat::before {
+  content: "\ea75";
+}
+.rebel-waiting::before {
+  content: "\ea76";
+}
+.rebel-walkie::before {
+  content: "\ea77";
+}

@@ -1,0 +1,561 @@
+/* stylelint-disable */
+/* stylelint-disable scss/dollar-variable-pattern */
+:root {
+  /* ========================================================================
+     1) Core Brand Color Tokens
+     - These 7-10 colors define the entire theme palette.
+     - Change these to re-theme the application.
+     ======================================================================== */
+  --rev-color-primary: #163666; /* Deep Blue */
+  --rev-color-secondary: #047c97; /* Teal */
+  --rev-color-accent: #71c9c5; /* Light Teal */
+  --rev-color-highlight: #b2d3de; /* Pale Blue */
+
+  --rev-color-warning: #faca78; /* Yellow/Orange */
+  --rev-color-danger: #f37d59; /* Orange */
+  --rev-color-error: #e05047; /* Red */
+
+  --rev-color-light: #fafafa; /* Off-white */
+  --rev-color-dark: #163666; /* Same as primary */
+  --rev-color-grey: #ababab;
+  --rev-color-grey-dark: #575757;
+  --rev-color-grey-medium: #cccccc;
+  --rev-color-grey-light: #dddddd;
+  --rev-color-grey-light-alt: #e3e3e3;
+  --rev-color-grey-xlight: #eeeeee;
+  --rev-color-grey-xxlight: #e9ecef;
+  --rev-color-grey-xxxlight: #e4e9f0;
+
+  --rev-color-purple: #8e456a;
+  --rev-color-purple-light: #ac80a4;
+  --rev-color-blue-alt: #364859;
+  --rev-color-blue-alt-dark: #1e2832;
+  --rev-color-blue-alt-darker: #2f3f4e;
+  --rev-color-blue-alt-light: #3d5062;
+
+  /* ========================================================================
+     2) Font Tokens
+     ======================================================================== */
+  --rev-body-font-weight: 300;
+  --rev-body-font: 'General Sans', 'Public Sans', 'Andale Mono', tahoma, sans-serif;
+  --rev-code-font: 'Fira Code', courier, monospace;
+  --rev-headline-font: 'Khand', 'Oswald', 'Impact', sans-serif;
+
+  /* ========================================================================
+     3) Semantic & Application-Specific Variables
+     - These variables give meaning to the core tokens.
+     - They are derived from the brand colors above.
+     ======================================================================== */
+  /* Theme Colors */
+  --sd-app-top-bar-color: var(--rev-color-primary);
+  --sd-app-top-bar-color-dark-2: var(--rev-color-primary);
+  --sd-app-top-bar-color-dar-2-contrast: var(--rev-color-light);
+  --sd-highlight: var(--rev-color-accent);
+  --sd-avatar-color: var(--rev-color-primary);
+  --sd-theme-primary-highlighting: var(--rev-color-primary);
+  --sd-bg-menu-item-active: rgba(0, 0, 0, 0.1);
+  --sd-border-menu-item-active: rgba(0, 0, 0, 0.2);
+  --sd-bg-button-primary: var(--sd-app-top-bar-color-dark-2);
+
+  /* Text Colors */
+  --sd-text-default: var(--rev-color-primary);
+  --sd-text-secondary: var(--rev-color-secondary);
+  --sd-text-tertiary: var(--rev-color-primary);
+  --sd-text-dark: var(--rev-color-primary);
+  --sd-text-light: var(--rev-color-grey-dark);
+  --sd-text-disabled: var(--rev-color-grey);
+  --sd-text-muted: var(--rev-color-grey);
+  --sd-theme-primary-highlighted-text: var(--sd-text-tertiary); // appTopBarColor_dark2
+  --sd-text-error: var(--rev-color-error);
+  --sd-text-contrast-to-avatar: #ffffff;
+  --sd-app-top-bar-text: #ffffff; // appTopBarTextColor
+  --sd-app-top-bar-icons: #fff; //appTopBarIconsColor
+  // bg colors pallet
+
+  --sd-white: rgb(250, 250, 250); // #FAFAFA
+  --sd-bg-primary: var(--rev-color-light);
+  --sd-bg-secondary: var(--rev-color-light);
+  --sd-bg-tertiary: var(--rev-color-light);
+  --sd-bg-accent: #fcfcfc; /* Almost white, specific use */
+  --sd-bg-accent-hover: rgb(248, 249, 251);
+  --sd-bg-accent-dashboard: rgb(252, 252, 252); // #FCFCFC;
+  --sd-bg-light-gray: var(--rev-color-grey-light-alt);
+
+  --sd-bg-input: #ffffff;
+  --sd-bg-input-readonly: var(--rev-color-grey-light-alt);
+
+  // bg colors for gradients
+
+  --sd-bg-gr-primary: 255, 255, 255;
+  --sd-bg-gr-secondary: 255, 255, 255;
+  --sd-bg-gr-tertiary: 255, 255, 255;
+  --sd-bg-gr-accent: 250, 250, 250;
+  --sd-bg-card: 246, 246, 246;
+
+  // gradients
+
+  --sd-blend-in-gradient-primary: linear-gradient(90deg, rgba(var(--sd-bg-gr-primary), 0.3) 0%, rgba(var(--sd-bg-gr-primary),1) 50%);
+  --sd-blend-in-gradient-secondary: linear-gradient(90deg, rgba(var(--sd-bg-gr-secondary), 0.3) 0%, rgba(var(--sd-bg-gr-secondary),1) 50%);
+  --sd-blend-in-gradient-tertiary: linear-gradient(90deg, rgba(var(--sd-bg-gr-tertiary), 0.3) 0%, rgba(var(--sd-bg-gr-tertiary),1) 50%);
+  --sd-blend-in-gradient-accent: linear-gradient(90deg, rgba(var(--sd-bg-gr-accent), 0.3) 0%, rgba(var(--sd-bg-gr-accent),1) 50%);
+
+  // borders
+
+  --sd-entity-border: 1px solid var(--rev-color-grey-xxlight);
+  --sd-input-border: 1px solid var(--rev-color-grey-light);
+  --sd-input-readonly-border: 1px solid var(--rev-color-grey-xxxlight);
+  --sd-table-border: 1px solid var(--rev-color-grey-xlight);
+  --sd-table-border-2x: 2px solid var(--rev-color-grey-xlight);
+  --sd-input-focus-border: 1px solid var(--sd-text-default);
+  --sd-dashed-decor-border: 2px dashed var(--rev-color-grey-light);
+  --sd-side-bar-border: 5px solid var(--rev-color-grey-light);
+
+  // border colors
+
+  // shadows
+
+  --sd-card-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.09);
+
+  // sizes
+
+  --sd-mobile-card-icon-size: 32px;
+
+  @media (min-width: 768px) {
+    --sd-mobile-card-icon-size: 39px;
+  }
+
+  --sd-border-radius-input: 0.25rem;
+  --sd-border-radius-sm: 4px;
+  --sd-border-radius-md: 6px;
+  --sd-border-radius-md-card: 7px;
+
+  // shadows
+
+  --sd-shadow-input: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+
+$cubic-bezier-curve: cubic-bezier(0.250, 0.460, 0.450, 0.940);
+
+$widget-body-border-color: rgba(0, 0, 0, 0.15);
+$widget-body-box-shadow-color: rgba(0, 0, 0, 0.1);
+
+$default-icon-color: var(--rev-color-blue-alt);
+
+$button-primary-background: #58718c; /* This is a unique color, leaving as is for now */
+
+$primary-background-color-behind-logo: var(--rev-color-blue-alt-dark);
+$profile-card-background-color: var(--rev-color-blue-alt-darker);
+$vertical-menu-main-color: var(--rev-color-blue-alt);
+$vertical-menu-open-sub-menu-color: var(--rev-color-blue-alt-light);
+
+
+// Theme Colors
+$color-scheme: var(--rev-color-blue-alt);
+$color-scheme-hover:      darken($color-scheme, 7%);
+$color-scheme-dark: var(--rev-color-blue-alt-dark);
+$color-scheme-dark-hover: var(--rev-color-blue-alt-light);
+$theme-border-color: var(--rev-color-grey-light);
+$form-border-color: var(--rev-color-grey-xxxlight);
+$link-color:              $color-scheme;
+$mrCleanMainColor: var(--rev-color-grey-medium);
+
+// Forms
+$form-control-default-height: 5px;
+$form-control-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+$form-control-border: 1px solid $form-border-color;
+$form-control-border-radius: 0.25rem;
+
+$font-family-base: var(--default-font-family);
+
+// Legacy bootstrap
+$btn-line-height: 2em; // This is not a color
+$primary: var(--rev-color-primary);
+$brand-primary: var(--rev-color-primary);
+$brand-success: var(--rev-color-secondary);
+$brand-info: var(--rev-color-accent);
+$brand-warning: var(--rev-color-warning);
+$brand-danger: var(--rev-color-error);
+$brand-inverse:  var(--rev-color-light);
+$text-dark:      var(--rev-color-primary);
+$dropdown-menu-text-color: var(--rev-color-primary);
+$theme-colors: (
+  color-scheme: $color-scheme,
+  color-scheme-dark: $color-scheme-dark,
+  content-color: $content-color,
+  content: $content-color,
+  primary: $brand-primary,
+  secondary: var(--rev-color-light),
+  success: var(--rev-color-secondary),
+  info: var(--rev-color-highlight),
+  warning: var(--rev-color-warning),
+  danger: var(--rev-color-error),
+  light:       $gray-100,
+  dark:        $gray-800
+);
+
+
+$fa-font-path: "../fonts/font-awesome";
+
+//rightSidebar variables
+$rightSidebar-color-dark: var(--rev-color-primary);
+$rightSidebar-color-blue: var(--rev-color-primary);
+$rightSidebar-color-red: var(--rev-color-warning);
+$rightSidebar-color-green: var(--rev-color-secondary);
+$rightSidebar-color-grey: var(--rev-color-grey);
+$rightSidebar-color-grey-light: var(--rev-color-highlight);
+$rightSidebar-color-light:      var(--rev-color-light);
+
+$rightSidebar-text-color: $rightSidebar-color-dark;
+$rightSidebar-border-color: $rightSidebar-color-grey-light;
+
+$rightSidebar-input-border-color: $rightSidebar-border-color;
+$rightSidebar-input-border-focus-color: $rightSidebar-color-grey;
+$rightSidebar-border-radius: 5px;
+$rightSidebar-btn-color: $rightSidebar-color-grey;
+
+$rightSidebar-svg-icon-color: $rightSidebar-color-grey;
+
+$rightSidebar-font-family-base: var(--default-font-family);
+$rightSidebar-font-family-secondary: "Roboto";
+$rightSidebar-title-font-size: 18px;
+$rightSidebar-title-font-weight: 600;
+$rightSidebar-text-font-size: 12px;
+$rightSidebar-text-line-height: 18px;
+
+$rightSidebar-badge-bg-primary: $rightSidebar-color-grey-light;
+$rightSidebar-badge-font-size: $rightSidebar-text-font-size;
+$rightSidebar-badge-line-height: $rightSidebar-text-line-height;
+$rightSidebar-sidebar-text-color: $rightSidebar-text-color;
+
+//new contactCrm design vars
+$contact-primary: var(--rev-color-primary);
+$contact-primary-hover: var(--rev-color-secondary);
+$contact-default: #010101; /* Black */
+$contact-dark: var(--rev-color-primary);
+$contact-dark-light: #565656; /* Dark Grey */
+$contact-grey-light: #e5e5e5;
+$contact-grey: var(--rev-color-primary);
+$contact-brown: var(--rev-color-danger);
+$contact-min-height: 52px;
+$contact-border-color: var(--rev-color-highlight);
+$contact-box-footer-bg: #FCFCFC;
+
+//lms variables
+$lms-color-dark:       #163666;
+$lms-color-blue: var(--rev-color-primary);
+$lms-color-red: var(--rev-color-warning);
+$lms-color-green: var(--rev-color-secondary);
+$lms-color-grey:       var(--rev-color-highlight);
+$lms-color-grey-light: #e4e9f0;
+$lms-color-light: var(--rev-color-light);
+
+$lms-text-color: $lms-color-dark;
+$lms-border-color: $lms-color-grey-light;
+
+$lms-input-border-color: $lms-border-color;
+$lms-input-border-focus-color: $lms-color-grey;
+$lms-border-radius: 0.3125rem; // 5px
+$lms-btn-color: $lms-color-grey;
+
+$lms-svg-icon-color: $lms-color-grey;
+
+$lms-font-family-base: var(--default-font-family);
+$lms-font-family-secondary: "Roboto";
+$lms-title-font-size: 1.125rem; // 18px
+$lms-title-font-weight: 600;
+$lms-text-font-size: 0.8125rem; //13px
+$lms-text-line-height: 1.125rem; // 18px
+
+$lms-badge-bg-primary: $lms-color-grey-light;
+$lms-badge-font-size: $lms-text-font-size;
+$lms-badge-line-height: $lms-text-line-height;
+
+$lms-sidebar-text-color: $lms-text-color;
+
+$lms-sidebar-width: 520px;
+
+///Right panel variables <-- remove when global sidebar will be implemented fully
+$rightPanel-color-dark:       #163666;
+$rightPanel-color-blue: var(--rev-color-highlight);
+$rightPanel-color-red: var(--rev-color-error);
+$brand-inverse: var(--rev-color-light);
+$rightPanel-color-green: var(--rev-color-secondary);
+$rightPanel-color-grey: var(--rev-color-primary);
+$rightPanel-color-grey-light: var(--rev-color-grey-light-alt);
+$rightPanel-color-light:      var(--rev-color-light);
+
+
+$rightPanel-text-color: $rightPanel-color-dark;
+$rightPanel-border-color: #EEEEEE;
+
+$rightPanel-input-border-color: $rightPanel-border-color;
+$rightPanel-input-border-focus-color: $rightPanel-color-grey;
+$rightPanel-border-radius: 5px;
+$rightPanel-btn-color: $rightPanel-color-grey;
+
+$rightPanel-svg-icon-color: $rightPanel-color-grey;
+
+$rightPanel-font-family-base: var(--default-font-family);
+$rightPanel-font-family-secondary: "Roboto";
+$rightPanel-title-font-size: 18px;
+$rightPanel-title-font-weight: 600;
+$rightPanel-text-font-size: 13px;
+$rightPanel-text-line-height: 18px;
+
+$rightPanel-badge-bg-primary: $rightPanel-color-grey-light;
+$rightPanel-badge-font-size: $rightPanel-text-font-size;
+$rightPanel-badge-line-height: $rightPanel-text-line-height;
+
+$rightPanel-sidebar-text-color: $rightPanel-text-color;
+
+//RightBar variables - NEW Global Sidebar
+$RightBar-color-dark:       var(--sd-text-default);
+$RightBar-color-blue: var(--rev-color-highlight);
+$RightBar-color-red: var(--rev-color-error);
+$RightBar-color-green: var(--rev-color-secondary);
+$RightBar-color-grey: var(--rev-color-primary);
+$RightBar-color-grey-light: var(--rev-color-grey-xlight);
+$RightBar-color-light:      var(--rev-color-light);
+
+
+$RightBar-text-color: $RightBar-color-dark;
+$RightBar-border-color: var(--rev-color-grey-light);
+
+$RightBar-input-border-color: $RightBar-border-color;
+$RightBar-input-border-focus-color: $RightBar-color-grey;
+$RightBar-border-radius: 5px;
+$RightBar-btn-color: $RightBar-color-grey;
+
+$lms-svg-icon-color: $RightBar-color-grey;
+
+$RightBar-font-family-base: var(--default-font-family);
+$RightBar-font-family-secondary: "Roboto";
+$RightBar-title-font-size: 20px;
+$RightBar-title-line-height: 24px;
+$RightBar-title-font-weight: 600;
+$RightBar-title-font-style: normal;
+$RightBar-text-font-size: 13px;
+$RightBar-text-line-height: 18px;
+
+$RightBar-badge-bg-primary: $RightBar-color-grey-light;
+$RightBar-badge-font-size: $RightBar-text-font-size;
+$RightBar-badge-line-height: $RightBar-text-line-height;
+
+$RightBar-sidebar-text-color: $RightBar-text-color;
+
+$RightBar-width: 520px;
+$RightBar-width-lg: 620px;
+$RightBar-width-sm: 430px;
+$RightBar-header-height: 64px;
+
+//forms global variables
+//colors
+$forms-color-black:      $black;
+$forms-color-dark: var(--rev-color-primary);
+$forms-color-blue: var(--rev-color-highlight);
+$forms-color-red: var(--rev-color-error);
+$forms-color-green: var(--rev-color-secondary);
+$forms-color-grey: var(--rev-color-primary);
+$forms-color-grey-light: #EEE;
+$forms-color-light: #fafafa;
+
+//text
+$forms-text-color:           $forms-color-grey;
+$forms-border-color:         $forms-color-grey-light;
+$forms-border-color-hover:   $forms-color-grey;
+$forms-border-color-focus:   $forms-color-blue;
+$forms-placeholder-color:    #bbb;
+$forms-border-color-success: $forms-color-green;
+$forms-border-color-error:   $forms-color-red;
+
+
+//input
+$forms-input-height:                calc(2.5rem + 2px);
+$forms-input-border-width:          1px;
+$forms-input-font-size:             14px;
+$forms-input-line-height:           16px;
+$forms-input-border-radius:         4px;
+$forms-input-box-shadow:            none;
+$forms-input-background-color:      $white;
+$forms-border: $forms-input-border-width solid $forms-border-color;
+$forms-font-family: var(--default-font-family);
+
+//select2 custom variables
+$select2-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+$select2-open-z-index: 1075;
+$select2-arrow-width: 6px;
+$select2-placeholder-color: $forms-placeholder-color;
+$select2-placeholder-font-weight: 300;
+$select2-dropdown-border-color: #aaa;
+
+
+//reseller sidebar plans
+$reseller-color-dark:              #163666;
+$reseller-color-blue: #54a2dd;
+$reseller-color-red:               var(--rev-color-error);
+$reseller-color-green: var(--rev-color-secondary);
+$reseller-color-yellow: #FFD700;
+$reseller-color-pink: var(--rev-color-purple);
+$reseller-color-grey-dark:         var(--rev-color-primary);
+$reseller-color-grey: var(--rev-color-primary);
+$reseller-color-grey-light: #bbbbbb;
+$reseller-color-light:             #F1F1F1;
+
+$reseller-font-family: var(--default-font-family);
+$reseller-title-color: $reseller-color-dark;
+$reseller-text-color: $reseller-color-grey;
+
+$reseller-border-color: $reseller-color-grey-light;
+
+
+//conditional logic variables
+$condition-color-red: var(--rev-color-error);
+$condition-color-green: var(--rev-color-secondary);
+$condition-color-grey: var(--rev-color-primary);
+$condition-color-grey-light: #777777;
+$condition-color-light: #fafafa;
+$condition-color-dark: #163666;
+
+$condition-background-darker: $condition-color-light;
+$condition-border-radius: 8px;
+
+$condition-text-color: $condition-color-dark;
+$condition-number-bg-color: $condition-color-dark;
+
+
+$condition-border-color: #EEEEEE;
+$condition-input-border-color: $condition-border-color;
+$condition-input-border-focus-color: $lms-color-grey;
+
+$condition-timeline-color: #DDDDDD;
+
+$condition-padding-x-sm: 16px;
+$condition-padding-y-sm: 20px;
+$condition-padding-x-lg: 16px;
+$condition-padding-y-lg: 20px;
+
+
+//custom accordion styles
+$sdAccordion-color-dark:              #163666;
+$sdAccordion-color-blue: #54a2dd;
+$sdAccordion-color-red: #e05047;
+$sdAccordion-color-green: var(--rev-color-secondary);
+$sdAccordion-color-yellow: #FFD700;
+$sdAccordion-color-pink: var(--rev-color-purple);
+$sdAccordion-color-grey-dark: var(--rev-color-primary);
+$sdAccordion-color-grey: var(--rev-color-primary);
+$sdAccordion-color-grey-light: #bbbbbb;
+$sdAccordion-color-light:             #FFFFFF;
+
+$sdAccordion-text-color: $sdAccordion-color-dark;
+$sdAccordion-border-color: #EEEEEE;
+
+$sdAccordion-border-radius: 5px;
+$sdAccordion-btn-color: $sdAccordion-color-grey;
+$sdAccordion-font-family: var(--default-font-family);
+
+//gridview variables
+$gridV-color-dark: #163666;
+$gridV-color-blue: var(--rev-color-highlight);
+$gridV-color-red: var(--rev-color-error);
+$gridV-color-green: var(--rev-color-secondary);
+$gridV-color-grey: var(--rev-color-primary);
+$gridV-color-grey-light: var(--rev-color-grey-xlight);
+$gridV-color-light:      var(--rev-color-light);
+
+$gridV-text-color: $gridV-color-grey;
+$gridV-border-color: $gridV-color-grey-light;
+
+//gridview variables
+$gridV-color-dark: #163666;
+$gridV-color-blue: var(--rev-color-highlight);
+$gridV-color-red: var(--rev-color-error);
+$gridV-color-green: var(--rev-color-secondary);
+$gridV-color-grey: var(--rev-color-primary);
+$gridV-color-grey-light: var(--rev-color-grey-xlight);
+$gridV-color-light:      var(--rev-color-light);
+
+$gridV-text-color: $gridV-color-grey;
+$gridV-border-color: $gridV-color-grey-light;
+
+
+//main-menu(Left Sidebar)
+$main-menu-animation-duration: 0.25s;
+$main-menu-animation-type: ease-in-out;
+$main-menu-animation-delay: 0.125s;
+
+//common-back
+$common-back-color-dark: #163666;
+$common-back-color-grey: var(--rev-color-primary);
+$common-back-color-grey-light: var(--rev-color-grey-xlight);
+$common-back-color-light:      var(--rev-color-light);
+
+$common-back-bg-color: $white;
+$common-back-border-color: $common-back-color-light;
+$common-back-link-bg-color: $common-back-color-grey-light;
+
+//common-back
+$common-back-color-dark: #163666;
+$common-back-color-grey: var(--rev-color-primary);
+$common-back-color-grey-light: #fdfdfd;
+$common-back-color-light: #EEE ;
+
+$common-back-bg-color: $white;
+$common-back-border-color: $common-back-color-light;
+$common-back-link-bg-color: $common-back-color-grey-light;
+
+//status labels colors
+//$light-green: #71c9c5;
+//$light-blue:  #BEE8FF;
+$light-green:   #00a6b6;
+$light-blue:    #77b8e1;
+$pink:          #e05047;
+$light-gray:    #d3cfd2;
+#faca78:        #faca78;
+
+
+//toolbar (Files)
+$toolbar-wrap-height: 100px;
+$operations-panel-height: $toolbar-wrap-height * 0.5;
+$toolbar-wrap-height-sm: 50px;
+
+$main-top-bar-height: 90px;
+
+//placeholders-colors
+
+$sky-blue:     #b2d3de;
+$salad-green:  #00a6b6;
+$lawanda:      #8e456a;
+$rose:         #8e456a;
+$sandy-storm:  #f37d59;
+$coral:        #e05047;
+$turquoise:    #71c9c5;
+$sea-green:    #00a6b6;
+$dusty-rose:   #ac80a4;
+$kiddo-pink:   #8e456a;
+$mouse-gray:   #b5b5b5;
+$grass-green:  #509c67;
+$oldish-blue:  #b2d3de;
+$olive:        #a7b878;
+$mustard:      #d3cd40;
+$bottle-green: #67978b;
+
+// invoice status badges colors
+
+$draftBlue:          #b2d3de;
+$outstandingOrange:  #f37d59;
+$payedGreen:         #00a6b6;
+$partiallyPayedLightGreen: #00a6b6;
+$overDueRed:          #faca78;
+$voidGray:            #B5B5B5;
+$processingViolet:    #8e456a;
+$overPaidCoral:       #e05047;
+
+//suitedreams
+
+$festivePink:    #faca78;
+$turquoiseGreen: #71c9c5;
+
+//book-me
+
+$orangeAccent: var(--rev-color-warning);

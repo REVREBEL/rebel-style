@@ -1,0 +1,63 @@
+
+.card {
+  border-radius: var(--rev-card-radius);
+  border: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  font-weight: 400;
+  list-style-type: none;
+  min-inline-size: 12rem;
+  width: 100%;
+
+    /* derive visuals from color pair */
+  --c-bg: var(--c-raw);
+  --c-fg: var(--c-ink);
+  --c-shadow: var(--c-ink);
+
+  background-color: var(--c-bg);
+  color: var(--c-fg);
+  box-shadow: 0 0 0 2px var(--c-shadow), 6px 6px 0 0 var(--c-shadow);
+}
+
+
+.card.is-color-3 {
+  text-shadow: #7CDBD7 0 0 20px;
+}
+
+
+
+.card-body {
+  background-color: var(--c-bg);
+  border-radius: inherit;
+  align-self: stretch;
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+  overflow: hidden;
+  padding: 2.5rem 1.5rem;
+  position: relative;
+  width: 100%;
+  z-index: 1;
+  color: var(--c-fg);
+}
+
+.card-body.is-small {
+  align-self: stretch;
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+  overflow: hidden;
+  padding: 2.5rem 1.5rem;
+  position: relative;
+  width: 100%;
+  z-index: 1
+}
+
+.card-body headline-md h3 {
+  color: var(--c-fg);
+}
+
+.card-body.h2 {
+  color: var(--c-fg);
+}

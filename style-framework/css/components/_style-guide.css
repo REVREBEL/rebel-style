@@ -1,0 +1,56 @@
+
+.sg_icon.is-icon-color-blue {
+  padding-left: 4px;
+  padding-right: 4px
+}
+
+.sg_icon.is-icon-white {
+  filter: invert(97%) sepia(0%) saturate(7112%) hue-rotate(301deg) brightness(128%) contrast(96%)
+}
+
+.sg_icon {
+  align-self: center;
+  background-color: #fff;
+  background-image: none;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: .25rem;
+  border: .0625rem solid #fff;
+  flex: none;
+  height: 1.5rem;
+  margin-bottom: auto;
+  margin-top: auto;
+  opacity: 1;
+  width: 2.5rem
+}
+
+.sg_flex_horizontal {
+  display: flex;
+  flex-flow: row;
+  gap: 0px;
+}
+
+.sg_flex_horizontal.gap-small {
+  gap: 2rem;
+}
+
+.sg_preview-solid {
+  align-items: center;
+  background-color: var(--rev-color-9);
+  border-radius: .55rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  min-height: 10rem;
+  padding: 5px;
+  width: 100%;
+}
+
+.sg_table-col {
+  align-self: auto;
+  display: flex;
+  flex-flow: column;
+  flex: 10rem;
+  gap: 1rem;
+}

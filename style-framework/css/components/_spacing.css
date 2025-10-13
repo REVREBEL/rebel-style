@@ -1,0 +1,460 @@
+
+.container-lg {
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: var(--rev-max-width-lg);
+  width: 100%
+}
+
+.container-md {
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: var(--rev-max-width-md)
+}
+
+.container-sm {
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: var(--rev-max-width-sm);
+  width: 100%
+}
+
+.container-xl {
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: var(--rev-max-width-xl);
+  width: 100%
+}
+
+.container-xs {
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: var(--rev-max-width-xs);
+  width: 100%
+}
+
+.container-xxl {
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: var(--rev-max-width-xxl);
+  width: 100%
+}
+
+.container {
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%
+}
+
+
+/* === Simple utilities === */
+.height_100pct { height: 100%; }
+.margin-top_none { margin-top: 0 !important; }
+.margin_none { margin: 0 !important; }
+.px left_none { padding-left: 0; }
+.padding-right_none { padding-right: 0; }
+.padding-top_none { padding-top: 0 !important; }
+.padding_none { list-style-type: none; padding: 0 !important; }
+.overflow_auto { overflow: auto; }
+.overflow_clip { overflow: clip; }
+.overflow_hidden { overflow: hidden; }
+.overflow_visible { overflow: visible !important; }
+
+/* === Mobile padding block === */
+.mobile-padding {
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+  padding: 4rem 3rem;
+}
+
+
+
+
+.height-100pct{height:100%}
+.height-50pct{height:50%}
+.height-50vh{height:50dvh}
+
+.space-sm{height:2rem}
+.space-md{width:100%}
+
+
+.full-height {min-height:100%}
+.full-width {min-width:100%}
+
+.width-100pct{width:100%}
+.width-35pct{width:35%}
+.width-40pct{width:40%}
+.width-60pct{width:60%}
+.width-80pct{width:80%}
+
+.width-md{width:40rem}
+
+/* PLACED HERE FOR EASIER REFERENCE ***************  **********
+  --rev-8x: 8rem;
+  --rev-7x: 7rem;        
+  --rev-6x: 6rem;        --rev-xxl: 6rem;
+  --rev-5x: 5rem;        --rev-xl: 5rem;
+  --rev-4x: 4rem;        --rev-lg: 4rem;
+  --rev-3x: 3rem;        --rev-md: 3rem;
+  --rev-2x: 2rem;        --rev-sm: 2rem;
+  --rev-1-75x: 1.75rem;    
+  --rev-1-5x:  1.5rem;       
+  --rev-1-25x: 1.25rem;
+                         --rev-xs: 1rem;
+  --rev-0-75x: .75rem;
+  --rev-0-5x:  .5rem;    --rev-xxs: .5rem;
+  --rev-0-25x: .25rem;
+ *************** *************** *************** ****************/
+
+.margin-none {margin:0}
+.margin-xs, .margin-1x {margin:var(--rev-xs)}
+.margin-sm, .margin-2x {margin:var(--rev-sm)}
+
+.margin-xxl, .margin-6x {margin:var(--rev-6x)}
+             .margin-7x  {margin:var(--rev-7x)}
+
+.margin-vertical-none{margin-bottom:0;margin-top:0}
+.margin-vertical-xxs{margin-bottom:var(--rev-xxs);margin-top:var(--rev-xxs)}
+.margin-vertical-xs{margin-bottom:var(--rev-xs);margin-top:var(--rev-xs);padding-top:0}
+.margin-vertical-sm{margin-bottom:var(--rev-sm);margin-top:var(--rev-sm)}
+.margin-vertical-md{margin-bottom:var(--rev-md);margin-top:var(--rev-md)}
+.margin-vertical-lg{margin-bottom:var(--rev-lg);margin-top:var(--rev-lg)}
+.margin-vertical-xl{margin-bottom:var(--rev-xl);margin-top:var(--rev-xl)}
+
+.margin-horizontal-none{margin-left:0;margin-right:0}
+.margin-horizontal-xxs{margin-left:var(--rev-xxs);margin-right:var(--rev-xxs)}
+.margin-horizontal-xs{margin-left:var(--rev-xs);margin-right:var(--rev-xs)}
+.margin-horizontal-sm{margin-left:var(--rev-sm);margin-right:var(--rev-sm)}
+.margin-horizontal-md{margin-left:var(--rev-md);margin-right:var(--rev-md)}
+.margin-horizontal-lg{margin-left:var(--rev-lg);margin-right:var(--rev-lg)}
+.margin-horizontal-xl{margin-left:var(--rev-xl);margin-right:var(--rev-xl)}
+
+.margin-top-auto {margin-top:auto}
+.margin-top-xxs {margin-top:var(--rev-xxs)}
+.margin-top-sm {margin-top:var(--rev-sm)}
+.margin-top-md {margin-top:var(--rev-md)}
+.margin-top-lg {margin-top:var(--rev-lg)}
+.margin-top-xl {margin-top:var(--rev-xl)}
+
+.margin-bottom-none {margin-bottom:0}
+.margin-bottom-auto {margin-bottom:auto}
+.margin-bottom-xxs {margin-bottom:var(--rev-xxs)}
+.margin-bottom-xs {margin-bottom:var(--rev-xs)}
+.margin-bottom-sm {margin-bottom:var(--rev-sm)}
+.margin-bottom-md {margin-bottom:var(--rev-md)}
+.margin-bottom-lg {margin-bottom:var(--rev-lg)}
+.margin-bottom-xl {margin-bottom:var(--rev-xl)}
+.margin-bottom-xxl {margin-bottom:var(--rev-xxl)}
+
+.margin-left-auto {margin-left:auto}
+.margin-left-none {margin-left:0}
+.margin-left-sm {margin-left:var(--rev-sm)}
+.margin-left-xs {margin-left:var(--rev-xs)}
+.margin-left-md {margin-left:var(--rev-md)}
+.margin-left-lg {margin-left:var(--rev-lg)}
+
+.margin-right-auto{margin-right:auto}
+.margin-right-none{margin-right:0}
+.margin-right-xs{margin-right:var(--rev-xs)}
+.margin-right-sm{margin-right:var(--rev-sm)}
+.margin-right-md{margin-right:var(--rev-md)}
+.margin-right-lg{margin-right:var(--rev-lg)}
+
+.padding-none { padding: 0}
+.padding-xxs { padding: var(--rev-xxs) }
+.padding-xs { padding: var(--rev-xs) }
+.padding-sm { padding: var(--rev-sm) }
+.padding-md { padding: var(--rev-md) }
+.padding-lg { padding: var(--rev-lg) }
+.padding-xl { padding:var(--rev-xl) }
+.padding-xxl { padding:var(--rev-xxl) }
+
+.padding-vertical-none{padding:0}
+.padding-vertical-sm{padding-bottom:var(--rev-sm);padding-top:var(--rev-sm)}
+.padding-vertical-md{padding-bottom:var(--rev-md);padding-top:var(--rev-md)}
+.padding-vertical-lg{padding-bottom:var(--rev-lg);padding-top:var(--rev-lg)}
+.padding-vertical-xl{padding-bottom:var(--rev-xl);padding-top:var(--rev-xl)}
+.padding-vertical-xxl{padding-bottom:var(--rev-xxl);padding-top:var(--rev-xxl)}
+
+.padding-horizontal-none{padding-left:0;padding-right:0}
+.padding-horizontal-xs{padding-left:var(--rev-xs);padding-right:var(--rev-xs)}
+.padding-horizontal-sm{padding-left:var(--rev-sm);padding-right:var(--rev-sm)}
+.padding-horizontal-md{padding-left:var(--rev-md);padding-right:var(--rev-md)}
+.padding-horizontal-lg{padding-left:var(--rev-lg);padding-right:var(--rev-lg)}
+.padding-horizontal-xl{padding-left:var(--rev-xl);padding-right:var(--rev-xl)}
+.padding-horizontal-xxl{padding-left:var(--rev-xxl);padding-right:var(--rev-xxl)}
+
+.padding-top-xxs{padding-top:var(--rev-xs)}
+.padding-top-xs{padding-top:var(--rev-xs)}
+.padding-top-sm{padding-top:var(--rev-sm)}
+.padding-top-md{padding-top:var(--rev-md)}
+.padding-top-lg{padding-top:var(--rev-lg)}
+.padding-top-xl{padding-top:var(--rev-xl)}
+.padding-top-xxl{padding-top:var(--rev-xxl)}
+
+.padding-bottom-none{padding-bottom:0}
+.padding-bottom-xs{padding-bottom:var(--rev-xs)}
+.padding-bottom-sm{padding-bottom:var(--rev-sm)}
+.padding-bottom-md{padding-bottom:var(--rev-md)}
+.padding-bottom-lg{padding-bottom:var(--rev-lg)}
+.padding-bottom-xl{padding-bottom:var(--rev-xl)}
+.padding-bottom-xxl{padding-bottom:var(--rev-xxl)}
+
+.padding-left-sm{padding-left:var(--rev-sm)}
+.padding-left-xs{padding-left:var(--rev-xs)}
+.padding-left-md{padding-left:var(--rev-md)}
+
+.padding-right-sm{padding-right:var(--rev-sm)}
+.padding-right-xs{padding-right:var(--rev-xs)}
+.padding-right-md{padding-right:var(--rev-md)}
+
+
+/* prettier-ignore-end */
+
+/* stylelint-enable declaration-block-semicolon-newline-after */
+
+.u-container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 940px;
+}
+
+.u-layout-block-container {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 940px;
+}
+
+
+
+
+/* ================================
+   Spacing Tokens (edit these)
+   ================================ */
+:root{
+  --space-0: 0rem;
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4rem;
+  --space-9: 6rem;
+  --space-10: 8rem;
+}
+
+/* =========================================
+   Margin utilities (logical, RTL-friendly)
+   Use with a size setter (e.g., .m-4, .m-8)
+   ========================================= */
+.mt { margin-block-start: var(--_m, 0); }
+.mb { margin-block-end:   var(--_m, 0); }
+.my { margin-block:       var(--_m, 0); }
+
+.ml { margin-inline-start: var(--_m, 0); }
+.mr { margin-inline-end:   var(--_m, 0); }
+.mx { margin-inline:       var(--_m, 0); }
+
+/* =========================================
+   Padding utilities (logical, RTL-friendly)
+   Use with a size setter (e.g., .p-4, .p-8)
+   ========================================= */
+.pt { padding-block-start: var(--_p, 0); }
+.pb { padding-block-end:   var(--_p, 0); }
+.py { padding-block:       var(--_p, 0); }
+
+.pl { padding-inline-start: var(--_p, 0); }
+.pr { padding-inline-end:   var(--_p, 0); }
+.px { padding-inline:       var(--_p, 0); }
+
+/* =========================================
+   Size setters (margin & padding use
+   separate internal vars so they don’t clash)
+   ========================================= */
+
+/* Margin size setters */
+.m-0  { --_m: var(--space-0); }
+.m-1  { --_m: var(--space-1); }
+.m-2  { --_m: var(--space-2); }
+.m-3  { --_m: var(--space-3); }
+.m-4  { --_m: var(--space-4); }
+.m-5  { --_m: var(--space-5); }
+.m-6  { --_m: var(--space-6); }
+.m-7  { --_m: var(--space-7); }
+.m-8  { --_m: var(--space-8); }
+.m-9  { --_m: var(--space-9); }
+.m-10 { --_m: var(--space-10); }
+
+/* Padding size setters */
+.p-0  { --_p: var(--space-0); }
+.p-1  { --_p: var(--space-1); }
+.p-2  { --_p: var(--space-2); }
+.p-3  { --_p: var(--space-3); }
+.p-4  { --_p: var(--space-4); }
+.p-5  { --_p: var(--space-5); }
+.p-6  { --_p: var(--space-6); }
+.p-7  { --_p: var(--space-7); }
+.p-8  { --_p: var(--space-8); }
+.p-9  { --_p: var(--space-9); }
+.p-10 { --_p: var(--space-10); }
+
+/* =========================================
+   Optional: zero-out helpers
+   ========================================= */
+.m-none { --_m: 0; }
+.p-none { --_p: 0; }
+
+/* Base (mobile/default) */
+.mx-7 { margin-inline: var(--space-7); }
+.px-7 { padding-inline: var(--space-7); }
+
+/* Down (max-width) variants */
+@media (max-width: 991px) { .mx-md-4 { margin-inline: var(--space-4); } }
+@media (max-width: 767px) { .mx-sm-2 { margin-inline: var(--space-2); } }
+@media (max-width: 479px) { .px-xs-1 { padding-inline: var(--space-1); } }
+
+/* Up (min-width) variants */
+@media (min-width: 1280px) { .mx-xl-8 { margin-inline: var(--space-8); } }
+@media (min-width: 1920px) { .px-uhd-9 { padding-inline: var(--space-9); } }
+
+
+
+
+
+
+
+/* ******* * Single-Token Spacing Utilities (tokens 0–10) * ***** */
+
+
+/* Spacing Tokens */
+
+:root{
+  --space-0: 0rem;
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4rem;
+  --space-9: 6rem;
+  --space-10: 8rem;
+}
+
+
+/* Horizontal margin (mx-*) */
+
+.mx-0  { margin-inline: var(--space-0); }
+.mx-1  { margin-inline: var(--space-1); }
+.mx-2  { margin-inline: var(--space-2); }
+.mx-3  { margin-inline: var(--space-3); }
+.mx-4  { margin-inline: var(--space-4); }
+.mx-5  { margin-inline: var(--space-5); }
+.mx-6  { margin-inline: var(--space-6); }
+.mx-7  { margin-inline: var(--space-7); }
+.mx-8  { margin-inline: var(--space-8); }
+.mx-9  { margin-inline: var(--space-9); }
+.mx-10 { margin-inline: var(--space-10); }
+
+/* Horizontal padding (px-*) */
+
+.px-0  { padding-inline: var(--space-0); }
+.px-1  { padding-inline: var(--space-1); }
+.px-2  { padding-inline: var(--space-2); }
+.px-3  { padding-inline: var(--space-3); }
+.px-4  { padding-inline: var(--space-4); }
+.px-5  { padding-inline: var(--space-5); }
+.px-6  { padding-inline: var(--space-6); }
+.px-7  { padding-inline: var(--space-7); }
+.px-8  { padding-inline: var(--space-8); }
+.px-9  { padding-inline: var(--space-9); }
+.px-10 { padding-inline: var(--space-10); }
+
+/* Zeroing helpers (single-token) */
+
+.m-none { margin: 0 !important; }
+.p-none { padding: 0 !important; }
+
+
+/* ******* * Margin: Single Side * ***** */
+
+/* Logical (RTL-friendly) */
+.mt-0  { margin-block-start: var(--space-0); }
+.mt-1  { margin-block-start: var(--space-1); }
+.mt-2  { margin-block-start: var(--space-2); }
+.mt-3  { margin-block-start: var(--space-3); }
+.mt-4  { margin-block-start: var(--space-4); }
+.mt-5  { margin-block-start: var(--space-5); }
+.mt-6  { margin-block-start: var(--space-6); }
+.mt-7  { margin-block-start: var(--space-7); }
+.mt-8  { margin-block-start: var(--space-8); }
+.mt-9  { margin-block-start: var(--space-9); }
+.mt-10 { margin-block-start: var(--space-10); }
+
+.mb-0  { margin-block-end: var(--space-0); }
+.mb-1  { margin-block-end: var(--space-1); }  /* …through mb-10 */
+
+/* Left / Right use inline start/end */
+.ml-0  { margin-inline-start: var(--space-0); }
+.ml-1  { margin-inline-start: var(--space-1); } /* …through ml-10 */
+
+.mr-0  { margin-inline-end: var(--space-0); }
+.mr-1  { margin-inline-end: var(--space-1); }   /* …through mr-10 */
+
+
+/* ******* * Padding: Single Side  * ***** */
+
+.pt-0  { padding-block-start: var(--space-0); }
+.pt-1  { padding-block-start: var(--space-1); } /* …pt-10 */
+.pb-0  { padding-block-end: var(--space-0); }
+.pb-1  { padding-block-end: var(--space-1); }   /* …pb-10 */
+
+.pl-0  { padding-inline-start: var(--space-0); }
+.pl-1  { padding-inline-start: var(--space-1); } /* …pl-10 */
+.pr-0  { padding-inline-end: var(--space-0); }
+.pr-1  { padding-inline-end: var(--space-1); }   /* …pr-10 */
+
+
+/* ****** * Axis * ****** */
+
+.mx-0  { margin-inline: var(--space-0); }   /* …mx-10 */
+.my-0  { margin-block:  var(--space-0); }   /* …my-10 */
+.px-0  { padding-inline: var(--space-0); }  /* …px-10 */
+.py-0  { padding-block:  var(--space-0); }  /* …py-10 */
+
+
+/* ****** * Zeroing Helpers * ****** */
+
+.m-none { margin: 0 !important; }
+.p-none { padding: 0 !important; }
+
+
+
+
+
+/* How to use (examples)
+
+<!-- Horizontal margin 8, top 4; horizontal padding 6, bottom padding 2 -->
+<div class="mx m-8 mt m-4 px p-6 pb p-2">...</div>
+
+<!-- Only left padding 5 -->
+<div class="pl p-5">...</div>
+
+<!-- Only bottom margin 3 -->
+<div class="mb m-3">...</div>
+
+<!-- Horizontal margin 9 + horizontal padding 9 -->
+<div class="mx m-9 px p-9">...</div>
+
+*/

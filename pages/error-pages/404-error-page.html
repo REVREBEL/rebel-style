@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>404 Error</title>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/REVREBEL/fonts@main/rebel-fonts.css">
+  <link rel="stylesheet" href="./css/rebel-style.css" />
+</head>
+
+<body>    
+    <section class="page-error_main-wrapper page-error_padding_none bg is-color-primary page-error_height_100pct page-error_overflow_clip">
+    
+        
+        <!--  START Grained Effect  -->
+        <script defer="" 
+          src="https://cdn.jsdelivr.net/gh/REVREBEL/rebel-style@main/scripts/grained.js" 
+          type="text/javascript" 
+          referrerpolicy="no-referrer" 
+          crossorigin="anonymous">
+        </script>
+        <style>
+        #grain-overlay{ pointer-events: none;} 
+        </style>
+        <!--  END Grained Effect  -->
+ 
+      
+      <div class="error-page_container-vh-vw-full">
+        <div class="error-page_headline m-none p-none">          
+          <div class="error-page_page_wrapper m-none px-2">
+            <div class="error-page_container">
+              <div class="error-page_headline-wrapper">
+                <h1 class="error-page_headline is-color-light">
+                  404
+                  <br>
+                  ERROR
+                </h1>
+              </div>
+              <div class="error-page_div-block">
+                <div class="error-page_text is-color-light">
+                  Monkey.....
+                </div>
+                <div class="error-page_text is-color-light is-neg-offset-1x1">
+                  I&#x27;ve got some bad news pal.
+                </div>
+                <div class="error-page_text is-color-light is-pos-offset-1x1">
+                  I think we&#x27;re lost.
+                </div>
+              </div>
+              <div class="error-page_return-home-link">
+                <a href="#" class="btn is-color-light" data-button-size="normal">[ Return Home ]</a>
+              </div>
+            </div>
+          </div>
+          <div class="error-page_grained_script-embed">
+
+            <!--  START Grained Effect  -->
+          <script>
+            // Initialize the grained effect directly after the DOM is loaded
+            document.addEventListener('DOMContentLoaded', function() {
+              var options = { animate: true, patternWidth: 200, patternHeight: 200, grainOpacity: 0.2, grainDensity: 1, grainWidth: 2, grainHeight: 2 };
+              grained('#grain-effect-target', options);
+            });
+          </script>
+          <!--  END Grained Effect  -->
+
+          </div>
+
+          <div id="grain-overlay" class="error-page_grained-overlay">
+            <div id="grain-effect-target" style="width: 100%; height: 100%;"></div>
+          </div>
+          <div class="error-page_gradient-overlay"></div>
+          <div class="video-spaceman" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
+            <video 
+              id="video-spaceman-video" 
+              autoplay 
+              loop 
+              muted 
+              playsinline
+              poster="./clips/space-monkey-poster-00001.jpg"
+              style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;" 
+            >
+              <source src="./clips/space-monkey-transcode.mp4" type="video/mp4">
+              <source src="./clips/space-monkey-transcode.webm" type="video/webm">
+            </video>
+          </div>
+        </div>
+      </div>
+     </section>
+  </div>
+</div>

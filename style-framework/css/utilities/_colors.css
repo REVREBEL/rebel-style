@@ -1,0 +1,179 @@
+
+
+:root {
+
+  --mc-base-color: var(--rev-color-primary);
+
+  /* Monochromatic Palettes*/
+  --mc-color-0: oklch(from var(--mc-base-color) calc(l + .20) c h); /* lightest */
+  --mc-color-1: oklch(from var(--mc-base-color) calc(l + .10) c h);
+  --mc-color-2: var(--mc-base-color);
+  --mc-color-3: oklch(from var(--mc-base-color) calc(l - .10) c h);
+  --mc-color-4: oklch(from var(--mc-base-color) calc(l - .20) c h); /* darkest */
+
+/* Monochromatic with a Slight Hue Rotation */
+
+  --mc-light-color-1: var(--mc-base-color);
+  --mc-light-color-2: oklch(from var(--mc-base-color) calc(l - .10) c calc(h - 10));
+  --mc-light-color-3: oklch(from var(--mc-base-color) calc(l - .20) c calc(h - 20));
+  --mc-light-color-4: oklch(from var(--mc-base-color) calc(l - .30) c calc(h - 30));
+  --mc-light-color-5: oklch(from var(--mc-base-color) calc(l - .40) c calc(h - 40));
+
+}
+
+/* ******* * ** ** ** *** ** ** ** ** * ******* */
+/* ******* *  COLOR GENERATOR TOKENS  * ******* */
+/* ******* * ** ** ** *** ** ** ** ** * ******* */
+
+/*
+
+To use: Combined the Class with a Single Color Token
+
+       in html
+
+       ext-color is-color primary
+       background is-color-3
+
+
+
+*/
+
+
+
+/* *********** * Ink = Text Color * ********* */
+
+
+.text-color {
+  --c-fg: var(--c-raw);
+  --c-border: var(--c-ink);
+
+  border-color: var(--c-border);
+  color: var(--c-fg);
+}
+
+
+/* *********** * Background Color * ********* */
+
+
+.bg {
+  --c-bg: var(-var(--c-raw));
+  --c-border: var(var(--c-raw));
+
+  background-color: var(--c-bg);
+  border: 0 solid var(--c-border);
+}
+
+
+/* *********** * Highliter Color * ********* */
+
+
+.highlighter {
+  display: inline-flex;
+
+  --c-bg: var(--c-ink);
+  --c-fg: var(--c-raw);
+  --c-border: var(--c-ink);
+  
+  background-color: var(--c-bg);
+  border-color: var(--c-border);
+  color: var(--c-fg);
+}
+
+
+/* *********** * Headline Color * ********* */
+
+
+.headline-color {
+  display: inline-flex;
+
+  --c-fg: var(--c-raw);
+
+  color: var(--c-fg);
+}
+
+.is-muted{color:var(--rev-color-muted)}
+.is-success{color:var(--rev-color-2)}
+.is-warning{color:var(--rev-color-warning)}
+.is-danger{color:var(--rev-color-danger)}
+.is-error{color:var(--rev-color-error)}
+.is-emoji-font{font-family:"Noto Emoji",Arial,sans-serif}
+
+
+
+/* stylelint-disable declaration-empty-line-before */
+
+.lighten-25pct {
+  --c-color: var(--c-raw);
+  background: oklch(from var(--c-color) calc(l * 1.25) c h);
+}
+
+.darken-25pct {
+  --c-color: var(--c-raw);
+  background: oklch(from var(--c-color) calc(l * .75) c h);
+}
+
+.saturate-to-100 {
+  --c-color: var(--c-raw);
+  
+  background: hsl(from var(--c-color) h 100% l);
+}
+
+.desaturate-by-half {
+  --c-color: var(--c-raw);
+  background: hsl(from var(--c-color) h calc(s / 2) l);
+}
+
+.increase-chroma {
+  --c-color: var(--c-raw);
+  background: oklch(from var(--c-color) l calc(c + .1) h);
+}
+
+.decrease-opacity-by-25 {
+  --c-color: var(--c-raw);
+  background: rgb(from var(--c-color) r g b / calc(alpha / 2));
+}
+
+.decrease-opacity-to-25 {
+  background: rgb(from var(--c-color) r g b / 25%);
+}
+
+.invert-each-rgb-channel {
+  --c-color: var(--c-raw);
+  background: rgb(from var(--c-color) calc(255 - r) calc(255 - g) calc(255 - b));
+}
+
+.complementary-color {
+  --c-color: var(--c-raw);
+  background: hsl(from var(--c-color) calc(h + 180) s l);
+}
+
+.well-contrasting-lighter-color {
+  --c-color: var(--c-raw);
+  background: var(--c-color);
+  color: oklch(from var(--c-color) calc(l - .60) c h);
+}
+
+
+/* stylelint-disable custom-property-pattern */
+
+li {
+  --_bg: oklch(
+    /* decrease lightness as list grows */
+    calc(75% - (var(--i) * 5%))
+
+    /* decrease chroma as list grows */
+    calc(.2 - (var(--i) * .01))
+
+    /* lightly rotate the hue as the list grows */
+    calc(var(--hue) - (var(--i) + 5))
+  );
+
+
+
+
+
+
+
+
+
+}.ink { color: var(--c-fg, var(--c-ink)); }
