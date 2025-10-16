@@ -920,3 +920,403 @@ body.branding-theme-mrclean:not(.sd-dark-mode) {
     opacity: 0.2;
     border-radius: 3px;
 }
+
+
+
+
+ 
+
+
+
+
+@import url('https://cdn.jsdelivr.net/gh/REVREBEL/fonts@main/rebel-fonts.css');
+
+
+
+h3, .sd-form-group, .label {
+  color:  #163666 !important;
+  font-family: 'Khand', 'Oswald', 'Impact', sans-serif;
+  font-weight: 700 !important;
+  letter-spacing: -0.95px;
+  line-height: 0.9 !important;
+  text-wrap: balance;
+  text-transform: uppercase !important;
+  font-size: 14px;
+}
+
+
+body, .textarea {
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  font-variant-ligatures: none;
+  -webkit-font-variant-ligatures: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: subpixel-antialiased;
+  font-smoothing: antialiased;
+  font-smooth: always;
+  -webkit-font-smoothing: antialiased;
+  text-shadow: rgba(0, 0, 0, .01) 0 0 1px
+}
+
+body, input, textarea, select, label-subtext {
+  font-family: 'General Sans', 'Public Sans', 'Andale Mono', tahoma, sans-serif;
+  color:  #163666 !important;
+  background-color: #FAFAFA !important;
+  -webkit-font-smoothing: antialiased;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+p, li, span, label {
+  font-family: 'General Sans', 'Public Sans', 'Andale Mono', tahoma, sans-serif;
+  color:  #163666 !important;
+  line-height: 1.5;
+  text-transform: uppercase !important;
+  text-decoration: none !important;
+}
+
+
+/* Links / underlines */
+a {
+  color: var(--rev-color-accent) !important;
+  text-decoration: underline !important;
+  transition: color var(--rev-transition);
+  text-transform: uppercase !important;
+  text-decoration: none !important;
+}
+
+.button, .btn, .btn-primary, .btn-sm, .form-submit-button, 
+.btn {
+  border-radius: 0.15rem;
+  border-style: solid;
+  border-color: #163666 !important;
+  border-width: 3px;
+  box-shadow: var(--rev-shadow-sm);
+  color:  #FAFAFA !important;
+  cursor: pointer;
+  font-family: 'Khand', 'Oswald', 'Impact', sans-serif;
+  font-weight: 700;
+  line-height: 1;
+  padding: 0.75rem 1rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition-duration: 200ms;
+  transition-property: all;
+  transition-timing-function: ease;
+  transition: background-color var(--rev-transition), box-shadow var(--rev-transition);
+  -webkit-border-radius: 0.15rem;
+  -moz-border-radius: 0.15rem;
+  -ms-border-radius: 0.15rem;
+  -o-border-radius: 0.15rem;
+}
+
+.button:hover, .button, .btn:hover, .btn-primary:hover, .btn-sm:hover, .form-submit-button, 
+.btn:hover {
+  color: var(--rev-color-accent);
+  border-color: var(--rev-color-accent);
+  box-shadow: var(--rev-shadow-md);
+}
+
+.button:active,
+.btn:active {
+  box-shadow: none;
+}
+
+.button:disabled,
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+
+
+
+<style role="CustomTheme" type="text/css" class="ng-binding">
+    /* Common */
+    @font-face {
+    font-family: primary_638;
+    src: url(https://fonts.gstatic.com/s/khand/v21/TwMN-IINQlQQ0bLpd1E3ZwaH__-C.ttf);
+}
+
+@font-face {
+    font-family: secondary_638;
+    src: url(https://fonts.gstatic.com/s/khand/v21/TwMN-IINQlQQ0bLpd1E3ZwaH__-C.ttf);
+}
+
+@font-face {
+    font-family: general_1187;
+    src: url(https://fonts.gstatic.com/s/publicsans/v18/ijwGs572Xtc6ZYQws9YVwllKVG8qX1oyOymuSJm5ww0pX189fg.ttf);
+}
+
+:root {
+    --sd-highlight: #047C97;
+    --sd-avatar-color: #FAFAFA;
+    --sd-text-contrast-to-avatar: ;
+    --sd-app-top-bar-text: #163666;
+    --sd-app-top-bar-icons: #163666;
+    --sd-app-top-bar-color: #FAFAFA;
+    --sd-app-top-bar-color-dark-1: #e0e0e0;
+    --sd-app-top-bar-color-dark-2: #c7c7c7;
+    --sd-app-top-bar-color-dar-2-contrast: ;
+    --sd-theme-primary-highlighting: #c7c7c7;
+    --sd-theme-primary-highlighting-light: #FAFAFA;
+    --sd-theme-primary-highlighted-text: #c7c7c7;
+
+    --sd-side-bar-border: 5px solid ;
+
+
+    /*old variables*/
+
+    --appTopBarColor: #FAFAFA;
+    --appTopBarTextColor: #163666;
+    --appTopBarIconsColor: #163666;
+    --appHighlightColor: #047C97;
+    --appAvatarColor: #FAFAFA;
+    --appProgressBarColor: #047c97;
+    --default-font-family: 'Inter', sans-serif;
+
+    --font-theme-font-family: 'general_1187', sans-serif;
+    --primary-header-font-family: 'primary_638', sans-serif;
+    --secondary-header-font-family: 'secondary_638', sans-serif;
+
+    --font-theme-font-weight: 300;
+    --primary-header-font-weight: 700;
+    --secondary-header-font-weight: 700;
+
+    --font-theme-font-style: normal;
+    --primary-header-font-style: normal;
+    --secondary-header-font-style: normal;
+
+ 
+ 
+ 
+    body.branding-theme-mrclean {
+        --sd-text-contrast-to-avatar: #777;
+    }
+}
+
+a {
+    color: var(--sd-theme-primary-highlighted-text);
+}
+
+a:focus,
+a:hover {
+  color: #FAFAFA;
+}
+
+a:hover i.fa-circle-question {
+    color: var(--sd-theme-primary-highlighting-light);
+}
+
+.branding-theme-mrclean a:hover i.fa-circle-question {
+    color: #555;
+}
+
+.product-card__show-more,
+.card-show-more {
+  color: #c7c7c7;
+}
+
+.product-card__show-more:hover,
+.product-card__show-more:focus,
+.card-show-more:hover,
+.card-show-more:focus {
+  color: #FAFAFA;
+}
+
+::selection {
+  background-color: ;
+  color: #93b5e8;
+}
+
+.sd-oscar-file-upload-wrapper .drop-box {
+background: ;
+border-color: ;
+}
+
+
+.sd-oscar-file-upload-wrapper .drop-box:hover {
+background: ;
+border-color: ;
+}
+
+
+
+@media (max-width: 575px) {
+    .contactCrmBar .person .client-options {
+        background-color: #949494;
+    }
+    .person-dropdown .client-options svg {
+        fill: white;
+    }
+}
+.branding-theme-mrclean svg .company-avatar-bg,
+.branding-theme-mrclean svg .contact-avatar-bg {
+  fill: #FAFAFA;
+}
+
+.list-group .list-group-item.active {
+  background-color: #FAFAFA;
+  border-color: #c7c7c7
+}
+.card-heading-extra a:hover,
+.card-heading-extra a .list-icon {
+    text-decoration: none;
+    color: ;
+}
+
+.book-me-appointment__details-data {
+    color: #c7c7c7
+}
+
+.link-block {
+    border-top: 3px solid #FAFAFA !important;
+}
+
+.file-count {
+background-color: #FAFAFA !important;
+color: #163666;
+}
+
+.modal-header {
+    border-bottom: 4px solid #FAFAFA !important;
+}
+
+.modal-sticky-footer--sidebar .form-actions.form-actions--sidebar,
+.modal-sticky-footer--tombstone .form-actions.form-actions--tombstone,
+.modal .modal-dialog .modal-content .modal-sticky-footer .form-actions.btn-list,
+.modal .modal-dialog.modal-fs .modal-body .form-actions.btn-list {
+    border-top: 1px solid #FAFAFA !important;
+}
+
+.branding-theme-mrclean .modal-header {
+    border-bottom: 4px solid #163666 !important;
+}
+
+.pdf-wrapper {
+    border-top: 4px solid #FAFAFA !important;
+}
+
+#proposal-form .card-header {
+    border-top: 2px solid #FAFAFA !important;
+}
+
+.file-transfer .nav .nav-item a.nav-link.active {
+    color: #FAFAFA !important;
+    border-bottom-color: #FAFAFA !important;
+}
+
+body.branding-theme-mrclean .file-transfer .nav .nav-item a.nav-link.active {
+    color: #163666 !important;
+    border-bottom-color: #163666 !important;
+}
+
+.files-storage-browser-widget .no-selected-files .choose-files-button,
+.active-packages .active-packages-header,
+.card-storage-browser .card-header{
+    background: #FAFAFA !important;
+}
+body.branding-theme-mrclean .active-packages .active-packages-header{
+    color: #163666 !important;
+}
+.active-packages .active-packages-content .list-group .list-group-item.active{
+    background: none !important;
+    border-left: 1px solid #c7c7c7;
+    border-right: 1px solid #c7c7c7;
+    color: #c7c7c7;
+}
+
+.impersonate-wrapper {
+    border-bottom: 2px solid #FAFAFA !important;
+}
+.branding-theme-mrclean .impersonate-wrapper {
+    border-bottom: 2px solid #ddd !important;
+}
+
+
+.footer-actions-wrapper .timer--action-wrapper .timer-form .counter-wrap .timer-input.counting-time-input:focus {
+    border-color: #c7c7c7;
+}
+
+.new-card-view .dataTableResp .data-table-item-mobile .card-details::before {
+background: #FAFAFA;
+}
+
+.form-actions-btn.form-actions-btn--sidebar,
+.form-actions-btn.form-actions-btn--tombstone,
+.sd-grid-view .grid-card-view .dropdown .dropdown-menu.dropdown-menu-ui .categories-container .tab-content .category-container .item-container li a:hover {
+    border-color: #FAFAFA !important;
+}
+
+.content-tabs .plan-tab-content .plan-panel {
+    box-shadow:inset 0 0 0 3px;
+    color: #ededed;
+}
+
+.content-tabs .plan-tab-content .plan-panel .info-label {
+    background: #e0e0e0 !important;
+}
+
+.content-tabs .plan-tab-content .plan-panel .info-label span{
+color: #163666;
+}
+
+.content-tabs .plan-tab-content .plan-panel .panel-value .value {
+color: #163666;
+}
+
+.content-tabs .plan-tab-content .plan-panel .panel-value .symbol {
+color: #163666;
+}
+
+.content-tabs .plan-tab-content .plan-panel .panel-value .period {
+color: #163666;
+}
+
+.content-tabs .plan-tab-content .plan-panel .panel-header {
+color: #163666;
+
+}
+
+.content-tabs .plan-tab-content .plan-panel .features-list li span {
+color: #163666;
+
+}
+
+.content-tabs .plan-tab-content .plan-panel {
+color: #163666;
+
+}
+
+.content-tabs .plan-tab-content .plan-panel .plan-btn-container .submit-plan-btn span {
+color: #163666;
+}
+
+.content-tabs .plans-tabs .nav-tabs .nav-item .nav-link {
+color: #163666;
+}
+
+.content-tabs .plan-tab-content .plan-panel .plan-btn-container .submit-plan-btn {
+color: #163666;
+border-color: #ededed !important;
+}
+
+.content-tabs .plan-tab-content .plan-panel .plan-btn-container a:hover  {
+background: #fafafa !important;
+}
+
+
+.content-tabs .plans-tabs .nav-tabs {
+  border: 2px solid;
+  border-color: #616161;
+
+}
+
+
+.view-submission-modal--line.bg-primary {
+    background-color: #FAFAFA !important;
+    border-color: #FAFAFA !important;
+}

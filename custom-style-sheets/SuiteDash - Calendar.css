@@ -1,0 +1,308 @@
+
+.book-me__main-content {
+
+  .about-me,
+  .book-me-content {
+    padding: 1.5rem;
+  }
+}
+
+.book-me__appointment-options-list {
+  flex-direction: column;
+  row-gap: 1rem;
+}
+
+.book-me__appointment-options-item {
+  max-width: 100%;
+  width: 100%;
+}
+
+.book-me-appointment {
+  align-items: center !important;
+  flex-direction: column;
+  row-gap: 2rem;
+}
+}
+
+/* CHANGE HEADER MONTH TITLE DARK BLUE */
+.extended-form-wrapper#FormEmbed_RPbk5yyn9LRo9NEkMYbSkja6R8FMchzUAEq9vZrb1Cyc812At-extended-form.choice-step-more-options .book-me-calendar.calendar table tr:first-child th button, .extended-form-wrapper#FormEmbed_RPbk5yyn9LRo9NEkMYbSkja6R8FMchzUAEq9vZrb1Cyc812At-extended-form.choice-step-more-options .choose-items-wrapper .choose-items-summary-actions button.next-btn, .extended-form-wrapper#FormEmbed_RPbk5yyn9LRo9NEkMYbSkja6R8FMchzUAEq9vZrb1Cyc812At-extended-form.choice-step-more-options .btn.btn-primary, .extended-form-wrapper#FormEmbed_RPbk5yyn9LRo9NEkMYbSkja6R8FMchzUAEq9vZrb1Cyc812At-extended-form.choice-step-more-options .btn.btn-primary span {
+  background-color: #163666 !important;
+  color: #B2D3DE;
+  padding-top: 3rem;
+}
+
+/* REMOVE BOARD AROUND AVATAR*/
+.personal-block__avatar {
+  background-color: unset;
+}
+
+/* CHANGE HEADER MONTH TITLE DARK BLUE */
+.book-me-calendar.calendar table tr:nth-child(2) th small {
+  background-co lor: var(--sd-text-secondary);
+  color: white;
+  text-transform: uppercase;
+}
+
+
+/* FONT SIZE MOD */
+btn btn-default btn-sm pull-left uib-left
+.calendar__title {
+
+  padding: 12px 0;
+  text-align: center;
+  h4 {
+    line-height: 1;
+  }
+}
+
+.calendar__pagination-icon {
+
+  padding: 6px 20px;
+  svg {
+    height: 20px;
+    width: 20px;
+  }
+}
+
+.calendar__week-days {
+
+  padding: 0 20px;
+  span {
+    background-co lor: var(--sd-text-secondary);
+    color: white;
+    text-transform: uppercase;
+  }
+}
+
+/* fixes button */
+.book-me-calendar.calendar table tr:first-child th button.uib-left i {
+  left: 0;
+}
+
+.book-me-calendar.calendar table tr:first-child th button.uib-left i {
+  position: relative;
+  top: 0;
+  transform: translate(0, 0);
+}
+
+.sdAccordion__toggle:hover, .sdAccordion__toggle:focus {
+  /* border: 1px solid #dddddd; */
+  background: #FFFFFF;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+.appointment-card__img-common-wrap,
+.default-user-avatar-container,
+.appointment-card__img-wrap {
+  display: none
+}
+
+.appointment-card .appointment-card__subtitle {
+  display: none !important;
+}
+
+.book-me__main-content .about-me, .book-me__main-content .book-me-content {
+  background-color: #fff;
+  border-radius: 35px;
+  padding: 26px 46px 46px;
+}
+
+.book-me__appointment-options-item.active .appointment-card {
+  border-color: #c7c7c7 !important;
+}
+
+.book-me__appointment-options-item.active .appointment-card {
+  border-color: #c7c7c7 !important;
+}
+
+.book-me__appointment-options-item.active .appointment-card {
+  border-color: #c7c7c7 !important;
+}
+
+.book-me__main-content .about-me, .book-me__main-content .book-me-content {
+  background-color: #fff;
+  border-radius: 35px;
+  padding: 26px 46px 46px;
+}
+
+.appointment-card__img-common-wrap,
+.default-user-avatar-container,
+.appointment-card__img-wrap {
+  display: none
+}
+
+.appointment-card .appointment-card__subtitle {
+  display: none !important;
+}
+
+/* CHANGE HEADER MONTH TITLE DARK BLUE */
+.extended-form-wrapper#FormEmbed_RPbk5yyn9LRo9NEkMYbSkja6R8FMchzUAEq9vZrb1Cyc812At-extended-form.choice-step-more-options .book-me-calendar.calendar table tr:first-child th button, .extended-form-wrapper#FormEmbed_RPbk5yyn9LRo9NEkMYbSkja6R8FMchzUAEq9vZrb1Cyc812At-extended-form.choice-step-more-options .choose-items-wrapper .choose-items-summary-actions button.next-btn, .extended-form-wrapper#FormEmbed_RPbk5yyn9LRo9NEkMYbSkja6R8FMchzUAEq9vZrb1Cyc812At-extended-form.choice-step-more-options .btn.btn-primary, .extended-form-wrapper#FormEmbed_RPbk5yyn9LRo9NEkMYbSkja6R8FMchzUAEq9vZrb1Cyc812At-extended-form.choice-step-more-options .btn.btn-primary span {
+  background-color: #163666 !important;
+  color: #B2D3DE;
+  padding-top: 3rem;
+}
+
+/* REMOVE BOARD AROUND AVATAR*/
+.personal-block__avatar {
+  background-color: unset;
+}
+
+/* CHANGE HEADER MONTH TITLE DARK BLUE */
+.book-me-calendar.calendar table tr:nth-child(2) th small {
+  background-co lor: var(--sd-text-secondary);
+  color: white;
+  text-transform: uppercase;
+}
+
+/* fixes button */
+.book-me-calendar.calendar table tr:first-child th button.uib-left i {
+  left: 0;
+}
+
+.book-me-calendar.calendar table tr:first-child th button.uib-left i {
+  position: relative;
+  top: 0;
+  transform: translate(0, 0);
+}
+
+.fc-event {
+  background-color: var(--rev-color-9) !important;
+  border: 1px solid var(--rev-color-9) !important;
+}
+
+.fc-event .fc-title {
+  color: var(--rev-color-primary) !important;
+}
+
+.fc-event {
+
+  background-color: var(--rev-color-9) !important;
+  border: 1px solid var(--rev-color-9) !important;
+  .fc-title {
+    color: var(--rev-color-primary) !important;
+  }
+}
+
+.calendar__title {
+  padding: 12px 0;
+  text-align: center;
+}
+
+.calendar__title h4 {
+  line-height: 1;
+}
+
+.calendar__week-days {
+  padding: 0 20px;
+}
+
+.calendar__week-days span {
+  background-color: var(--sd-text-secondary);
+  color: white;
+  text-transform: uppercase;
+}
+
+.book-me__appointment-options-item.active .appointment-card {
+  border-color: #c7c7c7 !important;
+}
+
+.book-me-calendar.calendar table tr:first-child th button.uib-left i, .book-me-calendar.calendar table tr:first-child th button.uib-right i {
+  /* position: absolute; */
+  /* top: 50%; */
+  /* transform: translate(0, -50%); */
+}
+
+.book-me-calendar.calendar table tr:first-child th button.uib-left i {
+  /* left: -6px; */
+}
+
+<button type="button" class="btn btn-default btn-sm pull-left uib-left" ng-click="move(-1)" tabindex="-1" > <i aria-hidden="true" class="material-icons" > navigate_before</i > <span class="sr-only" > previous</span > </button > .book-me-calendar.calendar table tr:nth-child(2) th small {
+  color: white;
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  height: 42px;
+  padding: 10px 0;
+  text-transform: uppercase;
+}
+
+.extended-form-wrapper#FormEmbed_RPbk5yyn9LRo9NEkMYbSkja6R8FMchzUAEq9vZrb1Cyc812At-extended-form.choice-step-more-options .book-me-calendar.calendar table tr:first-child th button, .extended-form-wrapper#FormEmbed_RPbk5yyn9LRo9NEkMYbSkja6R8FMchzUAEq9vZrb1Cyc812At-extended-form.choice-step-more-options .choose-items-wrapper .choose-items-summary-actions button.next-btn, .extended-form-wrapper#FormEmbed_RPbk5yyn9LRo9NEkMYbSkja6R8FMchzUAEq9vZrb1Cyc812At-extended-form.choice-step-more-options .btn.btn-primary, .extended-form-wrapper#FormEmbed_RPbk5yyn9LRo9NEkMYbSkja6R8FMchzUAEq9vZrb1Cyc812At-extended-form.choice-step-more-options .btn.btn-primary span {
+  background-color: #163666 !important;
+  color: #B2D3DE;
+  padding-top: 5rem;
+}
+
+.extended-form-wrapper[id^="FormEmbed_"][id$="-extended-form"].choice-step-more-options :where(.book-me-calendar.calendar table tr:first-child th button),
+.extended-form-wrapper[id^="FormEmbed_"][id$="-extended-form"].choice-step-more-options :where(.btn.btn-primary),
+.extended-form-wrapper[id^="FormEmbed_"][id$="-extended-form"].choice-step-more-options :where(.choose-items-wrapper .choose-items-summary-actions button.next-btn),
+.extended-form-wrapper[id^="FormEmbed_"][id$="-extended-form"].choice-step-more-options :where(.btn.btn-primary span) {
+  /* your styles here */
+}
+
+
+
+.book-me-calendar.calendar table th {
+  background-color: #163666;
+  border-right-color: transparent !important;
+  border: 0 solid transparent !important;
+}
+
+.default-user-avatar-container,
+.appointment-card__img-wrap .appointment-card__img-common-wrap {
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.default-user-avatar-container,
+.appointment-card__img-wrap {
+
+  border-radius: 50%;
+  display: flex;
+  flex-shrink: 0;
+  height: 117px;
+  overflow: hidden;
+  width: 117px;
+  @media (max-width: 450px) {
+    height: 60px;
+    width: 60px;
+  }
+
+  .book-me-calendar.calendar {
+    /* border: var(--sd-input-border); */
+    /* padding: 0 20px 20px; */
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 47%;
+    justify-content: center;
+    max-width: 800px;
+    overflow: hidden;
+  }
+
+
+  .fc-event {
+  background-color: var(--rev-color-9) !important;
+  border: 1px solid var(--rev-color-9) !important;
+}
+
+.fc-event .fc-title {
+  color: var(--rev-color-primary) !important;
+}
+
+.calendar__title {
+  padding: 12px 0;
+  text-align: center;
+}
+.calendar__title h4 {
+  line-height: 1;
+}
+
+.calendar__week-days {
+  padding: 0 20px;
+}
+.calendar__week-days span {
+  background-color: var(--sd-text-secondary);
+  color: white;
+  text-transform: uppercase;
+}

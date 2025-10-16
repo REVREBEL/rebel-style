@@ -1,0 +1,375 @@
+/* MAIN BACKGROUND COLOR  */
+html.intake-form body,
+div.book-me.w-100 > div.book-me__background,
+.book-me__background,
+[id^="FormEmbed_"][id$="-extended-form"] > div.book-me.w-100 > div.book-me__background > div,
+.extended-form-wrapper[id^="FormEmbed_"][id$="-extended-form"] > div.book-me.w-100 > div.book-me__background {
+  background-color: white !important;
+}
+
+/* REMOVE BOARD AROUND AVATAR */
+.personal-block__avatar {
+  background-color: unset !important;
+  border: none !important;
+}
+
+.book-me .book-me__title::after,
+.extended-form-wrapper[id^="FormEmbed_"][id$="-extended-form"] > div.book-me.w-100 > div.book-me__container.d-flex.align-items-start.justify-content-center > div.book-me__main-content.d-flex.flex-column > div.book-me-content.d-flex.flex-column.align-items-start > h3::after {
+  background-color: #fff !important;
+}
+
+/* APPOINTMENT CARD */
+/* HIDE IMAGES AND TITLE */
+.appointment-card .appointment-card__subtitle,
+.appointment-card__img-wrap,
+#choose-items-step-0 > div > div > ul > li > article > div > div.appointment-card__img-common-wrap.d-flex.flex-column > div,
+#choose-items-step-0 > div > div > ul > li.book-me__appointment-options-item.active > article > div > div.appointment-card__details.d-flex.flex-column > span.appointment-card__subtitle {
+  display: none !important;
+}
+
+#choose-items-step-0 > div > div > ul > li > article.appointment-card.discovery {
+  border-color: #eff5f6 !important;
+}
+
+#choose-items-step-0 > div > div > ul > li > article {
+  padding: 2rem 0 !important;
+}
+
+/* APPOINTMENT CARD : ACTIVE STATE */
+#choose-items-step-0 > div > div > ul > li.book-me__appointment-options-item.active {
+  background-color: #eff5f6 !important;
+}
+
+.appointment-card__duration,
+#choose-items-step-0 > div > div > ul > li.book-me__appointment-options-item > article > div > div.appointment-card__details.d-flex.flex-column > span.appointment-card__duration.mt-auto,
+#choose-items-step-0 > div > div > ul > li.book-me__appointment-options-item.active > article > div > div.appointment-card__details.d-flex.flex-column > span.appointment-card__duration.mt-auto {
+  color: #163666 !important;
+}
+
+div > div.sdAccordion__item.choose-items-card,
+[id^="choose-items-steps-"] > div > div.sdAccordion__item.choose-items-card {
+  color: #FAFAFA !important;
+}
+
+.sdAccordion__item.choose-items-card,
+[id^="choose-items-steps-"] .sdAccordion__item.choose-items-card {
+  color: #FAFAFA !important;
+}
+
+.choose-items-wrapper .choose-items-summary-wrapper:not(.loader-widget)::before,
+.choose-items-wrapper .sdAccordion__item .sdAccordion__head,
+.sdAccordion__toggle,
+#choose-items-heading-1 {
+  border-width: 0px !important;
+  color: #FAFAFA !important;
+}
+
+/* REMOVE SHIFT ON HOVER  */
+.sdAccordion__toggle:hover {
+  border-width: 0 !important;
+  background-color: #E5E5E5 !important;
+  color: #FAFAFA !important;
+}
+
+/* CALENDAR */
+#choose-items-step-0 > div > section > div.book-me-calendar.calendar.ng-scope {
+  max-width: 450px !important;
+  padding: 0 !important;
+  margin-left: 1px !important;
+  margin-top: 2.3rem;
+  border-radius: 2px !important;
+  box-shadow: 0 0 0 2px #163666, 6px 6px 0 0 #163666 !important;
+}
+
+/* ADD PADDING AROUND DAYS */
+.book-me-calendar.calendar table td button {
+  height: 3rem !important;
+  font-size: 16px !important;
+  color: #163666 !important;
+  background-color: #fafafa !important;
+}
+
+.book-me-calendar.calendar table tr:first-child th button.uib-left i {
+  left: 0 !important;
+  background-color: #163666 !important;
+  box-shadow: none !important;
+}
+
+.extended-form-wrapper[id^="FormEmbed_"][id$="-extended-form"] .book-me-calendar.calendar table tr:first-child th button.uib-left::before,
+.extended-form-wrapper[id^="FormEmbed_"][id$="-extended-form"] .book-me-calendar.calendar table tr:first-child th button.uib-right::before {
+  content: none !important
+}
+
+[id^="datepicker-"][id*="-"] > button [id^="datepicker-"][id*="-"] > button > span,
+[id^="datepicker-"][id*="-"] > button.btn-info .text-muted > .ng-binding.text-info,
+[id^="datepicker-"][id*="-"] > button.text-muted,
+.book-me-calendar.calendar table td button:disabled {
+  color: color-mix(in srgb, currentcolor 10%, white) !important;
+  background-color: #fff !important;
+}
+
+#choose-items-step-2 > div:nth-child(1) > div > h4,
+#choose-items-step-2 > div:nth-child(1) > div > span,
+#choose-items-step-2 > div:nth-child(1) > div > div > span,
+.book-me-appointment__details .book-me__title,
+.book-me-appointment__details-data {
+  font-family: Supreme, 'General Sans', 'Public Sans', 'Andale Mono', tahoma, sans-serif !important;
+  color: #163666 !important;
+  font-size: 1.25rem
+}
+
+#choose-items-step-2 > div:nth-child(1) > div > span.pb-3.mb-4.book-me-appointment__details-data.book-me__block-with-decor.ng-binding,
+#choose-items-step-2 > div:nth-child(1) > div > h4,
+#choose-items-step-2 > div:nth-child(1) > div > div > span,
+.book-me-appointment__details .book-me__title, .book-me-appointment__details-data,
+.book-me .book-me__title {
+  font-family: Khand, Oswald, Impact, sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+
+#choose-items-step-2 > div:nth-child(1) > div > span.pb-3.mb-4.book-me-appointment__details-data.book-me__block-with-decor.ng-binding,
+.book-me .book-me__block-with-decor {
+  font-family: Khand, Oswald, Impact, sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+}
+
+.book-me-appointment__details-data {
+  font-family: Supreme, 'General Sans', 'Public Sans', 'Andale Mono', tahoma, sans-serif !important;
+  color: #71c9c5 !important;
+  font-weight: 400 !important;
+  font-size: 1.25rem
+}
+
+#modal-body > div > div.appointment-card__details > span.appointment-card__duration;
+  font-family: Supreme, 'General Sans', 'Public Sans', 'Andale Mono', tahoma, sans-serif !important;
+  color: #71c9c5 !important;
+  font-weight: 300 !important;
+  font-size: 1.25rem
+}
+
+.book-me .book-me__block-with-decor::after {
+  content: none !important;
+  height: 0 !important;
+  background-color: transparent !important;
+}
+
+.book-me-calendar.calendar table tr:first-child th button.uib-right i {
+  right: 0 !important;
+  background-color: #163666 !important;
+  box-shadow: none !important;
+}
+
+
+
+#choose-items-step-0 > div:nth-child(1) > section > div.book-me-calendar.calendar.ng-scope > div > div > div > table > thead > tr > th:nth-child(3) > button > span:hover,
+#choose-items-step-0 > div:nth-child(1) > section > div.book-me-calendar.calendar.ng-scope > div > div > div > table > thead > tr > th:nth-child(1) > button > span:hover,
+.book-me-calendar.calendar table tr:first-child th button.uib-right:hover i,
+.book-me-calendar.calendar table tr:first-child th button.uib-left:hover i {
+  box-shadow: none !important;
+}
+
+#choose-items-step-1 > div.choose-items-summary-actions > div.choose-items-summary-action-back > button,
+#choose-items-step-2 > div.choose-items-summary-actions > div.choose-items-summary-action-back > button {
+  background-color: #fafafa !important;
+  color: #163666 !important;
+  border-radius: .15rem !important;
+  border-width: .2rem !important;
+  border-color: #163666 !important;
+  font-weight: 700 !important;
+  font-family: Khand, Oswald, Impact, sans-serif !important;
+}
+
+#choose-items-step-0 > div.choose-items-summary-actions > div.choose-items-summary-action-checkout > button,
+#choose-items-step-1 > div.choose-items-summary-actions > div.choose-items-summary-action-checkout > button,
+#choose-items-step-2 > div.choose-items-summary-actions > div.choose-items-summary-action-checkout > button {
+  background-color: #163666 !important;
+  color: #B2D3DE !important;
+  border-radius: .15rem !important;
+  border-width: .2rem !important;
+  border-color: #163666 !important;
+  font-weight: 700 !important;
+  font-family: Khand, Oswald, Impact, sans-serif !important;
+}
+
+#choose-items-step-0 > div:nth-child(1) > section > div.book-me-timeZone > ul > li > button {
+  background-color: #fafafa !important;
+  color: #163666 !important;
+  font-weight: 700 !important;
+  font-family: Khand, Oswald, Impact, sans-serif !important;
+}
+
+#choose-items-step-1 > div.choose-items-summary-actions > div.choose-items-summary-action-back > button:hover,
+#choose-items-step-2 > div.choose-items-summary-actions > div.choose-items-summary-action-back > button:hover {
+  background-color: #163666 !important;
+  color: #B2D3DE !important;
+  border-radius: .15rem !important;
+  border-width: .2rem !important;
+  border-color: #B2D3DE !important;
+  font-weight: 700 !important;
+  font-family: Khand, Oswald, Impact, sans-serif !important;
+}
+
+#choose-items-step-0 > div.choose-items-summary-actions > div.choose-items-summary-action-checkout > button:hover,
+#choose-items-step-1 > div.choose-items-summary-actions > div.choose-items-summary-action-checkout > button:hover,
+#choose-items-step-2 > div.choose-items-summary-actions > div.choose-items-summary-action-checkout > button:hover {
+  color: #163666 !important;
+  background-color: #B2D3DE !important;
+  border-radius: .15rem !important;
+  border-width: .2rem !important;
+  font-weight: 700 !important;
+  font-family: Khand, Oswald, Impact, sans-serif !important;
+}
+
+#choose-items-step-0 > div:nth-child(1) > section > div.book-me-calendar.calendar {
+  border-radius: 6px !important;
+  border: #eff5f6 !important;
+}
+
+.extended-form-wrapper[id^="FormEmbed_"][id$="-extended-form"].choice-step-more-options .btn.btn-primary:hover,
+.extended-form-wrapper[id^="FormEmbed_"][id$="-extended-form"].choice-step-more-options .btn.btn-primary:hover span {
+  color: inherit !important;
+}
+
+/* EXPAND CALENDAR TABLE */
+.book-me-calendar.calendar table tr:first-child th,
+.extended-form-wrapper[id^="FormEmbed_"][id$="-extended-form"] .book-me-calendar.calendar table tr:first-child th {
+  padding-bottom: 2rem !important;
+}
+
+/* SCOPE CALENDAR TABLE */
+#choose-items-step-0 .book-me-calendar.calendar div > div > div > table[role="grid"] thead tr,
+#choose-items-step-0 .book-me-calendar.calendar div > div > div > table[role="grid"] thead th,
+#choose-items-step-0 .book-me-calendar.calendar div > div > div > table[role="grid"] thead th > button,
+#choose-items-step-0 .book-me-calendar.calendar div > div > div > table[role="grid"] thead th > span,
+#choose-items-step-0 .book-me-calendar.calendar div > div > div > table[role="grid"] thead th > a {
+  background-color: #163666 !important;
+}
+
+/* All spans inside this datepicker should inherit the button color */
+[id^="datepicker-"][id*="-"] > .uib-day .text-info,
+[id^="datepicker-"][id*="-"] > .uib-day .text-muted {
+  /* adjust ancestor as needed */
+  color: inherit !important;
+}
+
+/* MAKE BUTTON FILL CELL */
+#choose-items-step-0 .book-me-calendar.calendar div > div > div > table[role="grid"] thead th > button {
+  /* background-color: #163666 !important; */
+  background: transparent !important;
+  border: 0 !important;
+  color: #B2D3DE !important;
+  font-size: 2.5rem;
+  display: block !important;
+  text-transform: uppercase !important;
+  width: 100% !important;
+  box-shadow: none !important;
+}
+
+#choose-items-step-0 .book-me-calendar.calendar div > div > div > table[role="grid"] thead th > button:hover {
+  box-shadow: none !important;
+}
+
+/* CHANGE HEADER MONTH TITLE DARK BLUE */
+[id^="-title"],
+.btn btn-default.btn-sm.uib-title {
+  color: #B2D3DE !important;
+  text-transform: uppercase !important;
+  padding: 2rem 0 !important;
+}
+
+/* CHANGE HEADER MONTH TITLE DARK BLUE */
+.book-me-calendar.calendar table tr:nth-child(2) th small {
+  color: #fff !important;
+  text-transform: uppercase !important;
+}
+
+.select2-container--default .select2-selection--single {
+  display: flex !important;
+  align-items: center;
+  padding: 1.5rem;
+  height: calc(2.5rem + 2px) !important;
+  border-color: #fafafa;
+  border-radius: 0.25rem;
+  box-shadow: none;
+  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+  background-color: #fafafa;
+}
+
+#choose-items-step-0 > div:nth-child(1) > section > div.book-me-timeZone > ul,
+.book-me-timeZone__time-table {
+  flex-wrap: wrap;
+  gap: 0 !important;
+  margin: 25px 0 0;
+}
+
+.book-me-timeZone__time-table {
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 2rem 0 0 !important;
+  padding: 15px !important;
+  border-radius: 4px;
+}
+
+.book-me-timeZone__time-table .book-me-timeZone__time-table-item {
+  display: flex;
+  flex: 1 1 calc(20% - 0.20rem) !important;
+  height: 55px;
+  max-width: calc(20% - 0.20rem) !important;
+  border: 2px solid #eee;
+  border-radius: 4px;
+}
+
+.book-me-appointment {
+  gap: 1.5rem;
+  max-width: 100%;
+  flex-wrap: wrap;
+  margin-top: 5rem;
+}
+
+/* ACTIVE CALENDAR TIME */
+#choose-items-step-0 > div:nth-child(1) > section > div.book-me-timeZone > ul > li.book-me-timeZone__time-table-item.ng-scope.active > button {
+  background-color: #B2D3DE !important;
+  border-width: 3px !important;
+  border-color: #163666 !important;
+  border-radius: 2px !important;
+}
+
+/* REMOVE HORIZONTAL PADDING AROUND OPTIONS */
+.choose-items-wrapper .choose-items-steps.sdAccordion .sdAccordion__body.multistep {
+  padding: 2rem 0 !important;
+}
+
+[id^="datepicker-"][id*="-"] > button.btn-info {
+  background-color: #fff;
+  color: #163666 !important;
+  box-shadow: inset 0 0 0 2px #163666 !important;
+}
+
+/* Scope tightly to that specific calendar table */
+#choose-items-step-0 .book-me-calendar.calendar div > div > div > table[role="grid"] thead tr,
+#choose-items-step-0 .book-me-calendar.calendar div > div > div > table[role="grid"] thead th,
+#choose-items-step-0 .book-me-calendar.calendar div > div > div > table[role="grid"] thead th > span,
+#choose-items-step-0 .book-me-calendar.calendar div > div > div > table[role="grid"] thead th > a,
+.extended-form-wrapper[id^="FormEmbed_"][id$="-extended-form"]#choose-items-step-0 .book-me-calendar.calendar div > div > div > table[role="grid"] thead tr,
+.extended-form-wrapper[id^="FormEmbed_"][id$="-extended-form"]#choose-items-step-0 .book-me-calendar.calendar div > div > div > table[role="grid"] thead th,
+.extended-form-wrapper[id^="FormEmbed_"][id$="-extended-form"]#choose-items-step-0 .book-me-calendar.calendar div > div > div > table[role="grid"] thead th > span,
+.extended-form-wrapper[id^="FormEmbed_"][id$="-extended-form"]#choose-items-step-0 .book-me-calendar.calendar div > div > div > table[role="grid"] thead th > a {
+  background-color: #163666 !important;
+}
+
+#choose-items-step-1 > div.choose-items-summary-actions > div.choose-items-summary-action-back > button > svg,
+#choose-items-step-2 > div.choose-items-summary-actions > div.choose-items-summary-action-back > button > svg,
+#choose-items-step-0 > div.choose-items-summary-actions > div.choose-items-summary-action-checkout > button > svg,
+#choose-items-step-1 > div.choose-items-summary-actions > div.choose-items-summary-action-checkout > button > svg,
+#choose-items-step-2 > div.choose-items-summary-actions > div.choose-items-summary-action-checkout > button > svg {
+  display: none;
+  /* or visibility: hidden; */
+}
+
+#formFields > div > label #forms-form-wrapper > div.card-header.forms-form-header > h6 {
+  color: #163666 !important;
+}

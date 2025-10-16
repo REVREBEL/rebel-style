@@ -458,10 +458,6 @@
   
     @media screen (max-width: 768) {
     --sd-mobile-card-icon-size: 39px;
-
-
-
-    
     }
 
 
@@ -2594,736 +2590,306 @@ To use: Combined the Class with a Single Color Token
 }
 
 
-.book-me__main-content .about-me, .book-me__main-content .book-me-content,
-.personal-block .personal-block__details-wrap,
-.book-me__main-content .about-me, .book-me__main-content .book-me-content {
-    background-color: #fff;
-}
+
+
+
+
+
+
+
+
+<template>
+  <div id="example">
+    <div class="container">
+      <div id="bar">
+        <h1>REBEL EDITOR</h1>
+
+        <button @click="saveDesign">Save Design</button>
+        <button @click="exportHtml">Export HTML</button>
+      </div>
+
+      <EmailEditor
+        ref="emailEditor"
+        @load="editorLoaded"
+        @ready="editorReady"
+        :options="options"
+      />
+    </div>
+  </div>
+</template>
+
+<!-- //////////////////////*************************************** */ -->
+<!-- //////////////////////*************************************** */ -->
  
+<script setup lang="ts">
 
-.book-me .book-me__title {
-    font-size: 5rem;
-    color: var(--sd-text-secondary);
-}
+  import { ref } from "vue";
+  import EmailEditor from "../components/EmailEditor.vue";
+  import sample from "../data/sample.json";
+  import type {
+    ChildComponentPublicMethods,
+    SaveDesignCallback,
+    ExportHtmlCallback,
+  } from "@/components/types";
 
-.appointment-card .default-user-avatar-container, .appointment-card .appointment-card__img-wrap {
-    display: flex;
-    flex-shrink: 0;
-    width: 117px;
-    height: 117px;
-    border-radius: 50%;
-    overflow: hidden;
-}
+  const emailEditor = ref<ChildComponentPublicMethods | null>(null);
 
+  const options = {
+      projectId: 187691, // Using your project ID
+      locale: 'en',
+      version: "latest",
+      appearance: {
+          name: 'REVREBEL',
+          theme: "modern_light",
+          isClassic: false,
+          //////////////////////*************************************** */
+          panels: {
+            tools: {
+              dock: 'right',
+            },
+          },
+          loader: {
+            url: 'https://res.cloudinary.com/revrebel/image/upload/v1758990562/RR/Favicon/revrebel_256_fgsrow.ico',
+          },
+        },
+      features: {
+        styleGuide: true,
+        headersAndFooters: true,
+      //|||||||||||||||||||||||||||
+        // Color Picker
+        colorPicker: {
+          presets: [
+            '#163666',
+            '#047c97',
+            '#00a6b6',
+            '#71c9c5',
+            '#B2D3dE',
+            '#faca78',
+            '#f37d59',
+            '#e05047',
+            '#8e456a',
+            '#fafafa',
+            '#575757',
+            '#2E2E2E',
+          ],
+          colors: [
+            {
+              id: 'blue_shades',
+              label: 'Blue Shades',
+              colors: [
+                '#496999',
+                '#3e5f92',
+                '#33568c',
+                '#274c85',
+                '#1c437f',
+                '#1b4079',
+                '#193c72',
+                '#18396c',
+                '#163666',
+              ],
+            },
+          ],
+        },
+        //|||||||||||||||||||||||||||
+        textEditor: {
+        //|||||||||||||||||||||||||||
+          spellChecker: true,
+          tables: true,
+          inlineFontControls: true,
 
-.book-me__appointment-options-item.active .appointment-card {
-    border-width: 0;
-}
+          customButtons: [
+            {
+              name: 'my_button',
+              text: 'My Button',
+              icon: 'bookmark',
+              onSetup: () => {},
+              onAction: (data: { text: string }, callback: (text: string) => void) => { console.log(data.text); callback(data.text + ' Updated'); },
+            },
+            {
+              name: 'my_svg_button',
+              text: 'My SVG Button',
+              icon: '<svg />', // Insert your custom SVG here
+              onSetup: () => { },
+              onAction: () => { },
+            },
+          ],
+        }
+      },
 
-.book-me-calendar.calendar {
-    flex: 1 1 47%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    /* padding: 0 20px 20px; */
-    max-width: 800px;
-    /* border: var(--sd-input-border); */
-    border-radius: 15px;
-    overflow: hidden;
-}
+    fonts: {
+    //|||||||||||||||||||||||||||
+      showDefaultFonts: true,
+      //|||||||||||||||||||||||||||
+      customFonts: [
+        {
+          label: 'Barlow',
+          value: '"Barlow", sans-serif',
+          url: 'https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,800;1,800;0,900;1,900', // url is required, even for system fonts
+          weights: [{ label: 'Extra Bold', value: 800 }, { label: 'Black', value: 900 }],
+        },
+        {
+          label: 'Khand',
+          value: '"Khand", sans-serif',
+          url: 'https://fonts.googleapis.com/css2?family=Khand:wght@500;600;700',
+          weights: [{ label: 'Medium', value: 500 }, { label: 'Semi Bold', value: 600 }, { label: 'Bold', value: 700 }],
+        },
+        {
+          label: 'Public Sans',
+          value: '"Public Sans", sans-serif',
+          url: 'https://fonts.googleapis.com/css2?family=Public+Sans:wght@100..900&display=swap',
+          weights: [
+            { label: 'Light', value: 300 },
+            { label: 'Regular', value: 400 },
+            { label: 'Medium', value: 500 },
+            { label: 'Semi Bold', value: 600 },
+          ],
+        },
+        {
+          label: 'General Sans',
+          value: "'General Sans', sans-serif",
+          url: 'https://fonts.cdnfonts.com/css/general-sans',
+          weights: [
+            { label: 'Light', value: 300 },
+            { label: 'Regular', value: 400 },
+            { label: 'Medium', value: 500 },
+            { label: 'Semi Bold', value: 500 },
+          ],
+        },
+      ],
+    },
+  };
 
-body.font-theme p b, body.font-theme p strong, body.font-theme b, body.font-theme strong, body.font-theme 
-
-
-
-  .appointment-card__img-common-wrap,
-  .default-user-avatar-container,
-  .appointment-card__img-wrap {
-display: none
-  }
-
-
-  .appointment-card .appointment-card__subtitle {
-    display: none !important;
-}
-
-
-.book-me-calendar.calendar {
-    flex: 1 1 47%;
-    margin-top: 7rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    /* padding: 0 20px 20px; */
-    max-width: 800px;
-    /* border: var(--sd-input-border); */
-    border-radius: 15px;
-    overflow: hidden;
-}
-
-
-
-@media (max-width: 1200px) {
-
-  .book-me {
-    .book-me__container {
-      flex-direction: column;
-      row-gap: 2rem;
-      padding: 140px 1rem 1rem;
-    }
-
-    .book-me__background {
-
-      .book-me__background-top {
-        height: 340px;
+  // called when the editor is created
+  const editorLoaded = async () => {
+    // --- Example: Loading from a backend API ---
+    try {
+      // Replace with your actual API endpoint to get the latest design
+      const response = await fetch('/api/v1/designs/latest');
+      if (response.ok) {
+        const savedDesign = await response.json();
+        emailEditor.value?.loadDesign(savedDesign); 
+        console.log('Loaded latest design from server.'); 
+      } else {
+        // If no design is found on the server (e.g., 404), load the default sample
+        console.log('No saved design found on server, loading blank design.');
+        emailEditor.value?.editor.value?.loadBlank({ backgroundColor: '#fafafa' });
       }
+    } catch (error) {
+      console.error('Failed to fetch design, loading blank design.', error);
+      emailEditor.value?.editor.value?.loadBlank({ backgroundColor: '#fafafa' });
     }
-  }
+  };
 
-  .book-me__main-content {
-    max-width: 100%;
-    min-width: 100%;
-    width: 100%;
-  }
+  // called when the editor has finished loading
+  const editorReady = () => {
+    console.log("editorReady");
+  };
 
-  .personal-block {
-    margin: 0 auto;
-    flex: 0 0 auto;
+  const saveDesign = () => {
+    emailEditor.value?.saveDesign(async (designObject: Parameters<SaveDesignCallback>[0]) => {
+      console.log("saveDesign JSON:", designObject);
 
-    .personal-block__avatar {
-      flex: 0 0 auto;
-      top: 0;
-      width: 120px;
-      height: 120px;
-      transform: translate(-50%, -50%);
-      z-index: 5;
-      overflow: hidden;
+      // --- Example: Saving to a backend API ---
+      try {
+        // Replace with your actual API endpoint
+        const response = await fetch('/api/v1/designs', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json', // Include authentication headers (e.g., JWT) if your API is secured // 'Authorization': `Bearer ${your_auth_token}`
+          },
+          body: JSON.stringify(designObject),
+        });
+
+        if (!response.ok) throw new Error('Failed to save design');
+
+        alert('Design saved successfully!'); 
+      } catch (error) {
+        console.error('Error saving design:', error); 
+        alert('Could not save the design. Please try again.'); 
+      }
+    });
+  };
+
+  const exportHtml = () => {
+    emailEditor.value?.exportHtml((data: Parameters<ExportHtmlCallback>[0]) => {
+      const { html } = data;
+      console.log("exportHtml", html);
+
+      // --- Example: Downloading the HTML as a file ---
+      const blob = new Blob([html], { type: 'text/html' });
+      const link = document.createElement('a');
+      link.href = URL.createObjectURL(blob);
+      link.download = 'email.html'; // The name of the downloaded file
+
+      // This part is important to make it work in all browsers
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    });
+  };
+
+</script>
+
+<!-- //////////////////////*************************************** */ -->
+<!-- //////////////////////*************************************** */ -->
+
+
+<style>
+
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
     }
 
-    .personal-block__details-wrap {
+    #app,
+    #example {
+      height: 100%;
+    }
+
+    #example .container {
+      display: flex;
+      flex-direction: column;
       position: relative;
-      max-width: 100%;
-      //padding: 1rem 2rem 1rem 76px;
-      z-index: 1;
+      height: 100%;
     }
-  }
-}
 
-.book-me__main-content {
-
-  .about-me,
-  .book-me-content {
-    padding: 1.5rem;
-  }
-}
-
-.book-me__appointment-options-list {
-  flex-direction: column;
-  row-gap: 1rem;
-}
-
-.book-me__appointment-options-item {
-  width: 100%;
-  max-width: 100%;
-}
-
-.book-me-appointment {
-  flex-direction: column;
-  align-items: center !important;
-  row-gap: 2rem;
-}
-}
-
-/* CHANGE HEADER MONTH TITLE DARK BLUE */
-.extended-form-wrapper#FormEmbed_RPbk5yyn9LRo9NEkMYbSkja6R8FMchzUAEq9vZrb1Cyc812At-extended-form.choice-step-more-options .book-me-calendar.calendar table tr:first-child th button, .extended-form-wrapper#FormEmbed_RPbk5yyn9LRo9NEkMYbSkja6R8FMchzUAEq9vZrb1Cyc812At-extended-form.choice-step-more-options .choose-items-wrapper .choose-items-summary-actions button.next-btn, .extended-form-wrapper#FormEmbed_RPbk5yyn9LRo9NEkMYbSkja6R8FMchzUAEq9vZrb1Cyc812At-extended-form.choice-step-more-options .btn.btn-primary, .extended-form-wrapper#FormEmbed_RPbk5yyn9LRo9NEkMYbSkja6R8FMchzUAEq9vZrb1Cyc812At-extended-form.choice-step-more-options .btn.btn-primary span {
-  color: #B2D3DE;
-  background-color: #163666 !important;
-  padding-top: 3rem;
-}
-
-/* REMOVE BOARD AROUND AVATAR*/
-.personal-block__avatar {
-  background-color: unset;
-}
-
-/* CHANGE HEADER MONTH TITLE DARK BLUE */
-.book-me-calendar.calendar table tr:nth-child(2) th small {
-  color: white;
-  text-transform: uppercase;
-  background-co lor: var(--sd-text-secondary);
-}
-
-btn btn-default btn-sm pull-left uib-left
-
-/* FONT SIZE MOD */
-.calendar__title {
-  padding: 12px 0;
-  text-align: center;
-
-  h4 {
-    line-height: 1;
-  }
-}
-
-.calendar__pagination-icon {
-  padding: 6px 20px;
-
-  svg {
-    width: 20px;
-    height: 20px;
-  }
-}
-
-.calendar__week-days {
-  padding: 0 20px;
-
-  span {
-    color: white;
-    text-transform: uppercase;
-    background-co lor: var(--sd-text-secondary);
-  }
-}
-
-/* fixes button */
-.book-me-calendar.calendar table tr:first-child th button.uib-left i {
-  left: 0;
-}
-
-.book-me-calendar.calendar table tr:first-child th button.uib-left i {
-  position: relative;
-  top: 0;
-  transform: translate(0, 0);
-}
-
-.sdAccordion__toggle:hover, .sdAccordion__toggle:focus {
-  cursor: pointer;
-  background: #FFFFFF;
-  /* border: 1px solid #dddddd; */
-  border-radius: 7px;
-}
-
-.appointment-card__img-common-wrap,
-.default-user-avatar-container,
-.appointment-card__img-wrap {
-  display: none
-}
-
-.appointment-card .appointment-card__subtitle {
-  display: none !important;
-}
-
-.book-me__main-content .about-me, .book-me__main-content .book-me-content {
-  padding: 26px 46px 46px;
-  background-color: #fff;
-  border-radius: 35px;
-}
-
-.book-me__appointment-options-item.active .appointment-card {
-  border-color: #c7c7c7 !important;
-}
-
-.book-me__appointment-options-item.active .appointment-card {
-  border-color: #c7c7c7 !important;
-}
-
-.book-me__appointment-options-item.active .appointment-card {
-  border-color: #c7c7c7 !important;
-}
-
-.book-me__main-content .about-me, .book-me__main-content .book-me-content {
-  padding: 26px 46px 46px;
-  background-color: #fff;
-  border-radius: 35px;
-}
-
-.appointment-card__img-common-wrap,
-.default-user-avatar-container,
-.appointment-card__img-wrap {
-  display: none
-}
-
-.appointment-card .appointment-card__subtitle {
-  display: none !important;
-}
-
-/* CHANGE HEADER MONTH TITLE DARK BLUE */
-.extended-form-wrapper#FormEmbed_RPbk5yyn9LRo9NEkMYbSkja6R8FMchzUAEq9vZrb1Cyc812At-extended-form.choice-step-more-options .book-me-calendar.calendar table tr:first-child th button, .extended-form-wrapper#FormEmbed_RPbk5yyn9LRo9NEkMYbSkja6R8FMchzUAEq9vZrb1Cyc812At-extended-form.choice-step-more-options .choose-items-wrapper .choose-items-summary-actions button.next-btn, .extended-form-wrapper#FormEmbed_RPbk5yyn9LRo9NEkMYbSkja6R8FMchzUAEq9vZrb1Cyc812At-extended-form.choice-step-more-options .btn.btn-primary, .extended-form-wrapper#FormEmbed_RPbk5yyn9LRo9NEkMYbSkja6R8FMchzUAEq9vZrb1Cyc812At-extended-form.choice-step-more-options .btn.btn-primary span {
-  color: #B2D3DE;
-  background-color: #163666 !important;
-  padding-top: 3rem;
-}
-
-/* REMOVE BOARD AROUND AVATAR*/
-.personal-block__avatar {
-  background-color: unset;
-}
-
-/* CHANGE HEADER MONTH TITLE DARK BLUE */
-.book-me-calendar.calendar table tr:nth-child(2) th small {
-  color: white;
-  text-transform: uppercase;
-  background-co lor: var(--sd-text-secondary);
-}
-
-/* fixes button */
-.book-me-calendar.calendar table tr:first-child th button.uib-left i {
-  left: 0;
-}
-
-.book-me-calendar.calendar table tr:first-child th button.uib-left i {
-  position: relative;
-  top: 0;
-  transform: translate(0, 0);
-}
-
-.fc-event {
-  background-color: var(--rev-color-9) !important;
-  border: 1px solid var(--rev-color-9) !important;
-}
-
-.fc-event .fc-title {
-  color: var(--rev-color-primary) !important;
-}
-
-.fc-event {
-  background-color: var(--rev-color-9) !important;
-  border: 1px solid var(--rev-color-9) !important;
-
-  .fc-title {
-    color: var(--rev-color-primary) !important;
-  }
-}
-
-.calendar__title {
-  padding: 12px 0;
-  text-align: center;
-}
-
-.calendar__title h4 {
-  line-height: 1;
-}
-
-.calendar__week-days {
-  padding: 0 20px;
-}
-
-.calendar__week-days span {
-  color: white;
-  text-transform: uppercase;
-  background-color: var(--sd-text-secondary);
-}
-
-.book-me__appointment-options-item.active .appointment-card {
-  border-color: #c7c7c7 !important;
-}
-
-.book-me-calendar.calendar table tr:first-child th button.uib-left i, .book-me-calendar.calendar table tr:first-child th button.uib-right i {
-  /* position: absolute; */
-  /* top: 50%; */
-  /* transform: translate(0, -50%); */
-}
-
-.book-me-calendar.calendar table tr:first-child th button.uib-left i {
-  /* left: -6px; */
-}
-
-<button type="button" class="btn btn-default btn-sm pull-left uib-left" ng-click="move(-1)" tabindex="-1" > <i aria-hidden="true" class="material-icons" > navigate_before</i > <span class="sr-only" > previous</span > </button > .book-me-calendar.calendar table tr:nth-child(2) th small {
-  display: block;
-  padding: 10px 0;
-  height: 42px;
-  font-size: 14px;
-  font-weight: 600;
-  color: white;
-  text-transform: uppercase;
-}
-
-.extended-form-wrapper#FormEmbed_RPbk5yyn9LRo9NEkMYbSkja6R8FMchzUAEq9vZrb1Cyc812At-extended-form.choice-step-more-options .book-me-calendar.calendar table tr:first-child th button, .extended-form-wrapper#FormEmbed_RPbk5yyn9LRo9NEkMYbSkja6R8FMchzUAEq9vZrb1Cyc812At-extended-form.choice-step-more-options .choose-items-wrapper .choose-items-summary-actions button.next-btn, .extended-form-wrapper#FormEmbed_RPbk5yyn9LRo9NEkMYbSkja6R8FMchzUAEq9vZrb1Cyc812At-extended-form.choice-step-more-options .btn.btn-primary, .extended-form-wrapper#FormEmbed_RPbk5yyn9LRo9NEkMYbSkja6R8FMchzUAEq9vZrb1Cyc812At-extended-form.choice-step-more-options .btn.btn-primary span {
-  color: #B2D3DE;
-  background-color: #163666 !important;
-  padding-top: 5rem;
-}
-
-.extended-form-wrapper[id^="FormEmbed_"][id$="-extended-form"].choice-step-more-options :where(.book-me-calendar.calendar table tr:first-child th button),
-.extended-form-wrapper[id^="FormEmbed_"][id$="-extended-form"].choice-step-more-options :where(.choose-items-wrapper .choose-items-summary-actions button.next-btn),
-.extended-form-wrapper[id^="FormEmbed_"][id$="-extended-form"].choice-step-more-options :where(.btn.btn-primary),
-.extended-form-wrapper[id^="FormEmbed_"][id$="-extended-form"].choice-step-more-options :where(.btn.btn-primary span) {
-  /* your styles here */
-}
-
-
-.is-text-normal{text-transform:unset;}
-.is-text-align-center{text-align:center}
-.is-text-align-left{text-align:left}
-.is-text-align-right{text-align:right}
-.is-text-decoration-none{text-decoration:none}
-
-.is-xlight,.is-font-weight-xlight {font-weight:var(--rev-font-weight-xlight) !important;}
-.is-light,.is-font-weight-light {font-weight:var(--rev-font-weight-light) !important;}
-.is-regular,.is-font-weight-regular {font-weight:var(--rev-font-weight-regular) !important;}
-.is-medium,.is-md,.is-font-weight-md {font-weight:var(--rev-font-weight-md) !important;}
-.is-semibold,.is-font-weight-semibold {font-weight:var(--rev-font-weight-semibold) !important;}
-.is-bold, .is-font-weight-bold {font-weight:var(--rev-font-weight-bold) !important;}
-.is-xbold,.is-font-weight-xbold {font-weight:var(--rev-font-weight-xbold) !important;}
-
-.btn.btn-primary, .contact-forms.create-form #formFieldsSortable .field-block .label-block label .editable-container .form-inline > .control-group > div .editable-buttons button.btn-primary, .contact-forms.edit-form #formFieldsSortable .field-block .label-block label .editable-container .form-inline > .control-group > div .editable-buttons button.btn-primary{
-  align-items: center;
-  border-radius: var(--rev-btn-radius);
-  cursor: pointer;
-  display: inline-flex;
-  flex: 0 auto;
-  font-family: var(--rev-headline-font);
-  font-weight: var(--rev-btn-font-weight);
-  letter-spacing: var(--rev-btn-letter-spacing);
-  line-height: var(--rev-btn-line-height);
-  gap: .5em;
-  justify-content: center;
-  padding: var(--rev-btn-padding);
-  pointer-events: auto;
-  text-align: center;
-  text-decoration: none;
-  text-transform: uppercase;
-  transition: border-color var(--t) var(--easing), background-color var(--t) var(--easing), box-shadow var(--t) var(--easing), color var(--t) var(--easing);
-  background-color: var(--rev-color-light);
-  border-width: var(--rev-btn-border-width);
-  border-style: solid;
-  border-color:  var(--rev-color-dark);
-  color: var(--rev-color-dark);
-}
-
-.btn, .button {
-  align-items: center;
-  border-radius: var(--rev-btn-radius);
-  cursor: pointer;
-  display: inline-flex;
-  flex: 0 auto;
-  font-family: var(--rev-headline-font);
-  font-weight: var(--rev-btn-font-weight);
-  letter-spacing: var(--rev-btn-letter-spacing);
-  line-height: var(--rev-btn-line-height);
-  gap: .5em;
-  justify-content: center;
-  padding: var(--rev-btn-padding);
-  pointer-events: auto;
-  text-align: center;
-  text-decoration: none;
-  text-transform: uppercase;
-  transition: border-color var(--t) var(--easing), background-color var(--t) var(--easing), box-shadow var(--t) var(--easing), color var(--t) var(--easing);
-  /* derive visuals from color pair */
-  --c-bg: var(--c-raw);
-  --c-fg: var(--c-ink);
-  --c-border: var(--c-raw);
-  background-color: var(--c-bg);
-  border-width: var(--rev-btn-border-width);
-  border-style: solid;
-  border-color:  var(--rev-color-dark);
-  color:solid var(--c-border);
-  color: var(--c-fg, white);
-}
-
-.btn.is-inverse, .button.is-inverse {
-  --c-bg: var(--c-ink);
-  --c-fg: var(--c-raw);
-  --c-border: var(--c-ink);
-}
-
-.btn.is-sm, .button.is-sm {
-  border-radius: var(--rev-btn-sm-radius);
-  border-width: var(--rev-btn-sm-border-width);
-
-  padding: var(--rev-btn-sm-padding);
-}
-
-.btn.is-lg, .button.is-lg {
-  border-radius: var(--rev-btn-lg-radius);
-  border-width: var(--rev-btn-lg-border-width);
-  padding: var(--rev-btn-lg-padding);
-}
-
-.btn.is-outline, .button.is-outline {
-  --c-fg: var(--c-raw);
-  --c-border: var(--c-raw);
-  background-color: transparent;
-  border: var(--rev-btn-border-width) solid var(--c-border);
-  color: var(--c-fg);
-}
-
-.btn.is-rebel, .button.is-rebel {
-  background-image: linear-gradient(to right, #27498b, #145491, #005e95, #006897, #007198, #00789b, #007f9d, #00869f, #008ea5, #0096ab, #009eb1, #00a6b6, #71c9c5, #7aceb5, #8fd2a2, #abd38e, #ccd17e, #dbca73, #ebc16d, #fab86b, #f9aa64, #f89b5e, #f68c5b, #f37d59, #f37d59, #f07555, #ec6d51, #e9654e, #e55c4b, #df554f, #d84e53, #d04856, #c2455f, #b14565, #a04569, #8e456a);
-  background-clip: border-box;
-  -webkit-text-fill-color: inherit;
-  box-shadow: none;
-  color: var(--var-color-primary);
-}
-
-.btn.is-rebel.is-outline, .button.is-rebel.is-outline {
-  background-image: linear-gradient(to right, #27498b, #145491, #005e95, #006897, #007198, #00789b, #007f9d, #00869f, #008ea5, #0096ab, #009eb1, #00a6b6, #71c9c5, #7aceb5, #8fd2a2, #abd38e, #ccd17e, #dbca73, #ebc16d, #fab86b, #f9aa64, #f89b5e, #f68c5b, #f37d59, #f37d59, #f07555, #ec6d51, #e9654e, #e55c4b, #df554f, #d84e53, #d04856, #c2455f, #b14565, #a04569, #8e456a);
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  box-shadow: none;
-}
-
-
-.is-muted{color:var(--rev-color-muted)}
-.is-success{color:var(--rev-color-2)}
-.is-warning{color:var(--rev-color-warning)}
-.is-danger{color:var(--rev-color-danger)}
-.is-error{color:var(--rev-color-error)}
-.is-emoji-font{font-family:"Noto Emoji",Arial,sans-serif}
-
-.btn:hover, .button:hover,
-.btn.is-lg:hover, .button.is-lg:hover,
-.btn.is-sm:hover, .button.is-sm:hover {
-  --c-bg: var(--c-ink);
-  --c-fg: var(--c-raw);
-  --c-border: var(--c-ink);
-  --c-shadow: var(--c-raw);
-  background-color: var(--c-bg);
-  border-color: var(--c-border);
-  box-shadow: 1px 1px 5px color-mix(in srgb, var(--c-shadow) 60%, transparent),
-    0 5px 30px color-mix(in srgb, var(--c-shadow) 60%, transparent),
-    0 10px 10px -15px color-mix(in srgb, var(--c-shadow) 60%, transparent);
-  color: var(--c-fg);
-}
-
-.btn.is-color-9:hover, .button.is-color-9:hover,
-.btn.is-color-light:hover, .button.is-color-light:hover {
-  --c-bg: var(--c-ink);
-  --c-fg: var(--c-raw);
-  --c-border: var(--c-ink);
-  --c-shadow: var(--c-raw);
-  background-color: var(--c-bg);
-  border-color: var(--c-border);
-  box-shadow: 1px 1px 5px color-mix(in srgb, var(--c-shadow) 60%, black),
-    0 5px 10px color-mix(in srgb, var(--c-shadow) 60%, black),
-    0 10px 20px -15px color-mix(in srgb, var(--c-shadow) 60%, black);
-  color: var(--c-fg);
-}
-
-.btn.is-inverse:hover, .button.is-inverse:hover,
-.btn.is-lg.is-inverse:hover, .button.is-lg.is-inverse:hover,
-.btn.is-sm.is-inverse:hover, .button.is-sm.is-inverse:hover {
-  /* derive visuals from color pair */
-  --c-bg: var(--c-raw);
-  --c-fg: var(--c-ink);
-  --c-border: var(--c-raw);
-  --c-shadow: var(--c-ink);
-  background-color: var(--c-bg);
-  border-color: var(--c-border);
-  box-shadow: 1px 1px 5px color-mix(in srgb, var(--c-shadow) 60%, transparent),
-    0 5px 30px color-mix(in srgb, var(--c-shadow) 60%, transparent),
-    0 10px 10px -15px color-mix(in srgb, var(--c-shadow) 60%, transparent);
-  color: var(--c-fg);
-}
-
-.btn.is-outline:hover, .button.is-outline:hover {
-  --c-bg: var(--c-raw);
-  --c-fg: var(--c-ink);
-  --c-border: var(--c-raw);
-  --c-shadow: var(--c-ink);
-  background-color: var(--c-bg);
-  border-color: var(--c-border);
-  box-shadow: 1px 1px 5px color-mix(in srgb, var(--c-shadow) 60%, transparent),
-    0 5px 30px color-mix(in srgb, var(--c-shadow) 60%, transparent),
-    0 10px 10px -15px color-mix(in srgb, var(--c-shadow) 60%, transparent);
-  color: var(--c-fg);
-}
-
-.btn.is-rebel:hover, .button.is-rebel:hover {
-  box-shadow: 1px 1px 5px var(--rev-color-primary), 0 10px 20px var(--rev-color-primary), 0 20px 30px -15px var(--rev-color-primary);
-}
-
-.btn:active, .button:active, .btn.is-inverse:active, .button.is-inverse:active,
-.btn.is-color-9:active, .button.is-color-9:active, .btn.is-color-light:active, .button.is-color-light:active,
-.btn.is-sm:active, .button.is-sm:active, .btn-is-lg:active, .button-is-lg:active,
-.btn.is-rebel:active, .button.is-rebel:active, .btn.is-rebel.is-outline:active, .button.is-rebe.is-outline:active {
-  box-shadow: none;
-  transform: none;
-}
-
-.btn.is-outline:active, .button.is-outline:active {
-  background-color: inherit;
-  border-color: inherit;
-  color: inherit;
-}
-
-.text-btn {
-  align-items: center;
-  color: inherit;
-  gap: .5em;
-  font-family: var(--rev-btn-font);
-  font-size: var(--rev-t3-base);
-  font-weight: var(--rev-btn-font-weight);
-  justify-content: flex-start;
-  text-decoration: none;
-  text-transform: uppercase;
-  transition-duration: .2s;
-  transition-property: all;
-  transition-timing-function: ease-in-out
-}
-
-.text-button-icon {
-  align-items: center;
-  color: inherit;
-  display: flex;
-  height: 1em;
-  justify-content: center;
-  width: 1em
-}
-
-.text-btn:hover {
-  gap: .7em;
-}
-
-.btn.next,
-.button.next {
-  color: var(--rev-color-primary);
-  z-index: 5;
-  width: auto;
-  display: inline-block;
-  position: absolute;
-  inset: auto auto 0% 10px;
-}
-
-.btn.next.is-inverse,
-.button.next.is-inverse {
-  color: var(--rev-color-primary-inverse);
-  z-index: 99;
-  padding: var(--rev-btn-sm-padding);
-  -webkit-text-fill-color: transparent;
-  /* stylelint-disable-next-line  property-no-vendor-prefix */
-  -webkit-background-clip: text;
-  background-clip: text;
-  width: auto;
-  display: inline-block;
-  position: absolute;
-  inset: auto auto 0% 10px;
-}
-
-.btn.previous,
-.button.previous {
-  z-index: 99;
-  padding: var(--rev-btn-sm-padding);
-  -webkit-text-fill-color: transparent;
-  /* stylelint-disable-next-line  property-no-vendor-prefix */
-  -webkit-background-clip: text;
-  background-clip: text;
-  width: auto;
-  display: inline-block;
-  position: absolute;
-  inset: auto auto .5% 20%;
-}
-
-.btn.previous.is-inverse,
-.button.previous.is-inverse {
-  color: var(--rev-color-primary-inverse);
-  z-index: 99;
-  padding: var(--rev-btn-sm-padding);
-  -webkit-text-fill-color: transparent;
-  /* stylelint-disable-next-line  property-no-vendor-prefix */
-  -webkit-background-clip: text;
-  background-clip: text;
-  width: auto;
-  display: inline-block;
-  position: absolute;
-  inset: auto auto .5% 20%;
-}
-
-.button.previous.is-inverse:hover, .button.next.is-inverse:hover,
-.btn.previous.is-inverse:hover, .btn.next.is-inverse:hover {
-  color: var(--rev-color-primary);
-  border-color: var(--rev-color-primary-inverse);
-  background-color: var(--rev-color-primary-inverse);
-  -webkit-text-fill-color: inherit;
-  background-clip: border-box;
-}
-
-.btn.previous:hover, .btn.next:hover,
-.button.previous:hover, .button.next:hover {
-  color: var(--rev-color-primary-inverse);
-  border-color: var(--rev-color-primary);
-  background-color: var(--rev-color-primary);
-  -webkit-text-fill-color: inherit;
-  background-clip: border-box;
-}
-
-
-.u-button {
-  display: inline-block;
-  padding: 9px 15px;
-  background-color: #163666;
-  ;
-  color: white;
-  border: 0;
-  line-height: inherit;
-  text-decoration: none;
-  cursor: pointer;
-  border-radius: 0;
-}
-
-/* ===== Respect reduced motion ===== */
-@media (prefers-reduced-motion: reduce) {
-  .btn, .button, .btn.is-inverse, .button.is-inverse,
-  .btn.is-color-9, .button.is-color-9, .btn.is-color-light, .button.is-color-light,
-  .btn.is-sm, .button.is-sm, .btn-is-lg, .button-is-lg,
-  .btn.is-rebel, .button.is-rebel, .btn.is-rebel.is-outline, .button.is-rebe.is-outline {
-    transition: none;
-  }
-}
-
-@media (max-width: 767px) {
-  .btn, .button, .btn.is-inverse, .button.is-inverse,
-  .btn.is-color-9, .button.is-color-9, .btn.is-color-light, .button.is-color-light,
-  .btn.is-sm, .button.is-sm, .btn-is-lg, .button-is-lg,
-  .btn.is-rebel, .button.is-rebel, .btn.is-rebel.is-outline, .button.is-rebe.is-outline {
-    font-size: 1.25rem;
-  }
-}
-
-
-.book-me-calendar.calendar table th {
-  border: 0 solid transparent !important;
-  background-color: #163666;
-  border-right-color: transparent !important;
-}
-
-.default-user-avatar-container,
-.appointment-card__img-wrap .appointment-card__img-common-wrap {
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.default-user-avatar-container,
-.appointment-card__img-wrap {
-  display: flex;
-  flex-shrink: 0;
-  width: 117px;
-  height: 117px;
-  border-radius: 50%;
-  overflow: hidden;
-
-  @media (max-width: 450px) {
-    width: 60px;
-    height: 60px;
-  }
-
-  .book-me-calendar.calendar {
-    flex: 1 1 47%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    /* padding: 0 20px 20px; */
-    max-width: 800px;
-    /* border: var(--sd-input-border); */
-    border-radius: 15px;
-    overflow: hidden;
-  }
-
-
-  .fc-event {
-  background-color: var(--rev-color-9) !important;
-  border: 1px solid var(--rev-color-9) !important;
-}
-
-.fc-event .fc-title {
-  color: var(--rev-color-primary) !important;
-}
+    #bar {
+      /* Don't grow, just take up the space needed. */
+      flex-shrink: 0;
+      background-color: #163666;
+      color: #fff;
+      padding: 10px;
+      display: flex;
+    }
+
+    /* Target the div rendered by the EmailEditor component */
+    .unlayer-editor {
+      flex: 1; /* Grow to fill remaining space */
+      min-height: 0; /* Prevent flexbox overflow issues */
+    }
+
+    #bar h1 {
+      flex: 1;
+      font-size: 16px;
+      text-align: left;
+    }
+
+    #bar button {
+      flex: 1;
+      padding: 10px;
+      margin-left: 10px;
+      font-size: 14px;
+      font-weight: bold;
+      background-color: #fafafa;
+      color: #163666;
+      border: 0px;
+      border-radius: 0.35rem;
+      max-width: 150px;
+      cursor: pointer;
+      text-transform: uppercase;
+    }
+
+</style>
