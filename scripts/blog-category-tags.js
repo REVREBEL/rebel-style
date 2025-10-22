@@ -1,5 +1,6 @@
-/*! ------------------ ADDING THE SCRIPT: ------------------ 
+/*! ------------------ ADDING THE SCRIPT: ------------------ */
 
+/*
 <!-- START Blog Category tags -->
 <script
   defer
@@ -9,7 +10,6 @@
   crossorigin="anonymous">
 </script>
 <!-- END Blog Category tags -->
-
 */
 
 /*! ------------------ HOW TO USE IN WEBFLOW --------------- 
@@ -115,8 +115,8 @@ class WfJoinAttr extends HTMLElement {
     const outputClass = `blog_category-${this.slug(categorySlug)}`;
     const target = this.querySelector(".output") || this;
 
-    // Apply class (default behavior)
-    target.setAttribute("class", outputClass);
+    // Add the new class without removing existing ones.
+    target.classList.add(outputClass);
 
     // Optional color application if attributes are provided
     // if (textColor) target.style.color = textColor;
@@ -132,6 +132,7 @@ class WfJoinAttr extends HTMLElement {
     });
   }
 }
+
 
 /**
  * Registers the custom element <wf-join-attr> with the browser.
