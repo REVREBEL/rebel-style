@@ -1,0 +1,367 @@
+{
+  "pages": [
+    {
+      "name": "RateSeason",
+      "title": "Rate Season",
+      "elements": [
+        {
+          "type": "text",
+          "name": "rateName",
+          "title": "Rate Name",
+          "showNumber": false,
+          "isRequired": true
+        },
+        {
+          "type": "text",
+          "name": "companyName",
+          "startWithNewLine": false,
+          "title": "Company Name",
+          "showNumber": false,
+          "setValueIf": "{Company Name Confirm} empty",
+          "isRequired": true
+        },
+        {
+          "type": "boolean",
+          "name": "rateLoadingInstructionsUpload_yn",
+          "title": "Rate Loading Instructions *",
+          "description": "Would you like to provide rate loading instructions for upload, or do you prefer to type or copy and paste them into the document?﻿",
+          "showNumber": false,
+          "isRequired": true,
+          "labelTrue": "I'm ready to upload them now",
+          "labelFalse": "I'd like to input them"
+        },
+        {
+          "type": "file",
+          "name": "rateLoadingInstructions",
+          "visibleIf": "{Rate Loading Instructions} = true",
+          "title": "Upload them here",
+          "showNumber": false
+        },
+        {
+          "type": "comment",
+          "name": "rateLoadingInstructionsText",
+          "visibleIf": "{Rate Loading Instructions} = false",
+          "title": "Rate Loading Instructions Input",
+          "description": "Type or Copy + Paste the Rate Loading Instructions in the Area Below.",
+          "showNumber": false
+        },
+        {
+          "type": "paneldynamic",
+          "name": "Pricing Seasons",
+          "visibleIf": "{Rate Loading Instructions} = false or {Pricing Input Method} = false",
+          "title": "Pricing Seasons",
+          "description": "Next, proceed to insert your rate's pricing. Select 'Add Season' below to define appropriate pricing for each season, then choose the specific room types applicable to that price range.",
+          "templateElements": [
+            {
+              "type": "panel",
+              "name": "Dates Block",
+              "elements": [
+                {
+                  "type": "panel",
+                  "name": "Extra Person",
+                  "title": "Rate Season",
+                  "elements": [
+                    {
+                      "type": "text",
+                      "name": "From Date",
+                      "minWidth": "200px",
+                      "title": "From Date",
+                      "showNumber": false,
+                      "inputType": "date"
+                    },
+                    {
+                      "type": "text",
+                      "name": "To Date",
+                      "minWidth": "200px",
+                      "startWithNewLine": false,
+                      "title": "To Date",
+                      "showNumber": false,
+                      "isRequired": true,
+                      "inputType": "date"
+                    },
+                    {
+                      "type": "text",
+                      "name": "Single",
+                      "minWidth": "175px",
+                      "startWithNewLine": false,
+                      "title": "Single",
+                      "description": "Single Adult",
+                      "showNumber": false,
+                      "isRequired": true,
+                      "inputType": "number",
+                      "min": 1,
+                      "step": 4
+                    },
+                    {
+                      "type": "text",
+                      "name": "Double",
+                      "minWidth": "175px",
+                      "startWithNewLine": false,
+                      "title": "Double",
+                      "description": "2 Adults",
+                      "showNumber": false,
+                      "isRequired": true,
+                      "inputType": "number",
+                      "min": 1,
+                      "step": 5
+                    },
+                    {
+                      "type": "text",
+                      "name": "question8",
+                      "minWidth": "175px",
+                      "startWithNewLine": false,
+                      "title": "Extra Person",
+                      "description": "$$ ",
+                      "showNumber": false,
+                      "inputType": "number",
+                      "min": -1,
+                      "step": 6
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "panel",
+              "name": "Amounts Block Continued"
+            }
+          ],
+          "confirmDelete": true,
+          "confirmDeleteText": "Do you want to delete the season?",
+          "addPanelText": "Add new season",
+          "removePanelText": "Remove existing season"
+        },
+        {
+          "type": "dropdown",
+          "name": "Market Segment",
+          "title": "Market Segment",
+          "description": "Which market segment should the rate be loaded under?",
+          "showNumber": false,
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "Item 1",
+              "text": "Consortia"
+            },
+            {
+              "value": "Item 2",
+              "text": "Chain Agreement",
+              "visibleIf": "Chainwide"
+            },
+            {
+              "value": "Item 3",
+              "text": "Local Account",
+              "visibleIf": "Local Negocaited"
+            },
+            {
+              "value": "Item 4",
+              "text": "Government"
+            },
+            {
+              "value": "Item 5",
+              "text": "Wholesale"
+            },
+            {
+              "value": "Item 6",
+              "text": "Retail"
+            },
+            {
+              "value": "Item 7",
+              "text": "Qualified"
+            },
+            {
+              "value": "Item 8",
+              "text": "Unqualified"
+            },
+            {
+              "value": "Item 9",
+              "text": "Package"
+            },
+            {
+              "value": "Item 10",
+              "text": "Promo"
+            },
+            {
+              "value": "Item 11",
+              "text": "Opaque"
+            },
+            {
+              "value": "Item 12",
+              "text": "Complimentary "
+            },
+            {
+              "value": "Item 13",
+              "text": "Other (Not Listed Here)"
+            }
+          ]
+        },
+        {
+          "type": "dropdown",
+          "name": "rateType",
+          "title": "Rate Type",
+          "choices": [
+            {
+              "value": "Item 1",
+              "text": "Dynamic ($$ | % off )"
+            },
+            {
+              "value": "Item 2",
+              "text": "Seasonal (Flat Rate with Adjustments)"
+            },
+            {
+              "value": "Item 3",
+              "text": "Flat (Single Term)"
+            },
+            {
+              "value": "Item 4",
+              "text": "Government Per Diem"
+            },
+            {
+              "value": "Item 5",
+              "text": "Special Event (Short Defined Period)"
+            },
+            "Item 6"
+          ]
+        },
+        {
+          "type": "panel",
+          "name": "panel2",
+          "startWithNewLine": false,
+          "elements": [
+            {
+              "type": "boolean",
+              "name": "dayOfWeekPricing",
+              "startWithNewLine": false,
+              "title": "Does Pricing Change by Day of Week?"
+            },
+            {
+              "type": "checkbox",
+              "name": "weekdayAdjustment",
+              "visibleIf": "{dayOfWeekPricing} = true",
+              "startWithNewLine": false,
+              "title": "Pricing is ....",
+              "choices": [
+                {
+                  "value": "Item 1",
+                  "text": "Adjusted by Weekday"
+                },
+                {
+                  "value": "Item 2",
+                  "text": "Adjusted by Weekday/Weekend"
+                }
+              ],
+              "choicesOrder": "asc"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "page1",
+      "elements": [
+        {
+          "type": "paneldynamic",
+          "name": "RateSeason_002",
+          "state": "collapsed",
+          "title": "Rate Season",
+          "templateElements": [
+            {
+              "type": "text",
+              "name": "fromDate",
+              "minWidth": "220px",
+              "title": "From Date",
+              "placeholder": "01/01/2026"
+            },
+            {
+              "type": "text",
+              "name": "toDate",
+              "minWidth": "210px",
+              "startWithNewLine": false,
+              "title": "To Date",
+              "placeholder": "12/31/26"
+            },
+            {
+              "type": "text",
+              "name": "single",
+              "minWidth": "230px",
+              "startWithNewLine": false,
+              "title": "Single | 1 Person",
+              "placeholder": "$329.00"
+            },
+            {
+              "type": "text",
+              "name": "double",
+              "minWidth": "230px",
+              "startWithNewLine": false,
+              "title": "Double | 2 People",
+              "placeholder": "$329.00"
+            },
+            {
+              "type": "text",
+              "name": "extraPerson",
+              "minWidth": "200px",
+              "startWithNewLine": false,
+              "title": "$$ | Extra Person",
+              "placeholder": "$40.00"
+            }
+          ],
+          "noEntriesText": "",
+          "copyDefaultValueFromLastEntry": true,
+          "addPanelText": "[NEW RATE SEASON]",
+          "removePanelText": "[DELETE RATE SEASON]"
+        },
+        {
+          "type": "panel",
+          "name": "RateSeason_001",
+          "title": "Rate Season",
+          "elements": [
+            {
+              "type": "text",
+              "name": "FromDate1",
+              "minWidth": "220px",
+              "title": "From Date",
+              "placeholder": "01/01/2026"
+            },
+            {
+              "type": "text",
+              "name": "ToDate1",
+              "minWidth": "210px",
+              "startWithNewLine": false,
+              "title": "To Date",
+              "placeholder": "12/31/26"
+            },
+            {
+              "type": "text",
+              "name": "Single1",
+              "minWidth": "230px",
+              "startWithNewLine": false,
+              "title": "Single | 1 Person",
+              "placeholder": "$329.00"
+            },
+            {
+              "type": "text",
+              "name": "Double1",
+              "minWidth": "230px",
+              "startWithNewLine": false,
+              "title": "Double | 2 People",
+              "placeholder": "$329.00"
+            },
+            {
+              "type": "text",
+              "name": "ExtraPerson1",
+              "minWidth": "200px",
+              "startWithNewLine": false,
+              "title": "$$ | Extra Person",
+              "placeholder": "$40.00"
+            }
+          ]
+        },
+        {
+          "type": "panel",
+          "name": "panel1"
+        }
+      ]
+    }
+  ],
+  "headerView": "advanced"
+}

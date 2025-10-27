@@ -1,0 +1,529 @@
+{
+  "title": "Submit Your Rate, Without the Spreadsheet Hangover",
+  "description": "Use this form to log your new rate request — clean, complete, and ready for liftoff. No chaos. No cryptic emails. Just structured inputs that keep the machine running smooth(ish).",
+  "logoPosition": "right",
+  "pages": [
+    {
+      "name": "page1",
+      "title": "Let's Get Started | The Essentials",
+      "description": "To begin, let's start with the basic information for your request",
+      "elements": [
+        {
+          "type": "text",
+          "name": "rateName",
+          "title": "Rate Name",
+          "showNumber": false,
+          "isRequired": true
+        },
+        {
+          "type": "text",
+          "name": "companyName",
+          "startWithNewLine": false,
+          "title": "Company Name",
+          "showNumber": false,
+          "setValueIf": "{Company Name Confirm} empty",
+          "isRequired": true
+        },
+        {
+          "type": "boolean",
+          "name": "rateLoadingInstructionsUpload_yn",
+          "title": "Rate Loading Instructions *",
+          "description": "Would you like to provide rate loading instructions for upload, or do you prefer to type or copy and paste them into the document?﻿",
+          "showNumber": false,
+          "isRequired": true,
+          "labelTrue": "I'm ready to upload them now",
+          "labelFalse": "I'd like to input them"
+        },
+        {
+          "type": "file",
+          "name": "rateLoadingInstructions",
+          "visibleIf": "{Rate Loading Instructions} = true",
+          "title": "Upload them here",
+          "showNumber": false
+        },
+        {
+          "type": "comment",
+          "name": "rateLoadingInstructionsText",
+          "visibleIf": "{Rate Loading Instructions} = false",
+          "title": "Rate Loading Instructions Input",
+          "description": "Type or Copy + Paste the Rate Loading Instructions in the Area Below.",
+          "showNumber": false
+        },
+        {
+          "type": "paneldynamic",
+          "name": "Pricing Seasons",
+          "visibleIf": "{Rate Loading Instructions} = false or {Pricing Input Method} = false",
+          "title": "Pricing Seasons",
+          "description": "Next, proceed to insert your rate's pricing. Select 'Add Season' below to define appropriate pricing for each season, then choose the specific room types applicable to that price range.",
+          "templateElements": [
+            {
+              "type": "panel",
+              "name": "Dates Block",
+              "elements": [
+                {
+                  "type": "panel",
+                  "name": "Extra Person",
+                  "title": "Rate Season",
+                  "elements": [
+                    {
+                      "type": "text",
+                      "name": "From Date",
+                      "minWidth": "200px",
+                      "title": "From Date",
+                      "showNumber": false,
+                      "inputType": "date"
+                    },
+                    {
+                      "type": "text",
+                      "name": "To Date",
+                      "minWidth": "200px",
+                      "startWithNewLine": false,
+                      "title": "To Date",
+                      "showNumber": false,
+                      "isRequired": true,
+                      "inputType": "date"
+                    },
+                    {
+                      "type": "text",
+                      "name": "Single",
+                      "minWidth": "175px",
+                      "startWithNewLine": false,
+                      "title": "Single",
+                      "description": "Single Adult",
+                      "showNumber": false,
+                      "isRequired": true,
+                      "inputType": "number",
+                      "min": 1,
+                      "step": 4
+                    },
+                    {
+                      "type": "text",
+                      "name": "Double",
+                      "minWidth": "175px",
+                      "startWithNewLine": false,
+                      "title": "Double",
+                      "description": "2 Adults",
+                      "showNumber": false,
+                      "isRequired": true,
+                      "inputType": "number",
+                      "min": 1,
+                      "step": 5
+                    },
+                    {
+                      "type": "text",
+                      "name": "question8",
+                      "minWidth": "175px",
+                      "startWithNewLine": false,
+                      "title": "Extra Person",
+                      "description": "$$ ",
+                      "showNumber": false,
+                      "inputType": "number",
+                      "min": -1,
+                      "step": 6
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "panel",
+              "name": "Amounts Block Continued"
+            }
+          ],
+          "confirmDelete": true,
+          "confirmDeleteText": "Do you want to delete the season?",
+          "addPanelText": "Add new season",
+          "removePanelText": "Remove existing season"
+        },
+        {
+          "type": "dropdown",
+          "name": "Market Segment",
+          "title": "Market Segment",
+          "description": "Which market segment should the rate be loaded under?",
+          "showNumber": false,
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "Item 1",
+              "text": "Consortia"
+            },
+            {
+              "value": "Item 2",
+              "text": "Chain Agreement",
+              "visibleIf": "Chainwide"
+            },
+            {
+              "value": "Item 3",
+              "text": "Local Account",
+              "visibleIf": "Local Negocaited"
+            },
+            {
+              "value": "Item 4",
+              "text": "Government"
+            },
+            {
+              "value": "Item 5",
+              "text": "Wholesale"
+            },
+            {
+              "value": "Item 6",
+              "text": "Retail"
+            },
+            {
+              "value": "Item 7",
+              "text": "Qualified"
+            },
+            {
+              "value": "Item 8",
+              "text": "Unqualified"
+            },
+            {
+              "value": "Item 9",
+              "text": "Package"
+            },
+            {
+              "value": "Item 10",
+              "text": "Promo"
+            },
+            {
+              "value": "Item 11",
+              "text": "Opaque"
+            },
+            {
+              "value": "Item 12",
+              "text": "Complimentary "
+            },
+            {
+              "value": "Item 13",
+              "text": "Other (Not Listed Here)"
+            }
+          ]
+        },
+        {
+          "type": "panel",
+          "name": "Pricing Options",
+          "elements": [
+            {
+              "type": "boolean",
+              "name": "pricingInputMethod",
+              "visibleIf": "{Rate Loading Instructions} = true",
+              "title": "Pricing",
+              "description": "Does rate loading instructions also include pricing, reflecting the contracted rate by room type and season?",
+              "showNumber": false,
+              "isRequired": true,
+              "labelTrue": "Yes, that's included",
+              "labelFalse": "No, I'll need to enter the pricing"
+            },
+            {
+              "type": "boolean",
+              "name": "otherInformation_yn",
+              "title": "Additional Information",
+              "description": "Is any other information that is not included that we should know for rate loading? ",
+              "showNumber": false
+            },
+            {
+              "type": "comment",
+              "name": "otherInformationText",
+              "visibleIf": "{otherInformation_yn} = true",
+              "title": "Additional Information Input",
+              "showNumber": false,
+              "placeholder": "examples: concessions,  cancellation policy, upgrades, reduced parking etc"
+            }
+          ]
+        },
+        {
+          "type": "html",
+          "name": "roomTypes",
+          "title": "Room Types"
+        },
+        {
+          "type": "paneldynamic",
+          "name": "question2",
+          "title": "Room Types",
+          "templateElements": [
+            {
+              "type": "text",
+              "name": "seasonEndDate",
+              "minWidth": "250px",
+              "title": "From Date",
+              "showNumber": false,
+              "inputType": "date"
+            },
+            {
+              "type": "panel",
+              "name": "Rate Options",
+              "readOnly": true,
+              "title": "TIP:",
+              "description": "If the pricing for Triple and Quad differs from the standard additional adult rate, please enter it here.",
+              "startWithNewLine": false
+            },
+            {
+              "type": "text",
+              "name": "rateAmountSingle",
+              "minWidth": "200px",
+              "startWithNewLine": false,
+              "title": "Single",
+              "description": "1 Person",
+              "showNumber": false,
+              "min": 1,
+              "step": 4
+            },
+            {
+              "type": "text",
+              "name": "rateAmountDouble",
+              "minWidth": "200px",
+              "startWithNewLine": false,
+              "title": "Double",
+              "titleLocation": "hidden",
+              "description": "2 People",
+              "showNumber": false,
+              "isRequired": true,
+              "inputType": "number",
+              "min": 1,
+              "step": 5
+            },
+            {
+              "type": "text",
+              "name": "seasonStartDate",
+              "minWidth": "250px",
+              "title": "To Date",
+              "showNumber": false,
+              "inputType": "date"
+            },
+            {
+              "type": "checkbox",
+              "name": "question3",
+              "startWithNewLine": false,
+              "title": "ShowMore",
+              "choices": [
+                {
+                  "value": "Show",
+                  "text": "Show Triple + Quad"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "name": "rateAmountTriple",
+              "visibleIf": "{showMore} notempty",
+              "minWidth": "200px",
+              "startWithNewLine": false,
+              "indent": 3,
+              "title": "Triple",
+              "description": "3 People",
+              "descriptionLocation": "underTitle",
+              "showNumber": false,
+              "inputType": "number",
+              "min": -1,
+              "step": 6
+            },
+            {
+              "type": "text",
+              "name": "rateAmountQuad",
+              "visibleIf": "{showMore} notempty",
+              "minWidth": "200px",
+              "startWithNewLine": false,
+              "indent": 3,
+              "title": "Quad",
+              "description": "4 People",
+              "descriptionLocation": "underTitle",
+              "showNumber": false,
+              "inputType": "number",
+              "min": 1,
+              "step": 7
+            }
+          ],
+          "confirmDelete": true
+        }
+      ]
+    },
+    {
+      "name": "Company Details",
+      "title": "Company Details",
+      "description": "This is used to complete the company profile in both the CRS and PMS",
+      "elements": [
+        {
+          "type": "text",
+          "name": "Company Name Confirm",
+          "title": "Company Name",
+          "showNumber": false,
+          "setValueIf": "{Company Name} notempty",
+          "setValueExpression": "{Company Name}",
+          "placeholder": "{Company Name}"
+        },
+        {
+          "type": "text",
+          "name": "Company Phone",
+          "startWithNewLine": false,
+          "title": "Company Phone",
+          "showNumber": false,
+          "inputType": "tel"
+        },
+        {
+          "type": "panel",
+          "name": "Company Address",
+          "elements": [
+            {
+              "type": "multipletext",
+              "name": "Street Address Line 1 & 2",
+              "title": "Address",
+              "showNumber": false,
+              "items": [
+                {
+                  "name": "companyStreetAddressLine1",
+                  "title": "Street Address Line 1"
+                },
+                {
+                  "name": "companyStreetAddressLine2",
+                  "title": "Street Address Line 2"
+                }
+              ]
+            },
+            {
+              "type": "multipletext",
+              "name": "City, State, Zip",
+              "showNumber": false,
+              "validators": [
+                {
+                  "type": "expression"
+                }
+              ],
+              "items": [
+                {
+                  "name": "companyCity",
+                  "title": "City"
+                },
+                {
+                  "name": "companyZip",
+                  "title": "Zip"
+                },
+                {
+                  "name": "companyState",
+                  "title": "State"
+                }
+              ],
+              "colCount": 3
+            }
+          ]
+        },
+        {
+          "type": "boolean",
+          "name": "showMore",
+          "state": "collapsed",
+          "indent": 3,
+          "title": "Show Triple + Quad",
+          "titleLocation": "left",
+          "descriptionLocation": "underInput",
+          "errorLocation": "bottom",
+          "renderAs": "checkbox"
+        }
+      ]
+    },
+    {
+      "name": "page2",
+      "title": "Channels",
+      "elements": [
+        {
+          "type": "panel",
+          "name": "Channel Distribution",
+          "elements": [
+            {
+              "type": "checkbox",
+              "name": "Channel Selection",
+              "title": "Choose the Distribution Channel(s) for Deploying Your Rate",
+              "description": "Select all that apply",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "gdsChannel",
+                  "text": "GDS"
+                },
+                {
+                  "value": "webChannel",
+                  "text": "Booking Engine"
+                },
+                {
+                  "value": "voiceChannel",
+                  "text": "Voice"
+                }
+              ],
+              "colCount": 3,
+              "minSelectedChoices": 1
+            },
+            {
+              "type": "file",
+              "name": "GDS Rate Load Instructions",
+              "visibleIf": "{Channel Selection} allof ['GDS Channel']",
+              "title": "GDS Rate Loading Instructions",
+              "description": "In order to load in the GDS, please upload the  rate loading instruction provide by the travel manager or corporate travel agent. ",
+              "showNumber": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Page 4: Point of Contact",
+      "title": "Internal Point of Contact",
+      "elements": [
+        {
+          "type": "expression",
+          "name": "submissionDate",
+          "title": "Today's Date",
+          "showNumber": false,
+          "expression": "today()",
+          "displayStyle": "date"
+        },
+        {
+          "type": "panel",
+          "name": "Point of Contact Information",
+          "title": "Point of Contact Information",
+          "elements": [
+            {
+              "type": "text",
+              "name": "pointOfContactFirstName",
+              "title": "First Name",
+              "showNumber": false,
+              "autocomplete": "given-name"
+            },
+            {
+              "type": "text",
+              "name": "pointOfContactLastName",
+              "startWithNewLine": false,
+              "title": "Last Name",
+              "showNumber": false,
+              "autocomplete": "family-name"
+            },
+            {
+              "type": "text",
+              "name": "pointOfContactEmailAddress",
+              "title": "Email Address",
+              "showNumber": false,
+              "inputType": "email",
+              "autocomplete": "email"
+            },
+            {
+              "type": "expression",
+              "name": "pointOfContactfullName",
+              "title": "Full Name",
+              "showNumber": false,
+              "expression": "{pointOfContactFirstName} + {pointOfContactLastName}",
+              "format": "{0}"
+            },
+            {
+              "type": "expression",
+              "name": "question1",
+              "title": "Full Name",
+              "showNumber": false,
+              "expression": "{pointOfContactFirstName} + {pointOfContactLastName}",
+              "format": "{0}"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "showTitle": false,
+  "widthMode": "responsive",
+  "headerView": "advanced"
+}

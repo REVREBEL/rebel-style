@@ -1,0 +1,82 @@
+{
+  "pages": [
+    {
+      "type": "paneldynamic",
+      "name": "Pricing Seasons",
+      "visibleIf": "{Rate Loading Instructions} = false or {Pricing Input Method} = false",
+      "title": "Pricing Seasons",
+      "description": "Next, proceed to insert your rate's pricing. Select 'Add Season' below to define appropriate pricing for each season, then choose the specific room types applicable to that price range.",
+      "templateElements": [
+        {
+          "type": "panel",
+          "name": "Dates Block",
+          "elements": [
+            {
+              "type": "panel",
+              "name": "Extra Person",
+              "title": "Rate Season",
+              "elements": [
+                {
+                  "type": "text",
+                  "name": "From Date",
+                  "minWidth": "200px",
+                  "title": "From Date",
+                  "showNumber": false,
+                  "inputType": "date"
+                },
+                {
+                  "type": "text",
+                  "name": "To Date",
+                  "minWidth": "200px",
+                  "startWithNewLine": false,
+                  "title": "To Date",
+                  "showNumber": false,
+                  "isRequired": true,
+                  "inputType": "date"
+                },
+                {
+                  "type": "text",
+                  "name": "Single",
+                  "minWidth": "175px",
+                  "startWithNewLine": false,
+                  "title": "Single",
+                  "description": "Single Adult",
+                  "showNumber": false,
+                  "isRequired": true,
+                  "inputType": "number",
+                  "min": 1,
+                  "step": 4
+                },
+                {
+                  "type": "text",
+                  "name": "Double",
+                  "minWidth": "175px",
+                  "startWithNewLine": false,
+                  "title": "Double",
+                  "description": "2 Adults",
+                  "showNumber": false,
+                  "isRequired": true,
+                  "inputType": "number",
+                  "min": 1,
+                  "step": 5
+                },
+                {
+                  "type": "text",
+                  "name": "question8",
+                  "minWidth": "175px",
+                  "startWithNewLine": false,
+                  "title": "Extra Person",
+                  "description": "$$ ",
+                  "showNumber": false,
+                  "inputType": "number",
+                  "min": -1,
+                  "step": 6
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

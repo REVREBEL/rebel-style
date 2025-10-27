@@ -1,0 +1,260 @@
+{
+  "pages": [
+    {
+      "name": "RateSeason",
+      "title": "Rate Season",
+      "elements": [
+        {
+          "type": "panel",
+          "name": "rateInformationPanel",
+          "elements": [
+            {
+              "type": "text",
+              "name": "rateName",
+              "title": "Rate Name",
+              "showNumber": false,
+              "isRequired": true
+            },
+            {
+              "type": "dropdown",
+              "name": "marketSegment",
+              "minWidth": "250px",
+              "startWithNewLine": false,
+              "title": "Market Segment",
+              "showNumber": false,
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "Item 1",
+                  "text": "Consortia"
+                },
+                {
+                  "value": "Item 2",
+                  "text": "Chain Agreement",
+                  "visibleIf": "Chainwide"
+                },
+                {
+                  "value": "Item 3",
+                  "text": "Local Account",
+                  "visibleIf": "Local Negocaited"
+                },
+                {
+                  "value": "Item 4",
+                  "text": "Government"
+                },
+                {
+                  "value": "Item 5",
+                  "text": "Wholesale"
+                },
+                {
+                  "value": "Item 6",
+                  "text": "Retail"
+                },
+                {
+                  "value": "Item 7",
+                  "text": "Qualified"
+                },
+                {
+                  "value": "Item 8",
+                  "text": "Unqualified"
+                },
+                {
+                  "value": "Item 9",
+                  "text": "Package"
+                },
+                {
+                  "value": "Item 10",
+                  "text": "Promo"
+                },
+                {
+                  "value": "Item 11",
+                  "text": "Opaque"
+                },
+                {
+                  "value": "Item 12",
+                  "text": "Complimentary "
+                },
+                {
+                  "value": "Item 13",
+                  "text": "Other (Not Listed Here)"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "panel",
+          "name": "rateTypePanel",
+          "elements": [
+            {
+              "type": "dropdown",
+              "name": "rateType",
+              "startWithNewLine": false,
+              "title": "Rate Type",
+              "choices": [
+                {
+                  "value": "Item 1",
+                  "text": "Dynamic ($$ | % off )"
+                },
+                {
+                  "value": "Item 2",
+                  "text": "Seasonal (Flat Rate with Adjustments)"
+                },
+                {
+                  "value": "Item 3",
+                  "text": "Flat (Single Term)"
+                },
+                {
+                  "value": "Item 4",
+                  "text": "Government Per Diem"
+                },
+                {
+                  "value": "Item 5",
+                  "text": "Special Event (Short Defined Period)"
+                },
+                "Item 6"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "panel",
+          "name": "dowPricingPanel",
+          "startWithNewLine": false,
+          "elements": [
+            {
+              "type": "boolean",
+              "name": "dayOfWeekPricing",
+              "startWithNewLine": false,
+              "title": "Does Pricing Change by Day of Week?"
+            },
+            {
+              "type": "checkbox",
+              "name": "weekdayAdjustment",
+              "visibleIf": "{dayOfWeekPricing} = true",
+              "startWithNewLine": false,
+              "title": "Pricing is ....",
+              "choices": [
+                {
+                  "value": "Item 1",
+                  "text": "Adjusted by Weekday"
+                },
+                {
+                  "value": "Item 2",
+                  "text": "Adjusted by Weekday/Weekend"
+                }
+              ],
+              "choicesOrder": "asc"
+            }
+          ]
+        },
+        {
+          "type": "panel",
+          "name": "instructionsPanel",
+          "elements": [
+            {
+              "type": "panel",
+              "name": "panel6",
+              "elements": [
+                {
+                  "type": "boolean",
+                  "name": "upload_yn",
+                  "title": "Have you received the loading instructions, or is the agreement ready for you to upload?﻿",
+                  "showNumber": false,
+                  "labelTrue": "I'm ready to upload them now",
+                  "labelFalse": "No"
+                },
+                {
+                  "type": "boolean",
+                  "name": "instructionsPricingConfirmation",
+                  "visibleIf": "{upload_yn} = true",
+                  "title": "CONFIRM",
+                  "description": "Do the instructions or agreement specify the pricing details?﻿",
+                  "requiredIf": "{upload_yn} = true",
+                  "labelTrue": "Yes, Pricing Included"
+                },
+                {
+                  "type": "expression",
+                  "name": "pricingResponse",
+                  "visibleIf": "{upload_yn} = false or {instructionsPricingConfirmation} = false",
+                  "title": "No problem!",
+                  "description": "In the next section, you’ll have the option to manually input the pricing directly within the request.﻿\n"
+                }
+              ]
+            },
+            {
+              "type": "file",
+              "name": "uploadItem",
+              "visibleIf": "{upload_yn} = true",
+              "startWithNewLine": false,
+              "title": ">> Upload them here",
+              "showNumber": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "pricingBySeason",
+      "visibleIf": "{upload_yn} = false",
+      "title": "Pricing by Season",
+      "elements": [
+        {
+          "type": "paneldynamic",
+          "name": "priceBySeason",
+          "title": "Pricing Seasons by Season",
+          "description": "In this section, input the rates for the request. Click 'Add Season' below to set the appropriate pricing for each season, then select the specific room types that correspond to the chosen price range.﻿",
+          "templateElements": [
+            {
+              "type": "text",
+              "name": "fromDateBySeason",
+              "minWidth": "220px",
+              "title": "From Date",
+              "placeholder": "01/01/2026"
+            },
+            {
+              "type": "text",
+              "name": "toDateBySeason",
+              "minWidth": "210px",
+              "startWithNewLine": false,
+              "title": "To Date",
+              "placeholder": "12/31/26"
+            },
+            {
+              "type": "text",
+              "name": "singleBySeason",
+              "minWidth": "230px",
+              "startWithNewLine": false,
+              "title": "Single | 1 Person",
+              "placeholder": "$329.00"
+            },
+            {
+              "type": "text",
+              "name": "doubleBySeason",
+              "minWidth": "230px",
+              "startWithNewLine": false,
+              "title": "Double | 2 People",
+              "placeholder": "$329.00"
+            },
+            {
+              "type": "text",
+              "name": "extraPersonBySeason",
+              "minWidth": "200px",
+              "startWithNewLine": false,
+              "title": "$$ | Extra Person",
+              "placeholder": "$40.00"
+            }
+          ],
+          "noEntriesText": "No entries yet.\nClick the button below to add a new season.",
+          "panelCount": 1,
+          "minPanelCount": 1,
+          "confirmDelete": true,
+          "confirmDeleteText": "Are you sure you want to delete this season?",
+          "addPanelText": "New Season",
+          "removePanelText": "Remove Season"
+        }
+      ]
+    }
+  ],
+  "headerView": "advanced"
+}
