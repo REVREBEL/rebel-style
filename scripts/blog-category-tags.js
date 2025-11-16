@@ -14,14 +14,14 @@
 
 /*! ------------------ HOW TO USE IN WEBFLOW --------------- 
 /**
- * Custom Web Component: <wf-join-attr>
+ * Custom Web Component: <wf-category-tag>
  * 
  * Dynamically applies category name, text color, and background color
  * as class names and inline styles to its target element.
  * 
  * Usage:
  * ```html
- * <wf-join-attr 
+ * <wf-category-tag 
  *   category-slug="Revenue Strategy"
  *   category-primary-color="#163666"
  *   category-inverse-color="#B2D3dE">
@@ -33,22 +33,22 @@
 
 
 /**
- * Custom Web Component: <wf-join-attr>
+ * Custom Web Component: <wf-category-tag>
  *
  * Dynamically applies category name, slugified class, and optional
  * text/background color styles to its target element.
  *
  * @example
  * ```html
- * <wf-join-attr 
+ * <wf-category-tag 
  *   category-slug="Revenue Strategy"
  *   category-primary-color="#163666"
  *   category-inverse-color="#B2D3dE">
  *   <div class="output"></div>
- * </wf-join-attr>
+ * </wf-category-tag>
  * ```
  */
-class WfJoinAttr extends HTMLElement {
+class WfCategoryTag extends HTMLElement {
   /**
    * Attributes this custom element observes for changes.
    * When any of these attributes change, {@link attributeChangedCallback} is triggered.
@@ -86,7 +86,7 @@ class WfJoinAttr extends HTMLElement {
   /**
    * Converts a string into a safe slug suitable for CSS class names.
    * Removes quotes, spaces, and special characters, replacing them with hyphens.
-   *
+   * 
    * @param {string} [input=""] - Input string to slugify.
    * @returns {string} Slugified string safe for use in class names.
    */
@@ -111,7 +111,7 @@ class WfJoinAttr extends HTMLElement {
     const categorySlug = this.getAttribute("category-slug") || "";
     const backgroundColor = this.getAttribute("category-primary-color") || "";
     const textColor = this.getAttribute("category-inverse-color") || "";
-    const borderColor = this.getAttribute("category-primary-color") || "";
+    const borderColor = backgroundColor;
 
     const outputClass = `blog_category-${this.slug(categorySlug)}`;
     const target = this.querySelector(".output") || this;
@@ -138,6 +138,6 @@ class WfJoinAttr extends HTMLElement {
 
 
 /**
- * Registers the custom element <wf-join-attr> with the browser.
+ * Registers the custom element <wf-category-tag> with the browser.
  */
-customElements.define("wf-join-attr", WfJoinAttr);
+customElements.define("wf-category-tag", WfCategoryTag);
