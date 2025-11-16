@@ -27839,8 +27839,6 @@ html:lang(ar) .v-application.v-application--is-rtl h1,html:lang(ar) .v-applicati
 .pixel-spinner[data-v-51b91a07] {
     height: 70px;
     width: 70px;
-    display: -webkit-box;
-    display: -ms-flexbox;
     -js-display: flex;
     display: flex;
     -webkit-box-orient: horizontal;
@@ -27908,8 +27906,6 @@ html:lang(ar) .v-application.v-application--is-rtl h1,html:lang(ar) .v-applicati
 .flower-spinner[data-v-3996aa1a] {
     height: 70px;
     width: 70px;
-    display: -webkit-box;
-    display: -ms-flexbox;
     -js-display: flex;
     display: flex;
     -webkit-box-orient: horizontal;
@@ -28038,8 +28034,6 @@ html:lang(ar) .v-application.v-application--is-rtl h1,html:lang(ar) .v-applicati
     height: 70px;
     width: 70px;
     position: relative;
-    display: -webkit-box;
-    display: -ms-flexbox;
     -js-display: flex;
     display: flex;
     -webkit-box-orient: horizontal;
@@ -28366,8 +28360,6 @@ html:lang(ar) .v-application.v-application--is-rtl h1,html:lang(ar) .v-applicati
     width: 66px;
     padding: 3px;
     position: relative;
-    display: -webkit-box;
-    display: -ms-flexbox;
     -js-display: flex;
     display: flex;
     -webkit-box-pack: center;
@@ -28617,8 +28609,6 @@ html:lang(ar) .v-application.v-application--is-rtl h1,html:lang(ar) .v-applicati
 .circles-to-rhombuses-spinner[data-v-690fd6ce] {
     height: 15px;
     width: 95.625px;
-    display: -webkit-box;
-    display: -ms-flexbox;
     -js-display: flex;
     display: flex;
     -webkit-box-align: center;
@@ -29035,8 +29025,6 @@ html:lang(ar) .v-application.v-application--is-rtl h1,html:lang(ar) .v-applicati
     height: 65px;
     width: 65px;
     position: relative;
-    display: -webkit-box;
-    display: -ms-flexbox;
     -js-display: flex;
     display: flex;
     -webkit-box-orient: horizontal;
@@ -29157,8 +29145,6 @@ html:lang(ar) .v-application.v-application--is-rtl h1,html:lang(ar) .v-applicati
     height: 65px;
     width: 65px;
     position: relative;
-    display: -webkit-box;
-    display: -ms-flexbox;
     -js-display: flex;
     display: flex;
     -webkit-box-orient: horizontal;
