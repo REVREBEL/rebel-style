@@ -56,11 +56,21 @@ html {
 body {
   margin: 0;
   min-height: 100%;
-  background-color: #fafafa;
-  font-family: 'General Sans', 'Public Sans', 'Andale Mono', tahoma, sans-serif;
-  font-size: 14px;
-  line-height: 20px;
-  color: #163666;
+  background-color: var(--rev-color-bg);
+  font-family: var(--rev-body-font);
+  font-size: 100%;
+  line-height: 1.5;
+  color: var(--rev-color-text);
+
+  /* Font Smoothing */
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smooth: always;
+  font-smoothing: antialiased;
+  font-variant-ligatures: none;
+  text-rendering: optimizelegibility;
+  text-shadow: rgb(0 0 0 / 1%) 0 0 1px;
+  text-size-adjust: 100%;
 }
 
 img {

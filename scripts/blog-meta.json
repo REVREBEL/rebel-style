@@ -1,0 +1,78 @@
+<script type="application/ld+json" id="revrebel-post">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "{{ wf {&quot;path&quot;:&quot;headline&quot;,&quot;type&quot;:&quot;PlainText&quot;} }}",
+    "name": "{{ wf {&quot;path&quot;:&quot;name&quot;,&quot;type&quot;:&quot;PlainText&quot;} }}",
+    "description": "{{ wf {&quot;path&quot;:&quot;description&quot;,&quot;type&quot;:&quot;PlainText&quot;} }}",
+    "abstract": "{{ wf {&quot;path&quot;:&quot;summary&quot;,&quot;type&quot;:&quot;PlainText&quot;} }}",
+    "url": "https://revrebel.io/article/{{ wf {&quot;path&quot;:&quot;slug&quot;,&quot;type&quot;:&quot;PlainText&quot;} }}",
+    "image": [
+      "https://res.cloudinary.com/revrebel/image/upload/{{ wf {&quot;path&quot;:&quot;cloudinary-slug&quot;,&quot;type&quot;:&quot;PlainText&quot;} }}/ar_16:9,c_thumb,g_auto",
+      "https://res.cloudinary.com/revrebel/image/upload/{{ wf {&quot;path&quot;:&quot;cloudinary-slug&quot;,&quot;type&quot;:&quot;PlainText&quot;} }}/ar_4:3,c_thumb,g_auto",
+      "https://res.cloudinary.com/revrebel/image/upload/{{ wf {&quot;path&quot;:&quot;cloudinary-slug&quot;,&quot;type&quot;:&quot;PlainText&quot;} }}/ar_1:1,c_thumb,g_auto"
+    ],
+    "author": {
+      "@type": "Person",
+      "name": "{{ wf {&quot;path&quot;:&quot;contributor:name&quot;,&quot;type&quot;:&quot;PlainText&quot;} }}",
+      "description": "{{ wf {&quot;path&quot;:&quot;contributor:bio-summary&quot;,&quot;type&quot;:&quot;PlainText&quot;} }}",
+      "jobTitle": "{{ wf {&quot;path&quot;:&quot;contributor:bio-headline&quot;,&quot;type&quot;:&quot;PlainText&quot;} }}",
+      "url": "/contributors/{{ wf {&quot;path&quot;:&quot;contributor:slug&quot;,&quot;type&quot;:&quot;PlainText&quot;} }}",
+      "image": {
+        "@type": "ImageObject",
+        "url": "{{ wf {&quot;path&quot;:&quot;contributor:profile-image&quot;,&quot;type&quot;:&quot;ImageRef&quot;} }}"
+      },
+      "sameAs": [
+        "{{ wf {&quot;path&quot;:&quot;contributor:linkedin&quot;,&quot;type&quot;:&quot;Link&quot;} }}",
+        "{{ wf {&quot;path&quot;:&quot;contributor:xs&quot;,&quot;type&quot;:&quot;Link&quot;} }}",
+        "{{ wf {&quot;path&quot;:&quot;contributor:facebook&quot;,&quot;type&quot;:&quot;Link&quot;} }}",
+        "{{ wf {&quot;path&quot;:&quot;contributor:instagram&quot;,&quot;type&quot;:&quot;Link&quot;} }}",
+        "{{ wf {&quot;path&quot;:&quot;contributor:website&quot;,&quot;type&quot;:&quot;Link&quot;} }}"
+      ]
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "RevRebel",
+      "url": "https://revrebel.io",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://cdn.prod.website-files.com/68729bbbf00ae2d98c02980d/68a6a639a8b98e5b97896291_revrebel_vertical_logo.svg"
+      }
+    },
+    "datePublished": "{{ wf {&quot;path&quot;:&quot;published-on&quot;,&quot;type&quot;:&quot;Date&quot;} }}",
+    "dateModified": "{{ wf {&quot;path&quot;:&quot;updated-on&quot;,&quot;type&quot;:&quot;Date&quot;} }}",
+    "inLanguage": "en",
+    "keywords": "{{ wf {&quot;path&quot;:&quot;keywords&quot;,&quot;type&quot;:&quot;PlainText&quot;} }}",
+    "articleSection": "{{ wf {&quot;path&quot;:&quot;primary-playlist:name&quot;,&quot;type&quot;:&quot;PlainText&quot;} }}",
+    "articleBody": "",
+    "wordCount": "{{ wf {&quot;path&quot;:&quot;read-time&quot;,&quot;type&quot;:&quot;Number&quot;} }}",
+    "speakable": {
+      "@type": "SpeakableSpecification",
+      "cssSelector": [
+        ".speakable-summary",
+        ".speakable-question"
+       ]
+    },
+    "isPartOf": {
+      "@type": "Blog",
+      "name": "CTRLShift by RevRebel",
+      "url": "https://revrebel.io/blog"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://revrebel.io/article/{{ wf {&quot;path&quot;:&quot;slug&quot;,&quot;type&quot;:&quot;PlainText&quot;} }}"
+    }
+  }
+
+  // Use JavaScript to populate the articleBody from the hidden div
+  document.addEventListener("DOMContentLoaded", function() {
+    const contentDiv = document.getElementById('article-body-content');
+    const ldScript = document.getElementById('revrebel-post');
+    
+    if (contentDiv && ldScript) {
+      const ldObject = JSON.parse(ldScript.textContent);
+      ldObject.articleBody = contentDiv.textContent || contentDiv.innerText || '';
+      ldScript.textContent = JSON.stringify(ldObject);
+    }
+  });
+</script>

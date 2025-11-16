@@ -57,9 +57,9 @@ class WfJoinAttr extends HTMLElement {
    */
   static get observedAttributes() {
     return [
-      "category-slug"
-      // "category-primary-color",
-      // "category-inverse-color"
+      "category-slug",
+      "category-primary-color",
+      "category-inverse-color"
     ];
   }
 
@@ -109,8 +109,9 @@ class WfJoinAttr extends HTMLElement {
    */
   update() {
     const categorySlug = this.getAttribute("category-slug") || "";
-    // const backgroundColor = this.getAttribute("category-primary-color") || "";
-    // const textColor       = this.getAttribute("category-inverse-color") || "";
+    const backgroundColor = this.getAttribute("category-primary-color") || "";
+    const textColor = this.getAttribute("category-inverse-color") || "";
+    const borderColor = this.getAttribute("category-primary-color") || "";
 
     const outputClass = `blog_category-${this.slug(categorySlug)}`;
     const target = this.querySelector(".output") || this;
@@ -119,14 +120,16 @@ class WfJoinAttr extends HTMLElement {
     target.classList.add(outputClass);
 
     // Optional color application if attributes are provided
-    // if (textColor) target.style.color = textColor;
-    // if (backgroundColor) target.style.backgroundColor = backgroundColor;
+     if (textColor) target.style.color = textColor;
+     if (borderColor) target.style.borderColor = borderColor;     
+     if (backgroundColor) target.style.backgroundColor = backgroundColor;
 
     // Debugging log for inspection
     console.log({
       categoryName: categorySlug,
-      // textColor,
-      // backgroundColor,
+       textColor,
+       borderColor,
+       backgroundColor,
       outputClass,
       target
     });
