@@ -110,8 +110,8 @@ href="https://cdn.jsdelivr.net/gh/REVREBEL/rebel-style@main/css/rebel-style.css"
   --rev-color-primary-inverse: var(--rev-color-4);
   --rev-color-1-inverse: var(--rev-color-9);
   --rev-color-2-inverse: var(--rev-color-5);
-  --rev-color-3-inverse: #D76F00;
-  --rev-color-4-inverse: var(--rev-color-8);
+  --rev-color-3-inverse: var(--rev-color-8);
+  --rev-color-4-inverse: var(--rev-color-primary);
   --rev-color-5-inverse: var(--rev-color-7);
   --rev-color-6-inverse: var(--rev-color-primary);
   --rev-color-7-inverse: var(--rev-color-4);
