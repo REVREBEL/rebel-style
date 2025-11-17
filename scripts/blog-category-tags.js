@@ -26,7 +26,7 @@
  *   category-primary-color="#163666"
  *   category-inverse-color="#B2D3dE">
  *   <div class="output"></div>
- * </wf-join-attr>
+ * </wf-category-tag>
  * ```
  */
 
@@ -59,7 +59,9 @@ class WfJoinAttr extends HTMLElement {
     return [
       "category-slug",
       "category-primary-color",
-      "category-inverse-color"
+      "category-inverse-color",
+      "category-text-color",
+      "category-background-color"
     ];
   }
 
@@ -91,6 +93,7 @@ class WfJoinAttr extends HTMLElement {
    * @returns {string} Slugified string safe for use in class names.
    */
   slug(input = "") {
+    // Ensure input is a string to prevent errors with non-string values.
     return String(input)
       .trim()
       .toLowerCase()
@@ -109,9 +112,18 @@ class WfJoinAttr extends HTMLElement {
    */
   update() {
     const categorySlug = this.getAttribute("category-slug") || "";
+<<<<<<< Updated upstream
     const backgroundColor = this.getAttribute("category-primary-color") || "";
     const textColor = this.getAttribute("category-inverse-color") || "";
     const borderColor = this.getAttribute("category-primary-color") || "";
+=======
+    const primaryColor = this.getAttribute("category-primary-color") || "";
+    const inverseColor = this.getAttribute("category-inverse-color") || "";
+    // Use specific colors if available, otherwise fall back to primary/inverse.
+    const backgroundColor = this.getAttribute("category-background-color") || primaryColor || "";
+    const textColor = this.getAttribute("category-text-color") || inverseColor || "";
+    const borderColor = backgroundColor; // Border should match the final background color
+>>>>>>> Stashed changes
 
     const outputClass = `blog_category-${this.slug(categorySlug)}`;
     const target = this.querySelector(".output") || this;
@@ -120,16 +132,18 @@ class WfJoinAttr extends HTMLElement {
     target.classList.add(outputClass);
 
     // Optional color application if attributes are provided
-     if (textColor) target.style.color = textColor;
-     if (borderColor) target.style.borderColor = borderColor;     
-     if (backgroundColor) target.style.backgroundColor = backgroundColor;
+    if (textColor) target.style.color = textColor;
+    if (borderColor) target.style.borderColor = borderColor;
+    if (backgroundColor) target.style.backgroundColor = backgroundColor;
 
     // Debugging log for inspection
     console.log({
       categoryName: categorySlug,
-       textColor,
-       borderColor,
-       backgroundColor,
+      primaryColor,
+      inverseColor,
+      textColor,
+      borderColor,
+      backgroundColor,
       outputClass,
       target
     });

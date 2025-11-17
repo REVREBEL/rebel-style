@@ -1,0 +1,910 @@
+
+
+
+
+
+<!DOCTYPE html><!-- Last Published: Mon Nov 17 2025 09:19:36 GMT+0000 (Coordinated Universal Time) --><html data-wf-domain="rebel-style.webflow.io" data-wf-page="68cf6673ed956e971b18d0ab" data-wf-site="68729bbbf00ae2d98c02980d" lang="en"><head><meta charset="utf-8"/><title>Dev</title><meta content="Dev" property="og:title"/><meta content="Dev" property="twitter:title"/><meta content="width=device-width, initial-scale=1" name="viewport"/><link href="https://cdn.prod.website-files.com/68729bbbf00ae2d98c02980d/css/rebel-style.shared.2e8a3b80a.css" rel="stylesheet" type="text/css"/><style>html.w-mod-js:not(.w-mod-ix3) :is([trigger="page-nav_menu"], [data-target="page-nav_menu-text"], [data-target="page-nav_menu-icon"], *:has(+ sg_section-headline), .page-nav_menu-bg-circle, .scrolling-icons_top, .scrolling-icons_bottom, [spinning-icon="target"], [MovingColors="target"], .blog-box-overlay, [data-wf-target*='["4635135d-9c45-fbad-f904-7a28b91f4bf2","e0ddf636-bf22-0eee-3530-ae2dda257d41"]']) {visibility: hidden !important;}</style><link href="https://fonts.googleapis.com" rel="preconnect"/><link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous"/><script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script><script type="text/javascript">WebFont.load({  google: {    families: ["Montserrat:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic","Open Sans:300,300italic,400,400italic,600,600italic,700,700italic,800,800italic"]  }});</script><script type="text/javascript">!function(o,c){var n=c.documentElement,t=" w-mod-";n.className+=t+"js",("ontouchstart"in o||o.DocumentTouch&&c instanceof DocumentTouch)&&(n.className+=t+"touch")}(window,document);</script><link href="https://cdn.prod.website-files.com/68729bbbf00ae2d98c02980d/6913bf979c533ab4ca876ca8_icon-revrebel32x32.png" rel="shortcut icon" type="image/x-icon"/><link href="https://cdn.prod.website-files.com/68729bbbf00ae2d98c02980d/6913bf89e0c6bdc48d4ec95e_icon-revrebel256x256.png" rel="apple-touch-icon"/><style>
+
+body {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -webkit-font-smoothing: subpixel-antialiased;
+  font-size: 100%;
+  /* stylelint-disable-next-line */
+  font-smooth: always;
+  /* stylelint-disable-next-line */
+  font-smoothing: antialiased;
+  font-variant-ligatures: none;
+  text-rendering: optimizelegibility;
+  text-shadow: rgb(0 0 0 / 1%) 0 0 1px;
+  text-size-adjust: 100%;
+}
+
+:root {
+  --list-icon: '✓';
+  --icon-color: inherit;
+  --icon-size: inherit
+}
+
+[tabindex]:focus-visible,
+input[type=file]:focus-visible {
+  outline: .125rem solid #4d65ff;
+  outline-offset: 0.125rem
+}
+[tabindex]:focus-visible,
+input[type=file]:focus-visible {
+  outline: .125rem solid #4d65ff;
+  outline-offset: 0.125rem
+}
+.w-richtext > :not(div):first-child,
+.w-richtext > div:first-child > :first-child {
+  margin-top: 0!important
+}
+.w-richtext > :last-child,
+.w-richtext ol li:last-child,
+.w-richtext ul li:last-child {
+  margin-bottom: 0!important
+}
+.div-square::after {
+  content: "";
+  display: block;
+  padding-bottom: 100%
+}
+.full-page-container {
+  margin-right: none!important;
+  margin-left: none!important;
+  width: 100%!important;
+  height: 100%!important
+}
+.container .container-xxlarge,
+.container-large,
+.container-medium,
+.container-small,
+.container-xlarge,
+.container-xsmall,
+.container-xxsmall {
+  margin-right: auto!important;
+  margin-left: auto!important;
+  box-sizing: border-box
+}
+@media screen and (max-width:479px) {
+  .container .container-xxlarge,
+  .container-large,
+  .container-medium,
+  .container-small,
+  .container-xlarge,
+  .container-xsmall,
+  .container-xxsmall {
+    box-sizing: border-box
+  }
+}
+.display-inlineflex {
+  display: inline-flex
+}
+.show-on-mobile {
+  display: none!important
+}
+@media screen and (max-width:991px) {
+  .show-on-mobile {
+    display: block!important
+  }
+}
+.hide {
+  display: none!important
+}
+@media screen and (max-width:991px) {
+  .hide,
+  .hide-tablet {
+    display: none!important
+  }
+}
+@media screen and (max-width:767px) {
+  .hide-mobile-landscape {
+    display: none!important
+  }
+}
+@media screen and (max-width:479px) {
+  .hide-mobile {
+    display: none!important
+  }
+}
+.truncate-width {
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  overflow: -moz-scrollbars-none
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none
+}
+.margin-none {
+  margin: 0!important
+}
+.padding-none {
+  padding: 0!important
+}
+.spacing-clean {
+  padding: 0!important;
+  margin: 0!important
+}
+.margin-top {
+  margin-right: 0!important;
+  margin-bottom: 0!important;
+  margin-left: 0!important
+}
+.padding-top {
+  padding-right: 0!important;
+  padding-bottom: 0!important;
+  padding-left: 0!important
+}
+.margin-right {
+  margin-top: 0!important;
+  margin-bottom: 0!important;
+  margin-left: 0!important
+}
+.padding-right {
+  padding-top: 0!important;
+  padding-bottom: 0!important;
+  padding-left: 0!important
+}
+.margin-bottom {
+  margin-top: 0!important;
+  margin-right: 0!important;
+  margin-left: 0!important
+}
+.padding-bottom {
+  padding-top: 0!important;
+  padding-right: 0!important;
+  padding-left: 0!important
+}
+.margin-left {
+  margin-top: 0!important;
+  margin-right: 0!important;
+  margin-bottom: 0!important
+}
+.padding-left {
+  padding-top: 0!important;
+  padding-right: 0!important;
+  padding-bottom: 0!important
+}
+.margin-horizontal {
+  margin-top: 0!important;
+  margin-bottom: 0!important
+}
+.padding-horizontal {
+  padding-top: 0!important;
+  padding-bottom: 0!important
+}
+.margin-vertical {
+  margin-right: 0!important;
+  margin-left: 0!important
+}
+.padding-vertical {
+  padding-right: 0!important;
+  padding-left: 0!important
+}
+.w-dropdown-btn,
+.w-dropdown-link,
+.w-dropdown-toggle,
+.w-nav-link,
+.w-tab-link,
+a {
+  color: inherit
+}
+.clickable-off {
+  pointer-events: none
+}
+.clickable-on {
+  pointer-events: auto
+}
+.w-input,
+.w-select,
+a {
+  color: inherit;
+  text-decoration: inherit;
+  font-size: inherit
+}
+
+
+/* Mobile/tablet only */
+@media (max-width: 991px) {
+
+  /* Webflow draws an overlay wrapper for the menu on mobile */
+  .w-nav-overlay,
+  .w-nav-menu {
+    max-height: 100dvh;
+    /* fills the viewport */
+    overflow-y: auto;
+    /* make the menu scroll */
+    -webkit-overflow-scrolling: touch;
+    /* momentum scroll on iOS */
+  }
+}
+
+@media (max-width: 991px) {
+  .w-nav-menu .w-dropdown-list {
+    position: static;
+    /* stack in the flow so height adds to the menu */
+    max-height: none;
+    overflow: visible;
+  }
+}
+
+@supports (-webkit-touch-callout: none) {
+  .w-nav-overlay, .w-nav-menu {
+    overscroll-behavior: contain;
+  }
+}
+
+
+
+@media screen and (max-width: 1024px) {
+.navcard_headline {
+  padding-right: 80px;
+  font-size: 2rem;
+}
+
+
+
+
+/* Responsive font scaling, skipped if element has data-responsive="none" */
+:root {
+  --font-from-0: 12;
+  --font-to-0: 16;
+  --vw-from-0: calc(1 / 100);
+  --vw-to-0: calc(479 / 100);
+  --coefficient-0: calc((var(--font-to-0) - var(--font-from-0)) / (var(--vw-to-0) - var(--vw-from-0)));
+  --base-0: calc((var(--font-from-0) - var(--vw-from-0) * var(--coefficient-0)) / 16);
+
+  --font-from-1: 14;
+  --font-to-1: 16;
+  --vw-from-1: calc(479 / 100);
+  --vw-to-1: calc(767 / 100);
+  --coefficient-1: calc((var(--font-to-1) - var(--font-from-1)) / (var(--vw-to-1) - var(--vw-from-1)));
+  --base-1: calc((var(--font-from-1) - var(--vw-from-1) * var(--coefficient-1)) / 16);
+
+  --font-from-2: 16;
+  --font-to-2: 18;
+  --vw-from-2: calc(767 / 100);
+  --vw-to-2: calc(991 / 100);
+  --coefficient-2: calc((var(--font-to-2) - var(--font-from-2)) / (var(--vw-to-2) - var(--vw-from-2)));
+  --base-2: calc((var(--font-from-2) - var(--vw-from-2) * var(--coefficient-2)) / 16);
+
+  --font-from-3: 16;
+  --font-to-3: 18;
+  --vw-from-3: calc(991 / 100);
+  --vw-to-3: calc(1280 / 100);
+  --coefficient-3: calc((var(--font-to-3) - var(--font-from-3)) / (var(--vw-to-3) - var(--vw-from-3)));
+  --base-3: calc((var(--font-from-3) - var(--vw-from-3) * var(--coefficient-3)) / 16);
+
+  --font-from-4: 17;
+  --font-to-4: 18;
+  --vw-from-4: calc(1280 / 100);
+  --vw-to-4: calc(1438 / 100);
+  --coefficient-4: calc((var(--font-to-4) - var(--font-from-4)) / (var(--vw-to-4) - var(--vw-from-4)));
+  --base-4: calc((var(--font-from-4) - var(--vw-from-4) * var(--coefficient-4)) / 16);
+
+  --font-from-5: 16;
+  --font-to-5: 18;
+  --vw-from-5: calc(1438 / 100);
+  --vw-to-5: calc(1920 / 100);
+  --coefficient-5: calc((var(--font-to-5) - var(--font-from-5)) / (var(--vw-to-5) - var(--vw-from-5)));
+  --base-5: calc((var(--font-from-5) - var(--vw-from-5) * var(--coefficient-5)) / 16);
+
+  --font-from-6: 18;
+  --font-to-6: 20;
+  --vw-from-6: calc(1920 / 100);
+  --vw-to-6: calc(2402 / 100);
+  --coefficient-6: calc((var(--font-to-6) - var(--font-from-6)) / (var(--vw-to-6) - var(--vw-from-6)));
+  --base-6: calc((var(--font-from-6) - var(--vw-from-6) * var(--coefficient-6)) / 16);
+}
+
+
+</style><script src="https://cdn.jsdelivr.net/npm/@flowbase-co/boosters-gsap-text-reveal@1.0.4/dist/gsap-text-reveal.js" type="text/javascript" integrity="sha384-tjP0YVRLeOKgBMvfr+SHrQ/7lwkfRYHkUw8DdhQk2PbvjhyhD1h7Mha5xhoyOGuh" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/@flowbase-co/boosters-gsap@3.12.7/dist/gsap.js" type="text/javascript" integrity="sha384-ix00rBrixOkNXXSFGDLKF65HUUk2HI2uu2A/8jkEdP8bdb6/3GrREjdoMSI/Wr6i" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/@flowbase-co/boosters-gsap-text-highlight@1.0.5/dist/gsap-text-highlight.js" type="text/javascript" integrity="sha384-m4EUI085F7J0rlXgBFHcGyyWw4w56X55grQZ9p1ZglmKBUOYmL9aLnltGCAn97sc" crossorigin="anonymous"></script><script src="https://cdn.prod.website-files.com/68729bbbf00ae2d98c02980d%2F6544eda5f000985a163a8687%2F68d75a1c201975b8d3387d30%2Ffinsweetcomponentsconfig-1.0.2.js" type="module" async="" siteId="68729bbbf00ae2d98c02980d" finsweet="components"></script></head><body><div class="w-layout-blockcontainer global_page-wrapper w-container"><div id="fixed-root" class="w-layout-blockcontainer global_fixed-root w-container"><div class="page-nav_wrapper fixed-root_child"></div></div><div class="w-embed"><style>
+/* 
+ * Applies a color filter to elements with both 'icon' and '{COLOR}' class.
+ * The filter uses a combination of invert, sepia, saturate, hue-rotate, brightness, and contrast
+ * to achieve the desired purple hue effect on the icon.
+ */
+ 
+/* 
+ * Gradients
+ */
+.bg-gradient-yellow-red {
+  background-image: linear-gradient(to right, #faca78, #fabc6e, #f9ae66, #f8a060, #f6915c, #f48759, #f17d56, #ee7254, #eb6a50, #e7624d, #e4594a, #e05047);
+}
+
+.bg-gradient-blue-green {
+  background-image: linear-gradient(to right, #27498b, #145491, #005e95, #006897, #007198, #067b9c, #1785a0, #278fa3, #3a9dac, #4cacb4, #5ebabd, #71c9c5);
+}
+
+.bg-red-purple {
+  background-image: linear-gradient(to right, #f37d59, #f07555, #ec6d51, #e9654e, #e55c4b, #df554f, #d84e53, #d04856, #c2455f, #b14565, #a04569, #8e456a);
+}
+
+.bg-yellow-purple {
+  background-image: linear-gradient(to right, #faca78, #fabc6e, #f9ae66, #f8a060, #f6915c, #f0835e, #e97660, #e06963, #ce5d68, #ba536b, #a54c6c, #8e456a);
+}
+
+.bg-yellow-red {
+  background-image: linear-gradient(to right, #faca78, #fabc6e, #f9ae66, #f8a060, #f6915c, #f48759, #f17d56, #ee7254, #eb6a50, #e7624d, #e4594a, #e05047);
+}
+
+.bg-blue-red {
+  background-image: linear-gradient(to right, #27498b, #494788, #604583, #72447d, #804375, #8e4372, #9b446e, #a64568, #b74563, #c7475c, #d54a53, #e05047);
+}
+
+.is-rebel,
+.text-rebel {
+  background-image: linear-gradient(to right, #27498b, #145491, #005e95, #006897, #007198, #00789b, #007f9d, #00869f, #008ea5, #0096ab, #009eb1, #00a6b6, #71c9c5, #7aceb5, #8fd2a2, #abd38e, #ccd17e, #dbca73, #ebc16d, #fab86b, #f9aa64, #f89b5e, #f68c5b, #f37d59, #f37d59, #f07555, #ec6d51, #e9654e, #e55c4b, #df554f, #d84e53, #d04856, #c2455f, #b14565, #a04569, #8e456a);
+}
+
+
+
+
+/* 
+ * Navigation Breakpoint Adjustment
+ */
+@media screen and (max-width: 1132px) {
+  .footer_contact-wrapper.margin_left-auto {
+    flex-flow: column;
+    margin-left: unset;
+    width: 100%
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .footer_contact-wrapper.margin_left-auto {
+    flex-flow: column;
+    width: 100%
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .footer_contact-wrapper.margin_left-auto {
+    flex-flow: row;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .footer_contact-wrapper.margin_left-auto {
+    flex-flow: column;
+  }
+}
+
+
+
+
+</style></div><div class="w-layout-blockcontainer global_container w-container"><div class="w-layout-blockcontainer global_page-padding w-container"><section class="global_colors"><section class="page_padding"><div class="section bg-color-light"><div class="component_wrapper padding-inline_sm margin-block_xxl"><div class="w-dyn-list"><div role="list" class="w-dyn-items"><div role="listitem" class="blog-card_collection-item_3x w-dyn-item"><div><div style="background-color:#047c97;color:#faca78;border-color:#047c97" class="card_category-wrapper"><div style="color:#faca78;background-color:#047c97;border-color:#047c97" class="card_category-size">strategy</div></div><div class="w-embed"><style>
+.blog_category-strategy {
+  border-style: solid;
+  border-width: 4px 6px;
+  border-top-color: #faca78;
+  border-right-color: #faca78;
+  border-bottom-color: #faca78;
+  border-left-color: #faca78;
+  background-color: #faca78;
+  color: #047c97;
+  font-family: var(--_buttons---tags--tag-font);
+  font-weight: var(--_buttons---tags--font-weight);
+  font-size: var(--_space-size---text-size--t3-base);
+  letter-spacing: 0.1em;
+  line-height: var(--_buttons---tags--line-height);
+  padding-top: 0.75px;
+  text-transform: uppercase;  
+}
+
+.blog_category-strategy:where(.w-variant-511a967a-b411-f08a-9882-db680b1d54fe) {
+  font-size: var(--_space-size---text-size--t4-sm);
+}
+
+.blog_category-strategy:where(.w-variant-b1d43679-a20e-3d90-5812-e310762336f5) {
+  font-size: var(--_space-size---text-size--t1-lg);
+}
+
+.blog_category-strategy:where(.w-variant-eebdf314-bdfe-f1e4-a83c-9626bc352883) {
+  font-size: var(--_space-size---text-size--t2-md);
+}
+.preview-card-strategy;{
+			display: none; 
+}      
+
+</style></div></div></div><div role="listitem" class="blog-card_collection-item_3x w-dyn-item"><div><div style="background-color:#163666;color:#b2d3de;border-color:#163666" class="card_category-wrapper"><div style="color:#b2d3de;background-color:#163666;border-color:#163666" class="card_category-size">revenue</div></div><div class="w-embed"><style>
+.blog_category-revenue {
+  border-style: solid;
+  border-width: 4px 6px;
+  border-top-color: #b2d3de;
+  border-right-color: #b2d3de;
+  border-bottom-color: #b2d3de;
+  border-left-color: #b2d3de;
+  background-color: #b2d3de;
+  color: #163666;
+  font-family: var(--_buttons---tags--tag-font);
+  font-weight: var(--_buttons---tags--font-weight);
+  font-size: var(--_space-size---text-size--t3-base);
+  letter-spacing: 0.1em;
+  line-height: var(--_buttons---tags--line-height);
+  padding-top: 0.75px;
+  text-transform: uppercase;  
+}
+
+.blog_category-revenue:where(.w-variant-511a967a-b411-f08a-9882-db680b1d54fe) {
+  font-size: var(--_space-size---text-size--t4-sm);
+}
+
+.blog_category-revenue:where(.w-variant-b1d43679-a20e-3d90-5812-e310762336f5) {
+  font-size: var(--_space-size---text-size--t1-lg);
+}
+
+.blog_category-revenue:where(.w-variant-eebdf314-bdfe-f1e4-a83c-9626bc352883) {
+  font-size: var(--_space-size---text-size--t2-md);
+}
+.preview-card-revenue;{
+			display: none; 
+}      
+
+</style></div></div></div><div role="listitem" class="blog-card_collection-item_3x w-dyn-item"><div><div style="background-color:#8e456a;color:#b2d3de;border-color:#8e456a" class="card_category-wrapper"><div style="color:#b2d3de;background-color:#8e456a;border-color:#8e456a" class="card_category-size">tech-integration</div></div><div class="w-embed"><style>
+.blog_category-tech-integration {
+  border-style: solid;
+  border-width: 4px 6px;
+  border-top-color: #b2d3de;
+  border-right-color: #b2d3de;
+  border-bottom-color: #b2d3de;
+  border-left-color: #b2d3de;
+  background-color: #b2d3de;
+  color: #8e456a;
+  font-family: var(--_buttons---tags--tag-font);
+  font-weight: var(--_buttons---tags--font-weight);
+  font-size: var(--_space-size---text-size--t3-base);
+  letter-spacing: 0.1em;
+  line-height: var(--_buttons---tags--line-height);
+  padding-top: 0.75px;
+  text-transform: uppercase;  
+}
+
+.blog_category-tech-integration:where(.w-variant-511a967a-b411-f08a-9882-db680b1d54fe) {
+  font-size: var(--_space-size---text-size--t4-sm);
+}
+
+.blog_category-tech-integration:where(.w-variant-b1d43679-a20e-3d90-5812-e310762336f5) {
+  font-size: var(--_space-size---text-size--t1-lg);
+}
+
+.blog_category-tech-integration:where(.w-variant-eebdf314-bdfe-f1e4-a83c-9626bc352883) {
+  font-size: var(--_space-size---text-size--t2-md);
+}
+.preview-card-tech-integration;{
+			display: none; 
+}      
+
+</style></div></div></div><div role="listitem" class="blog-card_collection-item_3x w-dyn-item"><div><div style="background-color:#faca78;color:#8e456a;border-color:#faca78" class="card_category-wrapper"><div style="color:#8e456a;background-color:#faca78;border-color:#faca78" class="card_category-size">marketing</div></div><div class="w-embed"><style>
+.blog_category-marketing {
+  border-style: solid;
+  border-width: 4px 6px;
+  border-top-color: #8e456a;
+  border-right-color: #8e456a;
+  border-bottom-color: #8e456a;
+  border-left-color: #8e456a;
+  background-color: #8e456a;
+  color: #faca78;
+  font-family: var(--_buttons---tags--tag-font);
+  font-weight: var(--_buttons---tags--font-weight);
+  font-size: var(--_space-size---text-size--t3-base);
+  letter-spacing: 0.1em;
+  line-height: var(--_buttons---tags--line-height);
+  padding-top: 0.75px;
+  text-transform: uppercase;  
+}
+
+.blog_category-marketing:where(.w-variant-511a967a-b411-f08a-9882-db680b1d54fe) {
+  font-size: var(--_space-size---text-size--t4-sm);
+}
+
+.blog_category-marketing:where(.w-variant-b1d43679-a20e-3d90-5812-e310762336f5) {
+  font-size: var(--_space-size---text-size--t1-lg);
+}
+
+.blog_category-marketing:where(.w-variant-eebdf314-bdfe-f1e4-a83c-9626bc352883) {
+  font-size: var(--_space-size---text-size--t2-md);
+}
+.preview-card-marketing;{
+			display: none; 
+}      
+
+</style></div></div></div><div role="listitem" class="blog-card_collection-item_3x w-dyn-item"><div><div style="background-color:#00a6b6;color:#f37d59;border-color:#00a6b6" class="card_category-wrapper"><div style="color:#f37d59;background-color:#00a6b6;border-color:#00a6b6" class="card_category-size">distribution</div></div><div class="w-embed"><style>
+.blog_category-distribution {
+  border-style: solid;
+  border-width: 4px 6px;
+  border-top-color: #f37d59;
+  border-right-color: #f37d59;
+  border-bottom-color: #f37d59;
+  border-left-color: #f37d59;
+  background-color: #f37d59;
+  color: #00a6b6;
+  font-family: var(--_buttons---tags--tag-font);
+  font-weight: var(--_buttons---tags--font-weight);
+  font-size: var(--_space-size---text-size--t3-base);
+  letter-spacing: 0.1em;
+  line-height: var(--_buttons---tags--line-height);
+  padding-top: 0.75px;
+  text-transform: uppercase;  
+}
+
+.blog_category-distribution:where(.w-variant-511a967a-b411-f08a-9882-db680b1d54fe) {
+  font-size: var(--_space-size---text-size--t4-sm);
+}
+
+.blog_category-distribution:where(.w-variant-b1d43679-a20e-3d90-5812-e310762336f5) {
+  font-size: var(--_space-size---text-size--t1-lg);
+}
+
+.blog_category-distribution:where(.w-variant-eebdf314-bdfe-f1e4-a83c-9626bc352883) {
+  font-size: var(--_space-size---text-size--t2-md);
+}
+.preview-card-distribution;{
+			display: none; 
+}      
+
+</style></div></div></div><div role="listitem" class="blog-card_collection-item_3x w-dyn-item"><div><div style="background-color:#163666;color:#eff5f6;border-color:#163666" class="card_category-wrapper"><div style="color:#eff5f6;background-color:#163666;border-color:#163666" class="card_category-size">things-we-heart</div></div><div class="w-embed"><style>
+.blog_category-things-we-heart {
+  border-style: solid;
+  border-width: 4px 6px;
+  border-top-color: #eff5f6;
+  border-right-color: #eff5f6;
+  border-bottom-color: #eff5f6;
+  border-left-color: #eff5f6;
+  background-color: #eff5f6;
+  color: #163666;
+  font-family: var(--_buttons---tags--tag-font);
+  font-weight: var(--_buttons---tags--font-weight);
+  font-size: var(--_space-size---text-size--t3-base);
+  letter-spacing: 0.1em;
+  line-height: var(--_buttons---tags--line-height);
+  padding-top: 0.75px;
+  text-transform: uppercase;  
+}
+
+.blog_category-things-we-heart:where(.w-variant-511a967a-b411-f08a-9882-db680b1d54fe) {
+  font-size: var(--_space-size---text-size--t4-sm);
+}
+
+.blog_category-things-we-heart:where(.w-variant-b1d43679-a20e-3d90-5812-e310762336f5) {
+  font-size: var(--_space-size---text-size--t1-lg);
+}
+
+.blog_category-things-we-heart:where(.w-variant-eebdf314-bdfe-f1e4-a83c-9626bc352883) {
+  font-size: var(--_space-size---text-size--t2-md);
+}
+.preview-card-things-we-heart;{
+			display: none; 
+}      
+
+</style></div></div></div><div role="listitem" class="blog-card_collection-item_3x w-dyn-item"><div><div style="background-color:#8e456a;color:#b2d3de;border-color:#8e456a" class="card_category-wrapper"><div style="color:#b2d3de;background-color:#8e456a;border-color:#8e456a" class="card_category-size">tech</div></div><div class="w-embed"><style>
+.blog_category-tech {
+  border-style: solid;
+  border-width: 4px 6px;
+  border-top-color: #b2d3de;
+  border-right-color: #b2d3de;
+  border-bottom-color: #b2d3de;
+  border-left-color: #b2d3de;
+  background-color: #b2d3de;
+  color: #8e456a;
+  font-family: var(--_buttons---tags--tag-font);
+  font-weight: var(--_buttons---tags--font-weight);
+  font-size: var(--_space-size---text-size--t3-base);
+  letter-spacing: 0.1em;
+  line-height: var(--_buttons---tags--line-height);
+  padding-top: 0.75px;
+  text-transform: uppercase;  
+}
+
+.blog_category-tech:where(.w-variant-511a967a-b411-f08a-9882-db680b1d54fe) {
+  font-size: var(--_space-size---text-size--t4-sm);
+}
+
+.blog_category-tech:where(.w-variant-b1d43679-a20e-3d90-5812-e310762336f5) {
+  font-size: var(--_space-size---text-size--t1-lg);
+}
+
+.blog_category-tech:where(.w-variant-eebdf314-bdfe-f1e4-a83c-9626bc352883) {
+  font-size: var(--_space-size---text-size--t2-md);
+}
+.preview-card-tech;{
+			display: none; 
+}      
+
+</style></div></div></div><div role="listitem" class="blog-card_collection-item_3x w-dyn-item"><div><div style="background-color:#047c97;color:#b2d3de;border-color:#047c97" class="card_category-wrapper"><div style="color:#b2d3de;background-color:#047c97;border-color:#047c97" class="card_category-size">revenue-strategy</div></div><div class="w-embed"><style>
+.blog_category-revenue-strategy {
+  border-style: solid;
+  border-width: 4px 6px;
+  border-top-color: #b2d3de;
+  border-right-color: #b2d3de;
+  border-bottom-color: #b2d3de;
+  border-left-color: #b2d3de;
+  background-color: #b2d3de;
+  color: #047c97;
+  font-family: var(--_buttons---tags--tag-font);
+  font-weight: var(--_buttons---tags--font-weight);
+  font-size: var(--_space-size---text-size--t3-base);
+  letter-spacing: 0.1em;
+  line-height: var(--_buttons---tags--line-height);
+  padding-top: 0.75px;
+  text-transform: uppercase;  
+}
+
+.blog_category-revenue-strategy:where(.w-variant-511a967a-b411-f08a-9882-db680b1d54fe) {
+  font-size: var(--_space-size---text-size--t4-sm);
+}
+
+.blog_category-revenue-strategy:where(.w-variant-b1d43679-a20e-3d90-5812-e310762336f5) {
+  font-size: var(--_space-size---text-size--t1-lg);
+}
+
+.blog_category-revenue-strategy:where(.w-variant-eebdf314-bdfe-f1e4-a83c-9626bc352883) {
+  font-size: var(--_space-size---text-size--t2-md);
+}
+.preview-card-revenue-strategy;{
+			display: none; 
+}      
+
+</style></div></div></div><div role="listitem" class="blog-card_collection-item_3x w-dyn-item"><div><div style="background-color:#f37d59;color:#163666;border-color:#f37d59" class="card_category-wrapper"><div style="color:#163666;background-color:#f37d59;border-color:#f37d59" class="card_category-size">social</div></div><div class="w-embed"><style>
+.blog_category-social {
+  border-style: solid;
+  border-width: 4px 6px;
+  border-top-color: #163666;
+  border-right-color: #163666;
+  border-bottom-color: #163666;
+  border-left-color: #163666;
+  background-color: #163666;
+  color: #f37d59;
+  font-family: var(--_buttons---tags--tag-font);
+  font-weight: var(--_buttons---tags--font-weight);
+  font-size: var(--_space-size---text-size--t3-base);
+  letter-spacing: 0.1em;
+  line-height: var(--_buttons---tags--line-height);
+  padding-top: 0.75px;
+  text-transform: uppercase;  
+}
+
+.blog_category-social:where(.w-variant-511a967a-b411-f08a-9882-db680b1d54fe) {
+  font-size: var(--_space-size---text-size--t4-sm);
+}
+
+.blog_category-social:where(.w-variant-b1d43679-a20e-3d90-5812-e310762336f5) {
+  font-size: var(--_space-size---text-size--t1-lg);
+}
+
+.blog_category-social:where(.w-variant-eebdf314-bdfe-f1e4-a83c-9626bc352883) {
+  font-size: var(--_space-size---text-size--t2-md);
+}
+.preview-card-social;{
+			display: none; 
+}      
+
+</style></div></div></div><div role="listitem" class="blog-card_collection-item_3x w-dyn-item"><div><div style="background-color:#e05047;color:#163666;border-color:#e05047" class="card_category-wrapper"><div style="color:#163666;background-color:#e05047;border-color:#e05047" class="card_category-size">branding</div></div><div class="w-embed"><style>
+.blog_category-branding {
+  border-style: solid;
+  border-width: 4px 6px;
+  border-top-color: #163666;
+  border-right-color: #163666;
+  border-bottom-color: #163666;
+  border-left-color: #163666;
+  background-color: #163666;
+  color: #e05047;
+  font-family: var(--_buttons---tags--tag-font);
+  font-weight: var(--_buttons---tags--font-weight);
+  font-size: var(--_space-size---text-size--t3-base);
+  letter-spacing: 0.1em;
+  line-height: var(--_buttons---tags--line-height);
+  padding-top: 0.75px;
+  text-transform: uppercase;  
+}
+
+.blog_category-branding:where(.w-variant-511a967a-b411-f08a-9882-db680b1d54fe) {
+  font-size: var(--_space-size---text-size--t4-sm);
+}
+
+.blog_category-branding:where(.w-variant-b1d43679-a20e-3d90-5812-e310762336f5) {
+  font-size: var(--_space-size---text-size--t1-lg);
+}
+
+.blog_category-branding:where(.w-variant-eebdf314-bdfe-f1e4-a83c-9626bc352883) {
+  font-size: var(--_space-size---text-size--t2-md);
+}
+.preview-card-branding;{
+			display: none; 
+}      
+
+</style></div></div></div><div role="listitem" class="blog-card_collection-item_3x w-dyn-item"><div><div style="background-color:#00a6b6;color:#8e456a;border-color:#00a6b6" class="card_category-wrapper"><div style="color:#8e456a;background-color:#00a6b6;border-color:#00a6b6" class="card_category-size">brand-activation</div></div><div class="w-embed"><style>
+.blog_category-brand-activation {
+  border-style: solid;
+  border-width: 4px 6px;
+  border-top-color: #8e456a;
+  border-right-color: #8e456a;
+  border-bottom-color: #8e456a;
+  border-left-color: #8e456a;
+  background-color: #8e456a;
+  color: #00a6b6;
+  font-family: var(--_buttons---tags--tag-font);
+  font-weight: var(--_buttons---tags--font-weight);
+  font-size: var(--_space-size---text-size--t3-base);
+  letter-spacing: 0.1em;
+  line-height: var(--_buttons---tags--line-height);
+  padding-top: 0.75px;
+  text-transform: uppercase;  
+}
+
+.blog_category-brand-activation:where(.w-variant-511a967a-b411-f08a-9882-db680b1d54fe) {
+  font-size: var(--_space-size---text-size--t4-sm);
+}
+
+.blog_category-brand-activation:where(.w-variant-b1d43679-a20e-3d90-5812-e310762336f5) {
+  font-size: var(--_space-size---text-size--t1-lg);
+}
+
+.blog_category-brand-activation:where(.w-variant-eebdf314-bdfe-f1e4-a83c-9626bc352883) {
+  font-size: var(--_space-size---text-size--t2-md);
+}
+.preview-card-brand-activation;{
+			display: none; 
+}      
+
+</style></div></div></div><div role="listitem" class="blog-card_collection-item_3x w-dyn-item"><div><div style="background-color:#faca78;color:#f37d59;border-color:#faca78" class="card_category-wrapper"><div style="color:#f37d59;background-color:#faca78;border-color:#faca78" class="card_category-size">optimized-distribution</div></div><div class="w-embed"><style>
+.blog_category-optimized-distribution {
+  border-style: solid;
+  border-width: 4px 6px;
+  border-top-color: #f37d59;
+  border-right-color: #f37d59;
+  border-bottom-color: #f37d59;
+  border-left-color: #f37d59;
+  background-color: #f37d59;
+  color: #faca78;
+  font-family: var(--_buttons---tags--tag-font);
+  font-weight: var(--_buttons---tags--font-weight);
+  font-size: var(--_space-size---text-size--t3-base);
+  letter-spacing: 0.1em;
+  line-height: var(--_buttons---tags--line-height);
+  padding-top: 0.75px;
+  text-transform: uppercase;  
+}
+
+.blog_category-optimized-distribution:where(.w-variant-511a967a-b411-f08a-9882-db680b1d54fe) {
+  font-size: var(--_space-size---text-size--t4-sm);
+}
+
+.blog_category-optimized-distribution:where(.w-variant-b1d43679-a20e-3d90-5812-e310762336f5) {
+  font-size: var(--_space-size---text-size--t1-lg);
+}
+
+.blog_category-optimized-distribution:where(.w-variant-eebdf314-bdfe-f1e4-a83c-9626bc352883) {
+  font-size: var(--_space-size---text-size--t2-md);
+}
+.preview-card-optimized-distribution;{
+			display: none; 
+}      
+
+</style></div></div></div></div></div></div></div><div class="sg_section-divider padding-inline_sm"><div class="label-lg">CMS CATEGORIES</div></div><div class="component_wrapper padding-inline_sm"><div class="w-dyn-list"><div role="list" class="w-dyn-items w-row"><div role="listitem" class="blog-card_collection-item_3x w-dyn-item w-col w-col-6"><div data-wf--card-meta-item--global-options-meta-font-size="t3-base" class="w-layout-blockcontainer component_base flex-horizontal w-container"><div class="variants_font-size flex-grow"><div class="card_meta"><a href="#" class="card_category-link-block w-inline-block"><wf-category-tag category-primary-color="" category-inverse-color="" category-slug="This is the default text value" category-background-color="" category-text-color="" class="card_category-wrapper category-primary-color category-inverse-color"><div class="card_category-size output">Category Name</div></wf-category-tag></a><div class="card_date-wrapper"><section data-copilot="true" data-wf--meta-date--settings-text-color="dark" class="component_base"><div class="variants_text-color is-inline-block"><div class="meta-date_wrapper"><div class="meta-date_text">Month YYYY</div></div></div></section></div></div></div></div></div><div role="listitem" class="blog-card_collection-item_3x w-dyn-item w-col w-col-6"><div data-wf--card-meta-item--global-options-meta-font-size="t3-base" class="w-layout-blockcontainer component_base flex-horizontal w-container"><div class="variants_font-size flex-grow"><div class="card_meta"><a href="#" class="card_category-link-block w-inline-block"><wf-category-tag category-primary-color="" category-inverse-color="" category-slug="This is the default text value" category-background-color="" category-text-color="" class="card_category-wrapper category-primary-color category-inverse-color"><div class="card_category-size output">Category Name</div></wf-category-tag></a><div class="card_date-wrapper"><section data-copilot="true" data-wf--meta-date--settings-text-color="dark" class="component_base"><div class="variants_text-color is-inline-block"><div class="meta-date_wrapper"><div class="meta-date_text">Month YYYY</div></div></div></section></div></div></div></div></div></div></div></div><div class="sg_section-divider bg-color-5"><div class="label-lg">Blog Meta Data ELements</div></div><div class="component_wrapper padding-inline_sm margin-block_sm width_60pct margin-inline_auto gap-md margin-block_md"><div class="card_meta t4-small-6"><a href="#" class="card_category-link-block category-1 t4-small-7 w-inline-block"><wf-join-attr category-primary-color="" category-inverse-color="" category-slug="Category Slug" class="card_category-wrapper"><div class="card_category-size output">Category Name</div></wf-join-attr></a><a href="#" class="card_category-link-block category-2 t4-small-10 w-inline-block"><wf-join-attr category-primary-color="" category-inverse-color="" category-slug="Category Slug" class="card_category-wrapper"><div class="card_category-size output">Category Name</div></wf-join-attr></a><section data-copilot="true" data-wf--meta-date--settings-text-color="dark" class="component_base"><div class="variants_text-color is-inline-block"><div class="meta-date_wrapper"><div class="meta-date_text">Month YYYY</div></div></div></section></div></div><div class="sg_section-divider"><div class="label-lg">Blog Meta Data ELements</div></div><div class="section max-width_xs"><div class="component_wrapper margin-block_sm padding-inline_sm"><div data-wf--card-meta-item--global-options-meta-font-size="t4-sm" class="w-layout-blockcontainer component_base flex-horizontal w-container"><div class="variants_font-size w-variant-511a967a-b411-f08a-9882-db680b1d54fe flex-grow"><div class="card_meta"><a href="#" class="card_category-link-block w-inline-block"><wf-category-tag category-primary-color="" category-inverse-color="" category-slug="This is the default text value" category-background-color="" category-text-color="" class="card_category-wrapper w-variant-511a967a-b411-f08a-9882-db680b1d54fe category-primary-color category-inverse-color"><div class="card_category-size w-variant-511a967a-b411-f08a-9882-db680b1d54fe output">Category Name</div></wf-category-tag></a><div class="card_date-wrapper"><section data-copilot="true" data-wf--meta-date--settings-text-color="dark" class="component_base"><div class="variants_text-color is-inline-block"><div class="meta-date_wrapper"><div class="meta-date_text">Month YYYY</div></div></div></section></div></div></div></div></div><div class="component_wrapper margin-block_sm padding-inline_sm"><div data-wf--card-meta-item--global-options-meta-font-size="t3-base" class="w-layout-blockcontainer component_base flex-horizontal w-container"><div class="variants_font-size flex-grow"><div class="card_meta"><a href="#" class="card_category-link-block w-inline-block"><wf-category-tag category-primary-color="" category-inverse-color="" category-slug="This is the default text value" category-background-color="" category-text-color="" class="card_category-wrapper category-primary-color category-inverse-color"><div class="card_category-size output">Category Name</div></wf-category-tag></a><div class="card_date-wrapper"><section data-copilot="true" data-wf--meta-date--settings-text-color="dark" class="component_base"><div class="variants_text-color is-inline-block"><div class="meta-date_wrapper"><div class="meta-date_text">Month YYYY</div></div></div></section></div></div></div></div></div><div class="component_wrapper margin-block_sm padding-inline_sm"><div data-wf--card-meta-item--global-options-meta-font-size="t2-md" class="w-layout-blockcontainer component_base flex-horizontal w-container"><div class="variants_font-size w-variant-eebdf314-bdfe-f1e4-a83c-9626bc352883 flex-grow"><div class="card_meta"><a href="#" class="card_category-link-block w-inline-block"><wf-category-tag category-primary-color="" category-inverse-color="" category-slug="This is the default text value" category-background-color="" category-text-color="" class="card_category-wrapper category-primary-color category-inverse-color"><div class="card_category-size w-variant-eebdf314-bdfe-f1e4-a83c-9626bc352883 output">Category Name</div></wf-category-tag></a><div class="card_date-wrapper"><section data-copilot="true" data-wf--meta-date--settings-text-color="dark" class="component_base"><div class="variants_text-color is-inline-block"><div class="meta-date_wrapper"><div class="meta-date_text">Month YYYY</div></div></div></section></div></div></div></div></div><div class="component_wrapper margin-block_sm padding-inline_sm"><div data-wf--card-meta-item--global-options-meta-font-size="t1-lg" class="w-layout-blockcontainer component_base flex-horizontal w-container"><div class="variants_font-size w-variant-b1d43679-a20e-3d90-5812-e310762336f5 flex-grow"><div class="card_meta"><a href="#" class="card_category-link-block w-inline-block"><wf-category-tag category-primary-color="" category-inverse-color="" category-slug="This is the default text value" category-background-color="" category-text-color="" class="card_category-wrapper w-variant-b1d43679-a20e-3d90-5812-e310762336f5 category-primary-color category-inverse-color"><div class="card_category-size w-variant-b1d43679-a20e-3d90-5812-e310762336f5 output">Category Name</div></wf-category-tag></a><div class="card_date-wrapper"><section data-copilot="true" data-wf--meta-date--settings-text-color="dark" class="component_base"><div class="variants_text-color is-inline-block"><div class="meta-date_wrapper"><div class="meta-date_text">Month YYYY</div></div></div></section></div></div></div></div></div></div><div class="sg_section-divider bg-color-5"><div class="label-lg"> RELATED BLOG CARD Base Classes</div></div><div class="component_wrapper padding-inline_sm bg-color-light"><div class="w-layout-blockcontainer component_wrapper margin-block_xxl flex_horizontal gap-md w-container"><div class="w-layout-blockcontainer component_base w-container"><div class="card_body-wrapper card-radius_sm is-regular"><div class="image-cover radius-bottom_none"><img sizes="(max-width: 767px) 100vw, (max-width: 991px) 728px, 939.984375px" srcset="https://cdn.prod.website-files.com/68729bbbf00ae2d98c02980d/68a1a0eaafa32138996338f6_a6b1096979e1df93c5c53260541abdc9_revrebel_nostalgic-stylish-social-mood-camera-35mm-f4-iso-2__83432-p-500.jpeg 500w, https://cdn.prod.website-files.com/68729bbbf00ae2d98c02980d/68a1a0eaafa32138996338f6_a6b1096979e1df93c5c53260541abdc9_revrebel_nostalgic-stylish-social-mood-camera-35mm-f4-iso-2__83432-p-800.jpeg 800w, https://cdn.prod.website-files.com/68729bbbf00ae2d98c02980d/68a1a0eaafa32138996338f6_a6b1096979e1df93c5c53260541abdc9_revrebel_nostalgic-stylish-social-mood-camera-35mm-f4-iso-2__83432-p-1080.jpeg 1080w, https://cdn.prod.website-files.com/68729bbbf00ae2d98c02980d/68a1a0eaafa32138996338f6_a6b1096979e1df93c5c53260541abdc9_revrebel_nostalgic-stylish-social-mood-camera-35mm-f4-iso-2__83432.jpeg 1344w" alt="Outdoor patio with lounge chairs, umbrellas, seating areas, and a mountain backdrop with palm trees under a clear blue sky." loading="lazy" src="https://cdn.prod.website-files.com/68729bbbf00ae2d98c02980d/68a1a0eaafa32138996338f6_a6b1096979e1df93c5c53260541abdc9_revrebel_nostalgic-stylish-social-mood-camera-35mm-f4-iso-2__83432.jpeg" class="image-animated radius-bottom_none"/></div><div id="w-node-eef44220-7392-16e9-45a2-fd0071078516-1b18d0ab" class="card_body-content"><div id="w-node-_0a1a6c07-5d48-29ff-41d0-9f372de38740-2de38740" data-wf--card-gap-size--global-options-padding="none" class="component_base flex-grow"><div class="variants_gap-size"><div class="card_meta-wrapper"><div data-wf--card-meta-item--global-options-meta-font-size="t4-sm" class="w-layout-blockcontainer component_base flex-horizontal w-container"><div class="variants_font-size w-variant-511a967a-b411-f08a-9882-db680b1d54fe flex-grow"><div class="card_meta"><a href="#" class="card_category-link-block w-inline-block"><wf-category-tag category-primary-color="" category-inverse-color="" category-slug="Category Slug" category-background-color="" category-text-color="" class="card_category-wrapper w-variant-511a967a-b411-f08a-9882-db680b1d54fe category-primary-color category-inverse-color"><div class="card_category-size w-variant-511a967a-b411-f08a-9882-db680b1d54fe output">Category Name</div></wf-category-tag></a><div class="card_date-wrapper"><section data-copilot="true" data-wf--meta-date--settings-text-color="dark" class="component_base"><div class="variants_text-color is-inline-block"><div class="meta-date_wrapper"><div class="meta-date_text">Month YYYY</div></div></div></section></div></div></div></div></div><div class="card_headline-wrapper"><div data-wf--card-headline-font-size--headline-headline-font-size="h4-sm" class="component_base"><div class="variants_headline-font-size"><h3 class="component_headline">Blog Headline</h3></div></div></div><div class="card_item-wrapper"><div data-wf--underlined-link--underlined-link-color="dark" class="component_text-color"><a href="#" class="read-more_link-block w-inline-block"><div data-w-id="812ead38-6e7d-da57-39fa-5e1af79a2850" class="component_label">Read Article</div></a></div><div data-wf--card-likes-posts--variant="color" class="like-button"><div class="views-wrapper"><div class="views">VIEWS<br/></div><a href="#" data-post-views="views" class="views-count">+920</a></div><div class="likes-wrapper"><img src="https://cdn.prod.website-files.com/68729bbbf00ae2d98c02980d/68c0b4d9ec1660243dddf2b7_heart.svg" loading="lazy" width="Auto" height="Auto" alt="" class="like-icon_red"/><a href="#" data-post-likes="likes" class="likes-count">66</a></div></div></div></div></div></div></div></div><div class="w-layout-blockcontainer component_base w-container"><div class="card_body-wrapper card-radius_sm is-reverse"><div id="w-node-dc6a4b5b-4722-30a8-e3b3-8eeba2d8636c-1b18d0ab" class="card_body-content is-reverse"><div id="w-node-_0a1a6c07-5d48-29ff-41d0-9f372de38740-2de38740" data-wf--card-gap-size--global-options-padding="none" class="component_base flex-grow"><div class="variants_gap-size"><div class="card_meta-wrapper"><div data-wf--card-meta-item--global-options-meta-font-size="t4-sm" class="w-layout-blockcontainer component_base flex-horizontal w-container"><div class="variants_font-size w-variant-511a967a-b411-f08a-9882-db680b1d54fe flex-grow"><div class="card_meta"><a href="#" class="card_category-link-block w-inline-block"><wf-category-tag category-primary-color="" category-inverse-color="" category-slug="Category Slug" category-background-color="" category-text-color="" class="card_category-wrapper w-variant-511a967a-b411-f08a-9882-db680b1d54fe category-primary-color category-inverse-color"><div class="card_category-size w-variant-511a967a-b411-f08a-9882-db680b1d54fe output">Category Name</div></wf-category-tag></a><div class="card_date-wrapper"><section data-copilot="true" data-wf--meta-date--settings-text-color="dark" class="component_base"><div class="variants_text-color is-inline-block"><div class="meta-date_wrapper"><div class="meta-date_text">Month YYYY</div></div></div></section></div></div></div></div></div><div class="card_headline-wrapper"><div data-wf--card-headline-font-size--headline-headline-font-size="h4-sm" class="component_base"><div class="variants_headline-font-size"><h3 class="component_headline">Blog Headline</h3></div></div></div><div class="card_item-wrapper"><div data-wf--underlined-link--underlined-link-color="dark" class="component_text-color"><a href="#" class="read-more_link-block w-inline-block"><div data-w-id="812ead38-6e7d-da57-39fa-5e1af79a2850" class="component_label">Read Article</div></a></div><div data-wf--card-likes-posts--variant="color" class="like-button"><div class="views-wrapper"><div class="views">VIEWS<br/></div><a href="#" data-post-views="views" class="views-count">+920</a></div><div class="likes-wrapper"><img src="https://cdn.prod.website-files.com/68729bbbf00ae2d98c02980d/68c0b4d9ec1660243dddf2b7_heart.svg" loading="lazy" width="Auto" height="Auto" alt="" class="like-icon_red"/><a href="#" data-post-likes="likes" class="likes-count">66</a></div></div></div></div></div></div><div class="image-cover radius-top_none"><img sizes="(max-width: 767px) 100vw, (max-width: 991px) 728px, 939.984375px" srcset="https://cdn.prod.website-files.com/68729bbbf00ae2d98c02980d/68a1a0eaafa32138996338f6_a6b1096979e1df93c5c53260541abdc9_revrebel_nostalgic-stylish-social-mood-camera-35mm-f4-iso-2__83432-p-500.jpeg 500w, https://cdn.prod.website-files.com/68729bbbf00ae2d98c02980d/68a1a0eaafa32138996338f6_a6b1096979e1df93c5c53260541abdc9_revrebel_nostalgic-stylish-social-mood-camera-35mm-f4-iso-2__83432-p-800.jpeg 800w, https://cdn.prod.website-files.com/68729bbbf00ae2d98c02980d/68a1a0eaafa32138996338f6_a6b1096979e1df93c5c53260541abdc9_revrebel_nostalgic-stylish-social-mood-camera-35mm-f4-iso-2__83432-p-1080.jpeg 1080w, https://cdn.prod.website-files.com/68729bbbf00ae2d98c02980d/68a1a0eaafa32138996338f6_a6b1096979e1df93c5c53260541abdc9_revrebel_nostalgic-stylish-social-mood-camera-35mm-f4-iso-2__83432.jpeg 1344w" alt="Outdoor patio with lounge chairs, umbrellas, and seating area with mountain and palm tree backdrop under clear sky." loading="lazy" src="https://cdn.prod.website-files.com/68729bbbf00ae2d98c02980d/68a1a0eaafa32138996338f6_a6b1096979e1df93c5c53260541abdc9_revrebel_nostalgic-stylish-social-mood-camera-35mm-f4-iso-2__83432.jpeg" class="image-animated radius-top_none"/></div></div></div></div></div><div class="sg_section-divider bg-color-6"><div class="label-lg"> RELATED BLOG CARD Base Component</div></div><div class="component_wrapper padding-inline_sm bg-color-light"><div class="component_wrapper margin-block_xxl flex_horizontal gap-md"><div class="w-layout-blockcontainer component_base w-container"><div data-wf-target="[[[&quot;4635135d-9c45-fbad-f904-7a28b91f4bf2&quot;,&quot;e0ddf636-bf22-0eee-3530-ae2dda257d3f&quot;],[&quot;5442fe6c-c44b-b636-13fa-4b84e5cad5b9&quot;]]]" class="card_body-wrapper card-radius_sm is-regular"><div class="image-cover radius-bottom_none"><img data-wf-target="[[[&quot;4635135d-9c45-fbad-f904-7a28b91f4bf2&quot;,&quot;e0ddf636-bf22-0eee-3530-ae2dda257d41&quot;],[&quot;5442fe6c-c44b-b636-13fa-4b84e5cad5b9&quot;]]]" alt="Outdoor patio with lounge chairs, umbrellas, and seating area with mountain and palm tree backdrop under clear sky." loading="lazy" src="https://cdn.prod.website-files.com/68729bbbf00ae2d98c02980d/68a1a0eaafa32138996338f6_a6b1096979e1df93c5c53260541abdc9_revrebel_nostalgic-stylish-social-mood-camera-35mm-f4-iso-2__83432.jpeg" sizes="(max-width: 767px) 100vw, (max-width: 991px) 728px, 940px" srcset="https://cdn.prod.website-files.com/68729bbbf00ae2d98c02980d/68a1a0eaafa32138996338f6_a6b1096979e1df93c5c53260541abdc9_revrebel_nostalgic-stylish-social-mood-camera-35mm-f4-iso-2__83432-p-500.jpeg 500w, https://cdn.prod.website-files.com/68729bbbf00ae2d98c02980d/68a1a0eaafa32138996338f6_a6b1096979e1df93c5c53260541abdc9_revrebel_nostalgic-stylish-social-mood-camera-35mm-f4-iso-2__83432-p-800.jpeg 800w, https://cdn.prod.website-files.com/68729bbbf00ae2d98c02980d/68a1a0eaafa32138996338f6_a6b1096979e1df93c5c53260541abdc9_revrebel_nostalgic-stylish-social-mood-camera-35mm-f4-iso-2__83432-p-1080.jpeg 1080w, https://cdn.prod.website-files.com/68729bbbf00ae2d98c02980d/68a1a0eaafa32138996338f6_a6b1096979e1df93c5c53260541abdc9_revrebel_nostalgic-stylish-social-mood-camera-35mm-f4-iso-2__83432.jpeg 1344w" class="image-animated radius-bottom_none"/></div><div id="w-node-e0ddf636-bf22-0eee-3530-ae2dda257d42-b91f4bf2" class="card_body-content"><div id="w-node-_0a1a6c07-5d48-29ff-41d0-9f372de38740-2de38740" data-wf--card-gap-size--global-options-padding="none" class="component_base flex-grow"><div class="variants_gap-size"><div class="card_meta-wrapper"><div data-wf--card-meta-item--global-options-meta-font-size="t4-sm" class="w-layout-blockcontainer component_base flex-horizontal w-container"><div class="variants_font-size w-variant-511a967a-b411-f08a-9882-db680b1d54fe flex-grow"><div class="card_meta"><a href="#" class="card_category-link-block w-inline-block"><wf-category-tag category-primary-color="" category-inverse-color="" category-slug="Category Slug" category-background-color="" category-text-color="" class="card_category-wrapper w-variant-511a967a-b411-f08a-9882-db680b1d54fe category-primary-color category-inverse-color"><div class="card_category-size w-variant-511a967a-b411-f08a-9882-db680b1d54fe output">Category Name</div></wf-category-tag></a><div class="card_date-wrapper"><section data-copilot="true" data-wf--meta-date--settings-text-color="dark" class="component_base"><div class="variants_text-color is-inline-block"><div class="meta-date_wrapper"><div class="meta-date_text">Month YYYY</div></div></div></section></div></div></div></div></div><div class="card_headline-wrapper"><div data-wf--card-headline-font-size--headline-headline-font-size="h4-sm" class="component_base"><div class="variants_headline-font-size"><h3 class="component_headline">Blog Headline</h3></div></div></div><div class="card_item-wrapper"><div data-wf--underlined-link--underlined-link-color="dark" class="component_text-color"><a href="#" class="read-more_link-block w-inline-block"><div data-w-id="812ead38-6e7d-da57-39fa-5e1af79a2850" class="component_label">Read Article</div></a></div><div data-wf--card-likes-posts--variant="color" class="like-button"><div class="views-wrapper"><div class="views">VIEWS<br/></div><a href="#" data-post-views="views" class="views-count">+920</a></div><div class="likes-wrapper"><img src="https://cdn.prod.website-files.com/68729bbbf00ae2d98c02980d/68c0b4d9ec1660243dddf2b7_heart.svg" loading="lazy" width="Auto" height="Auto" alt="" class="like-icon_red"/><a href="#" data-post-likes="likes" class="likes-count">66</a></div></div></div></div></div></div></div></div><div class="w-layout-blockcontainer component_base w-container"><div class="card_body-wrapper card-radius_sm is-reverse"><div id="w-node-_1868f3fd-bfca-0973-42b8-befb223518ca-223518c6" class="card_body-content is-reverse"><div id="w-node-_0a1a6c07-5d48-29ff-41d0-9f372de38740-2de38740" data-wf--card-gap-size--global-options-padding="none" class="component_base flex-grow"><div class="variants_gap-size"><div class="card_meta-wrapper"><div data-wf--card-meta-item--global-options-meta-font-size="t4-sm" class="w-layout-blockcontainer component_base flex-horizontal w-container"><div class="variants_font-size w-variant-511a967a-b411-f08a-9882-db680b1d54fe flex-grow"><div class="card_meta"><a href="#" class="card_category-link-block w-inline-block"><wf-category-tag category-primary-color="" category-inverse-color="" category-slug="Category Slug" category-background-color="" category-text-color="" class="card_category-wrapper w-variant-511a967a-b411-f08a-9882-db680b1d54fe category-primary-color category-inverse-color"><div class="card_category-size w-variant-511a967a-b411-f08a-9882-db680b1d54fe output">Category Name</div></wf-category-tag></a><div class="card_date-wrapper"><section data-copilot="true" data-wf--meta-date--settings-text-color="dark" class="component_base"><div class="variants_text-color is-inline-block"><div class="meta-date_wrapper"><div class="meta-date_text">Month YYYY</div></div></div></section></div></div></div></div></div><div class="card_headline-wrapper"><div data-wf--card-headline-font-size--headline-headline-font-size="h4-sm" class="component_base"><div class="variants_headline-font-size"><h3 class="component_headline">Blog Headline</h3></div></div></div><div class="card_item-wrapper"><div data-wf--underlined-link--underlined-link-color="dark" class="component_text-color"><a href="#" class="read-more_link-block w-inline-block"><div data-w-id="812ead38-6e7d-da57-39fa-5e1af79a2850" class="component_label">Read Article</div></a></div><div data-wf--card-likes-posts--variant="color" class="like-button"><div class="views-wrapper"><div class="views">VIEWS<br/></div><a href="#" data-post-views="views" class="views-count">+920</a></div><div class="likes-wrapper"><img src="https://cdn.prod.website-files.com/68729bbbf00ae2d98c02980d/68c0b4d9ec1660243dddf2b7_heart.svg" loading="lazy" width="Auto" height="Auto" alt="" class="like-icon_red"/><a href="#" data-post-likes="likes" class="likes-count">66</a></div></div></div></div></div></div><div class="image-cover radius-top_none"><img alt="Outdoor patio with lounge chairs, umbrellas, and seating area with mountain and palm tree backdrop under clear sky." src="https://cdn.prod.website-files.com/68729bbbf00ae2d98c02980d/68a1a0eaafa32138996338f6_a6b1096979e1df93c5c53260541abdc9_revrebel_nostalgic-stylish-social-mood-camera-35mm-f4-iso-2__83432.jpeg" loading="lazy" sizes="(max-width: 767px) 100vw, (max-width: 991px) 728px, 940px" srcset="https://cdn.prod.website-files.com/68729bbbf00ae2d98c02980d/68a1a0eaafa32138996338f6_a6b1096979e1df93c5c53260541abdc9_revrebel_nostalgic-stylish-social-mood-camera-35mm-f4-iso-2__83432-p-500.jpeg 500w, https://cdn.prod.website-files.com/68729bbbf00ae2d98c02980d/68a1a0eaafa32138996338f6_a6b1096979e1df93c5c53260541abdc9_revrebel_nostalgic-stylish-social-mood-camera-35mm-f4-iso-2__83432-p-800.jpeg 800w, https://cdn.prod.website-files.com/68729bbbf00ae2d98c02980d/68a1a0eaafa32138996338f6_a6b1096979e1df93c5c53260541abdc9_revrebel_nostalgic-stylish-social-mood-camera-35mm-f4-iso-2__83432-p-1080.jpeg 1080w, https://cdn.prod.website-files.com/68729bbbf00ae2d98c02980d/68a1a0eaafa32138996338f6_a6b1096979e1df93c5c53260541abdc9_revrebel_nostalgic-stylish-social-mood-camera-35mm-f4-iso-2__83432.jpeg 1344w" class="image-animated radius-top_none"/></div></div></div></div></div><div class="sg_section-divider bg-color-6"><div class="label-lg"> RELATED BLOG CARD Base</div></div><div class="section bg-color-light"><div class="component_wrapper padding-inline_sm margin-block_xxl flex_horizontal"><div class="flex-horizontal w-dyn-list"><div role="list" class="blog-card_collection-list_1x w-dyn-items"><div role="listitem" class="blog-card_collection-item_1x gap-md w-dyn-item"><div class="w-layout-blockcontainer component_base w-container"><div data-wf-target="[[[&quot;4635135d-9c45-fbad-f904-7a28b91f4bf2&quot;,&quot;e0ddf636-bf22-0eee-3530-ae2dda257d3f&quot;],[&quot;219c372a-7241-7cf0-c1fb-0f1e0b938289_instance-0&quot;]]]" class="card_body-wrapper card-radius_sm is-regular"><div class="image-cover radius-bottom_none"><img data-wf-target="[[[&quot;4635135d-9c45-fbad-f904-7a28b91f4bf2&quot;,&quot;e0ddf636-bf22-0eee-3530-ae2dda257d41&quot;],[&quot;219c372a-7241-7cf0-c1fb-0f1e0b938289_instance-0&quot;]]]" alt="Outdoor patio with lounge chairs, umbrellas, and seating area with mountain and palm tree backdrop under clear sky." loading="lazy" src="https://cdn.prod.website-files.com/68729bbbf00ae2d98c02980d/68a1a0eaafa32138996338f6_a6b1096979e1df93c5c53260541abdc9_revrebel_nostalgic-stylish-social-mood-camera-35mm-f4-iso-2__83432.jpeg" sizes="(max-width: 767px) 100vw, (max-width: 991px) 728px, 940px" srcset="https://cdn.prod.website-files.com/68729bbbf00ae2d98c02980d/68a1a0eaafa32138996338f6_a6b1096979e1df93c5c53260541abdc9_revrebel_nostalgic-stylish-social-mood-camera-35mm-f4-iso-2__83432-p-500.jpeg 500w, https://cdn.prod.website-files.com/68729bbbf00ae2d98c02980d/68a1a0eaafa32138996338f6_a6b1096979e1df93c5c53260541abdc9_revrebel_nostalgic-stylish-social-mood-camera-35mm-f4-iso-2__83432-p-800.jpeg 800w, https://cdn.prod.website-files.com/68729bbbf00ae2d98c02980d/68a1a0eaafa32138996338f6_a6b1096979e1df93c5c53260541abdc9_revrebel_nostalgic-stylish-social-mood-camera-35mm-f4-iso-2__83432-p-1080.jpeg 1080w, https://cdn.prod.website-files.com/68729bbbf00ae2d98c02980d/68a1a0eaafa32138996338f6_a6b1096979e1df93c5c53260541abdc9_revrebel_nostalgic-stylish-social-mood-camera-35mm-f4-iso-2__83432.jpeg 1344w" class="image-animated radius-bottom_none"/></div><div id="w-node-e0ddf636-bf22-0eee-3530-ae2dda257d42-b91f4bf2" class="card_body-content"><div id="w-node-_0a1a6c07-5d48-29ff-41d0-9f372de38740-2de38740" data-wf--card-gap-size--global-options-padding="none" class="component_base flex-grow"><div class="variants_gap-size"><div class="card_meta-wrapper"><div data-wf--card-meta-item--global-options-meta-font-size="t4-sm" class="w-layout-blockcontainer component_base flex-horizontal w-container"><div class="variants_font-size w-variant-511a967a-b411-f08a-9882-db680b1d54fe flex-grow"><div class="card_meta"><a href="#" class="card_category-link-block w-inline-block"><wf-category-tag category-primary-color="" category-inverse-color="" category-slug="Category Slug" category-background-color="" category-text-color="" class="card_category-wrapper w-variant-511a967a-b411-f08a-9882-db680b1d54fe category-primary-color category-inverse-color"><div class="card_category-size w-variant-511a967a-b411-f08a-9882-db680b1d54fe output">Category Name</div></wf-category-tag></a><div class="card_date-wrapper"><section data-copilot="true" data-wf--meta-date--settings-text-color="dark" class="component_base"><div class="variants_text-color is-inline-block"><div class="meta-date_wrapper"><div class="meta-date_text">Month YYYY</div></div></div></section></div></div></div></div></div><div class="card_headline-wrapper"><div data-wf--card-headline-font-size--headline-headline-font-size="h4-sm" class="component_base"><div class="variants_headline-font-size"><h3 class="component_headline">Blog Headline</h3></div></div></div><div class="card_item-wrapper"><div data-wf--underlined-link--underlined-link-color="dark" class="component_text-color"><a href="#" class="read-more_link-block w-inline-block"><div data-w-id="812ead38-6e7d-da57-39fa-5e1af79a2850" class="component_label">Read Article</div></a></div><div data-wf--card-likes-posts--variant="color" class="like-button"><div class="views-wrapper"><div class="views">VIEWS<br/></div><a href="#" data-post-views="views" class="views-count">+920</a></div><div class="likes-wrapper"><img src="https://cdn.prod.website-files.com/68729bbbf00ae2d98c02980d/68c0b4d9ec1660243dddf2b7_heart.svg" loading="lazy" width="Auto" height="Auto" alt="" class="like-icon_red"/><a href="#" data-post-likes="likes" class="likes-count">66</a></div></div></div></div></div></div></div></div><div class="w-layout-blockcontainer component_base w-container"><div class="card_body-wrapper card-radius_sm is-reverse"><div id="w-node-_1868f3fd-bfca-0973-42b8-befb223518ca-223518c6" class="card_body-content is-reverse"><div id="w-node-_0a1a6c07-5d48-29ff-41d0-9f372de38740-2de38740" data-wf--card-gap-size--global-options-padding="none" class="component_base flex-grow"><div class="variants_gap-size"><div class="card_meta-wrapper"><div data-wf--card-meta-item--global-options-meta-font-size="t4-sm" class="w-layout-blockcontainer component_base flex-horizontal w-container"><div class="variants_font-size w-variant-511a967a-b411-f08a-9882-db680b1d54fe flex-grow"><div class="card_meta"><a href="#" class="card_category-link-block w-inline-block"><wf-category-tag category-primary-color="" category-inverse-color="" category-slug="Category Slug" category-background-color="" category-text-color="" class="card_category-wrapper w-variant-511a967a-b411-f08a-9882-db680b1d54fe category-primary-color category-inverse-color"><div class="card_category-size w-variant-511a967a-b411-f08a-9882-db680b1d54fe output">Category Name</div></wf-category-tag></a><div class="card_date-wrapper"><section data-copilot="true" data-wf--meta-date--settings-text-color="dark" class="component_base"><div class="variants_text-color is-inline-block"><div class="meta-date_wrapper"><div class="meta-date_text">Month YYYY</div></div></div></section></div></div></div></div></div><div class="card_headline-wrapper"><div data-wf--card-headline-font-size--headline-headline-font-size="h4-sm" class="component_base"><div class="variants_headline-font-size"><h3 class="component_headline">Blog Headline</h3></div></div></div><div class="card_item-wrapper"><div data-wf--underlined-link--underlined-link-color="dark" class="component_text-color"><a href="#" class="read-more_link-block w-inline-block"><div data-w-id="812ead38-6e7d-da57-39fa-5e1af79a2850" class="component_label">Read Article</div></a></div><div data-wf--card-likes-posts--variant="color" class="like-button"><div class="views-wrapper"><div class="views">VIEWS<br/></div><a href="#" data-post-views="views" class="views-count">+920</a></div><div class="likes-wrapper"><img src="https://cdn.prod.website-files.com/68729bbbf00ae2d98c02980d/68c0b4d9ec1660243dddf2b7_heart.svg" loading="lazy" width="Auto" height="Auto" alt="" class="like-icon_red"/><a href="#" data-post-likes="likes" class="likes-count">66</a></div></div></div></div></div></div><div class="image-cover radius-top_none"><img alt="Outdoor patio with lounge chairs, umbrellas, and seating area with mountain and palm tree backdrop under clear sky." src="https://cdn.prod.website-files.com/68729bbbf00ae2d98c02980d/68a1a0eaafa32138996338f6_a6b1096979e1df93c5c53260541abdc9_revrebel_nostalgic-stylish-social-mood-camera-35mm-f4-iso-2__83432.jpeg" loading="lazy" sizes="(max-width: 767px) 100vw, (max-width: 991px) 728px, 940px" srcset="https://cdn.prod.website-files.com/68729bbbf00ae2d98c02980d/68a1a0eaafa32138996338f6_a6b1096979e1df93c5c53260541abdc9_revrebel_nostalgic-stylish-social-mood-camera-35mm-f4-iso-2__83432-p-500.jpeg 500w, https://cdn.prod.website-files.com/68729bbbf00ae2d98c02980d/68a1a0eaafa32138996338f6_a6b1096979e1df93c5c53260541abdc9_revrebel_nostalgic-stylish-social-mood-camera-35mm-f4-iso-2__83432-p-800.jpeg 800w, https://cdn.prod.website-files.com/68729bbbf00ae2d98c02980d/68a1a0eaafa32138996338f6_a6b1096979e1df93c5c53260541abdc9_revrebel_nostalgic-stylish-social-mood-camera-35mm-f4-iso-2__83432-p-1080.jpeg 1080w, https://cdn.prod.website-files.com/68729bbbf00ae2d98c02980d/68a1a0eaafa32138996338f6_a6b1096979e1df93c5c53260541abdc9_revrebel_nostalgic-stylish-social-mood-camera-35mm-f4-iso-2__83432.jpeg 1344w" class="image-animated radius-top_none"/></div></div></div></div></div></div></div></div><div class="sg_section-divider"><div class="label-lg">2 Card - RELATED BLOG CARD Component (CMS Connected)</div></div><section class="section bg-color-light"><div class="component_wrapper padding-inline_sm margin-block_xxl"><div class="w-dyn-list"><div role="list" class="blog-card_collection-list_2x w-dyn-items"><div role="listitem" class="blog-card_collection-item_2x w-dyn-item"><div class="w-layout-blockcontainer component_base w-container"><div data-wf-target="[[[&quot;4635135d-9c45-fbad-f904-7a28b91f4bf2&quot;,&quot;e0ddf636-bf22-0eee-3530-ae2dda257d3f&quot;],[&quot;71fdd17d-f156-421c-fec6-341d7b284f6c_instance-0&quot;]]]" class="card_body-wrapper card-radius_sm is-regular"><div class="image-cover radius-bottom_none"><img data-wf-target="[[[&quot;4635135d-9c45-fbad-f904-7a28b91f4bf2&quot;,&quot;e0ddf636-bf22-0eee-3530-ae2dda257d41&quot;],[&quot;71fdd17d-f156-421c-fec6-341d7b284f6c_instance-0&quot;]]]" alt="" loading="lazy" src="https://cdn.prod.website-files.com/687ecf7c8eeb652bce5a9df5/68dac8dbb979b3833855743b_68ce3126cf3842139fdc69c3_6543c6f180cded72ce035a41_toa-heftiba-bcLE7reXFLM-unsplash%252520(2).png" sizes="(max-width: 767px) 100vw, (max-width: 991px) 728px, 940px" srcset="https://cdn.prod.website-files.com/687ecf7c8eeb652bce5a9df5/68dac8dbb979b3833855743b_68ce3126cf3842139fdc69c3_6543c6f180cded72ce035a41_toa-heftiba-bcLE7reXFLM-unsplash%252520(2)-p-500.png 500w, https://cdn.prod.website-files.com/687ecf7c8eeb652bce5a9df5/68dac8dbb979b3833855743b_68ce3126cf3842139fdc69c3_6543c6f180cded72ce035a41_toa-heftiba-bcLE7reXFLM-unsplash%252520(2)-p-800.png 800w, https://cdn.prod.website-files.com/687ecf7c8eeb652bce5a9df5/68dac8dbb979b3833855743b_68ce3126cf3842139fdc69c3_6543c6f180cded72ce035a41_toa-heftiba-bcLE7reXFLM-unsplash%252520(2)-p-1080.png 1080w, https://cdn.prod.website-files.com/687ecf7c8eeb652bce5a9df5/68dac8dbb979b3833855743b_68ce3126cf3842139fdc69c3_6543c6f180cded72ce035a41_toa-heftiba-bcLE7reXFLM-unsplash%252520(2)-p-1600.png 1600w, https://cdn.prod.website-files.com/687ecf7c8eeb652bce5a9df5/68dac8dbb979b3833855743b_68ce3126cf3842139fdc69c3_6543c6f180cded72ce035a41_toa-heftiba-bcLE7reXFLM-unsplash%252520(2)-p-2000.png 2000w, https://cdn.prod.website-files.com/687ecf7c8eeb652bce5a9df5/68dac8dbb979b3833855743b_68ce3126cf3842139fdc69c3_6543c6f180cded72ce035a41_toa-heftiba-bcLE7reXFLM-unsplash%252520(2).png 2100w" class="image-animated radius-bottom_none"/></div><div id="w-node-e0ddf636-bf22-0eee-3530-ae2dda257d42-b91f4bf2" class="card_body-content"><div id="w-node-_0a1a6c07-5d48-29ff-41d0-9f372de38740-2de38740" data-wf--card-gap-size--global-options-padding="none" class="component_base flex-grow"><div class="variants_gap-size"><div class="card_meta-wrapper"><div data-wf--card-meta-item--global-options-meta-font-size="t3-base" class="w-layout-blockcontainer component_base flex-horizontal w-container"><div class="variants_font-size flex-grow"><div class="card_meta"><a href="#" class="card_category-link-block w-inline-block"><wf-category-tag category-primary-color="" category-inverse-color="" category-slug="" category-background-color="" category-text-color="" class="card_category-wrapper category-primary-color category-inverse-color"><div class="card_category-size output"></div></wf-category-tag></a><div class="card_date-wrapper"><section data-copilot="true" data-wf--meta-date--settings-text-color="dark" class="component_base"><div class="variants_text-color is-inline-block"><div class="meta-date_wrapper"><div class="meta-date_text">October 2023</div></div></div></section></div></div></div></div></div><div class="card_headline-wrapper"><div data-wf--card-headline-font-size--headline-headline-font-size="h5-xs" class="component_base"><div class="variants_headline-font-size w-variant-62414350-2ba0-c64c-8ae7-fdc9b1b9ffda"><h3 class="component_headline">5 Questions You Should Ask About Your Hotel&#x27;s Pricing Strategy</h3></div></div></div><div class="card_item-wrapper"><div data-wf--underlined-link--underlined-link-color="dark" class="component_text-color"><a href="/article/5-questions-you-should-ask-about-your-hotels-pricing-strategy" class="read-more_link-block w-inline-block"><div data-w-id="812ead38-6e7d-da57-39fa-5e1af79a2850" class="component_label">Read Article</div></a></div><div data-wf--card-likes-posts--variant="color" class="like-button"><div class="views-wrapper"><div class="views">VIEWS<br/></div><a href="#" data-post-views="views" class="views-count">+920</a></div><div class="likes-wrapper"><img src="https://cdn.prod.website-files.com/68729bbbf00ae2d98c02980d/68c0b4d9ec1660243dddf2b7_heart.svg" loading="lazy" width="Auto" height="Auto" alt="" class="like-icon_red"/><a href="#" data-post-likes="likes" class="likes-count">66</a></div></div></div></div></div></div></div></div></div><div role="listitem" class="blog-card_collection-item_2x w-dyn-item"><div class="w-layout-blockcontainer component_base w-container"><div data-wf-target="[[[&quot;4635135d-9c45-fbad-f904-7a28b91f4bf2&quot;,&quot;e0ddf636-bf22-0eee-3530-ae2dda257d3f&quot;],[&quot;71fdd17d-f156-421c-fec6-341d7b284f6c_instance-1&quot;]]]" class="card_body-wrapper card-radius_sm is-regular"><div class="image-cover radius-bottom_none"><img data-wf-target="[[[&quot;4635135d-9c45-fbad-f904-7a28b91f4bf2&quot;,&quot;e0ddf636-bf22-0eee-3530-ae2dda257d41&quot;],[&quot;71fdd17d-f156-421c-fec6-341d7b284f6c_instance-1&quot;]]]" alt="" loading="lazy" src="https://cdn.prod.website-files.com/687ecf7c8eeb652bce5a9df5/68dac8da9bc09d13e3f59a0b_68ce312611d817ead231e2d7_6543c6913adaa764eb0e67d4_pexels-drew-williams-3483968.png" sizes="(max-width: 767px) 100vw, (max-width: 991px) 728px, 940px" srcset="https://cdn.prod.website-files.com/687ecf7c8eeb652bce5a9df5/68dac8da9bc09d13e3f59a0b_68ce312611d817ead231e2d7_6543c6913adaa764eb0e67d4_pexels-drew-williams-3483968-p-500.png 500w, https://cdn.prod.website-files.com/687ecf7c8eeb652bce5a9df5/68dac8da9bc09d13e3f59a0b_68ce312611d817ead231e2d7_6543c6913adaa764eb0e67d4_pexels-drew-williams-3483968-p-800.png 800w, https://cdn.prod.website-files.com/687ecf7c8eeb652bce5a9df5/68dac8da9bc09d13e3f59a0b_68ce312611d817ead231e2d7_6543c6913adaa764eb0e67d4_pexels-drew-williams-3483968-p-1080.png 1080w, https://cdn.prod.website-files.com/687ecf7c8eeb652bce5a9df5/68dac8da9bc09d13e3f59a0b_68ce312611d817ead231e2d7_6543c6913adaa764eb0e67d4_pexels-drew-williams-3483968-p-1600.png 1600w, https://cdn.prod.website-files.com/687ecf7c8eeb652bce5a9df5/68dac8da9bc09d13e3f59a0b_68ce312611d817ead231e2d7_6543c6913adaa764eb0e67d4_pexels-drew-williams-3483968-p-2000.png 2000w, https://cdn.prod.website-files.com/687ecf7c8eeb652bce5a9df5/68dac8da9bc09d13e3f59a0b_68ce312611d817ead231e2d7_6543c6913adaa764eb0e67d4_pexels-drew-williams-3483968.png 2100w" class="image-animated radius-bottom_none"/></div><div id="w-node-e0ddf636-bf22-0eee-3530-ae2dda257d42-b91f4bf2" class="card_body-content"><div id="w-node-_0a1a6c07-5d48-29ff-41d0-9f372de38740-2de38740" data-wf--card-gap-size--global-options-padding="none" class="component_base flex-grow"><div class="variants_gap-size"><div class="card_meta-wrapper"><div data-wf--card-meta-item--global-options-meta-font-size="t3-base" class="w-layout-blockcontainer component_base flex-horizontal w-container"><div class="variants_font-size flex-grow"><div class="card_meta"><a href="#" class="card_category-link-block w-inline-block"><wf-category-tag category-primary-color="" category-inverse-color="" category-slug="" category-background-color="" category-text-color="" class="card_category-wrapper category-primary-color category-inverse-color"><div class="card_category-size output"></div></wf-category-tag></a><div class="card_date-wrapper"><section data-copilot="true" data-wf--meta-date--settings-text-color="dark" class="component_base"><div class="variants_text-color is-inline-block"><div class="meta-date_wrapper"><div class="meta-date_text">November 2023</div></div></div></section></div></div></div></div></div><div class="card_headline-wrapper"><div data-wf--card-headline-font-size--headline-headline-font-size="h5-xs" class="component_base"><div class="variants_headline-font-size w-variant-62414350-2ba0-c64c-8ae7-fdc9b1b9ffda"><h3 class="component_headline">3 Most Important Tips for Making a Hotel Opening a Revenue Success</h3></div></div></div><div class="card_item-wrapper"><div data-wf--underlined-link--underlined-link-color="dark" class="component_text-color"><a href="/article/3-most-important-tips-for-making-a-hotel-opening-a-revenue-success" class="read-more_link-block w-inline-block"><div data-w-id="812ead38-6e7d-da57-39fa-5e1af79a2850" class="component_label">Read Article</div></a></div><div data-wf--card-likes-posts--variant="color" class="like-button"><div class="views-wrapper"><div class="views">VIEWS<br/></div><a href="#" data-post-views="views" class="views-count">+920</a></div><div class="likes-wrapper"><img src="https://cdn.prod.website-files.com/68729bbbf00ae2d98c02980d/68c0b4d9ec1660243dddf2b7_heart.svg" loading="lazy" width="Auto" height="Auto" alt="" class="like-icon_red"/><a href="#" data-post-likes="likes" class="likes-count">66</a></div></div></div></div></div></div></div></div></div></div></div></div></section><div class="sg_section-divider"><div class="label-lg">3 Card - RELATED BLOG CARD Component (CMS Connected)</div></div><section class="section bg-color-light"><div class="component_wrapper padding-inline_sm margin-block_xxl"><div class="w-dyn-list"><div role="list" class="blog-card_collection-list_3x w-dyn-items"><div role="listitem" class="blog-card_collection-item_3x w-dyn-item"><div class="w-layout-blockcontainer component_base w-container"><div data-wf-target="[[[&quot;4635135d-9c45-fbad-f904-7a28b91f4bf2&quot;,&quot;e0ddf636-bf22-0eee-3530-ae2dda257d3f&quot;],[&quot;20e70954-598a-b96d-8e61-1ed5bf9583ac_instance-0&quot;]]]" class="card_body-wrapper card-radius_sm is-regular"><div class="image-cover radius-bottom_none"><img data-wf-target="[[[&quot;4635135d-9c45-fbad-f904-7a28b91f4bf2&quot;,&quot;e0ddf636-bf22-0eee-3530-ae2dda257d41&quot;],[&quot;20e70954-598a-b96d-8e61-1ed5bf9583ac_instance-0&quot;]]]" alt="" loading="lazy" src="https://cdn.prod.website-files.com/687ecf7c8eeb652bce5a9df5/68dac8dbb979b3833855743b_68ce3126cf3842139fdc69c3_6543c6f180cded72ce035a41_toa-heftiba-bcLE7reXFLM-unsplash%252520(2).png" sizes="(max-width: 767px) 100vw, (max-width: 991px) 728px, 940px" srcset="https://cdn.prod.website-files.com/687ecf7c8eeb652bce5a9df5/68dac8dbb979b3833855743b_68ce3126cf3842139fdc69c3_6543c6f180cded72ce035a41_toa-heftiba-bcLE7reXFLM-unsplash%252520(2)-p-500.png 500w, https://cdn.prod.website-files.com/687ecf7c8eeb652bce5a9df5/68dac8dbb979b3833855743b_68ce3126cf3842139fdc69c3_6543c6f180cded72ce035a41_toa-heftiba-bcLE7reXFLM-unsplash%252520(2)-p-800.png 800w, https://cdn.prod.website-files.com/687ecf7c8eeb652bce5a9df5/68dac8dbb979b3833855743b_68ce3126cf3842139fdc69c3_6543c6f180cded72ce035a41_toa-heftiba-bcLE7reXFLM-unsplash%252520(2)-p-1080.png 1080w, https://cdn.prod.website-files.com/687ecf7c8eeb652bce5a9df5/68dac8dbb979b3833855743b_68ce3126cf3842139fdc69c3_6543c6f180cded72ce035a41_toa-heftiba-bcLE7reXFLM-unsplash%252520(2)-p-1600.png 1600w, https://cdn.prod.website-files.com/687ecf7c8eeb652bce5a9df5/68dac8dbb979b3833855743b_68ce3126cf3842139fdc69c3_6543c6f180cded72ce035a41_toa-heftiba-bcLE7reXFLM-unsplash%252520(2)-p-2000.png 2000w, https://cdn.prod.website-files.com/687ecf7c8eeb652bce5a9df5/68dac8dbb979b3833855743b_68ce3126cf3842139fdc69c3_6543c6f180cded72ce035a41_toa-heftiba-bcLE7reXFLM-unsplash%252520(2).png 2100w" class="image-animated radius-bottom_none"/></div><div id="w-node-e0ddf636-bf22-0eee-3530-ae2dda257d42-b91f4bf2" class="card_body-content"><div id="w-node-_0a1a6c07-5d48-29ff-41d0-9f372de38740-2de38740" data-wf--card-gap-size--global-options-padding="none" class="component_base flex-grow"><div class="variants_gap-size"><div class="card_meta-wrapper"><div data-wf--card-meta-item--global-options-meta-font-size="t5-xs" class="w-layout-blockcontainer component_base flex-horizontal w-container"><div class="variants_font-size flex-grow w-variant-c6096379-791a-4d37-a580-b8b0d7ff082f"><div class="card_meta"><a href="#" class="card_category-link-block w-inline-block"><wf-category-tag category-primary-color="" category-inverse-color="" category-slug="Category Slug" category-background-color="" category-text-color="" class="card_category-wrapper category-primary-color category-inverse-color"><div class="card_category-size output"></div></wf-category-tag></a><div class="card_date-wrapper"><section data-copilot="true" data-wf--meta-date--settings-text-color="dark" class="component_base"><div class="variants_text-color is-inline-block"><div class="meta-date_wrapper"><div class="meta-date_text">October 2023</div></div></div></section></div></div></div></div></div><div class="card_headline-wrapper"><div data-wf--card-headline-font-size--headline-headline-font-size="h6-xxs" class="component_base"><div class="variants_headline-font-size w-variant-2afb1133-8136-eb70-d1f9-5332ba439d00"><h3 class="component_headline">5 Questions You Should Ask About Your Hotel&#x27;s Pricing Strategy</h3></div></div></div><div class="card_item-wrapper"><div data-wf--underlined-link--underlined-link-color="dark" class="component_text-color"><a href="/article/5-questions-you-should-ask-about-your-hotels-pricing-strategy" class="read-more_link-block w-inline-block"><div data-w-id="812ead38-6e7d-da57-39fa-5e1af79a2850" class="component_label">Read Article</div></a></div><div data-wf--card-likes-posts--variant="color" class="like-button"><div class="views-wrapper"><div class="views">VIEWS<br/></div><a href="#" data-post-views="views" class="views-count">+920</a></div><div class="likes-wrapper"><img src="https://cdn.prod.website-files.com/68729bbbf00ae2d98c02980d/68c0b4d9ec1660243dddf2b7_heart.svg" loading="lazy" width="Auto" height="Auto" alt="" class="like-icon_red"/><a href="#" data-post-likes="likes" class="likes-count">66</a></div></div></div></div></div></div></div></div></div><div role="listitem" class="blog-card_collection-item_3x w-dyn-item"><div class="w-layout-blockcontainer component_base w-container"><div data-wf-target="[[[&quot;4635135d-9c45-fbad-f904-7a28b91f4bf2&quot;,&quot;e0ddf636-bf22-0eee-3530-ae2dda257d3f&quot;],[&quot;20e70954-598a-b96d-8e61-1ed5bf9583ac_instance-1&quot;]]]" class="card_body-wrapper card-radius_sm is-regular"><div class="image-cover radius-bottom_none"><img data-wf-target="[[[&quot;4635135d-9c45-fbad-f904-7a28b91f4bf2&quot;,&quot;e0ddf636-bf22-0eee-3530-ae2dda257d41&quot;],[&quot;20e70954-598a-b96d-8e61-1ed5bf9583ac_instance-1&quot;]]]" alt="" loading="lazy" src="https://cdn.prod.website-files.com/687ecf7c8eeb652bce5a9df5/68dac8da9bc09d13e3f59a0b_68ce312611d817ead231e2d7_6543c6913adaa764eb0e67d4_pexels-drew-williams-3483968.png" sizes="(max-width: 767px) 100vw, (max-width: 991px) 728px, 940px" srcset="https://cdn.prod.website-files.com/687ecf7c8eeb652bce5a9df5/68dac8da9bc09d13e3f59a0b_68ce312611d817ead231e2d7_6543c6913adaa764eb0e67d4_pexels-drew-williams-3483968-p-500.png 500w, https://cdn.prod.website-files.com/687ecf7c8eeb652bce5a9df5/68dac8da9bc09d13e3f59a0b_68ce312611d817ead231e2d7_6543c6913adaa764eb0e67d4_pexels-drew-williams-3483968-p-800.png 800w, https://cdn.prod.website-files.com/687ecf7c8eeb652bce5a9df5/68dac8da9bc09d13e3f59a0b_68ce312611d817ead231e2d7_6543c6913adaa764eb0e67d4_pexels-drew-williams-3483968-p-1080.png 1080w, https://cdn.prod.website-files.com/687ecf7c8eeb652bce5a9df5/68dac8da9bc09d13e3f59a0b_68ce312611d817ead231e2d7_6543c6913adaa764eb0e67d4_pexels-drew-williams-3483968-p-1600.png 1600w, https://cdn.prod.website-files.com/687ecf7c8eeb652bce5a9df5/68dac8da9bc09d13e3f59a0b_68ce312611d817ead231e2d7_6543c6913adaa764eb0e67d4_pexels-drew-williams-3483968-p-2000.png 2000w, https://cdn.prod.website-files.com/687ecf7c8eeb652bce5a9df5/68dac8da9bc09d13e3f59a0b_68ce312611d817ead231e2d7_6543c6913adaa764eb0e67d4_pexels-drew-williams-3483968.png 2100w" class="image-animated radius-bottom_none"/></div><div id="w-node-e0ddf636-bf22-0eee-3530-ae2dda257d42-b91f4bf2" class="card_body-content"><div id="w-node-_0a1a6c07-5d48-29ff-41d0-9f372de38740-2de38740" data-wf--card-gap-size--global-options-padding="none" class="component_base flex-grow"><div class="variants_gap-size"><div class="card_meta-wrapper"><div data-wf--card-meta-item--global-options-meta-font-size="t5-xs" class="w-layout-blockcontainer component_base flex-horizontal w-container"><div class="variants_font-size flex-grow w-variant-c6096379-791a-4d37-a580-b8b0d7ff082f"><div class="card_meta"><a href="#" class="card_category-link-block w-inline-block"><wf-category-tag category-primary-color="" category-inverse-color="" category-slug="Category Slug" category-background-color="" category-text-color="" class="card_category-wrapper category-primary-color category-inverse-color"><div class="card_category-size output"></div></wf-category-tag></a><div class="card_date-wrapper"><section data-copilot="true" data-wf--meta-date--settings-text-color="dark" class="component_base"><div class="variants_text-color is-inline-block"><div class="meta-date_wrapper"><div class="meta-date_text">November 2023</div></div></div></section></div></div></div></div></div><div class="card_headline-wrapper"><div data-wf--card-headline-font-size--headline-headline-font-size="h6-xxs" class="component_base"><div class="variants_headline-font-size w-variant-2afb1133-8136-eb70-d1f9-5332ba439d00"><h3 class="component_headline">3 Most Important Tips for Making a Hotel Opening a Revenue Success</h3></div></div></div><div class="card_item-wrapper"><div data-wf--underlined-link--underlined-link-color="dark" class="component_text-color"><a href="/article/3-most-important-tips-for-making-a-hotel-opening-a-revenue-success" class="read-more_link-block w-inline-block"><div data-w-id="812ead38-6e7d-da57-39fa-5e1af79a2850" class="component_label">Read Article</div></a></div><div data-wf--card-likes-posts--variant="color" class="like-button"><div class="views-wrapper"><div class="views">VIEWS<br/></div><a href="#" data-post-views="views" class="views-count">+920</a></div><div class="likes-wrapper"><img src="https://cdn.prod.website-files.com/68729bbbf00ae2d98c02980d/68c0b4d9ec1660243dddf2b7_heart.svg" loading="lazy" width="Auto" height="Auto" alt="" class="like-icon_red"/><a href="#" data-post-likes="likes" class="likes-count">66</a></div></div></div></div></div></div></div></div></div><div role="listitem" class="blog-card_collection-item_3x w-dyn-item"><div class="w-layout-blockcontainer component_base w-container"><div data-wf-target="[[[&quot;4635135d-9c45-fbad-f904-7a28b91f4bf2&quot;,&quot;e0ddf636-bf22-0eee-3530-ae2dda257d3f&quot;],[&quot;20e70954-598a-b96d-8e61-1ed5bf9583ac_instance-2&quot;]]]" class="card_body-wrapper card-radius_sm is-regular"><div class="image-cover radius-bottom_none"><img data-wf-target="[[[&quot;4635135d-9c45-fbad-f904-7a28b91f4bf2&quot;,&quot;e0ddf636-bf22-0eee-3530-ae2dda257d41&quot;],[&quot;20e70954-598a-b96d-8e61-1ed5bf9583ac_instance-2&quot;]]]" alt="" loading="lazy" src="https://cdn.prod.website-files.com/687ecf7c8eeb652bce5a9df5/68dac8d9f614a4503eb6acc2_68d0f7a0c86bdfd410e111c0_serkan%2520bayraktar%2520from%2520pexels.jpeg" sizes="(max-width: 767px) 100vw, (max-width: 991px) 728px, 940px" srcset="https://cdn.prod.website-files.com/687ecf7c8eeb652bce5a9df5/68dac8d9f614a4503eb6acc2_68d0f7a0c86bdfd410e111c0_serkan%2520bayraktar%2520from%2520pexels-p-500.jpeg 500w, https://cdn.prod.website-files.com/687ecf7c8eeb652bce5a9df5/68dac8d9f614a4503eb6acc2_68d0f7a0c86bdfd410e111c0_serkan%2520bayraktar%2520from%2520pexels-p-800.jpeg 800w, https://cdn.prod.website-files.com/687ecf7c8eeb652bce5a9df5/68dac8d9f614a4503eb6acc2_68d0f7a0c86bdfd410e111c0_serkan%2520bayraktar%2520from%2520pexels-p-1080.jpeg 1080w, https://cdn.prod.website-files.com/687ecf7c8eeb652bce5a9df5/68dac8d9f614a4503eb6acc2_68d0f7a0c86bdfd410e111c0_serkan%2520bayraktar%2520from%2520pexels-p-1600.jpeg 1600w, https://cdn.prod.website-files.com/687ecf7c8eeb652bce5a9df5/68dac8d9f614a4503eb6acc2_68d0f7a0c86bdfd410e111c0_serkan%2520bayraktar%2520from%2520pexels.jpeg 1920w" class="image-animated radius-bottom_none"/></div><div id="w-node-e0ddf636-bf22-0eee-3530-ae2dda257d42-b91f4bf2" class="card_body-content"><div id="w-node-_0a1a6c07-5d48-29ff-41d0-9f372de38740-2de38740" data-wf--card-gap-size--global-options-padding="none" class="component_base flex-grow"><div class="variants_gap-size"><div class="card_meta-wrapper"><div data-wf--card-meta-item--global-options-meta-font-size="t5-xs" class="w-layout-blockcontainer component_base flex-horizontal w-container"><div class="variants_font-size flex-grow w-variant-c6096379-791a-4d37-a580-b8b0d7ff082f"><div class="card_meta"><a href="#" class="card_category-link-block w-inline-block"><wf-category-tag category-primary-color="" category-inverse-color="" category-slug="Category Slug" category-background-color="" category-text-color="" class="card_category-wrapper category-primary-color category-inverse-color"><div class="card_category-size output"></div></wf-category-tag></a><div class="card_date-wrapper"><section data-copilot="true" data-wf--meta-date--settings-text-color="dark" class="component_base"><div class="variants_text-color is-inline-block"><div class="meta-date_wrapper"><div class="meta-date_text">April 2024</div></div></div></section></div></div></div></div></div><div class="card_headline-wrapper"><div data-wf--card-headline-font-size--headline-headline-font-size="h6-xxs" class="component_base"><div class="variants_headline-font-size w-variant-2afb1133-8136-eb70-d1f9-5332ba439d00"><h3 class="component_headline">Enhance Forecasting in Uncertain Times</h3></div></div></div><div class="card_item-wrapper"><div data-wf--underlined-link--underlined-link-color="dark" class="component_text-color"><a href="/article/adapting-to-change-how-hoteliers-can-enhance-forecasting-in-uncertain-times" class="read-more_link-block w-inline-block"><div data-w-id="812ead38-6e7d-da57-39fa-5e1af79a2850" class="component_label">Read Article</div></a></div><div data-wf--card-likes-posts--variant="color" class="like-button"><div class="views-wrapper"><div class="views">VIEWS<br/></div><a href="#" data-post-views="views" class="views-count">+920</a></div><div class="likes-wrapper"><img src="https://cdn.prod.website-files.com/68729bbbf00ae2d98c02980d/68c0b4d9ec1660243dddf2b7_heart.svg" loading="lazy" width="Auto" height="Auto" alt="" class="like-icon_red"/><a href="#" data-post-likes="likes" class="likes-count">66</a></div></div></div></div></div></div></div></div></div></div></div></div></section><div class="sg_section-divider"><div class="label-lg">4 Cards - RELATED BLOG CARD Component (CMS Connected)</div></div><section class="section bg-color-light"><div class="component_wrapper padding-inline_sm margin-block_xxl"><div class="w-dyn-list"><div role="list" class="blog-card_collection-list_3x w-dyn-items"><div role="listitem" class="blog-card_collection-item_3x w-dyn-item"><div class="w-layout-blockcontainer component_base w-container"><div class="card_body-wrapper card-radius_sm is-reverse"><div id="w-node-_1868f3fd-bfca-0973-42b8-befb223518ca-223518c6" class="card_body-content is-reverse"><div id="w-node-_0a1a6c07-5d48-29ff-41d0-9f372de38740-2de38740" data-wf--card-gap-size--global-options-padding="none" class="component_base flex-grow"><div class="variants_gap-size"><div class="card_meta-wrapper"><div data-wf--card-meta-item--global-options-meta-font-size="t5-xs" class="w-layout-blockcontainer component_base flex-horizontal w-container"><div class="variants_font-size flex-grow w-variant-c6096379-791a-4d37-a580-b8b0d7ff082f"><div class="card_meta"><a href="#" class="card_category-link-block w-inline-block"><wf-category-tag category-primary-color="" category-inverse-color="" category-slug="" category-background-color="" category-text-color="" class="card_category-wrapper category-primary-color category-inverse-color"><div class="card_category-size output"></div></wf-category-tag></a><div class="card_date-wrapper"><section data-copilot="true" data-wf--meta-date--settings-text-color="dark" class="component_base"><div class="variants_text-color is-inline-block"><div class="meta-date_wrapper"><div class="meta-date_text">Month YYYY</div></div></div></section></div></div></div></div></div><div class="card_headline-wrapper"><div data-wf--card-headline-font-size--headline-headline-font-size="h6-xxs" class="component_base"><div class="variants_headline-font-size w-variant-2afb1133-8136-eb70-d1f9-5332ba439d00"><h3 class="component_headline">5 Questions You Should Ask About Your Hotel&#x27;s Pricing Strategy</h3></div></div></div><div class="card_item-wrapper"><div data-wf--underlined-link--underlined-link-color="dark" class="component_text-color"><a href="/article/5-questions-you-should-ask-about-your-hotels-pricing-strategy" class="read-more_link-block w-inline-block"><div data-w-id="812ead38-6e7d-da57-39fa-5e1af79a2850" class="component_label">Read Article</div></a></div><div data-wf--card-likes-posts--variant="color" class="like-button"><div class="views-wrapper"><div class="views">VIEWS<br/></div><a href="#" data-post-views="views" class="views-count">+920</a></div><div class="likes-wrapper"><img src="https://cdn.prod.website-files.com/68729bbbf00ae2d98c02980d/68c0b4d9ec1660243dddf2b7_heart.svg" loading="lazy" width="Auto" height="Auto" alt="" class="like-icon_red"/><a href="#" data-post-likes="likes" class="likes-count">66</a></div></div></div></div></div></div><div class="image-cover radius-top_none"><img alt="" src="https://cdn.prod.website-files.com/687ecf7c8eeb652bce5a9df5/68dac8dbb979b3833855743b_68ce3126cf3842139fdc69c3_6543c6f180cded72ce035a41_toa-heftiba-bcLE7reXFLM-unsplash%252520(2).png" loading="lazy" sizes="(max-width: 767px) 100vw, (max-width: 991px) 728px, 940px" srcset="https://cdn.prod.website-files.com/687ecf7c8eeb652bce5a9df5/68dac8dbb979b3833855743b_68ce3126cf3842139fdc69c3_6543c6f180cded72ce035a41_toa-heftiba-bcLE7reXFLM-unsplash%252520(2)-p-500.png 500w, https://cdn.prod.website-files.com/687ecf7c8eeb652bce5a9df5/68dac8dbb979b3833855743b_68ce3126cf3842139fdc69c3_6543c6f180cded72ce035a41_toa-heftiba-bcLE7reXFLM-unsplash%252520(2)-p-800.png 800w, https://cdn.prod.website-files.com/687ecf7c8eeb652bce5a9df5/68dac8dbb979b3833855743b_68ce3126cf3842139fdc69c3_6543c6f180cded72ce035a41_toa-heftiba-bcLE7reXFLM-unsplash%252520(2)-p-1080.png 1080w, https://cdn.prod.website-files.com/687ecf7c8eeb652bce5a9df5/68dac8dbb979b3833855743b_68ce3126cf3842139fdc69c3_6543c6f180cded72ce035a41_toa-heftiba-bcLE7reXFLM-unsplash%252520(2)-p-1600.png 1600w, https://cdn.prod.website-files.com/687ecf7c8eeb652bce5a9df5/68dac8dbb979b3833855743b_68ce3126cf3842139fdc69c3_6543c6f180cded72ce035a41_toa-heftiba-bcLE7reXFLM-unsplash%252520(2)-p-2000.png 2000w, https://cdn.prod.website-files.com/687ecf7c8eeb652bce5a9df5/68dac8dbb979b3833855743b_68ce3126cf3842139fdc69c3_6543c6f180cded72ce035a41_toa-heftiba-bcLE7reXFLM-unsplash%252520(2).png 2100w" class="image-animated radius-top_none"/></div></div></div></div><div role="listitem" class="blog-card_collection-item_3x w-dyn-item"><div class="w-layout-blockcontainer component_base w-container"><div class="card_body-wrapper card-radius_sm is-reverse"><div id="w-node-_1868f3fd-bfca-0973-42b8-befb223518ca-223518c6" class="card_body-content is-reverse"><div id="w-node-_0a1a6c07-5d48-29ff-41d0-9f372de38740-2de38740" data-wf--card-gap-size--global-options-padding="none" class="component_base flex-grow"><div class="variants_gap-size"><div class="card_meta-wrapper"><div data-wf--card-meta-item--global-options-meta-font-size="t5-xs" class="w-layout-blockcontainer component_base flex-horizontal w-container"><div class="variants_font-size flex-grow w-variant-c6096379-791a-4d37-a580-b8b0d7ff082f"><div class="card_meta"><a href="#" class="card_category-link-block w-inline-block"><wf-category-tag category-primary-color="" category-inverse-color="" category-slug="" category-background-color="" category-text-color="" class="card_category-wrapper category-primary-color category-inverse-color"><div class="card_category-size output"></div></wf-category-tag></a><div class="card_date-wrapper"><section data-copilot="true" data-wf--meta-date--settings-text-color="dark" class="component_base"><div class="variants_text-color is-inline-block"><div class="meta-date_wrapper"><div class="meta-date_text">Month YYYY</div></div></div></section></div></div></div></div></div><div class="card_headline-wrapper"><div data-wf--card-headline-font-size--headline-headline-font-size="h6-xxs" class="component_base"><div class="variants_headline-font-size w-variant-2afb1133-8136-eb70-d1f9-5332ba439d00"><h3 class="component_headline">3 Most Important Tips for Making a Hotel Opening a Revenue Success</h3></div></div></div><div class="card_item-wrapper"><div data-wf--underlined-link--underlined-link-color="dark" class="component_text-color"><a href="/article/3-most-important-tips-for-making-a-hotel-opening-a-revenue-success" class="read-more_link-block w-inline-block"><div data-w-id="812ead38-6e7d-da57-39fa-5e1af79a2850" class="component_label">Read Article</div></a></div><div data-wf--card-likes-posts--variant="color" class="like-button"><div class="views-wrapper"><div class="views">VIEWS<br/></div><a href="#" data-post-views="views" class="views-count">+920</a></div><div class="likes-wrapper"><img src="https://cdn.prod.website-files.com/68729bbbf00ae2d98c02980d/68c0b4d9ec1660243dddf2b7_heart.svg" loading="lazy" width="Auto" height="Auto" alt="" class="like-icon_red"/><a href="#" data-post-likes="likes" class="likes-count">66</a></div></div></div></div></div></div><div class="image-cover radius-top_none"><img alt="" src="https://cdn.prod.website-files.com/687ecf7c8eeb652bce5a9df5/68dac8da9bc09d13e3f59a0b_68ce312611d817ead231e2d7_6543c6913adaa764eb0e67d4_pexels-drew-williams-3483968.png" loading="lazy" sizes="(max-width: 767px) 100vw, (max-width: 991px) 728px, 940px" srcset="https://cdn.prod.website-files.com/687ecf7c8eeb652bce5a9df5/68dac8da9bc09d13e3f59a0b_68ce312611d817ead231e2d7_6543c6913adaa764eb0e67d4_pexels-drew-williams-3483968-p-500.png 500w, https://cdn.prod.website-files.com/687ecf7c8eeb652bce5a9df5/68dac8da9bc09d13e3f59a0b_68ce312611d817ead231e2d7_6543c6913adaa764eb0e67d4_pexels-drew-williams-3483968-p-800.png 800w, https://cdn.prod.website-files.com/687ecf7c8eeb652bce5a9df5/68dac8da9bc09d13e3f59a0b_68ce312611d817ead231e2d7_6543c6913adaa764eb0e67d4_pexels-drew-williams-3483968-p-1080.png 1080w, https://cdn.prod.website-files.com/687ecf7c8eeb652bce5a9df5/68dac8da9bc09d13e3f59a0b_68ce312611d817ead231e2d7_6543c6913adaa764eb0e67d4_pexels-drew-williams-3483968-p-1600.png 1600w, https://cdn.prod.website-files.com/687ecf7c8eeb652bce5a9df5/68dac8da9bc09d13e3f59a0b_68ce312611d817ead231e2d7_6543c6913adaa764eb0e67d4_pexels-drew-williams-3483968-p-2000.png 2000w, https://cdn.prod.website-files.com/687ecf7c8eeb652bce5a9df5/68dac8da9bc09d13e3f59a0b_68ce312611d817ead231e2d7_6543c6913adaa764eb0e67d4_pexels-drew-williams-3483968.png 2100w" class="image-animated radius-top_none"/></div></div></div></div><div role="listitem" class="blog-card_collection-item_3x w-dyn-item"><div class="w-layout-blockcontainer component_base w-container"><div class="card_body-wrapper card-radius_sm is-reverse"><div id="w-node-_1868f3fd-bfca-0973-42b8-befb223518ca-223518c6" class="card_body-content is-reverse"><div id="w-node-_0a1a6c07-5d48-29ff-41d0-9f372de38740-2de38740" data-wf--card-gap-size--global-options-padding="none" class="component_base flex-grow"><div class="variants_gap-size"><div class="card_meta-wrapper"><div data-wf--card-meta-item--global-options-meta-font-size="t5-xs" class="w-layout-blockcontainer component_base flex-horizontal w-container"><div class="variants_font-size flex-grow w-variant-c6096379-791a-4d37-a580-b8b0d7ff082f"><div class="card_meta"><a href="#" class="card_category-link-block w-inline-block"><wf-category-tag category-primary-color="" category-inverse-color="" category-slug="" category-background-color="" category-text-color="" class="card_category-wrapper category-primary-color category-inverse-color"><div class="card_category-size output"></div></wf-category-tag></a><div class="card_date-wrapper"><section data-copilot="true" data-wf--meta-date--settings-text-color="dark" class="component_base"><div class="variants_text-color is-inline-block"><div class="meta-date_wrapper"><div class="meta-date_text">Month YYYY</div></div></div></section></div></div></div></div></div><div class="card_headline-wrapper"><div data-wf--card-headline-font-size--headline-headline-font-size="h6-xxs" class="component_base"><div class="variants_headline-font-size w-variant-2afb1133-8136-eb70-d1f9-5332ba439d00"><h3 class="component_headline">Enhance Forecasting in Uncertain Times</h3></div></div></div><div class="card_item-wrapper"><div data-wf--underlined-link--underlined-link-color="dark" class="component_text-color"><a href="/article/adapting-to-change-how-hoteliers-can-enhance-forecasting-in-uncertain-times" class="read-more_link-block w-inline-block"><div data-w-id="812ead38-6e7d-da57-39fa-5e1af79a2850" class="component_label">Read Article</div></a></div><div data-wf--card-likes-posts--variant="color" class="like-button"><div class="views-wrapper"><div class="views">VIEWS<br/></div><a href="#" data-post-views="views" class="views-count">+920</a></div><div class="likes-wrapper"><img src="https://cdn.prod.website-files.com/68729bbbf00ae2d98c02980d/68c0b4d9ec1660243dddf2b7_heart.svg" loading="lazy" width="Auto" height="Auto" alt="" class="like-icon_red"/><a href="#" data-post-likes="likes" class="likes-count">66</a></div></div></div></div></div></div><div class="image-cover radius-top_none"><img alt="" src="https://cdn.prod.website-files.com/687ecf7c8eeb652bce5a9df5/68dac8d9f614a4503eb6acc2_68d0f7a0c86bdfd410e111c0_serkan%2520bayraktar%2520from%2520pexels.jpeg" loading="lazy" sizes="(max-width: 767px) 100vw, (max-width: 991px) 728px, 940px" srcset="https://cdn.prod.website-files.com/687ecf7c8eeb652bce5a9df5/68dac8d9f614a4503eb6acc2_68d0f7a0c86bdfd410e111c0_serkan%2520bayraktar%2520from%2520pexels-p-500.jpeg 500w, https://cdn.prod.website-files.com/687ecf7c8eeb652bce5a9df5/68dac8d9f614a4503eb6acc2_68d0f7a0c86bdfd410e111c0_serkan%2520bayraktar%2520from%2520pexels-p-800.jpeg 800w, https://cdn.prod.website-files.com/687ecf7c8eeb652bce5a9df5/68dac8d9f614a4503eb6acc2_68d0f7a0c86bdfd410e111c0_serkan%2520bayraktar%2520from%2520pexels-p-1080.jpeg 1080w, https://cdn.prod.website-files.com/687ecf7c8eeb652bce5a9df5/68dac8d9f614a4503eb6acc2_68d0f7a0c86bdfd410e111c0_serkan%2520bayraktar%2520from%2520pexels-p-1600.jpeg 1600w, https://cdn.prod.website-files.com/687ecf7c8eeb652bce5a9df5/68dac8d9f614a4503eb6acc2_68d0f7a0c86bdfd410e111c0_serkan%2520bayraktar%2520from%2520pexels.jpeg 1920w" class="image-animated radius-top_none"/></div></div></div></div></div></div></div></section><div class="sg_section-divider"><div class="label-lg">4 Cards - RELATED BLOG CARD Component (CMS Connected)</div></div><section class="section bg-color-light"><div class="component_wrapper padding-inline_sm margin-block_xxl"><div class="w-dyn-list"><div role="list" class="blog-card_collection-list_4x w-dyn-items"><div id="w-node-_028c5141-37a4-0bb1-9fbf-8cc47895b677-1b18d0ab" role="listitem" class="blog-card_collection-item_4x w-dyn-item"><div class="w-layout-blockcontainer component_base w-container"><div data-wf-target="[[[&quot;4635135d-9c45-fbad-f904-7a28b91f4bf2&quot;,&quot;e0ddf636-bf22-0eee-3530-ae2dda257d3f&quot;],[&quot;3ccb5e00-f3ed-b36b-84ab-6784ea3f3a14_instance-0&quot;]]]" class="card_body-wrapper card-radius_sm is-regular"><div class="image-cover radius-bottom_none"><img data-wf-target="[[[&quot;4635135d-9c45-fbad-f904-7a28b91f4bf2&quot;,&quot;e0ddf636-bf22-0eee-3530-ae2dda257d41&quot;],[&quot;3ccb5e00-f3ed-b36b-84ab-6784ea3f3a14_instance-0&quot;]]]" alt="" loading="lazy" src="https://cdn.prod.website-files.com/687ecf7c8eeb652bce5a9df5/68dac8dbb979b3833855743b_68ce3126cf3842139fdc69c3_6543c6f180cded72ce035a41_toa-heftiba-bcLE7reXFLM-unsplash%252520(2).png" sizes="(max-width: 767px) 100vw, (max-width: 991px) 728px, 940px" srcset="https://cdn.prod.website-files.com/687ecf7c8eeb652bce5a9df5/68dac8dbb979b3833855743b_68ce3126cf3842139fdc69c3_6543c6f180cded72ce035a41_toa-heftiba-bcLE7reXFLM-unsplash%252520(2)-p-500.png 500w, https://cdn.prod.website-files.com/687ecf7c8eeb652bce5a9df5/68dac8dbb979b3833855743b_68ce3126cf3842139fdc69c3_6543c6f180cded72ce035a41_toa-heftiba-bcLE7reXFLM-unsplash%252520(2)-p-800.png 800w, https://cdn.prod.website-files.com/687ecf7c8eeb652bce5a9df5/68dac8dbb979b3833855743b_68ce3126cf3842139fdc69c3_6543c6f180cded72ce035a41_toa-heftiba-bcLE7reXFLM-unsplash%252520(2)-p-1080.png 1080w, https://cdn.prod.website-files.com/687ecf7c8eeb652bce5a9df5/68dac8dbb979b3833855743b_68ce3126cf3842139fdc69c3_6543c6f180cded72ce035a41_toa-heftiba-bcLE7reXFLM-unsplash%252520(2)-p-1600.png 1600w, https://cdn.prod.website-files.com/687ecf7c8eeb652bce5a9df5/68dac8dbb979b3833855743b_68ce3126cf3842139fdc69c3_6543c6f180cded72ce035a41_toa-heftiba-bcLE7reXFLM-unsplash%252520(2)-p-2000.png 2000w, https://cdn.prod.website-files.com/687ecf7c8eeb652bce5a9df5/68dac8dbb979b3833855743b_68ce3126cf3842139fdc69c3_6543c6f180cded72ce035a41_toa-heftiba-bcLE7reXFLM-unsplash%252520(2).png 2100w" class="image-animated radius-bottom_none"/></div><div id="w-node-e0ddf636-bf22-0eee-3530-ae2dda257d42-b91f4bf2" class="card_body-content"><div id="w-node-_0a1a6c07-5d48-29ff-41d0-9f372de38740-2de38740" data-wf--card-gap-size--global-options-padding="none" class="component_base flex-grow"><div class="variants_gap-size"><div class="card_meta-wrapper"><div data-wf--card-meta-item--global-options-meta-font-size="t3-base" class="w-layout-blockcontainer component_base flex-horizontal w-container"><div class="variants_font-size flex-grow"><div class="card_meta"><a href="#" class="card_category-link-block w-inline-block"><wf-category-tag category-primary-color="" category-inverse-color="" category-slug="Category Slug" category-background-color="" category-text-color="" class="card_category-wrapper category-primary-color category-inverse-color"><div class="card_category-size output"></div></wf-category-tag></a><div class="card_date-wrapper"><section data-copilot="true" data-wf--meta-date--settings-text-color="dark" class="component_base"><div class="variants_text-color is-inline-block"><div class="meta-date_wrapper"><div class="meta-date_text">October 2023</div></div></div></section></div></div></div></div></div><div class="card_headline-wrapper"><div data-wf--card-headline-font-size--headline-headline-font-size="h5-xs" class="component_base"><div class="variants_headline-font-size w-variant-62414350-2ba0-c64c-8ae7-fdc9b1b9ffda"><h3 class="component_headline">5 Questions You Should Ask About Your Hotel&#x27;s Pricing Strategy</h3></div></div></div><div class="card_item-wrapper"><div data-wf--underlined-link--underlined-link-color="dark" class="component_text-color"><a href="/article/5-questions-you-should-ask-about-your-hotels-pricing-strategy" class="read-more_link-block w-inline-block"><div data-w-id="812ead38-6e7d-da57-39fa-5e1af79a2850" class="component_label">Read Article</div></a></div><div data-wf--card-likes-posts--variant="color" class="like-button"><div class="views-wrapper"><div class="views">VIEWS<br/></div><a href="#" data-post-views="views" class="views-count">+920</a></div><div class="likes-wrapper"><img src="https://cdn.prod.website-files.com/68729bbbf00ae2d98c02980d/68c0b4d9ec1660243dddf2b7_heart.svg" loading="lazy" width="Auto" height="Auto" alt="" class="like-icon_red"/><a href="#" data-post-likes="likes" class="likes-count">66</a></div></div></div></div></div></div></div></div></div><div id="w-node-_028c5141-37a4-0bb1-9fbf-8cc47895b677-1b18d0ab" role="listitem" class="blog-card_collection-item_4x w-dyn-item"><div class="w-layout-blockcontainer component_base w-container"><div data-wf-target="[[[&quot;4635135d-9c45-fbad-f904-7a28b91f4bf2&quot;,&quot;e0ddf636-bf22-0eee-3530-ae2dda257d3f&quot;],[&quot;3ccb5e00-f3ed-b36b-84ab-6784ea3f3a14_instance-1&quot;]]]" class="card_body-wrapper card-radius_sm is-regular"><div class="image-cover radius-bottom_none"><img data-wf-target="[[[&quot;4635135d-9c45-fbad-f904-7a28b91f4bf2&quot;,&quot;e0ddf636-bf22-0eee-3530-ae2dda257d41&quot;],[&quot;3ccb5e00-f3ed-b36b-84ab-6784ea3f3a14_instance-1&quot;]]]" alt="" loading="lazy" src="https://cdn.prod.website-files.com/687ecf7c8eeb652bce5a9df5/68dac8da9bc09d13e3f59a0b_68ce312611d817ead231e2d7_6543c6913adaa764eb0e67d4_pexels-drew-williams-3483968.png" sizes="(max-width: 767px) 100vw, (max-width: 991px) 728px, 940px" srcset="https://cdn.prod.website-files.com/687ecf7c8eeb652bce5a9df5/68dac8da9bc09d13e3f59a0b_68ce312611d817ead231e2d7_6543c6913adaa764eb0e67d4_pexels-drew-williams-3483968-p-500.png 500w, https://cdn.prod.website-files.com/687ecf7c8eeb652bce5a9df5/68dac8da9bc09d13e3f59a0b_68ce312611d817ead231e2d7_6543c6913adaa764eb0e67d4_pexels-drew-williams-3483968-p-800.png 800w, https://cdn.prod.website-files.com/687ecf7c8eeb652bce5a9df5/68dac8da9bc09d13e3f59a0b_68ce312611d817ead231e2d7_6543c6913adaa764eb0e67d4_pexels-drew-williams-3483968-p-1080.png 1080w, https://cdn.prod.website-files.com/687ecf7c8eeb652bce5a9df5/68dac8da9bc09d13e3f59a0b_68ce312611d817ead231e2d7_6543c6913adaa764eb0e67d4_pexels-drew-williams-3483968-p-1600.png 1600w, https://cdn.prod.website-files.com/687ecf7c8eeb652bce5a9df5/68dac8da9bc09d13e3f59a0b_68ce312611d817ead231e2d7_6543c6913adaa764eb0e67d4_pexels-drew-williams-3483968-p-2000.png 2000w, https://cdn.prod.website-files.com/687ecf7c8eeb652bce5a9df5/68dac8da9bc09d13e3f59a0b_68ce312611d817ead231e2d7_6543c6913adaa764eb0e67d4_pexels-drew-williams-3483968.png 2100w" class="image-animated radius-bottom_none"/></div><div id="w-node-e0ddf636-bf22-0eee-3530-ae2dda257d42-b91f4bf2" class="card_body-content"><div id="w-node-_0a1a6c07-5d48-29ff-41d0-9f372de38740-2de38740" data-wf--card-gap-size--global-options-padding="none" class="component_base flex-grow"><div class="variants_gap-size"><div class="card_meta-wrapper"><div data-wf--card-meta-item--global-options-meta-font-size="t3-base" class="w-layout-blockcontainer component_base flex-horizontal w-container"><div class="variants_font-size flex-grow"><div class="card_meta"><a href="#" class="card_category-link-block w-inline-block"><wf-category-tag category-primary-color="" category-inverse-color="" category-slug="Category Slug" category-background-color="" category-text-color="" class="card_category-wrapper category-primary-color category-inverse-color"><div class="card_category-size output"></div></wf-category-tag></a><div class="card_date-wrapper"><section data-copilot="true" data-wf--meta-date--settings-text-color="dark" class="component_base"><div class="variants_text-color is-inline-block"><div class="meta-date_wrapper"><div class="meta-date_text">November 2023</div></div></div></section></div></div></div></div></div><div class="card_headline-wrapper"><div data-wf--card-headline-font-size--headline-headline-font-size="h5-xs" class="component_base"><div class="variants_headline-font-size w-variant-62414350-2ba0-c64c-8ae7-fdc9b1b9ffda"><h3 class="component_headline">3 Most Important Tips for Making a Hotel Opening a Revenue Success</h3></div></div></div><div class="card_item-wrapper"><div data-wf--underlined-link--underlined-link-color="dark" class="component_text-color"><a href="/article/3-most-important-tips-for-making-a-hotel-opening-a-revenue-success" class="read-more_link-block w-inline-block"><div data-w-id="812ead38-6e7d-da57-39fa-5e1af79a2850" class="component_label">Read Article</div></a></div><div data-wf--card-likes-posts--variant="color" class="like-button"><div class="views-wrapper"><div class="views">VIEWS<br/></div><a href="#" data-post-views="views" class="views-count">+920</a></div><div class="likes-wrapper"><img src="https://cdn.prod.website-files.com/68729bbbf00ae2d98c02980d/68c0b4d9ec1660243dddf2b7_heart.svg" loading="lazy" width="Auto" height="Auto" alt="" class="like-icon_red"/><a href="#" data-post-likes="likes" class="likes-count">66</a></div></div></div></div></div></div></div></div></div><div id="w-node-_028c5141-37a4-0bb1-9fbf-8cc47895b677-1b18d0ab" role="listitem" class="blog-card_collection-item_4x w-dyn-item"><div class="w-layout-blockcontainer component_base w-container"><div data-wf-target="[[[&quot;4635135d-9c45-fbad-f904-7a28b91f4bf2&quot;,&quot;e0ddf636-bf22-0eee-3530-ae2dda257d3f&quot;],[&quot;3ccb5e00-f3ed-b36b-84ab-6784ea3f3a14_instance-2&quot;]]]" class="card_body-wrapper card-radius_sm is-regular"><div class="image-cover radius-bottom_none"><img data-wf-target="[[[&quot;4635135d-9c45-fbad-f904-7a28b91f4bf2&quot;,&quot;e0ddf636-bf22-0eee-3530-ae2dda257d41&quot;],[&quot;3ccb5e00-f3ed-b36b-84ab-6784ea3f3a14_instance-2&quot;]]]" alt="" loading="lazy" src="https://cdn.prod.website-files.com/687ecf7c8eeb652bce5a9df5/68dac8d9f614a4503eb6acc2_68d0f7a0c86bdfd410e111c0_serkan%2520bayraktar%2520from%2520pexels.jpeg" sizes="(max-width: 767px) 100vw, (max-width: 991px) 728px, 940px" srcset="https://cdn.prod.website-files.com/687ecf7c8eeb652bce5a9df5/68dac8d9f614a4503eb6acc2_68d0f7a0c86bdfd410e111c0_serkan%2520bayraktar%2520from%2520pexels-p-500.jpeg 500w, https://cdn.prod.website-files.com/687ecf7c8eeb652bce5a9df5/68dac8d9f614a4503eb6acc2_68d0f7a0c86bdfd410e111c0_serkan%2520bayraktar%2520from%2520pexels-p-800.jpeg 800w, https://cdn.prod.website-files.com/687ecf7c8eeb652bce5a9df5/68dac8d9f614a4503eb6acc2_68d0f7a0c86bdfd410e111c0_serkan%2520bayraktar%2520from%2520pexels-p-1080.jpeg 1080w, https://cdn.prod.website-files.com/687ecf7c8eeb652bce5a9df5/68dac8d9f614a4503eb6acc2_68d0f7a0c86bdfd410e111c0_serkan%2520bayraktar%2520from%2520pexels-p-1600.jpeg 1600w, https://cdn.prod.website-files.com/687ecf7c8eeb652bce5a9df5/68dac8d9f614a4503eb6acc2_68d0f7a0c86bdfd410e111c0_serkan%2520bayraktar%2520from%2520pexels.jpeg 1920w" class="image-animated radius-bottom_none"/></div><div id="w-node-e0ddf636-bf22-0eee-3530-ae2dda257d42-b91f4bf2" class="card_body-content"><div id="w-node-_0a1a6c07-5d48-29ff-41d0-9f372de38740-2de38740" data-wf--card-gap-size--global-options-padding="none" class="component_base flex-grow"><div class="variants_gap-size"><div class="card_meta-wrapper"><div data-wf--card-meta-item--global-options-meta-font-size="t3-base" class="w-layout-blockcontainer component_base flex-horizontal w-container"><div class="variants_font-size flex-grow"><div class="card_meta"><a href="#" class="card_category-link-block w-inline-block"><wf-category-tag category-primary-color="" category-inverse-color="" category-slug="Category Slug" category-background-color="" category-text-color="" class="card_category-wrapper category-primary-color category-inverse-color"><div class="card_category-size output"></div></wf-category-tag></a><div class="card_date-wrapper"><section data-copilot="true" data-wf--meta-date--settings-text-color="dark" class="component_base"><div class="variants_text-color is-inline-block"><div class="meta-date_wrapper"><div class="meta-date_text">April 2024</div></div></div></section></div></div></div></div></div><div class="card_headline-wrapper"><div data-wf--card-headline-font-size--headline-headline-font-size="h5-xs" class="component_base"><div class="variants_headline-font-size w-variant-62414350-2ba0-c64c-8ae7-fdc9b1b9ffda"><h3 class="component_headline">Enhance Forecasting in Uncertain Times</h3></div></div></div><div class="card_item-wrapper"><div data-wf--underlined-link--underlined-link-color="dark" class="component_text-color"><a href="/article/adapting-to-change-how-hoteliers-can-enhance-forecasting-in-uncertain-times" class="read-more_link-block w-inline-block"><div data-w-id="812ead38-6e7d-da57-39fa-5e1af79a2850" class="component_label">Read Article</div></a></div><div data-wf--card-likes-posts--variant="color" class="like-button"><div class="views-wrapper"><div class="views">VIEWS<br/></div><a href="#" data-post-views="views" class="views-count">+920</a></div><div class="likes-wrapper"><img src="https://cdn.prod.website-files.com/68729bbbf00ae2d98c02980d/68c0b4d9ec1660243dddf2b7_heart.svg" loading="lazy" width="Auto" height="Auto" alt="" class="like-icon_red"/><a href="#" data-post-likes="likes" class="likes-count">66</a></div></div></div></div></div></div></div></div></div><div id="w-node-_028c5141-37a4-0bb1-9fbf-8cc47895b677-1b18d0ab" role="listitem" class="blog-card_collection-item_4x w-dyn-item"><div class="w-layout-blockcontainer component_base w-container"><div data-wf-target="[[[&quot;4635135d-9c45-fbad-f904-7a28b91f4bf2&quot;,&quot;e0ddf636-bf22-0eee-3530-ae2dda257d3f&quot;],[&quot;3ccb5e00-f3ed-b36b-84ab-6784ea3f3a14_instance-3&quot;]]]" class="card_body-wrapper card-radius_sm is-regular"><div class="image-cover radius-bottom_none"><img data-wf-target="[[[&quot;4635135d-9c45-fbad-f904-7a28b91f4bf2&quot;,&quot;e0ddf636-bf22-0eee-3530-ae2dda257d41&quot;],[&quot;3ccb5e00-f3ed-b36b-84ab-6784ea3f3a14_instance-3&quot;]]]" alt="" loading="lazy" src="https://cdn.prod.website-files.com/687ecf7c8eeb652bce5a9df5/68dac8d99f5888be46a757fe_68d0f71dcf3e1c5acdd6cd1a_appellation.jpeg" sizes="(max-width: 767px) 100vw, (max-width: 991px) 728px, 940px" srcset="https://cdn.prod.website-files.com/687ecf7c8eeb652bce5a9df5/68dac8d99f5888be46a757fe_68d0f71dcf3e1c5acdd6cd1a_appellation-p-500.jpeg 500w, https://cdn.prod.website-files.com/687ecf7c8eeb652bce5a9df5/68dac8d99f5888be46a757fe_68d0f71dcf3e1c5acdd6cd1a_appellation-p-800.jpeg 800w, https://cdn.prod.website-files.com/687ecf7c8eeb652bce5a9df5/68dac8d99f5888be46a757fe_68d0f71dcf3e1c5acdd6cd1a_appellation-p-1080.jpeg 1080w, https://cdn.prod.website-files.com/687ecf7c8eeb652bce5a9df5/68dac8d99f5888be46a757fe_68d0f71dcf3e1c5acdd6cd1a_appellation-p-1600.jpeg 1600w, https://cdn.prod.website-files.com/687ecf7c8eeb652bce5a9df5/68dac8d99f5888be46a757fe_68d0f71dcf3e1c5acdd6cd1a_appellation.jpeg 1920w" class="image-animated radius-bottom_none"/></div><div id="w-node-e0ddf636-bf22-0eee-3530-ae2dda257d42-b91f4bf2" class="card_body-content"><div id="w-node-_0a1a6c07-5d48-29ff-41d0-9f372de38740-2de38740" data-wf--card-gap-size--global-options-padding="none" class="component_base flex-grow"><div class="variants_gap-size"><div class="card_meta-wrapper"><div data-wf--card-meta-item--global-options-meta-font-size="t3-base" class="w-layout-blockcontainer component_base flex-horizontal w-container"><div class="variants_font-size flex-grow"><div class="card_meta"><a href="#" class="card_category-link-block w-inline-block"><wf-category-tag category-primary-color="" category-inverse-color="" category-slug="Category Slug" category-background-color="" category-text-color="" class="card_category-wrapper category-primary-color category-inverse-color"><div class="card_category-size output"></div></wf-category-tag></a><div class="card_date-wrapper"><section data-copilot="true" data-wf--meta-date--settings-text-color="dark" class="component_base"><div class="variants_text-color is-inline-block"><div class="meta-date_wrapper"><div class="meta-date_text">October 2023</div></div></div></section></div></div></div></div></div><div class="card_headline-wrapper"><div data-wf--card-headline-font-size--headline-headline-font-size="h5-xs" class="component_base"><div class="variants_headline-font-size w-variant-62414350-2ba0-c64c-8ae7-fdc9b1b9ffda"><h3 class="component_headline">Experts Reinventing the Boutique Hotel Experience</h3></div></div></div><div class="card_item-wrapper"><div data-wf--underlined-link--underlined-link-color="dark" class="component_text-color"><a href="/article/appellation-hospitality-fusion-of-culinary-and-hospitality-experts-reinventing-boutique-hotel-experience" class="read-more_link-block w-inline-block"><div data-w-id="812ead38-6e7d-da57-39fa-5e1af79a2850" class="component_label">Read Article</div></a></div><div data-wf--card-likes-posts--variant="color" class="like-button"><div class="views-wrapper"><div class="views">VIEWS<br/></div><a href="#" data-post-views="views" class="views-count">+920</a></div><div class="likes-wrapper"><img src="https://cdn.prod.website-files.com/68729bbbf00ae2d98c02980d/68c0b4d9ec1660243dddf2b7_heart.svg" loading="lazy" width="Auto" height="Auto" alt="" class="like-icon_red"/><a href="#" data-post-likes="likes" class="likes-count">66</a></div></div></div></div></div></div></div></div></div></div></div></div></section><div class="sg_section-divider"><div class="label-lg">4 Card - RELATED BLOG CARD Reverse Component (CMS Connected)</div></div><section class="section bg-color-light"><div class="component_wrapper padding-inline_sm margin-block_md"><div class="w-dyn-list"><div role="list" class="blog-card_collection-list_4x w-dyn-items"><div role="listitem" class="blog-card_collection-item_4x w-dyn-item"><div class="w-layout-blockcontainer component_base w-container"><div class="card_body-wrapper card-radius_sm is-reverse"><div id="w-node-_1868f3fd-bfca-0973-42b8-befb223518ca-223518c6" class="card_body-content is-reverse"><div id="w-node-_0a1a6c07-5d48-29ff-41d0-9f372de38740-2de38740" data-wf--card-gap-size--global-options-padding="none" class="component_base flex-grow"><div class="variants_gap-size"><div class="card_meta-wrapper"><div data-wf--card-meta-item--global-options-meta-font-size="t5-xs" class="w-layout-blockcontainer component_base flex-horizontal w-container"><div class="variants_font-size flex-grow w-variant-c6096379-791a-4d37-a580-b8b0d7ff082f"><div class="card_meta"><a href="#" class="card_category-link-block w-inline-block"><wf-category-tag category-primary-color="" category-inverse-color="" category-slug="" category-background-color="" category-text-color="" class="card_category-wrapper category-primary-color category-inverse-color"><div class="card_category-size output"></div></wf-category-tag></a><div class="card_date-wrapper"><section data-copilot="true" data-wf--meta-date--settings-text-color="dark" class="component_base"><div class="variants_text-color is-inline-block"><div class="meta-date_wrapper"><div class="meta-date_text">Month YYYY</div></div></div></section></div></div></div></div></div><div class="card_headline-wrapper"><div data-wf--card-headline-font-size--headline-headline-font-size="h6-xxs" class="component_base"><div class="variants_headline-font-size w-variant-2afb1133-8136-eb70-d1f9-5332ba439d00"><h3 class="component_headline">5 Questions You Should Ask About Your Hotel&#x27;s Pricing Strategy</h3></div></div></div><div class="card_item-wrapper"><div data-wf--underlined-link--underlined-link-color="dark" class="component_text-color"><a href="/article/5-questions-you-should-ask-about-your-hotels-pricing-strategy" class="read-more_link-block w-inline-block"><div data-w-id="812ead38-6e7d-da57-39fa-5e1af79a2850" class="component_label">Read Article</div></a></div><div data-wf--card-likes-posts--variant="color" class="like-button"><div class="views-wrapper"><div class="views">VIEWS<br/></div><a href="#" data-post-views="views" class="views-count">+920</a></div><div class="likes-wrapper"><img src="https://cdn.prod.website-files.com/68729bbbf00ae2d98c02980d/68c0b4d9ec1660243dddf2b7_heart.svg" loading="lazy" width="Auto" height="Auto" alt="" class="like-icon_red"/><a href="#" data-post-likes="likes" class="likes-count">66</a></div></div></div></div></div></div><div class="image-cover radius-top_none"><img alt="" src="https://cdn.prod.website-files.com/687ecf7c8eeb652bce5a9df5/68dac8dbb979b3833855743b_68ce3126cf3842139fdc69c3_6543c6f180cded72ce035a41_toa-heftiba-bcLE7reXFLM-unsplash%252520(2).png" loading="lazy" sizes="(max-width: 767px) 100vw, (max-width: 991px) 728px, 940px" srcset="https://cdn.prod.website-files.com/687ecf7c8eeb652bce5a9df5/68dac8dbb979b3833855743b_68ce3126cf3842139fdc69c3_6543c6f180cded72ce035a41_toa-heftiba-bcLE7reXFLM-unsplash%252520(2)-p-500.png 500w, https://cdn.prod.website-files.com/687ecf7c8eeb652bce5a9df5/68dac8dbb979b3833855743b_68ce3126cf3842139fdc69c3_6543c6f180cded72ce035a41_toa-heftiba-bcLE7reXFLM-unsplash%252520(2)-p-800.png 800w, https://cdn.prod.website-files.com/687ecf7c8eeb652bce5a9df5/68dac8dbb979b3833855743b_68ce3126cf3842139fdc69c3_6543c6f180cded72ce035a41_toa-heftiba-bcLE7reXFLM-unsplash%252520(2)-p-1080.png 1080w, https://cdn.prod.website-files.com/687ecf7c8eeb652bce5a9df5/68dac8dbb979b3833855743b_68ce3126cf3842139fdc69c3_6543c6f180cded72ce035a41_toa-heftiba-bcLE7reXFLM-unsplash%252520(2)-p-1600.png 1600w, https://cdn.prod.website-files.com/687ecf7c8eeb652bce5a9df5/68dac8dbb979b3833855743b_68ce3126cf3842139fdc69c3_6543c6f180cded72ce035a41_toa-heftiba-bcLE7reXFLM-unsplash%252520(2)-p-2000.png 2000w, https://cdn.prod.website-files.com/687ecf7c8eeb652bce5a9df5/68dac8dbb979b3833855743b_68ce3126cf3842139fdc69c3_6543c6f180cded72ce035a41_toa-heftiba-bcLE7reXFLM-unsplash%252520(2).png 2100w" class="image-animated radius-top_none"/></div></div></div></div><div role="listitem" class="blog-card_collection-item_4x w-dyn-item"><div class="w-layout-blockcontainer component_base w-container"><div class="card_body-wrapper card-radius_sm is-reverse"><div id="w-node-_1868f3fd-bfca-0973-42b8-befb223518ca-223518c6" class="card_body-content is-reverse"><div id="w-node-_0a1a6c07-5d48-29ff-41d0-9f372de38740-2de38740" data-wf--card-gap-size--global-options-padding="none" class="component_base flex-grow"><div class="variants_gap-size"><div class="card_meta-wrapper"><div data-wf--card-meta-item--global-options-meta-font-size="t5-xs" class="w-layout-blockcontainer component_base flex-horizontal w-container"><div class="variants_font-size flex-grow w-variant-c6096379-791a-4d37-a580-b8b0d7ff082f"><div class="card_meta"><a href="#" class="card_category-link-block w-inline-block"><wf-category-tag category-primary-color="" category-inverse-color="" category-slug="" category-background-color="" category-text-color="" class="card_category-wrapper category-primary-color category-inverse-color"><div class="card_category-size output"></div></wf-category-tag></a><div class="card_date-wrapper"><section data-copilot="true" data-wf--meta-date--settings-text-color="dark" class="component_base"><div class="variants_text-color is-inline-block"><div class="meta-date_wrapper"><div class="meta-date_text">Month YYYY</div></div></div></section></div></div></div></div></div><div class="card_headline-wrapper"><div data-wf--card-headline-font-size--headline-headline-font-size="h6-xxs" class="component_base"><div class="variants_headline-font-size w-variant-2afb1133-8136-eb70-d1f9-5332ba439d00"><h3 class="component_headline">3 Most Important Tips for Making a Hotel Opening a Revenue Success</h3></div></div></div><div class="card_item-wrapper"><div data-wf--underlined-link--underlined-link-color="dark" class="component_text-color"><a href="/article/3-most-important-tips-for-making-a-hotel-opening-a-revenue-success" class="read-more_link-block w-inline-block"><div data-w-id="812ead38-6e7d-da57-39fa-5e1af79a2850" class="component_label">Read Article</div></a></div><div data-wf--card-likes-posts--variant="color" class="like-button"><div class="views-wrapper"><div class="views">VIEWS<br/></div><a href="#" data-post-views="views" class="views-count">+920</a></div><div class="likes-wrapper"><img src="https://cdn.prod.website-files.com/68729bbbf00ae2d98c02980d/68c0b4d9ec1660243dddf2b7_heart.svg" loading="lazy" width="Auto" height="Auto" alt="" class="like-icon_red"/><a href="#" data-post-likes="likes" class="likes-count">66</a></div></div></div></div></div></div><div class="image-cover radius-top_none"><img alt="" src="https://cdn.prod.website-files.com/687ecf7c8eeb652bce5a9df5/68dac8da9bc09d13e3f59a0b_68ce312611d817ead231e2d7_6543c6913adaa764eb0e67d4_pexels-drew-williams-3483968.png" loading="lazy" sizes="(max-width: 767px) 100vw, (max-width: 991px) 728px, 940px" srcset="https://cdn.prod.website-files.com/687ecf7c8eeb652bce5a9df5/68dac8da9bc09d13e3f59a0b_68ce312611d817ead231e2d7_6543c6913adaa764eb0e67d4_pexels-drew-williams-3483968-p-500.png 500w, https://cdn.prod.website-files.com/687ecf7c8eeb652bce5a9df5/68dac8da9bc09d13e3f59a0b_68ce312611d817ead231e2d7_6543c6913adaa764eb0e67d4_pexels-drew-williams-3483968-p-800.png 800w, https://cdn.prod.website-files.com/687ecf7c8eeb652bce5a9df5/68dac8da9bc09d13e3f59a0b_68ce312611d817ead231e2d7_6543c6913adaa764eb0e67d4_pexels-drew-williams-3483968-p-1080.png 1080w, https://cdn.prod.website-files.com/687ecf7c8eeb652bce5a9df5/68dac8da9bc09d13e3f59a0b_68ce312611d817ead231e2d7_6543c6913adaa764eb0e67d4_pexels-drew-williams-3483968-p-1600.png 1600w, https://cdn.prod.website-files.com/687ecf7c8eeb652bce5a9df5/68dac8da9bc09d13e3f59a0b_68ce312611d817ead231e2d7_6543c6913adaa764eb0e67d4_pexels-drew-williams-3483968-p-2000.png 2000w, https://cdn.prod.website-files.com/687ecf7c8eeb652bce5a9df5/68dac8da9bc09d13e3f59a0b_68ce312611d817ead231e2d7_6543c6913adaa764eb0e67d4_pexels-drew-williams-3483968.png 2100w" class="image-animated radius-top_none"/></div></div></div></div><div role="listitem" class="blog-card_collection-item_4x w-dyn-item"><div class="w-layout-blockcontainer component_base w-container"><div class="card_body-wrapper card-radius_sm is-reverse"><div id="w-node-_1868f3fd-bfca-0973-42b8-befb223518ca-223518c6" class="card_body-content is-reverse"><div id="w-node-_0a1a6c07-5d48-29ff-41d0-9f372de38740-2de38740" data-wf--card-gap-size--global-options-padding="none" class="component_base flex-grow"><div class="variants_gap-size"><div class="card_meta-wrapper"><div data-wf--card-meta-item--global-options-meta-font-size="t5-xs" class="w-layout-blockcontainer component_base flex-horizontal w-container"><div class="variants_font-size flex-grow w-variant-c6096379-791a-4d37-a580-b8b0d7ff082f"><div class="card_meta"><a href="#" class="card_category-link-block w-inline-block"><wf-category-tag category-primary-color="" category-inverse-color="" category-slug="" category-background-color="" category-text-color="" class="card_category-wrapper category-primary-color category-inverse-color"><div class="card_category-size output"></div></wf-category-tag></a><div class="card_date-wrapper"><section data-copilot="true" data-wf--meta-date--settings-text-color="dark" class="component_base"><div class="variants_text-color is-inline-block"><div class="meta-date_wrapper"><div class="meta-date_text">Month YYYY</div></div></div></section></div></div></div></div></div><div class="card_headline-wrapper"><div data-wf--card-headline-font-size--headline-headline-font-size="h6-xxs" class="component_base"><div class="variants_headline-font-size w-variant-2afb1133-8136-eb70-d1f9-5332ba439d00"><h3 class="component_headline">Enhance Forecasting in Uncertain Times</h3></div></div></div><div class="card_item-wrapper"><div data-wf--underlined-link--underlined-link-color="dark" class="component_text-color"><a href="/article/adapting-to-change-how-hoteliers-can-enhance-forecasting-in-uncertain-times" class="read-more_link-block w-inline-block"><div data-w-id="812ead38-6e7d-da57-39fa-5e1af79a2850" class="component_label">Read Article</div></a></div><div data-wf--card-likes-posts--variant="color" class="like-button"><div class="views-wrapper"><div class="views">VIEWS<br/></div><a href="#" data-post-views="views" class="views-count">+920</a></div><div class="likes-wrapper"><img src="https://cdn.prod.website-files.com/68729bbbf00ae2d98c02980d/68c0b4d9ec1660243dddf2b7_heart.svg" loading="lazy" width="Auto" height="Auto" alt="" class="like-icon_red"/><a href="#" data-post-likes="likes" class="likes-count">66</a></div></div></div></div></div></div><div class="image-cover radius-top_none"><img alt="" src="https://cdn.prod.website-files.com/687ecf7c8eeb652bce5a9df5/68dac8d9f614a4503eb6acc2_68d0f7a0c86bdfd410e111c0_serkan%2520bayraktar%2520from%2520pexels.jpeg" loading="lazy" sizes="(max-width: 767px) 100vw, (max-width: 991px) 728px, 940px" srcset="https://cdn.prod.website-files.com/687ecf7c8eeb652bce5a9df5/68dac8d9f614a4503eb6acc2_68d0f7a0c86bdfd410e111c0_serkan%2520bayraktar%2520from%2520pexels-p-500.jpeg 500w, https://cdn.prod.website-files.com/687ecf7c8eeb652bce5a9df5/68dac8d9f614a4503eb6acc2_68d0f7a0c86bdfd410e111c0_serkan%2520bayraktar%2520from%2520pexels-p-800.jpeg 800w, https://cdn.prod.website-files.com/687ecf7c8eeb652bce5a9df5/68dac8d9f614a4503eb6acc2_68d0f7a0c86bdfd410e111c0_serkan%2520bayraktar%2520from%2520pexels-p-1080.jpeg 1080w, https://cdn.prod.website-files.com/687ecf7c8eeb652bce5a9df5/68dac8d9f614a4503eb6acc2_68d0f7a0c86bdfd410e111c0_serkan%2520bayraktar%2520from%2520pexels-p-1600.jpeg 1600w, https://cdn.prod.website-files.com/687ecf7c8eeb652bce5a9df5/68dac8d9f614a4503eb6acc2_68d0f7a0c86bdfd410e111c0_serkan%2520bayraktar%2520from%2520pexels.jpeg 1920w" class="image-animated radius-top_none"/></div></div></div></div><div role="listitem" class="blog-card_collection-item_4x w-dyn-item"><div class="w-layout-blockcontainer component_base w-container"><div class="card_body-wrapper card-radius_sm is-reverse"><div id="w-node-_1868f3fd-bfca-0973-42b8-befb223518ca-223518c6" class="card_body-content is-reverse"><div id="w-node-_0a1a6c07-5d48-29ff-41d0-9f372de38740-2de38740" data-wf--card-gap-size--global-options-padding="none" class="component_base flex-grow"><div class="variants_gap-size"><div class="card_meta-wrapper"><div data-wf--card-meta-item--global-options-meta-font-size="t5-xs" class="w-layout-blockcontainer component_base flex-horizontal w-container"><div class="variants_font-size flex-grow w-variant-c6096379-791a-4d37-a580-b8b0d7ff082f"><div class="card_meta"><a href="#" class="card_category-link-block w-inline-block"><wf-category-tag category-primary-color="" category-inverse-color="" category-slug="" category-background-color="" category-text-color="" class="card_category-wrapper category-primary-color category-inverse-color"><div class="card_category-size output"></div></wf-category-tag></a><div class="card_date-wrapper"><section data-copilot="true" data-wf--meta-date--settings-text-color="dark" class="component_base"><div class="variants_text-color is-inline-block"><div class="meta-date_wrapper"><div class="meta-date_text">Month YYYY</div></div></div></section></div></div></div></div></div><div class="card_headline-wrapper"><div data-wf--card-headline-font-size--headline-headline-font-size="h6-xxs" class="component_base"><div class="variants_headline-font-size w-variant-2afb1133-8136-eb70-d1f9-5332ba439d00"><h3 class="component_headline">Experts Reinventing the Boutique Hotel Experience</h3></div></div></div><div class="card_item-wrapper"><div data-wf--underlined-link--underlined-link-color="dark" class="component_text-color"><a href="/article/appellation-hospitality-fusion-of-culinary-and-hospitality-experts-reinventing-boutique-hotel-experience" class="read-more_link-block w-inline-block"><div data-w-id="812ead38-6e7d-da57-39fa-5e1af79a2850" class="component_label">Read Article</div></a></div><div data-wf--card-likes-posts--variant="color" class="like-button"><div class="views-wrapper"><div class="views">VIEWS<br/></div><a href="#" data-post-views="views" class="views-count">+920</a></div><div class="likes-wrapper"><img src="https://cdn.prod.website-files.com/68729bbbf00ae2d98c02980d/68c0b4d9ec1660243dddf2b7_heart.svg" loading="lazy" width="Auto" height="Auto" alt="" class="like-icon_red"/><a href="#" data-post-likes="likes" class="likes-count">66</a></div></div></div></div></div></div><div class="image-cover radius-top_none"><img alt="" src="https://cdn.prod.website-files.com/687ecf7c8eeb652bce5a9df5/68dac8d99f5888be46a757fe_68d0f71dcf3e1c5acdd6cd1a_appellation.jpeg" loading="lazy" sizes="(max-width: 767px) 100vw, (max-width: 991px) 728px, 940px" srcset="https://cdn.prod.website-files.com/687ecf7c8eeb652bce5a9df5/68dac8d99f5888be46a757fe_68d0f71dcf3e1c5acdd6cd1a_appellation-p-500.jpeg 500w, https://cdn.prod.website-files.com/687ecf7c8eeb652bce5a9df5/68dac8d99f5888be46a757fe_68d0f71dcf3e1c5acdd6cd1a_appellation-p-800.jpeg 800w, https://cdn.prod.website-files.com/687ecf7c8eeb652bce5a9df5/68dac8d99f5888be46a757fe_68d0f71dcf3e1c5acdd6cd1a_appellation-p-1080.jpeg 1080w, https://cdn.prod.website-files.com/687ecf7c8eeb652bce5a9df5/68dac8d99f5888be46a757fe_68d0f71dcf3e1c5acdd6cd1a_appellation-p-1600.jpeg 1600w, https://cdn.prod.website-files.com/687ecf7c8eeb652bce5a9df5/68dac8d99f5888be46a757fe_68d0f71dcf3e1c5acdd6cd1a_appellation.jpeg 1920w" class="image-animated radius-top_none"/></div></div></div></div></div></div></div></section><div class="sg_section-divider"><div class="label-lg">4 Cards - RELATED BLOG CARD REVERSE Component (CMS Connected)</div></div><section class="section bg-color-light"><div class="component_wrapper padding-inline_sm margin-block_xxl"><div class="collection-list-wrapper-3 w-dyn-list"><div role="list" class="blog-card_collection-list_4x w-dyn-items"><div role="listitem" class="blog-card_collection-item_4x w-dyn-item"><div class="w-layout-blockcontainer component_base w-container"><div class="card_body-wrapper card-radius_sm is-reverse"><div id="w-node-_1868f3fd-bfca-0973-42b8-befb223518ca-223518c6" class="card_body-content is-reverse"><div id="w-node-_0a1a6c07-5d48-29ff-41d0-9f372de38740-2de38740" data-wf--card-gap-size--global-options-padding="none" class="component_base flex-grow"><div class="variants_gap-size"><div class="card_meta-wrapper"><div data-wf--card-meta-item--global-options-meta-font-size="t5-xs" class="w-layout-blockcontainer component_base flex-horizontal w-container"><div class="variants_font-size flex-grow w-variant-c6096379-791a-4d37-a580-b8b0d7ff082f"><div class="card_meta"><a href="#" class="card_category-link-block w-inline-block"><wf-category-tag category-primary-color="" category-inverse-color="" category-slug="" category-background-color="" category-text-color="" class="card_category-wrapper category-primary-color category-inverse-color"><div class="card_category-size output"></div></wf-category-tag></a><div class="card_date-wrapper"><section data-copilot="true" data-wf--meta-date--settings-text-color="dark" class="component_base"><div class="variants_text-color is-inline-block"><div class="meta-date_wrapper"><div class="meta-date_text">Month YYYY</div></div></div></section></div></div></div></div></div><div class="card_headline-wrapper"><div data-wf--card-headline-font-size--headline-headline-font-size="h6-xxs" class="component_base"><div class="variants_headline-font-size w-variant-2afb1133-8136-eb70-d1f9-5332ba439d00"><h3 class="component_headline">5 Questions You Should Ask About Your Hotel&#x27;s Pricing Strategy</h3></div></div></div><div class="card_item-wrapper"><div data-wf--underlined-link--underlined-link-color="dark" class="component_text-color"><a href="/article/5-questions-you-should-ask-about-your-hotels-pricing-strategy" class="read-more_link-block w-inline-block"><div data-w-id="812ead38-6e7d-da57-39fa-5e1af79a2850" class="component_label">Read Article</div></a></div><div data-wf--card-likes-posts--variant="color" class="like-button"><div class="views-wrapper"><div class="views">VIEWS<br/></div><a href="#" data-post-views="views" class="views-count">+920</a></div><div class="likes-wrapper"><img src="https://cdn.prod.website-files.com/68729bbbf00ae2d98c02980d/68c0b4d9ec1660243dddf2b7_heart.svg" loading="lazy" width="Auto" height="Auto" alt="" class="like-icon_red"/><a href="#" data-post-likes="likes" class="likes-count">66</a></div></div></div></div></div></div><div class="image-cover radius-top_none"><img alt="" src="https://cdn.prod.website-files.com/687ecf7c8eeb652bce5a9df5/68dac8dbb979b3833855743b_68ce3126cf3842139fdc69c3_6543c6f180cded72ce035a41_toa-heftiba-bcLE7reXFLM-unsplash%252520(2).png" loading="lazy" sizes="(max-width: 767px) 100vw, (max-width: 991px) 728px, 940px" srcset="https://cdn.prod.website-files.com/687ecf7c8eeb652bce5a9df5/68dac8dbb979b3833855743b_68ce3126cf3842139fdc69c3_6543c6f180cded72ce035a41_toa-heftiba-bcLE7reXFLM-unsplash%252520(2)-p-500.png 500w, https://cdn.prod.website-files.com/687ecf7c8eeb652bce5a9df5/68dac8dbb979b3833855743b_68ce3126cf3842139fdc69c3_6543c6f180cded72ce035a41_toa-heftiba-bcLE7reXFLM-unsplash%252520(2)-p-800.png 800w, https://cdn.prod.website-files.com/687ecf7c8eeb652bce5a9df5/68dac8dbb979b3833855743b_68ce3126cf3842139fdc69c3_6543c6f180cded72ce035a41_toa-heftiba-bcLE7reXFLM-unsplash%252520(2)-p-1080.png 1080w, https://cdn.prod.website-files.com/687ecf7c8eeb652bce5a9df5/68dac8dbb979b3833855743b_68ce3126cf3842139fdc69c3_6543c6f180cded72ce035a41_toa-heftiba-bcLE7reXFLM-unsplash%252520(2)-p-1600.png 1600w, https://cdn.prod.website-files.com/687ecf7c8eeb652bce5a9df5/68dac8dbb979b3833855743b_68ce3126cf3842139fdc69c3_6543c6f180cded72ce035a41_toa-heftiba-bcLE7reXFLM-unsplash%252520(2)-p-2000.png 2000w, https://cdn.prod.website-files.com/687ecf7c8eeb652bce5a9df5/68dac8dbb979b3833855743b_68ce3126cf3842139fdc69c3_6543c6f180cded72ce035a41_toa-heftiba-bcLE7reXFLM-unsplash%252520(2).png 2100w" class="image-animated radius-top_none"/></div></div></div></div><div role="listitem" class="blog-card_collection-item_4x w-dyn-item"><div class="w-layout-blockcontainer component_base w-container"><div class="card_body-wrapper card-radius_sm is-reverse"><div id="w-node-_1868f3fd-bfca-0973-42b8-befb223518ca-223518c6" class="card_body-content is-reverse"><div id="w-node-_0a1a6c07-5d48-29ff-41d0-9f372de38740-2de38740" data-wf--card-gap-size--global-options-padding="none" class="component_base flex-grow"><div class="variants_gap-size"><div class="card_meta-wrapper"><div data-wf--card-meta-item--global-options-meta-font-size="t5-xs" class="w-layout-blockcontainer component_base flex-horizontal w-container"><div class="variants_font-size flex-grow w-variant-c6096379-791a-4d37-a580-b8b0d7ff082f"><div class="card_meta"><a href="#" class="card_category-link-block w-inline-block"><wf-category-tag category-primary-color="" category-inverse-color="" category-slug="" category-background-color="" category-text-color="" class="card_category-wrapper category-primary-color category-inverse-color"><div class="card_category-size output"></div></wf-category-tag></a><div class="card_date-wrapper"><section data-copilot="true" data-wf--meta-date--settings-text-color="dark" class="component_base"><div class="variants_text-color is-inline-block"><div class="meta-date_wrapper"><div class="meta-date_text">Month YYYY</div></div></div></section></div></div></div></div></div><div class="card_headline-wrapper"><div data-wf--card-headline-font-size--headline-headline-font-size="h6-xxs" class="component_base"><div class="variants_headline-font-size w-variant-2afb1133-8136-eb70-d1f9-5332ba439d00"><h3 class="component_headline">3 Most Important Tips for Making a Hotel Opening a Revenue Success</h3></div></div></div><div class="card_item-wrapper"><div data-wf--underlined-link--underlined-link-color="dark" class="component_text-color"><a href="/article/3-most-important-tips-for-making-a-hotel-opening-a-revenue-success" class="read-more_link-block w-inline-block"><div data-w-id="812ead38-6e7d-da57-39fa-5e1af79a2850" class="component_label">Read Article</div></a></div><div data-wf--card-likes-posts--variant="color" class="like-button"><div class="views-wrapper"><div class="views">VIEWS<br/></div><a href="#" data-post-views="views" class="views-count">+920</a></div><div class="likes-wrapper"><img src="https://cdn.prod.website-files.com/68729bbbf00ae2d98c02980d/68c0b4d9ec1660243dddf2b7_heart.svg" loading="lazy" width="Auto" height="Auto" alt="" class="like-icon_red"/><a href="#" data-post-likes="likes" class="likes-count">66</a></div></div></div></div></div></div><div class="image-cover radius-top_none"><img alt="" src="https://cdn.prod.website-files.com/687ecf7c8eeb652bce5a9df5/68dac8da9bc09d13e3f59a0b_68ce312611d817ead231e2d7_6543c6913adaa764eb0e67d4_pexels-drew-williams-3483968.png" loading="lazy" sizes="(max-width: 767px) 100vw, (max-width: 991px) 728px, 940px" srcset="https://cdn.prod.website-files.com/687ecf7c8eeb652bce5a9df5/68dac8da9bc09d13e3f59a0b_68ce312611d817ead231e2d7_6543c6913adaa764eb0e67d4_pexels-drew-williams-3483968-p-500.png 500w, https://cdn.prod.website-files.com/687ecf7c8eeb652bce5a9df5/68dac8da9bc09d13e3f59a0b_68ce312611d817ead231e2d7_6543c6913adaa764eb0e67d4_pexels-drew-williams-3483968-p-800.png 800w, https://cdn.prod.website-files.com/687ecf7c8eeb652bce5a9df5/68dac8da9bc09d13e3f59a0b_68ce312611d817ead231e2d7_6543c6913adaa764eb0e67d4_pexels-drew-williams-3483968-p-1080.png 1080w, https://cdn.prod.website-files.com/687ecf7c8eeb652bce5a9df5/68dac8da9bc09d13e3f59a0b_68ce312611d817ead231e2d7_6543c6913adaa764eb0e67d4_pexels-drew-williams-3483968-p-1600.png 1600w, https://cdn.prod.website-files.com/687ecf7c8eeb652bce5a9df5/68dac8da9bc09d13e3f59a0b_68ce312611d817ead231e2d7_6543c6913adaa764eb0e67d4_pexels-drew-williams-3483968-p-2000.png 2000w, https://cdn.prod.website-files.com/687ecf7c8eeb652bce5a9df5/68dac8da9bc09d13e3f59a0b_68ce312611d817ead231e2d7_6543c6913adaa764eb0e67d4_pexels-drew-williams-3483968.png 2100w" class="image-animated radius-top_none"/></div></div></div></div><div role="listitem" class="blog-card_collection-item_4x w-dyn-item"><div class="w-layout-blockcontainer component_base w-container"><div class="card_body-wrapper card-radius_sm is-reverse"><div id="w-node-_1868f3fd-bfca-0973-42b8-befb223518ca-223518c6" class="card_body-content is-reverse"><div id="w-node-_0a1a6c07-5d48-29ff-41d0-9f372de38740-2de38740" data-wf--card-gap-size--global-options-padding="none" class="component_base flex-grow"><div class="variants_gap-size"><div class="card_meta-wrapper"><div data-wf--card-meta-item--global-options-meta-font-size="t5-xs" class="w-layout-blockcontainer component_base flex-horizontal w-container"><div class="variants_font-size flex-grow w-variant-c6096379-791a-4d37-a580-b8b0d7ff082f"><div class="card_meta"><a href="#" class="card_category-link-block w-inline-block"><wf-category-tag category-primary-color="" category-inverse-color="" category-slug="" category-background-color="" category-text-color="" class="card_category-wrapper category-primary-color category-inverse-color"><div class="card_category-size output"></div></wf-category-tag></a><div class="card_date-wrapper"><section data-copilot="true" data-wf--meta-date--settings-text-color="dark" class="component_base"><div class="variants_text-color is-inline-block"><div class="meta-date_wrapper"><div class="meta-date_text">Month YYYY</div></div></div></section></div></div></div></div></div><div class="card_headline-wrapper"><div data-wf--card-headline-font-size--headline-headline-font-size="h6-xxs" class="component_base"><div class="variants_headline-font-size w-variant-2afb1133-8136-eb70-d1f9-5332ba439d00"><h3 class="component_headline">Enhance Forecasting in Uncertain Times</h3></div></div></div><div class="card_item-wrapper"><div data-wf--underlined-link--underlined-link-color="dark" class="component_text-color"><a href="/article/adapting-to-change-how-hoteliers-can-enhance-forecasting-in-uncertain-times" class="read-more_link-block w-inline-block"><div data-w-id="812ead38-6e7d-da57-39fa-5e1af79a2850" class="component_label">Read Article</div></a></div><div data-wf--card-likes-posts--variant="color" class="like-button"><div class="views-wrapper"><div class="views">VIEWS<br/></div><a href="#" data-post-views="views" class="views-count">+920</a></div><div class="likes-wrapper"><img src="https://cdn.prod.website-files.com/68729bbbf00ae2d98c02980d/68c0b4d9ec1660243dddf2b7_heart.svg" loading="lazy" width="Auto" height="Auto" alt="" class="like-icon_red"/><a href="#" data-post-likes="likes" class="likes-count">66</a></div></div></div></div></div></div><div class="image-cover radius-top_none"><img alt="" src="https://cdn.prod.website-files.com/687ecf7c8eeb652bce5a9df5/68dac8d9f614a4503eb6acc2_68d0f7a0c86bdfd410e111c0_serkan%2520bayraktar%2520from%2520pexels.jpeg" loading="lazy" sizes="(max-width: 767px) 100vw, (max-width: 991px) 728px, 940px" srcset="https://cdn.prod.website-files.com/687ecf7c8eeb652bce5a9df5/68dac8d9f614a4503eb6acc2_68d0f7a0c86bdfd410e111c0_serkan%2520bayraktar%2520from%2520pexels-p-500.jpeg 500w, https://cdn.prod.website-files.com/687ecf7c8eeb652bce5a9df5/68dac8d9f614a4503eb6acc2_68d0f7a0c86bdfd410e111c0_serkan%2520bayraktar%2520from%2520pexels-p-800.jpeg 800w, https://cdn.prod.website-files.com/687ecf7c8eeb652bce5a9df5/68dac8d9f614a4503eb6acc2_68d0f7a0c86bdfd410e111c0_serkan%2520bayraktar%2520from%2520pexels-p-1080.jpeg 1080w, https://cdn.prod.website-files.com/687ecf7c8eeb652bce5a9df5/68dac8d9f614a4503eb6acc2_68d0f7a0c86bdfd410e111c0_serkan%2520bayraktar%2520from%2520pexels-p-1600.jpeg 1600w, https://cdn.prod.website-files.com/687ecf7c8eeb652bce5a9df5/68dac8d9f614a4503eb6acc2_68d0f7a0c86bdfd410e111c0_serkan%2520bayraktar%2520from%2520pexels.jpeg 1920w" class="image-animated radius-top_none"/></div></div></div></div><div role="listitem" class="blog-card_collection-item_4x w-dyn-item"><div class="w-layout-blockcontainer component_base w-container"><div class="card_body-wrapper card-radius_sm is-reverse"><div id="w-node-_1868f3fd-bfca-0973-42b8-befb223518ca-223518c6" class="card_body-content is-reverse"><div id="w-node-_0a1a6c07-5d48-29ff-41d0-9f372de38740-2de38740" data-wf--card-gap-size--global-options-padding="none" class="component_base flex-grow"><div class="variants_gap-size"><div class="card_meta-wrapper"><div data-wf--card-meta-item--global-options-meta-font-size="t5-xs" class="w-layout-blockcontainer component_base flex-horizontal w-container"><div class="variants_font-size flex-grow w-variant-c6096379-791a-4d37-a580-b8b0d7ff082f"><div class="card_meta"><a href="#" class="card_category-link-block w-inline-block"><wf-category-tag category-primary-color="" category-inverse-color="" category-slug="" category-background-color="" category-text-color="" class="card_category-wrapper category-primary-color category-inverse-color"><div class="card_category-size output"></div></wf-category-tag></a><div class="card_date-wrapper"><section data-copilot="true" data-wf--meta-date--settings-text-color="dark" class="component_base"><div class="variants_text-color is-inline-block"><div class="meta-date_wrapper"><div class="meta-date_text">Month YYYY</div></div></div></section></div></div></div></div></div><div class="card_headline-wrapper"><div data-wf--card-headline-font-size--headline-headline-font-size="h6-xxs" class="component_base"><div class="variants_headline-font-size w-variant-2afb1133-8136-eb70-d1f9-5332ba439d00"><h3 class="component_headline">Experts Reinventing the Boutique Hotel Experience</h3></div></div></div><div class="card_item-wrapper"><div data-wf--underlined-link--underlined-link-color="dark" class="component_text-color"><a href="/article/appellation-hospitality-fusion-of-culinary-and-hospitality-experts-reinventing-boutique-hotel-experience" class="read-more_link-block w-inline-block"><div data-w-id="812ead38-6e7d-da57-39fa-5e1af79a2850" class="component_label">Read Article</div></a></div><div data-wf--card-likes-posts--variant="color" class="like-button"><div class="views-wrapper"><div class="views">VIEWS<br/></div><a href="#" data-post-views="views" class="views-count">+920</a></div><div class="likes-wrapper"><img src="https://cdn.prod.website-files.com/68729bbbf00ae2d98c02980d/68c0b4d9ec1660243dddf2b7_heart.svg" loading="lazy" width="Auto" height="Auto" alt="" class="like-icon_red"/><a href="#" data-post-likes="likes" class="likes-count">66</a></div></div></div></div></div></div><div class="image-cover radius-top_none"><img alt="" src="https://cdn.prod.website-files.com/687ecf7c8eeb652bce5a9df5/68dac8d99f5888be46a757fe_68d0f71dcf3e1c5acdd6cd1a_appellation.jpeg" loading="lazy" sizes="(max-width: 767px) 100vw, (max-width: 991px) 728px, 940px" srcset="https://cdn.prod.website-files.com/687ecf7c8eeb652bce5a9df5/68dac8d99f5888be46a757fe_68d0f71dcf3e1c5acdd6cd1a_appellation-p-500.jpeg 500w, https://cdn.prod.website-files.com/687ecf7c8eeb652bce5a9df5/68dac8d99f5888be46a757fe_68d0f71dcf3e1c5acdd6cd1a_appellation-p-800.jpeg 800w, https://cdn.prod.website-files.com/687ecf7c8eeb652bce5a9df5/68dac8d99f5888be46a757fe_68d0f71dcf3e1c5acdd6cd1a_appellation-p-1080.jpeg 1080w, https://cdn.prod.website-files.com/687ecf7c8eeb652bce5a9df5/68dac8d99f5888be46a757fe_68d0f71dcf3e1c5acdd6cd1a_appellation-p-1600.jpeg 1600w, https://cdn.prod.website-files.com/687ecf7c8eeb652bce5a9df5/68dac8d99f5888be46a757fe_68d0f71dcf3e1c5acdd6cd1a_appellation.jpeg 1920w" class="image-animated radius-top_none"/></div></div></div></div></div></div></div></section><div class="sg_section-divider"><div class="label-lg">3 Card - RELATED BLOG CARD Component</div></div><div class="component_wrapper padding-inline_sm bg-color-light"><div class="w-dyn-list"><div role="list" class="w-dyn-items"><div role="listitem" class="blog-card_collection-item_3x w-dyn-item"></div><div role="listitem" class="blog-card_collection-item_3x w-dyn-item"></div><div role="listitem" class="blog-card_collection-item_3x w-dyn-item"></div><div role="listitem" class="blog-card_collection-item_3x w-dyn-item"></div><div role="listitem" class="blog-card_collection-item_3x w-dyn-item"></div><div role="listitem" class="blog-card_collection-item_3x w-dyn-item"></div><div role="listitem" class="blog-card_collection-item_3x w-dyn-item"></div><div role="listitem" class="blog-card_collection-item_3x w-dyn-item"></div><div role="listitem" class="blog-card_collection-item_3x w-dyn-item"></div><div role="listitem" class="blog-card_collection-item_3x w-dyn-item"></div><div role="listitem" class="blog-card_collection-item_3x w-dyn-item"></div><div role="listitem" class="blog-card_collection-item_3x w-dyn-item"></div></div></div></div><div class="component_wrapper padding-inline_sm"><div class="w-dyn-list"><div role="list" class="w-dyn-items"><div role="listitem" class="blog-card_collection-item_3x w-dyn-item"></div><div role="listitem" class="blog-card_collection-item_3x w-dyn-item"></div><div role="listitem" class="blog-card_collection-item_3x w-dyn-item"></div><div role="listitem" class="blog-card_collection-item_3x w-dyn-item"></div><div role="listitem" class="blog-card_collection-item_3x w-dyn-item"></div><div role="listitem" class="blog-card_collection-item_3x w-dyn-item"></div><div role="listitem" class="blog-card_collection-item_3x w-dyn-item"></div><div role="listitem" class="blog-card_collection-item_3x w-dyn-item"></div><div role="listitem" class="blog-card_collection-item_3x w-dyn-item"></div><div role="listitem" class="blog-card_collection-item_3x w-dyn-item"></div><div role="listitem" class="blog-card_collection-item_3x w-dyn-item"></div><div role="listitem" class="blog-card_collection-item_3x w-dyn-item"></div></div></div></div><div class="component_wrapper padding-inline_sm"><div class="w-dyn-list"><div role="list" class="w-dyn-items"><div role="listitem" class="blog-card_collection-item_3x w-dyn-item"></div><div role="listitem" class="blog-card_collection-item_3x w-dyn-item"></div><div role="listitem" class="blog-card_collection-item_3x w-dyn-item"></div><div role="listitem" class="blog-card_collection-item_3x w-dyn-item"></div><div role="listitem" class="blog-card_collection-item_3x w-dyn-item"></div><div role="listitem" class="blog-card_collection-item_3x w-dyn-item"></div><div role="listitem" class="blog-card_collection-item_3x w-dyn-item"></div><div role="listitem" class="blog-card_collection-item_3x w-dyn-item"></div><div role="listitem" class="blog-card_collection-item_3x w-dyn-item"></div><div role="listitem" class="blog-card_collection-item_3x w-dyn-item"></div><div role="listitem" class="blog-card_collection-item_3x w-dyn-item"></div><div role="listitem" class="blog-card_collection-item_3x w-dyn-item"></div></div></div></div></section></section></div><div></div></div></div><script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=68729bbbf00ae2d98c02980d" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script><script src="https://cdn.prod.website-files.com/68729bbbf00ae2d98c02980d/js/rebel-style.schunk.36b8fb49256177c8.js" type="text/javascript"></script><script src="https://cdn.prod.website-files.com/68729bbbf00ae2d98c02980d/js/rebel-style.schunk.fcd1a0091dc23eb6.js" type="text/javascript"></script><script src="https://cdn.prod.website-files.com/68729bbbf00ae2d98c02980d/js/rebel-style.3e4690d3.b805a719a5ff22d8.js" type="text/javascript"></script><script src="https://cdn.prod.website-files.com/gsap/3.13.0/ScrollTrigger.min.js" type="text/javascript"></script><script src="https://cdn.prod.website-files.com/gsap/3.13.0/gsap.min.js" type="text/javascript"></script><script>var measurementID='G-VF5Z5N3FMD'; function isWebflowEditorOrDesigner(){ return window.location.search.includes('?edit') || window.WebflowEditor} if (isWebflowEditorOrDesigner()){ window['ga-disable-' + measurementID]=true; console.log('Google Analytics disabled for Webflow Editor/Designer mode.')}</script><script defer src="https://cdn.jsdelivr.net/gh/REVREBEL/rebel-style@main/scripts/blog-category-tags.js" type="text/javascript" referrerpolicy="no-referrer" crossorigin="anonymous"></script><script defer src="https://cdn.jsdelivr.net/gh/REVREBEL/rebel-style@main/scripts/color-mix.js" type="text/javascript" referrerpolicy="no-referrer" crossorigin="anonymous"></script></script><script defer src="https://cdn.jsdelivr.net/gh/REVREBEL/rebel-style@main/scripts/form-vaildation.js" type="text/javascript" referrerpolicy="no-referrer" crossorigin="anonymous"></script><script defer src="https://cdn.jsdelivr.net/gh/REVREBEL/rebel-style@main/scripts/form-recall-input.js" type="text/javascript" referrerpolicy="no-referrer" crossorigin="anonymous"></script><script defer src="https://cdn.jsdelivr.net/gh/REVREBEL/rebel-style@main/scripts/phone-vaildation.js" type="text/javascript" referrerpolicy="no-referrer" crossorigin="anonymous"></script><script defer src="https://cdn.jsdelivr.net/gh/REVREBEL/rebel-style@main/scripts/read-time.js" type="text/javascript" referrerpolicy="no-referrer" crossorigin="anonymous"></script><script defer src="https://cdn.jsdelivr.net/gh/REVREBEL/rebel-style@main/scripts/emoji-styling.js" type="text/javascript" referrerpolicy="no-referrer" crossorigin="anonymous"></script><script defer src="https://cdn.jsdelivr.net/gh/REVREBEL/rebel-style@main/scripts/page-nav-visibility.js" type="text/javascript" referrerpolicy="no-referrer" crossorigin="anonymous"></script><script defer src="https://cdn.jsdelivr.net/gh/REVREBEL/rebel-style@main/scripts/equalize-height.js" type="text/javascript" referrerpolicy="no-referrer" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script><script defer src="https://cdn.jsdelivr.net/gh/REVREBEL/rebel-style@main/scripts/page-nav-gsap-controller.js" type="text/javascript" referrerpolicy="no-referrer" crossorigin="anonymous"></script><script>
+
+
+/**
+ * Custom Web Component: <wf-category-tag>
+ *
+ * Dynamically applies category name, slugified class, and optional
+ * text/background color styles to its target element.
+ *
+ * @example
+ * ```html
+ * <wf-category-tag 
+ *   category-slug="Revenue Strategy"
+ *   category-primary-color="#163666"
+ *   category-inverse-color="#B2D3dE">
+ *   <div class="output"></div>
+ * </wf-category-tag>
+ * ```
+ */
+class WfCategoryTag extends HTMLElement {
+  /**
+   * Attributes this custom element observes for changes.
+   * When any of these attributes change, {@link attributeChangedCallback} is triggered.
+   *
+   * @returns {string[]} List of observed attribute names.
+   */
+  static get observedAttributes() {
+    return [
+      "category-slug",
+      "category-primary-color",
+      "category-inverse-color",
+      "category-text-color",
+      "category-background-color"
+    ];
+  }
+
+  /**
+   * Lifecycle callback executed when the element is connected to the DOM.
+   * Automatically initializes rendering by calling {@link update}.
+   *
+   * @returns {void}
+   */
+  connectedCallback() {
+    this.update();
+  }
+
+  /**
+   * Lifecycle callback executed when observed attributes change.
+   * Automatically re-renders the element by calling {@link update}.
+   *
+   * @returns {void}
+   */
+  attributeChangedCallback() {
+    this.update();
+  }
+
+  /**
+   * Converts a string into a safe slug suitable for CSS class names.
+   * Removes quotes, spaces, and special characters, replacing them with hyphens.
+   * 
+   * @param {string} [input=""] - Input string to slugify.
+   * @returns {string} Slugified string safe for use in class names.
+   */
+  slug(input = "") {
+    return String(input)
+      .trim()
+      .toLowerCase()
+      .replace(/["']/g, "")            // remove quotes
+      .replace(/[^a-z0-9\-_]+/g, "-")  // replace non-alphanumeric with hyphen
+      .replace(/^-+|-+$/g, "");        // trim leading/trailing hyphens
+  }
+
+  /**
+   * Updates the component’s target element by:
+   * 1. Creating a slug-based class from the `category-slug` attribute.
+   * 2. Assigning that class name to the `.output` child (or to the host if none exists).
+   * 3. Optionally applying inline text and background colors from attributes.
+   *
+   * @returns {void}
+   */
+  update() {
+    const categorySlug = this.getAttribute("category-slug") || "";
+    const primaryColor = this.getAttribute("category-primary-color") || "";
+    const inverseColor = this.getAttribute("category-inverse-color") || "";
+    const backgroundColor = this.getAttribute("category-background-color") || "";
+    const textColor = this.getAttribute("category-text-color") || "";
+    const borderColor = backgroundColor;
+
+    const outputClass = `blog_category-${this.slug(categorySlug)}`;
+    const target = this.querySelector(".output") || this;
+
+    // Add the new class without removing existing ones.
+    target.classList.add(outputClass);
+
+    // Optional color application if attributes are provided
+    if (textColor) target.style.color = textColor;
+    if (borderColor) target.style.borderColor = borderColor;
+    if (backgroundColor) target.style.backgroundColor = backgroundColor;
+
+    // Debugging log for inspection
+    console.log({
+      categoryName: categorySlug,
+      primaryColor,
+      inverseColor,
+      textColor,
+      borderColor,
+      backgroundColor,
+      outputClass,
+      target
+    });
+  }
+}
+
+
+/**
+ * Registers the custom element <wf-category-tag> with the browser.
+ */
+customElements.define("wf-category-tag", WfCategoryTag);
+
+</script>
+</body></html>
