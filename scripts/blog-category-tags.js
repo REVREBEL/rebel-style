@@ -21,7 +21,30 @@
  * 
  * Usage:
  * ```html
+<<<<<<< Updated upstream
  * <wf-join-attr 
+=======
+ * <wf-category-tag 
+ *   category-slug="Revenue Strategy"
+ *   category-primary-color="#163666"
+ *   category-inverse-color="#B2D3dE">
+ *   <div class="output"></div>
+ * </wf-category-tag>
+ * ```
+ */
+
+
+
+/**
+ * Custom Web Component: <wf-category-tag>
+ *
+ * Dynamically applies category name, slugified class, and optional
+ * text/background color styles to its target element.
+ *
+ * @example
+ * ```html
+ * <wf-category-tag 
+>>>>>>> Stashed changes
  *   category-slug="Revenue Strategy"
  *   category-primary-color="#163666"
  *   category-inverse-color="#B2D3dE">
@@ -113,16 +136,22 @@ class WfJoinAttr extends HTMLElement {
   update() {
     const categorySlug = this.getAttribute("category-slug") || "";
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     const backgroundColor = this.getAttribute("category-primary-color") || "";
     const textColor = this.getAttribute("category-inverse-color") || "";
     const borderColor = this.getAttribute("category-primary-color") || "";
 =======
+=======
+>>>>>>> Stashed changes
     const primaryColor = this.getAttribute("category-primary-color") || "";
     const inverseColor = this.getAttribute("category-inverse-color") || "";
     // Use specific colors if available, otherwise fall back to primary/inverse.
     const backgroundColor = this.getAttribute("category-background-color") || primaryColor || "";
     const textColor = this.getAttribute("category-text-color") || inverseColor || "";
     const borderColor = backgroundColor; // Border should match the final background color
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 
     const outputClass = `blog_category-${this.slug(categorySlug)}`;
