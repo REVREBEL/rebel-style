@@ -3016,7 +3016,6 @@ h4 {
   font-weight: var(--_type---h4-headline--h4-font-weight);
   letter-spacing: var(--_type---h4-headline--h4-letter-spacing);
   text-transform: uppercase;
-  text-wrap: balance;
   color: inherit;
   text-wrap: balance;
   margin-top: 0;
@@ -4849,7 +4848,7 @@ figcaption {
   flex: 1;
   place-content: stretch center;
   align-items: stretch;
-  padding: 0 0;
+  padding: 0;
   display: flex;
   position: relative;
 }
@@ -13467,7 +13466,6 @@ figcaption {
 }
 
 .card.is-color-2 {
-  background-color: var(--_colors---color-6--color-6);
   color: var(--_colors---color-2--color-2-inverse);
   background-color: var(--_colors---color-2--color-2);
   -webkit-text-stroke-color: var(--_colors---color-2--color-2-inverse);
@@ -13715,8 +13713,6 @@ figcaption {
 
 .text_error.text-size-s {
   font-family: var(--_type---fonts--base);
-  text-align: center;
-  text-wrap: balance;
   text-align: center;
   text-wrap: balance;
   font-size: .85rem;
@@ -14056,7 +14052,6 @@ figcaption {
 }
 
 .image-animated.image_cover {
-  object-fit: cover;
   object-fit: cover;
   width: 100%;
   height: 100%;
@@ -19427,7 +19422,7 @@ figcaption {
   order: 1;
   width: 100%;
   height: 100%;
-  margin: 0 0 0 0;
+  margin: 0;
   padding: 1rem;
   line-height: 1rem;
   transition: border-color .35s, all .35s;
