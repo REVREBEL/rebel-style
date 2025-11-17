@@ -137,10 +137,13 @@ class WfJoinAttr extends HTMLElement {
     const categorySlug = this.getAttribute("category-slug") || "";
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     const backgroundColor = this.getAttribute("category-primary-color") || "";
     const textColor = this.getAttribute("category-inverse-color") || "";
     const borderColor = this.getAttribute("category-primary-color") || "";
 =======
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
     const primaryColor = this.getAttribute("category-primary-color") || "";
@@ -150,6 +153,9 @@ class WfJoinAttr extends HTMLElement {
     const textColor = this.getAttribute("category-text-color") || inverseColor || "";
     const borderColor = backgroundColor; // Border should match the final background color
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
