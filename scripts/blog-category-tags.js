@@ -14,16 +14,13 @@
 
 /*! ------------------ HOW TO USE IN WEBFLOW --------------- 
 /**
- * Custom Web Component: <wf-join-attr>
+ * Custom Web Component: <wf-category-tag>
  * 
  * Dynamically applies category name, text color, and background color
  * as class names and inline styles to its target element.
  * 
  * Usage:
  * ```html
-<<<<<<< Updated upstream
- * <wf-join-attr 
-=======
  * <wf-category-tag 
  *   category-slug="Revenue Strategy"
  *   category-primary-color="#163666"
@@ -44,7 +41,6 @@
  * @example
  * ```html
  * <wf-category-tag 
->>>>>>> Stashed changes
  *   category-slug="Revenue Strategy"
  *   category-primary-color="#163666"
  *   category-inverse-color="#B2D3dE">
@@ -52,26 +48,7 @@
  * </wf-category-tag>
  * ```
  */
-
-
-
-/**
- * Custom Web Component: <wf-join-attr>
- *
- * Dynamically applies category name, slugified class, and optional
- * text/background color styles to its target element.
- *
- * @example
- * ```html
- * <wf-join-attr 
- *   category-slug="Revenue Strategy"
- *   category-primary-color="#163666"
- *   category-inverse-color="#B2D3dE">
- *   <div class="output"></div>
- * </wf-join-attr>
- * ```
- */
-class WfJoinAttr extends HTMLElement {
+class wfCategoryTag extends HTMLElement {
   /**
    * Attributes this custom element observes for changes.
    * When any of these attributes change, {@link attributeChangedCallback} is triggered.
@@ -111,7 +88,7 @@ class WfJoinAttr extends HTMLElement {
   /**
    * Converts a string into a safe slug suitable for CSS class names.
    * Removes quotes, spaces, and special characters, replacing them with hyphens.
-   *
+   * 
    * @param {string} [input=""] - Input string to slugify.
    * @returns {string} Slugified string safe for use in class names.
    */
@@ -135,30 +112,12 @@ class WfJoinAttr extends HTMLElement {
    */
   update() {
     const categorySlug = this.getAttribute("category-slug") || "";
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-    const backgroundColor = this.getAttribute("category-primary-color") || "";
-    const textColor = this.getAttribute("category-inverse-color") || "";
-    const borderColor = this.getAttribute("category-primary-color") || "";
-=======
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
     const primaryColor = this.getAttribute("category-primary-color") || "";
     const inverseColor = this.getAttribute("category-inverse-color") || "";
     // Use specific colors if available, otherwise fall back to primary/inverse.
     const backgroundColor = this.getAttribute("category-background-color") || primaryColor || "";
     const textColor = this.getAttribute("category-text-color") || inverseColor || "";
     const borderColor = backgroundColor; // Border should match the final background color
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
 
     const outputClass = `blog_category-${this.slug(categorySlug)}`;
     const target = this.querySelector(".output") || this;
@@ -187,6 +146,6 @@ class WfJoinAttr extends HTMLElement {
 
 
 /**
- * Registers the custom element <wf-join-attr> with the browser.
+ * Registers the custom element <wf-category-tag> with the browser.
  */
-customElements.define("wf-join-attr", WfJoinAttr);
+customElements.define("wf-category-tag", wfCategoryTag);
