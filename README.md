@@ -1,1 +1,1 @@
-The framwork for creating the REVREBEL look. 
+The framework for creating the REVREBEL look. 
