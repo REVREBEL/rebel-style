@@ -1,0 +1,525 @@
+<style>
+/**** CLICKABLE ON *****/
+
+.variants_tag-color[data-clickable="True"] {
+  cursor: pointer;
+  transition: background-color 160ms ease, border-color 160ms ease, color 160ms ease;
+}
+
+/**** OUTLINE ON *****/
+
+.variants_tag-color[data-outline="True"] {
+  --tag-bg: var(--surface);
+  --tag-text: var(--surface-inverse);
+  --tag-border: var(--surface);
+  
+  background-color: var(--tag-bg);
+  color: var(--tag-text);
+  border-color: var(--tag-border);
+
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.variants_tag-color[data-outline="True"][data-clickable="True"]:is(:hover, :focus-visible) {
+  --tag-bg-hover: var(--surface-inverse);
+  --tag-border-hover: var(--surface-inverse);
+  
+  background-color: var(--tag-bg-hover);
+  border-color: var(--tag-border-hover);
+}
+
+.variants_tag-color[data-clickable="True"][data-outline="True"] :active {
+  --tag-bg-active: var(--surface-fade);
+  --tag-border-active: var(--surface-fade);
+  
+  background-color: var(--tag-bg-active);
+  border-color: var(--tag-border-active);
+}
+
+
+/**** OUTLINE OFF *****/
+
+.variants_tag-color[data-outline="False"][data-clickable="True"]:is(:hover, :focus-visible) {
+  --tag-bg-hover: var(--surface-inverse);
+  --tag-text-hover: var(--surface);
+  --tag-border-hover: var(--surface-inverse);
+  
+  background-color: var(--tag-bg-hover);
+  color: var(--tag-text-hover);
+  border-color: var(--tag-border-hover);
+}
+
+.variants_tag-color[data-outline="False"][data-clickable="True"]:active {
+  --tag-bg-active: var(--surface-fade);
+  --tag-border-active: var(--surface-fade);
+  
+  background-color: var(--tag-bg-active);
+  border-color: var(--tag-border-active);
+}
+
+
+
+
+/* ===============================
+   TAG COLOR → SURFACE TOKEN MAP
+   =============================== */
+
+/* LIGHT */
+.variants_tag-color[data-wf--variants_tag-color--settings-color="light"] {
+  --surface: var(--_colors---color-light--color-primary);
+  --surface-inverse: var(--_colors---color-light--color-light-inverse);
+  --surface-fade: var(--_colors---color-light--color-light-inverse-fade);
+}
+
+/* DARK */
+.variants_tag-color[data-wf--variants_tag-color--settings-color="dark"] {
+  --surface: var(--_colors---color-dark--color-dark);
+  --surface-inverse: var(--_colors---color-dark--color-dark-inverse);
+  --surface-fade: var(--_colors---color-dark--color-dark-inverse-fade);
+}
+
+/* PRIMARY */
+.variants_tag-color[data-wf--variants_tag-color--settings-color="primary"] {
+  --surface: var(--_colors---color-primary--color-primary);
+  --surface-inverse: var(--_colors---color-primary--color-primary-inverse);
+  --surface-fade: var(--_colors---color-primary--color-primary-inverse-fade);
+}
+
+/* COLOR 1 */
+.variants_tag-color[data-wf--variants_tag-color--settings-color="color-1"] {
+  --surface: var(--_colors---color-1--color-1);
+  --surface-inverse: var(--_colors---color-1--color-1-inverse);
+  --surface-fade: var(--_colors---color-1--color-1-inverse-fade);
+}
+
+/* COLOR 2 */
+.variants_tag-color[data-wf--variants_tag-color--settings-color="color-2"] {
+  --surface: var(--_colors---color-2--color-2);
+  --surface-inverse: var(--_colors---color-2--color-2-inverse);
+  --surface-fade: var(--_colors---color-2--color-2-inverse-fade);
+}
+
+/* COLOR 3 */
+.variants_tag-color[data-wf--variants_tag-color--settings-color="color-3"] {
+  --surface: var(--_colors---color-3--color-3);
+  --surface-inverse: var(--_colors---color-3--color-3-inverse);
+  --surface-fade: var(--_colors---color-3--color-3-inverse-fade);
+}
+
+/* COLOR 4 */
+.variants_tag-color[data-wf--variants_tag-color--settings-color="color-4"] {
+  --surface: var(--_colors---color-4--color-4);
+  --surface-inverse: var(--_colors---color-4--color-4-inverse);
+  --surface-fade: var(--_colors---color-4--color-4-inverse-fade);
+}
+
+/* COLOR 5 */
+.variants_tag-color[data-wf--variants_tag-color--settings-color="color-5"] {
+  --surface: var(--_colors---color-5--color-5);
+  --surface-inverse: var(--_colors---color-5--color-5-inverse);
+  --surface-fade: var(--_colors---color-5--color-5-inverse-fade);
+}
+
+/* COLOR 6 */
+.variants_tag-color[data-wf--variants_tag-color--settings-color="color-6"] {
+  --surface: var(--_colors---color-6--color-6);
+  --surface-inverse: var(--_colors---color-6--color-6-inverse);
+  --surface-fade: var(--_colors---color-6--color-6-inverse-fade);
+}
+
+/* COLOR 7 */
+.variants_tag-color[data-wf--variants_tag-color--settings-color="color-7"] {
+  --surface: var(--_colors---color-7--color-7);
+  --surface-inverse: var(--_colors---color-7--color-7-inverse);
+  --surface-fade: var(--_colors---color-7--color-7-inverse-fade);
+}
+
+/* COLOR 8 */
+.variants_tag-color[data-wf--variants_tag-color--settings-color="color-8"] {
+  --surface: var(--_colors---color-8--color-8);
+  --surface-inverse: var(--_colors---color-8--color-8-inverse);
+  --surface-fade: var(--_colors---color-8--color-8-inverse-fade);
+}
+
+/* COLOR 9 */
+.variants_tag-color[data-wf--variants_tag-color--settings-color="color-9"] {
+  --surface: var(--_colors---color-9--color-9);
+  --surface-inverse: var(--_colors---color-9--color-9-inverse);
+  --surface-fade: var(--_colors---color-9--color-9-inverse-fade);
+}
+<style>
+
+invert(var(--f-invert)) sepia(var(--f-sepia)) saturate(var(--f-saturate)) 
+hue-rotate(var(--f-hue)) brightness(var(--f-brightness)) contrast(var(--f-contrast))
+
+
+
+color: inherit
+background-color: color-mix(in srgb, currentColor 20%, transparent)
+border-color: inherit
+
+
+
+<style>
+/* ===============================
+   ICON ENGINE
+   =============================== */
+
+  /* ---------------------------------
+     ICON FILTER TOKENS (defaults)
+     These get overridden by each color map:
+       --f-*        = surface color filter
+       --f-*-inv    = inverse color filter
+     --------------------------------- */
+     
+  --f-invert: 0;
+  --f-sepia: 0;
+  --f-saturate: 100;
+  --f-hue: 0;
+  --f-brightness: 100;
+  --f-contrast: 100;
+
+  /* inverse defaults (overridden in color maps) */
+  --f-invert-inv: var(--f-invert);
+  --f-sepia-inv: var(--f-sepia);
+  --f-saturate-inv: var(--f-saturate);
+  --f-hue-inv: var(--f-hue);
+  --f-brightness-inv: var(--f-brightness);
+  --f-contrast-inv: var(--f-contrast);
+
+  /* ---------------------------------
+     ROUTING DEFAULTS
+     - base defaults to surface
+     - hover defaults to base
+     (state rules will flip these)
+     --------------------------------- */
+  --f-invert-base: var(--f-invert);
+  --f-sepia-base: var(--f-sepia);
+  --f-saturate-base: var(--f-saturate);
+  --f-hue-base: var(--f-hue);
+  --f-brightness-base: var(--f-brightness);
+  --f-contrast-base: var(--f-contrast);
+
+  --f-invert-hover: var(--f-invert-base);
+  --f-sepia-hover: var(--f-sepia-base);
+  --f-saturate-hover: var(--f-saturate-base);
+  --f-hue-hover: var(--f-hue-base);
+  --f-brightness-hover: var(--f-brightness-base);
+  --f-contrast-hover: var(--f-contrast-base);
+
+  /* build FULL filter strings (prevents “filter-on-filter” thinking) */
+  --icon-filter-base:
+    invert(calc(var(--f-invert-base) * 1%))
+    sepia(calc(var(--f-sepia-base) * 1%))
+    saturate(calc(var(--f-saturate-base) * 1%))
+    hue-rotate(calc(var(--f-hue-base) * 1deg))
+    brightness(calc(var(--f-brightness-base) * 1%))
+    contrast(calc(var(--f-contrast-base) * 1%));
+
+  --icon-filter-hover:
+    invert(calc(var(--f-invert-hover) * 1%))
+    sepia(calc(var(--f-sepia-hover) * 1%))
+    saturate(calc(var(--f-saturate-hover) * 1%))
+    hue-rotate(calc(var(--f-hue-hover) * 1deg))
+    brightness(calc(var(--f-brightness-hover) * 1%))
+    contrast(calc(var(--f-contrast-hover) * 1%));
+}
+
+/* icon uses BASE filter (always) */
+.icon-variant {
+  filter: var(--icon-filter-base);
+}
+
+/* ===============================
+   ICON STATE ROUTING
+   =============================== */
+   
+.variants_tag-states[data-wf--variants_tag-states--variant="non-clickable"] .variants_icon-color-clickable {
+  --f-invert-base: var(--f-invert);
+  --f-sepia-base: var(--f-sepia);
+  --f-saturate-base: var(--f-saturate);
+  --f-hue-base: var(--f-hue);
+  --f-brightness-hover: var(--f-brightness);
+  --f-contrast-base: var(--f-contrast);
+}
+
+.variants_tag-states[data-wf--variants_tag-states--variant="is-clickable"] .variants_icon-color-clickable {
+  --f-invert-base: var(--f-invert);
+  --f-sepia-base: var(--f-sepia);
+  --f-saturate-base: var(--f-saturate);
+  --f-hue-base: var(--f-hue);
+  --f-brightness-base: var(--f-brightness);
+  --f-contrast-base: var(--f-contrast);
+}
+
+.variants_tag-states[data-wf--variants_tag-states--variant="is-clickable"] .variants_icon-color-clickable {
+  --f-invert-hover: var(--f-invert-inv);
+  --f-sepia-hover: var(--f-sepia-inv);
+  --f-saturate-hover: var(--f-saturate-inv);
+  --f-hue-hover: var(--f-hue-inv);
+  --f-brightness-hover: var(--f-brightness-inv);
+  --f-contrast-hover: var(--f-contrast-inv);
+}
+
+.variants_tag-states[data-wf--variants_tag-states--variant="is-clickable"] .icon-variant:is(:hover, :focus-within) {
+  filter: var(--icon-filter-hover);
+}
+
+/* ===============================
+   ICON COLOR → SURFACE TOKEN MAP
+   =============================== */
+   
+/* LIGHT */
+.variants_tag-color[data-wf--variants_tag-color--settings-color="light"] .icon-variant {
+  --f-invert: var(--light-filter--light-invert);
+  --f-sepia: var(--light-filter--light-sepia);
+  --f-saturate: var(--light-filter--light-saturate);
+  --f-hue: var(--light-filter--light-hue-rotate);
+  --f-brightness: var(--light-filter--light-brightness);
+  --f-contrast: var(--light-filter--light-contrast);
+
+  --f-invert-inv: var(--dark-filter--dark-invert);
+  --f-sepia-inv: var(--dark-filter--dark-sepia);
+  --f-saturate-inv: var(--dark-filter--dark-saturate);
+  --f-hue-inv: var(--dark-filter--dark-hue-rotate);
+  --f-brightness-inv: var(--dark-filter--dark-brightness);
+  --f-contrast-inv: var(--dark-filter--dark-contrast);
+}
+
+/* DARK */
+.variants_tag-color[data-wf--variants_tag-color--settings-color="dark"] .icon-variant {
+  --f-invert: var(--dark-filter--dark-invert);
+  --f-sepia: var(--dark-filter--dark-sepia);
+  --f-saturate: var(--dark-filter--dark-saturate);
+  --f-hue: var(--dark-filter--dark-hue-rotate);
+  --f-brightness: var(--dark-filter--dark-brightness);
+  --f-contrast: var(--dark-filter--dark-contrast);
+
+  --f-invert-inv: var(--light-filter--light-invert);
+  --f-sepia-inv: var(--light-filter--light-sepia);
+  --f-saturate-inv: var(--light-filter--light-saturate);
+  --f-hue-inv: var(--light-filter--light-hue-rotate);
+  --f-brightness-inv: var(--light-filter--light-brightness);
+  --f-contrast-inv: var(--light-filter--light-contrast);
+}
+
+/* PRIMARY */
+.variants_tag-color[data-wf--variants_tag-color--settings-color="primary"] .icon-variant {
+  --f-invert: var(--primary-filter--primary-invert);
+  --f-sepia: var(--primary-filter--primary-sepia);
+  --f-saturate: var(--primary-filter--primary-saturate);
+  --f-hue: var(--primary-filter--primary-hue-rotate);
+  --f-brightness: var(--primary-filter--primary-brightness);
+  --f-contrast: var(--primary-filter--primary-contrast);
+
+  --f-invert-inv: var(--color-4-filter--color-4-invert);
+  --f-sepia-inv: var(--color-4-filter--color-4-sepia);
+  --f-saturate-inv: var(--color-4-filter--color-4-saturate);
+  --f-hue-inv: var(--color-4-filter--color-4-hue-rotate);
+  --f-brightness-inv: var(--color-4-filter--color-4-brightness);
+  --f-contrast-inv: var(--color-4-filter--color-4-contrast);
+}
+
+/* COLOR 1 */
+.variants_tag-color[data-wf--variants_tag-color--settings-color="color-1"] .icon-variant {
+  --f-invert: var(--color-1-filter--color-1-invert);
+  --f-sepia: var(--color-1-filter--color-1-sepia);
+  --f-saturate: var(--color-1-filter--color-1-saturate);
+  --f-hue: var(--color-1-filter--color-1-hue-rotate);
+  --f-brightness: var(--color-1-filter--color-1-brightness);
+  --f-contrast: var(--color-1-filter--color-1-contrast);
+
+  --f-invert-inv: var(--color-9-filter--color-9-invert);
+  --f-sepia-inv: var(--color-9-filter--color-9-sepia);
+  --f-saturate-inv: var(--color-9-filter--color-9-saturate);
+  --f-hue-inv: var(--color-9-filter--color-9-hue-rotate);
+  --f-brightness-inv: var(--color-9-filter--color-9-brightness);
+  --f-contrast-inv: var(--color-9-filter--color-9-contrast);
+}
+
+/* COLOR 2 */
+.variants_tag-color[data-wf--variants_tag-color--settings-color="color-2"] .icon-variant {
+  --f-invert: var(--color-2-filter--color-2-invert);
+  --f-sepia: var(--color-2-filter--color-2-sepia);
+  --f-saturate: var(--color-2-filter--color-2-saturate);
+  --f-hue: var(--color-2-filter--color-2-hue-rotate);
+  --f-brightness: var(--color-2-filter--color-2-brightness);
+  --f-contrast: var(--color-2-filter--color-2-contrast);
+
+  --f-invert-inv: var(--color-5-filter--color-5-invert);
+  --f-sepia-inv: var(--color-5-filter--color-5-sepia);
+  --f-saturate-inv: var(--color-5-filter--color-5-saturate);
+  --f-hue-inv: var(--color-5-filter--color-5-hue-rotate);
+  --f-brightness-inv: var(--color-5-filter--color-5-brightness);
+  --f-contrast-inv: var(--color-5-filter--color-5-contrast);
+}
+
+/* COLOR 3 */
+.variants_tag-color[data-wf--variants_tag-color--settings-color="color-3"] .icon-variant {
+  --f-invert: var(--color-3-filter--color-3-invert);
+  --f-sepia: var(--color-3-filter--color-3-sepia);
+  --f-saturate: var(--color-3-filter--color-3-saturate);
+  --f-hue: var(--color-3-filter--color-3-hue-rotate);
+  --f-brightness: var(--color-3-filter--color-3-brightness);
+  --f-contrast: var(--color-3-filter--color-3-contrast);
+
+  --f-invert-inv: var(--color-8-filter--color-8-invert);
+  --f-sepia-inv: var(--color-8-filter--color-8-sepia);
+  --f-saturate-inv: var(--color-8-filter--color-8-saturate);
+  --f-hue-inv: var(--color-8-filter--color-8-hue-rotate);
+  --f-brightness-inv: var(--color-8-filter--color-8-brightness);
+  --f-contrast-inv: var(--color-8-filter--color-8-contrast);
+}
+
+/* COLOR 4 */
+.variants_tag-color[data-wf--variants_tag-color--settings-color="color-4"] .icon-variant {
+  --f-invert: var(--color-4-filter--color-4-invert);
+  --f-sepia: var(--color-4-filter--color-4-sepia);
+  --f-saturate: var(--color-4-filter--color-4-saturate);
+  --f-hue: var(--color-4-filter--color-4-hue-rotate);
+  --f-brightness: var(--color-4-filter--color-4-brightness);
+  --f-contrast: var(--color-4-filter--color-4-contrast);
+  
+  --f-invert-inv: var(--primary-filter--primary-invert);
+  --f-sepia-inv: var(--primary-filter--primary-sepia);
+  --f-saturate-inv: var(--primary-filter--primary-saturate);
+  --f-hue-inv: var(--primary-filter--primary-hue-rotate);
+  --f-brightness-inv: var(--primary-filter--primary-brightness);
+  --f-contrast-inv: var(--primary-filter--primary-contrast);
+}
+
+/* COLOR 5 */
+.variants_tag-color[data-wf--variants_tag-color--settings-color="color-5"] .icon-variant {
+  --f-invert: var(--color-5-filter--color-5-invert);
+  --f-sepia: var(--color-5-filter--color-5-sepia);
+  --f-saturate: var(--color-5-filter--color-5-saturate);
+  --f-hue: var(--color-5-filter--color-5-hue-rotate);
+  --f-brightness: var(--color-5-filter--color-5-brightness);
+  --f-contrast: var(--color-5-filter--color-5-contrast);
+
+  --f-invert-inv: var(--color-7-filter--color-7-invert);
+  --f-sepia-inv: var(--color-7-filter--color-7-sepia);
+  --f-saturate-inv: var(--color-7-filter--color-7-saturate);
+  --f-hue-inv: var(--color-7-filter--color-7-hue-rotate);
+  --f-brightness-inv: var(--color-7-filter--color-7-brightness);
+  --f-contrast-inv: var(--color-7-filter--color-7-contrast);
+}
+
+/* COLOR 6 */
+.variants_tag-color[data-wf--variants_tag-color--settings-color="color-6"] .icon-variant {
+  --f-invert: var(--color-6-filter--color-6-invert);
+  --f-sepia: var(--color-6-filter--color-6-sepia);
+  --f-saturate: var(--color-6-filter--color-6-saturate);
+  --f-hue: var(--color-6-filter--color-6-hue-rotate);
+  --f-brightness: var(--color-6-filter--color-6-brightness);
+  --f-contrast: var(--color-6-filter--color-6-contrast);
+
+  --f-invert-inv: var(--primary-filter--primary-invert);
+  --f-sepia-inv: var(--primary-filter--primary-sepia);
+  --f-saturate-inv: var(--primary-filter--primary-saturate);
+  --f-hue-inv: var(--primary-filter--primary-hue-rotate);
+  --f-brightness-inv: var(--primary-filter--primary-brightness);
+  --f-contrast-inv: var(--primary-filter--primary-contrast);
+}
+
+/* COLOR 7 */
+.variants_tag-color[data-wf--variants_tag-color--settings-color="color-7"] .icon-variant {
+  --f-invert: var(--color-7-filter--color-7-invert);
+  --f-sepia: var(--color-7-filter--color-7-sepia);
+  --f-saturate: var(--color-7-filter--color-7-saturate);
+  --f-hue: var(--color-7-filter--color-7-hue-rotate);
+  --f-brightness: var(--color-7-filter--color-7-brightness);
+  --f-contrast: var(--color-7-filter--color-7-contrast);
+
+  --f-invert-inv: var(--color-4-filter--color-4-invert);
+  --f-sepia-inv: var(--color-4-filter--color-4-sepia);
+  --f-saturate-inv: var(--color-4-filter--color-4-saturate);
+  --f-hue-inv: var(--color-4-filter--color-4-hue-rotate);
+  --f-brightness-inv: var(--color-4-filter--color-4-brightness);
+  --f-contrast-inv: var(--color-4-filter--color-4-contrast);
+}
+
+/* COLOR 8 */
+.variants_tag-color[data-wf--variants_tag-color--settings-color="color-8"] .icon-variant {
+  --f-invert: var(--color-8-filter--color-8-invert);
+  --f-sepia: var(--color-8-filter--color-8-sepia);
+  --f-saturate: var(--color-8-filter--color-8-saturate);
+  --f-hue: var(--color-8-filter--color-8-hue-rotate);
+  --f-brightness: var(--color-8-filter--color-8-brightness);
+  --f-contrast: var(--color-8-filter--color-8-contrast);
+
+  --f-invert-inv: var(--color-3-filter--color-3-invert);
+  --f-sepia-inv: var(--color-3-filter--color-3-sepia);
+  --f-saturate-inv: var(--color-3-filter--color-3-saturate);
+  --f-hue-inv: var(--color-3-filter--color-3-hue-rotate);
+  --f-brightness-inv: var(--color-3-filter--color-3-brightness);
+  --f-contrast-inv: var(--color-3-filter--color-3-contrast);
+}
+
+/* COLOR 9 */
+.variants_tag-color[data-wf--variants_tag-color--settings-color="color-9"] .icon-variant {  
+  --f-invert: var(--color-9-filter--color-9-invert);
+  --f-sepia: var(--color-9-filter--color-9-sepia);
+  --f-saturate: var(--color-9-filter--color-9-saturate);
+  --f-hue: var(--color-9-filter--color-9-hue-rotate);
+  --f-brightness: var(--color-9-filter--color-9-brightness);
+  --f-contrast: var(--color-9-filter--color-9-contrast);
+
+  --f-invert-inv: var(--color-1-filter--color-1-invert);
+  --f-sepia-inv: var(--color-1-filter--color-1-sepia);
+  --f-saturate-inv: var(--color-1-filter--color-1-saturate);
+  --f-hue-inv: var(--color-1-filter--color-1-hue-rotate);
+  --f-brightness-inv: var(--color-1-filter--color-1-brightness);
+  --f-contrast-inv: var(--color-1-filter--color-1-contrast);
+}
+
+[data-wf--variants_icon-color--variant="grey-1"] .icon-variant {
+  --f-invert: var(--grey-1-filter--grey-1-invert);
+  --f-sepia: var(--grey-1-filter--grey-1-sepia);
+  --f-saturate: var(--grey-1-filter--grey-1-saturate);
+  --f-hue: var(--grey-1-filter--grey-1-hue-rotate);
+  --f-brightness: var(--grey-1-filter--grey-1-brightness);
+  --f-contrast: var(--grey-1-filter--grey-1-contrast);
+
+  --f-invert-inv: var(--grey-3-filter--grey-3-invert);
+  --f-sepia-inv: var(--grey-3-filter--grey-3-sepia);
+  --f-saturate-inv: var(--grey-3-filter--grey-3-saturate);
+  --f-hue-inv: var(--grey-3-filter--grey-3-hue-rotate);
+  --f-brightness-inv: var(--grey-3-filter--grey-3-brightness);
+  --f-contrast-inv: var(--grey-3-filter--grey-3-contrast);
+}
+
+[data-wf--variants_icon-color--variant="grey-2"] .icon-variant {
+  --f-invert: var(--grey-2-filter--grey-2-invert);
+  --f-sepia: var(--grey-2-filter--grey-2-sepia);
+  --f-saturate: var(--grey-2-filter--grey-2-saturate);
+  --f-hue: var(--grey-2-filter--grey-2-hue-rotate);
+  --f-brightness: var(--grey-2-filter--grey-2-brightness);
+  --f-contrast: var(--grey-2-filter--grey-2-contrast);
+
+  --f-invert-inv: var(--light-filter--light-invert);
+  --f-sepia-inv: var(--light-filter--light-sepia);
+  --f-saturate-inv: var(--light-filter--light-saturate);
+  --f-hue-inv: var(--light-filter--light-hue-rotate);
+  --f-brightness-inv: var(--light-filter--light-brightness);
+  --f-contrast-inv: var(--light-filter--light-contrast);
+}
+
+[data-wf--variants_icon-color--variant="grey-3"] .component_icon {
+  --f-invert: var(--grey-3-filter--grey-3-invert);
+  --f-sepia: var(--grey-3-filter--grey-3-sepia);
+  --f-saturate: var(--grey-3-filter--grey-3-saturate);
+  --f-hue: var(--grey-3-filter--grey-3-hue-rotate);
+  --f-brightness: var(--grey-3-filter--grey-3-brightness);
+  --f-contrast: var(--grey-3-filter--grey-3-contrast);
+
+  --f-invert-inv: var(--grey-1-filter--grey-1-invert);
+  --f-sepia-inv: var(--grey-1-filter--grey-1-sepia);
+  --f-saturate-inv: var(--grey-1-filter--grey-1-saturate);
+  --f-hue-inv: var(--grey-1-filter--grey-1-hue-rotate);
+  --f-brightness-inv: var(--grey-1-filter--grey-1-brightness);
+  --f-contrast-inv: var(--grey-1-filter--grey-1-contrast);
+}
+
+</style>

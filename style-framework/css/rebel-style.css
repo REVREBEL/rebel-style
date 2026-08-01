@@ -87,12 +87,12 @@ href="https://cdn.jsdelivr.net/gh/REVREBEL/rebel-style@main/css/rebel-style.css"
   --rev-color-8: #8e456a;
   --rev-color-9: #eff5f6;
 
-  --rev-color-accent: #b2d3de;
-  --rev-color-bg: #fafafa;
-
   --rev-color-grey-1: #ababab;
   --rev-color-grey-2: #575757;
   --rev-color-grey-3: #2e2e2e;
+
+  --rev-color-accent: #b2d3de;
+  --rev-color-bg: #fafafa;
 
   --rev-color-light: #fafafa;
   --rev-color-dark: var(--rev-color-primary);

@@ -1,0 +1,171 @@
+<style>
+
+
+/* ===============================
+   TAG ENGINE
+   =============================== */
+
+.variants_tag-color {
+  --surface: var(--_colors---color-primary--primary);
+  --surface-inverse: var(--_colors---color-primary--primary-inverse);
+  --surface-fade: var(--_colors---color-primary--primary-inverse-fade);
+
+  /* default state */
+  --tag-bg: var(--surface);
+  --tag-text: var(--surface-inverse);
+  --tag-border: var(--surface);
+
+  /* non-clickable by default: hover/active */
+  --tag-bg-hover: var(--tag-bg);
+  --tag-text-hover: var(--tag-text);
+  --tag-border-hover: var(--tag-border);
+  --tag-bg-active: var(--tag-bg);
+  --tag-text-active: var(--tag-text);
+  --tag-border-active: var(--tag-border);
+
+  /* apply tokens to actual css properties */
+  background-color: var(--tag-bg);
+  color: var(--tag-text);
+  border-top-color: var(--tag-border);
+  border-right-color: var(--tag-border);
+  border-bottom-color: var(--tag-border);
+  border-left-color: var(--tag-border);
+}
+
+/* hover + active from tokens */
+.variants_tag-color:hover {
+  background-color: var(--tag-bg-hover);
+  color: var(--tag-text-hover);
+  border-width: 4px;
+  border-top-color: var(--tag-border-hover);
+  border-right-color: var(--tag-border-hover);
+  border-bottom-color: var(--tag-border-hover);
+  border-left-color: var(--tag-border-hover);
+}
+
+.variants_tag-color:active {
+  background-color: var(--tag-bg-active);
+  color: var(--tag-text-active);
+  border-width: 4px;
+  border-top-color: var(--tag-border-active);
+  border-right-color: var(--tag-border-active);
+  border-bottom-color: var(--tag-border-active);
+  border-left-color: var(--tag-border-active);
+}
+
+/* clickable oN: hover -> inverse, active -> fade */
+.variants_tag-color[data-clickable="True"] {
+  --tag-bg-hover: var(--surface-inverse);
+  --tag-text-hover: var(--surface);
+  --tag-border-hover: var(--surface-inverse);
+  --tag-bg-active: var(--surface-fade);
+  --tag-text-active: var(--surface);
+  --tag-border-active: var(--surface-fade);
+}
+
+/* outline on: (clip-to-text) */
+.variants_tag-color[data-outline="True"] {
+  --tag-bg: var(--surface);
+  --tag-text: var(--surface-inverse);
+
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.variants_tag-color[data-outline="True"][data-clickable="True"] {
+  --tag-bg-hover: var(--surface-inverse); /* ink becomes inverse */
+  --tag-bg-active: var(--surface-fade);   /* ink becomes fade */
+  --tag-border: var(--surface);
+  --tag-border-hover: var(--surface-inverse);
+  --tag-border-active: var(--surface-fade);
+}
+
+/* ===============================
+   TAG COLOR → SURFACE TOKEN MAP
+   =============================== */
+
+/* LIGHT */
+.variants_tag-color[data-wf--variants_tag-color--settings-color="light"] {
+  --surface: var(--_colors---color-light--color-primary);
+  --surface-inverse: var(--_colors---color-light--color-light-inverse);
+  --surface-fade: var(--_colors---color-light--color-light-inverse-fade);
+}
+
+/* DARK */
+.variants_tag-color[data-wf--variants_tag-color--settings-color="dark"] {
+  --surface: var(--_colors---color-dark--color-dark);
+  --surface-inverse: var(--_colors---color-dark--color-dark-inverse);
+  --surface-fade: var(--_colors---color-dark--color-dark-inverse-fade);
+}
+
+/* PRIMARY */
+.variants_tag-color[data-wf--variants_tag-color--settings-color="primary"] {
+  --surface: var(--_colors---color-primary--color-primary);
+  --surface-inverse: var(--_colors---color-primary--color-primary-inverse);
+  --surface-fade: var(--_colors---color-primary--color-primary-inverse-fade);
+}
+
+/* COLOR 1 */
+.variants_tag-color[data-wf--variants_tag-color--settings-color="color-1"] {
+  --surface: var(--_colors---color-1--color-1);
+  --surface-inverse: var(--_colors---color-1--color-1-inverse);
+  --surface-fade: var(--_colors---color-1--color-1-inverse-fade);
+}
+
+/* COLOR 2 */
+.variants_tag-color[data-wf--variants_tag-color--settings-color="color-2"] {
+  --surface: var(--_colors---color-2--color-2);
+  --surface-inverse: var(--_colors---color-2--color-2-inverse);
+  --surface-fade: var(--_colors---color-2--color-2-inverse-fade);
+}
+
+/* COLOR 3 */
+.variants_tag-color[data-wf--variants_tag-color--settings-color="color-3"] {
+  --surface: var(--_colors---color-3--color-3);
+  --surface-inverse: var(--_colors---color-3--color-3-inverse);
+  --surface-fade: var(--_colors---color-3--color-3-inverse-fade);
+}
+
+/* COLOR 4 */
+.variants_tag-color[data-wf--variants_tag-color--settings-color="color-4"] {
+  --surface: var(--_colors---color-4--color-4);
+  --surface-inverse: var(--_colors---color-4--color-4-inverse);
+  --surface-fade: var(--_colors---color-4--color-4-inverse-fade);
+}
+
+/* COLOR 5 */
+.variants_tag-color[data-wf--variants_tag-color--settings-color="color-5"] {
+  --surface: var(--_colors---color-5--color-5);
+  --surface-inverse: var(--_colors---color-5--color-5-inverse);
+  --surface-fade: var(--_colors---color-5--color-5-inverse-fade);
+}
+
+/* COLOR 6 */
+.variants_tag-color[data-wf--variants_tag-color--settings-color="color-6"] {
+  --surface: var(--_colors---color-6--color-6);
+  --surface-inverse: var(--_colors---color-6--color-6-inverse);
+  --surface-fade: var(--_colors---color-6--color-6-inverse-fade);
+}
+
+/* COLOR 7 */
+.variants_tag-color[data-wf--variants_tag-color--settings-color="color-7"] {
+  --surface: var(--_colors---color-7--color-7);
+  --surface-inverse: var(--_colors---color-7--color-7-inverse);
+  --surface-fade: var(--_colors---color-7--color-7-inverse-fade);
+}
+
+/* COLOR 8 */
+.variants_tag-color[data-wf--variants_tag-color--settings-color="color-8"] {
+  --surface: var(--_colors---color-8--color-8);
+  --surface-inverse: var(--_colors---color-8--color-8-inverse);
+  --surface-fade: var(--_colors---color-8--color-8-inverse-fade);
+}
+
+/* COLOR 9 */
+.variants_tag-color[data-wf--variants_tag-color--settings-color="color-9"] {
+  --surface: var(--_colors---color-9--color-9);
+  --surface-inverse: var(--_colors---color-9--color-9-inverse);
+  --surface-fade: var(--_colors---color-9--color-9-inverse-fade);
+}
+
+</style>

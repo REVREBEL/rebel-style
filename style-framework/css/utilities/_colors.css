@@ -1,7 +1,6 @@
 
 
 :root {
-
   --mc-base-color: var(--rev-color-primary);
 
   /* Monochromatic Palettes*/
@@ -56,8 +55,8 @@ To use: Combined the Class with a Single Color Token
 
 
 .bg {
-  --c-bg: var(-var(--c-raw));
-  --c-border: var(var(--c-raw));
+  --c-bg: var(--c-raw);
+  --c-border: var(--c-raw);
 
   background-color: var(--c-bg);
   border: 0 solid var(--c-border);
@@ -167,13 +166,5 @@ li {
     /* lightly rotate the hue as the list grows */
     calc(var(--hue) - (var(--i) + 5))
   );
-
-
-
-
-
-
-
-
 
 }.ink { color: var(--c-fg, var(--c-ink)); }
