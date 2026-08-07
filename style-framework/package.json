@@ -10,7 +10,7 @@
   },
   "devDependencies": {
     "@projectwallace/css-analyzer": "^7.6.0",
-    "postcss": "^8.5.6",
+    "postcss": "^8.5.14",
     "postcss-safe-parser": "^7.0.1",
     "stylelint": "^16.25.0",
     "stylelint-config-standard": "^39.0.0",
